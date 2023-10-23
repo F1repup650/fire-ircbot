@@ -108,7 +108,7 @@ def joinserver():
             if ircmsg.find("PING :") != -1:
                 # pong = "PONG :" + input("Ping?:") + "\n"
                 # pong = pong.replace("\\\\", "\\")
-                pong = f"PONG :{ircmsg.split(':')[1]}\n"
+                pong = f"PONG :{ircmsg.split('PING :')[1]}\n"
                 print(pong, end="")
                 ircsock.send(bytes(pong, e))
             if ircmsg.find("Closing Link") != -1:
