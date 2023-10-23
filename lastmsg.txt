@@ -1,0 +1,1 @@
+:firepup!Firepup@owner.firepi PRIVMSG #main :pnp just auto fills my name in to np
