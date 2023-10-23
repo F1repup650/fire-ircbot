@@ -349,9 +349,10 @@ def main():
                     else:
                         sendmsg("Access Denied", chan)
                 elif np.search(message):
-                    x02 = '\x02'
+                    x02 = "\x02"
                     sendmsg(
-                        f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}", chan
+                        f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
+                        chan,
                     )
                 elif message == "\x01VERSION\x01":
                     notice(f"\x01VERSION FireBot {__version__}\x01", name)
