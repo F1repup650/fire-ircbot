@@ -15,7 +15,7 @@ threads = {}
 servers = [
     "ircnow",
     "replirc",
-    #"efnet",
+    # "efnet",
 ]
 
 

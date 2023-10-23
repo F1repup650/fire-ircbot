@@ -13,6 +13,7 @@ class bytes(bbytes):
     def lazy_decode(e):
         return str(e)[2:-1]
 
+
 __version__ = "v1.0.2"
 ircsock = socket(AF_INET, SOCK_STREAM)
 botnick = "FireBot"
@@ -127,12 +128,21 @@ def ping(ircmsg):
 
 
 def sendmsg(msg, target):
-    print(f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target}")
+    if target != "NickServ" and not mfind(msg, ["IDENTIFY"], False):
+        print(
+            f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target}"
+        )
+    else:
+        print(f"[LOG][{server}] Identifying myself...")
     ircsock.send(bytes(f"PRIVMSG {target} :{msg}\n", e))
 
+
 def notice(msg, target):
-    print(f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target} (NOTICE)")
+    print(
+        f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target} (NOTICE)"
+    )
     ircsock.send(bytes(f"NOTICE {target} :{msg}\n", e))
+
 
 def joinchan(chan: str, origin: str, chanList: dict, lock: bool = True):
     chan = chan.replace(" ", "")
@@ -339,8 +349,9 @@ def main():
                     else:
                         sendmsg("Access Denied", chan)
                 elif np.search(message):
+                    x02 = '\x02'
                     sendmsg(
-                        f"f.sp {message.split(':')[1].split('(')[0].strip(' ')}", chan
+                        f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}", chan
                     )
                 elif message == "\x01VERSION\x01":
                     notice(f"\x01VERSION FireBot {__version__}\x01", name)
