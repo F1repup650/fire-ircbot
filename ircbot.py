@@ -5,6 +5,9 @@ import re, random as r, codecs
 from sys import argv as args
 from socket import socket, AF_INET, SOCK_STREAM
 from os import environ as env
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class bytes(bbytes):
