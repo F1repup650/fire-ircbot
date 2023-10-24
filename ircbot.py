@@ -24,8 +24,9 @@ servers = {
     "ircnow": {
         "address": "localhost",
         "port": 6601,
+        "interval": 200,
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, botnick: 0},
-        "admins": ["firepup", "firepup650", "h|thelounge"],
+        "admins": ["firepup", "h|thelounge"],
     },
     "efnet": {
         "address": "irc.servercentral.net",
@@ -45,6 +46,7 @@ nicklen = 30
 address = servers[server]["address"]
 port = servers[server]["port"] if "port" in servers[server] else 6667
 channels = servers[server]["channels"]
+interval = servers[server]["interval"] if "interval" in servers[server] else 50
 encoding = "UTF-8"
 prefix = "."
 rebt = "fire"
@@ -83,6 +85,51 @@ def sucheck(message):
     return re.search("^(su|sudo).*", message)
 
 
+def ping(ircmsg):
+    pong = f"PONG :{ircmsg.split('PING :')[1]}\n"
+    ircsock.send(bytes(pong, e))
+    print(pong, end="")
+
+
+def sendmsg(msg, target):
+    if target != "NickServ" and not mfind(msg, ["IDENTIFY"], False):
+        print(
+            f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target}"
+        )
+    else:
+        print(f"[LOG][{server}] Identifying myself...")
+    ircsock.send(bytes(f"PRIVMSG {target} :{msg}\n", e))
+
+
+def notice(msg, target):
+    print(
+        f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target} (NOTICE)"
+    )
+    ircsock.send(bytes(f"NOTICE {target} :{msg}\n", e))
+
+
+def CTCPHandler(msg: str, sender: str = "", isRaw: bool = False):
+    if isRaw:
+        sender = msg.split("!", 1)[0][1:]
+        message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+    CTCP = msg.split("\x01")[1]
+    if CTCP == "VERSION":
+        notice(
+            f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
+            sender,
+        )
+    elif CTCP == "USERINFO":
+        notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender)
+    elif CTCP == "SOURCE":
+        notice(
+            "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01", sender
+        )
+    elif CTCP == "FINGER":
+        notice(f"\x01FINGER Firepup's bot\x01", sender)
+    elif CTCP == "CLIENTINFO":
+        notice(f"\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER", sender)
+
+
 def joinserver():
     global e, nicklen
     ircsock.connect((address, port))
@@ -108,9 +155,9 @@ def joinserver():
             if ircmsg.find("PING :") != -1:
                 # pong = "PONG :" + input("Ping?:") + "\n"
                 # pong = pong.replace("\\\\", "\\")
-                pong = f"PONG :{ircmsg.split('PING :')[1]}\n"
-                print(pong, end="")
-                ircsock.send(bytes(pong, e))
+                ping(ircmsg)
+            if len(ircmsg.split("\x01")) == 3:
+                CTCPHandler(ircmsg, isRaw=True)
             if ircmsg.find("Closing Link") != -1:
                 print(f"[LOG][{server}] I tried.")
                 exit(f"[EXIT][{server}] Closing Link")
@@ -122,29 +169,6 @@ def mfind(message: str, find: list, usePrefix: bool = True):
         return any(message[: len(match) + 1] == prefix + match for match in find)
     else:
         return any(message[: len(match)] == match for match in find)
-
-
-def ping(ircmsg):
-    pong = f"PONG :{ircmsg.split(':')[1]}\n"
-    ircsock.send(bytes(pong, e))
-    print(pong, end="")
-
-
-def sendmsg(msg, target):
-    if target != "NickServ" and not mfind(msg, ["IDENTIFY"], False):
-        print(
-            f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target}"
-        )
-    else:
-        print(f"[LOG][{server}] Identifying myself...")
-    ircsock.send(bytes(f"PRIVMSG {target} :{msg}\n", e))
-
-
-def notice(msg, target):
-    print(
-        f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target} (NOTICE)"
-    )
-    ircsock.send(bytes(f"NOTICE {target} :{msg}\n", e))
 
 
 def joinchan(chan: str, origin: str, chanList: dict, lock: bool = True):
@@ -170,6 +194,8 @@ def joinchan(chan: str, origin: str, chanList: dict, lock: bool = True):
             print(bytes(ircmsg.encode()).lazy_decode())
             if ircmsg.find("PING :") != -1:
                 ping()
+            if len(ircmsg.split("\x01")) == 3:
+                CTCPHandler(ircmsg, isRaw=True)
         if ircmsg.find("No such channel") != -1:
             print(f"[LOG][{server}] Joining {chan} failed (DM)")
             if origin != "null":
@@ -357,9 +383,9 @@ def main():
                         f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
                         chan,
                     )
-                elif message == "\x01VERSION\x01":
-                    notice(f"\x01VERSION FireBot {__version__}\x01", name)
-                if chan in channels and channels[chan] >= 50:
+                elif len(message.split("\x01")) == 3:
+                    CTCPHandler(message, name)
+                if chan in channels and channels[chan] >= interval:
                     r.seed()
                     channels[chan] = 0
                     log = open("mastermessages.txt", "r")
