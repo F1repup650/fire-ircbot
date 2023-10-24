@@ -101,10 +101,11 @@ def sendmsg(msg, target):
     ircsock.send(bytes(f"PRIVMSG {target} :{msg}\n", e))
 
 
-def notice(msg, target):
-    print(
-        f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target} (NOTICE)"
-    )
+def notice(msg, target, silent: bool = False):
+    if not silent:
+        print(
+            f"[LOG][{server}] Sending {bytes(msg.encode()).lazy_decode()} to {target} (NOTICE)"
+        )
     ircsock.send(bytes(f"NOTICE {target} :{msg}\n", e))
 
 
@@ -113,25 +114,28 @@ def CTCPHandler(msg: str, sender: str = "", isRaw: bool = False):
         sender = msg.split("!", 1)[0][1:]
         message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
     CTCP = msg.split("\x01")[1]
+    print(f"[LOG][{server}] Responding to CTCP {CTCP} from {sender}")
     if CTCP == "VERSION":
         notice(
             f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
             sender,
+            True,
         )
         return True
     elif CTCP == "USERINFO":
-        notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender)
+        notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender, True)
         return True
     elif CTCP == "SOURCE":
         notice(
-            "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01", sender
+            "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01", sender,
+            True,
         )
         return True
     elif CTCP == "FINGER":
-        notice(f"\x01FINGER Firepup's bot\x01", sender)
+        notice(f"\x01FINGER Firepup's bot\x01", sender, True)
         return True
     elif CTCP == "CLIENTINFO":
-        notice(f"\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER", sender)
+        notice(f"\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER", sender, True)
         return True
     return False
 
@@ -404,7 +408,7 @@ def main():
                     sel = decode_escapes(
                         str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
                     )
-                    sendmsg(sel, chan)
+                    sendmsg(f"[QUOTE] {sel}", chan)
                     log.close()
             else:
                 if ircmsg.find("PING") != -1:
