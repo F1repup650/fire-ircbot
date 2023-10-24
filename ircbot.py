@@ -118,16 +118,22 @@ def CTCPHandler(msg: str, sender: str = "", isRaw: bool = False):
             f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
             sender,
         )
+        return True
     elif CTCP == "USERINFO":
         notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender)
+        return True
     elif CTCP == "SOURCE":
         notice(
             "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01", sender
         )
+        return True
     elif CTCP == "FINGER":
         notice(f"\x01FINGER Firepup's bot\x01", sender)
+        return True
     elif CTCP == "CLIENTINFO":
         notice(f"\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER", sender)
+        return True
+    return False
 
 
 def joinserver():
@@ -355,7 +361,7 @@ def main():
                 ):
                     for i in channels:
                         sendmsg("Rebooting...", i)
-                    ircsock.send(bytes("QUIT\n", e))
+                    ircsock.send(bytes("QUIT :Rebooting\n", e))
                     __import__("os").system("python3 -u ircbot.py")
                     exit(f"[EXIT][{server}] Inner layer exited or crashed")
                 elif (
@@ -366,9 +372,9 @@ def main():
                         # print(f'[LOG][{server}] i="{i}" vs chan="{chan}"')
                         if i != chan.strip():
                             sendmsg("goodbye... :'(", i)
-                    ircsock.send(bytes("QUIT \n", "UTF-8"))
+                    ircsock.send(bytes("QUIT :Shutting down\n", "UTF-8"))
                     print(f"[LOG][{server}] QUIT")
-                    exit(f"[EXIT][{server}] goodbye ;'(")
+                    exit(f"[EXIT][{server}] goodbye :'(")
                     # raise EOFError
                 elif sucheck(message):
                     if name.lower() in adminnames:
@@ -384,7 +390,12 @@ def main():
                         chan,
                     )
                 elif len(message.split("\x01")) == 3:
-                    CTCPHandler(message, name)
+                    if not CTCPHandler(message, name):
+                        CTCP = message.split("\x01")[1]
+                        if CTCP == "ACTION ducks":
+                            sendmsg("\x01ACTION gets hit by a duck\x01", chan)
+                        elif CTCP.startswith("ACTION ducks"):
+                            sendmsg(f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01", chan)
                 if chan in channels and channels[chan] >= interval:
                     r.seed()
                     channels[chan] = 0
