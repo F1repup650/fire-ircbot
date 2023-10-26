@@ -21,7 +21,7 @@ def is_dead(thr):
     thr.join(timeout=0)
     return not thr.is_alive()
 
-def start():
+def start(server):
     t = Thread(target=launch, args=(server,))
     t.daemon = True
     t.start()
@@ -33,7 +33,8 @@ if __name__ == "__main__":
         threads[server] = start(server)
     print("[LOG][CORE] Started all instances. Idling...")
     while 1:
-        sleep(10)
+        sleep(60)
+        print("[LOG][CORE] Running a checkup on all running instances")
         for server in threads:
             t = threads[server]
             if is_dead(t):
