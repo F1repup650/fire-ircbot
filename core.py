@@ -4,11 +4,9 @@ from time import sleep
 from sys import argv as args
 from threading import Thread
 
-call = "python3 -u ircbot.py"
-
 
 def launch(server: str) -> None:
-    system(f"{call} {server}")
+    system(f"python3 -u ircbot.py {server}")
 
 
 threads = {}
