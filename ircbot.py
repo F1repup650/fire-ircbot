@@ -366,7 +366,7 @@ def main():
                     for i in channels:
                         sendmsg("Rebooting...", i)
                     ircsock.send(bytes("QUIT :Rebooting\n", e))
-                    __import__("os").system("python3 -u ircbot.py")
+                    __import__("os").system(f"python3 -u ircbot.py {server}")
                     exit(f"[EXIT][{server}] Inner layer exited or crashed")
                 elif (
                     name.lower() in adminnames and message.rstrip().lower() == exitcode
@@ -415,6 +415,8 @@ def main():
                     ping(ircmsg)
                 if ircmsg.find("Closing Link") != -1:
                     exit(f"[EXIT][{server}] I got killed :'(")
+                if ircmsg.find("ERROR :Ping timeout: ") != -1:
+                    exit(f"[EXIT][{server} Ping timeout]")
     except KeyboardInterrupt:
         pass
 
