@@ -58,7 +58,7 @@ adminnames = servers[server]["admins"]
 exitcode = f"bye {botnick.lower()}"
 ircmsg = ""
 np = re.compile(
-    "\[\x0303last\.fm\x03\] [A-Za-z0-9_]+ is listening to: \x02.+ - .+\x02 \([0-9]+ plays\)"
+    "\[\x0303last\.fm\x03\] [A-Za-z0-9_]+ (is listening|last listened) to: \x02.+ - .+\x02 \([0-9]+ plays\)"
 )
 
 ESCAPE_SEQUENCE_RE = re.compile(
@@ -387,7 +387,7 @@ def main():
                         print(f"[LOG][{server}] lol, no.")
                     else:
                         sendmsg("Access Denied", chan)
-                elif np.search(message):
+                elif np.search(message) and name == "FireBitBot":
                     x02 = "\x02"
                     sendmsg(
                         f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
