@@ -21,11 +21,13 @@ def is_dead(thr):
     thr.join(timeout=0)
     return not thr.is_alive()
 
+
 def start(server):
     t = Thread(target=launch, args=(server,))
     t.daemon = True
     t.start()
     return t
+
 
 if __name__ == "__main__":
     print("[LOG][CORE] Begin initialization")

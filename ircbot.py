@@ -57,8 +57,9 @@ e = encoding
 adminnames = servers[server]["admins"]
 exitcode = f"bye {botnick.lower()}"
 ircmsg = ""
+blanks = 0
 np = re.compile(
-    "\[\x0303last\.fm\x03\] [A-Za-z0-9_]+ (is listening|last listened) to: \x02.+ - .+\x02 \([0-9]+ plays\)"
+    "\[\x0303last\.fm\x03\] [A-Za-z0-9_]+ (is listening|last listened) to: \x02.+ - .+\x02 \([0-9]+ plays\)( \[.*\])?"
 )
 
 ESCAPE_SEQUENCE_RE = re.compile(
@@ -82,7 +83,7 @@ def decode_escapes(s):
 
 
 def sucheck(message):
-    return re.search("^(su|sudo).*", message)
+    return re.search("^(su|sudo|(su .*|sudo .*))$", message)
 
 
 def ping(ircmsg):
@@ -127,7 +128,8 @@ def CTCPHandler(msg: str, sender: str = "", isRaw: bool = False):
         return True
     elif CTCP == "SOURCE":
         notice(
-            "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01", sender,
+            "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01",
+            sender,
             True,
         )
         return True
@@ -156,12 +158,12 @@ def joinserver():
                 global nicklen
                 nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
                 print(f"[LOG][{server}] NICKLEN set to {nicklen}")
-            if ircmsg.find("Nickname is already in use") != -1:
+            if ircmsg.find("Nickname already in use") != -1:
                 print(f"[LOG][{server}] My nickname's in use? lemme try that again...")
                 ircsock.send(
                     bytes(f"USER {botnick} {botnick} {botnick} {botnick}\n", e)
                 )
-                ircsock.send(bytes(f"NICK {botnick}\n", e))
+                ircsock.send(bytes(f"NICK {botnick+r.randint(0,1000)}\n", e))
             if ircmsg.find("PING :") != -1:
                 # pong = "PONG :" + input("Ping?:") + "\n"
                 # pong = pong.replace("\\\\", "\\")
@@ -233,7 +235,7 @@ def op(name, chan):
 
 def main():
     try:
-        global ircmsg, channels, e, gmode, prefix, rebt, gblrebt, lrebt, lgblrebt
+        global ircmsg, channels, e, gmode, prefix, rebt, gblrebt, lrebt, lgblrebt, blanks
         joinserver()
         if "pass" in servers[server]:
             sendmsg(f"IDENTIFY {servers[server]['pass']}", "NickServ")
@@ -244,179 +246,205 @@ def main():
             global ircmsg, gmode
             raw = bytes(ircsock.recv(2048).strip(b"\r\n"))
             ircmsg = raw.decode()
-            if ircmsg != "":
+            if ircmsg == "":
+                exit(f"[EXIT][{server}] Probably a netsplit")
+            else:
                 print(raw.lazy_decode(), sep="\n")
-            if ircmsg.find("PRIVMSG") != -1:
-                # Format of ":[Nick]!~[hostname]@[IP Address] PRIVMSG [channel] :[message]”
-                name = ircmsg.split("!", 1)[0][1:]
-                helpErr = False
-                if (name.startswith("saxjax") and server == "efnet") or (
-                    name == "ReplIRC" and server == "replirc"
-                ):
-                    if ircmsg.find("<") != -1 and ircmsg.find(">") != -1:
-                        Nname = ircmsg.split("<", 1)[1].split(">", 1)[0].strip()
-                        if name == "ReplIRC":
-                            name = Nname[4:]
+                if ircmsg.find("PRIVMSG") != -1:
+                    # Format of ":[Nick]!~[hostname]@[IP Address] PRIVMSG [channel] :[message]”
+                    name = ircmsg.split("!", 1)[0][1:]
+                    helpErr = False
+                    if (name.startswith("saxjax") and server == "efnet") or (
+                        name == "ReplIRC" and server == "replirc"
+                    ):
+                        if ircmsg.find("<") != -1 and ircmsg.find(">") != -1:
+                            Nname = ircmsg.split("<", 1)[1].split(">", 1)[0].strip()
+                            if name == "ReplIRC":
+                                name = Nname[4:]
+                            else:
+                                name = Nname
+                            message = ircmsg.split(">", 1)[1].strip()
+                            helpErr = True
                         else:
-                            name = Nname
-                        message = ircmsg.split(">", 1)[1].strip()
-                        helpErr = True
-                    else:
-                        message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-                else:
-                    message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-                if name.endswith("dsc"):
-                    helpErr = True
-                chan = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
-                print(
-                    f'[LOG][{server}] Got "{bytes(message.encode()).lazy_decode()}" from "{name}" in "{chan}"'
-                )
-                if "goat" in name.lower() and gmode == True:
-                    print(f"[LOG][{server}] GOAT DETECTED")
-                    sendmsg("Hello Goat", chan)
-                    gmode = False
-                if len(name) < nicklen and chan in channels:
-                    channels[chan] += 1
-                elif len(name) > nicklen:
-                    print(f"[LOG][{server}] Name too long ({len(name)} > {nicklen})")
-                    continue
-                elif chan not in channels:
-                    print(
-                        f"[LOG][{server}] Channel not in channels ({chan} not in {channels})"
-                    )
-                    continue
-                if mfind(
-                    message.lower(),
-                    [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
-                    False,
-                ):
-                    sendmsg(f"Hello {name}!", chan)
-                elif mfind(message, ["op me"], False) and name.lower() in adminnames:
-                    op(name, chan)
-                elif mfind(message, ["amIAdmin"]):
-                    sendmsg(
-                        f"{name.lower()} in {adminnames} == {name.lower() in adminnames}",
-                        chan,
-                    )
-                elif mfind(message, ["help"]):
-                    if not helpErr:
-                        sendmsg("List of commands:", name)
-                        sendmsg(f'Current prefix is "{prefix}"', name)
-                        sendmsg(f"{prefix}help - Sends this help list", name)
-                        sendmsg(f"{prefix}quote - Sends a random firepup quote", name)
-                        sendmsg(
-                            f"{prefix}(eightball,8ball,8b) [question]? - Asks the magic eightball a question",
-                            name,
-                        )
-                        sendmsg(f"(hi,hello) {botnick} - The bot says hi to you", name)
-                        if name.lower() in adminnames:
-                            sendmsg(f"reboot {rebt} - Restarts the bot", name)
-                            sendmsg(exitcode + " - Shuts down the bot", name)
-                            sendmsg("op me - Makes the bot try to op you", name)
-                            sendmsg(
-                                f"{prefix}join [channel(s)] - Joins the bot to the specified channel(s)",
-                                name,
+                            message = (
+                                ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
                             )
                     else:
-                        sendmsg("Sorry, I can't send help to bridged users.", chan)
-                elif name.lower() in adminnames and mfind(
-                    message, ["goat.mode.activate"]
-                ):
-                    print(f"[LOG][{server}] GOAT DETECTION ACTIVATED")
-                    gmode = True
-                elif name.lower() in adminnames and mfind(
-                    message, ["goat.mode.deactivate"]
-                ):
-                    print(f"[LOG][{server}] GOAT DETECTION DEACTIVATED")
-                    gmode = False
-                elif mfind(message, ["quote"]):
-                    r.seed()
-                    log = open("mastermessages.txt", "r")
-                    q = log.readlines()
-                    sel = decode_escapes(
-                        str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
+                        message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+                    if name.endswith("dsc"):
+                        helpErr = True
+                    chan = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
+                    print(
+                        f'[LOG][{server}] Got "{bytes(message.encode()).lazy_decode()}" from "{name}" in "{chan}"'
                     )
-                    sendmsg(sel, chan)
-                    log.close()
-                elif mfind(message, ["join "]) and name.lower() in adminnames:
-                    newchan = message.split(" ")[1].strip()
-                    channels = joinchan(newchan, chan, channels)
-                elif mfind(message, ["eightball", "8ball", "8b"]):
-                    if message.endswith("?"):
-                        log = open("eightball.txt", "r")
+                    if "goat" in name.lower() and gmode == True:
+                        print(f"[LOG][{server}] GOAT DETECTED")
+                        sendmsg("Hello Goat", chan)
+                        gmode = False
+                    if len(name) < nicklen and chan in channels:
+                        channels[chan] += 1
+                    elif len(name) > nicklen:
+                        print(
+                            f"[LOG][{server}] Name too long ({len(name)} > {nicklen})"
+                        )
+                        continue
+                    elif chan not in channels:
+                        print(
+                            f"[LOG][{server}] Channel not in channels ({chan} not in {channels})"
+                        )
+                        continue
+                    if mfind(
+                        message.lower(),
+                        [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
+                        False,
+                    ):
+                        sendmsg(f"Hello {name}!", chan)
+                    elif (
+                        mfind(message, ["op me"], False) and name.lower() in adminnames
+                    ):
+                        op(name, chan)
+                    elif mfind(message, ["amIAdmin"]):
+                        sendmsg(
+                            f"{name.lower()} in {adminnames} == {name.lower() in adminnames}",
+                            chan,
+                        )
+                    elif mfind(message, ["help"]):
+                        if not helpErr:
+                            sendmsg("List of commands:", name)
+                            sendmsg(f'Current prefix is "{prefix}"', name)
+                            sendmsg(f"{prefix}help - Sends this help list", name)
+                            sendmsg(
+                                f"{prefix}quote - Sends a random firepup quote", name
+                            )
+                            sendmsg(
+                                f"{prefix}(eightball,8ball,8b) [question]? - Asks the magic eightball a question",
+                                name,
+                            )
+                            sendmsg(
+                                f"(hi,hello) {botnick} - The bot says hi to you", name
+                            )
+                            if name.lower() in adminnames:
+                                sendmsg(f"reboot {rebt} - Restarts the bot", name)
+                                sendmsg(exitcode + " - Shuts down the bot", name)
+                                sendmsg("op me - Makes the bot try to op you", name)
+                                sendmsg(
+                                    f"{prefix}join [channel(s)] - Joins the bot to the specified channel(s)",
+                                    name,
+                                )
+                        else:
+                            sendmsg("Sorry, I can't send help to bridged users.", chan)
+                    elif name.lower() in adminnames and mfind(
+                        message, ["goat.mode.activate"]
+                    ):
+                        print(f"[LOG][{server}] GOAT DETECTION ACTIVATED")
+                        gmode = True
+                    elif name.lower() in adminnames and mfind(
+                        message, ["goat.mode.deactivate"]
+                    ):
+                        print(f"[LOG][{server}] GOAT DETECTION DEACTIVATED")
+                        gmode = False
+                    elif mfind(message, ["quote"]):
+                        r.seed()
+                        log = open("mastermessages.txt", "r")
                         q = log.readlines()
-                        sel = (
+                        sel = decode_escapes(
                             str(r.sample(q, 1))
                             .strip("[]'")
                             .replace("\\n", "")
                             .strip('"')
                         )
-                        sendmsg(f"The magic eightball says: {sel}", chan)
+                        sendmsg(sel, chan)
                         log.close()
-                    else:
-                        sendmsg("Please pose a Yes or No question.", chan)
-                elif mfind(message, ["debug", "dbg"]) and name.lower() in adminnames:
-                    sendmsg(f"[DEBUG] NICKLEN={nicklen}", chan)
-                    sendmsg(f"[DEBUG] ADMINS={adminnames}", chan)
-                    sendmsg(f"[DEBUG] CHANNELS={channels}", chan)
-                elif (
-                    mfind(message, [f"reboot {rebt}", f"reboot {gblrebt}"], False)
-                    and name.lower() in adminnames
-                ):
-                    for i in channels:
-                        sendmsg("Rebooting...", i)
-                    ircsock.send(bytes("QUIT :Rebooting\n", e))
-                    __import__("os").system(f"python3 -u ircbot.py {server}")
-                    exit(f"[EXIT][{server}] Inner layer exited or crashed")
-                elif (
-                    name.lower() in adminnames and message.rstrip().lower() == exitcode
-                ):
-                    sendmsg("oh...okay. :'(", chan)
-                    for i in channels:
-                        # print(f'[LOG][{server}] i="{i}" vs chan="{chan}"')
-                        if i != chan.strip():
-                            sendmsg("goodbye... :'(", i)
-                    ircsock.send(bytes("QUIT :Shutting down\n", "UTF-8"))
-                    print(f"[LOG][{server}] QUIT")
-                    exit(f"[EXIT][{server}] goodbye :'(")
-                    # raise EOFError
-                elif sucheck(message):
-                    if name.lower() in adminnames:
-                        sendmsg("Error - system failure, contact system operator", chan)
-                    elif "bot" in name.lower():
-                        print(f"[LOG][{server}] lol, no.")
-                    else:
-                        sendmsg("Access Denied", chan)
-                elif np.search(message) and name == "FireBitBot":
-                    x02 = "\x02"
-                    sendmsg(
-                        f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
-                        chan,
-                    )
-                elif len(message.split("\x01")) == 3:
-                    if not CTCPHandler(message, name):
-                        CTCP = message.split("\x01")[1]
-                        if CTCP == "ACTION ducks":
-                            sendmsg("\x01ACTION gets hit by a duck\x01", chan)
-                        elif CTCP.startswith("ACTION ducks"):
-                            sendmsg(f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01", chan)
-                if chan in channels and channels[chan] >= interval:
-                    r.seed()
-                    channels[chan] = 0
-                    log = open("mastermessages.txt", "r")
-                    q = log.readlines()
-                    sel = decode_escapes(
-                        str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
-                    )
-                    sendmsg(f"[QUOTE] {sel}", chan)
-                    log.close()
-            else:
-                if ircmsg.find("PING") != -1:
-                    ping(ircmsg)
-                if ircmsg.find("Closing Link") != -1:
-                    exit(f"[EXIT][{server}] I got killed :'(")
-                if ircmsg.find("ERROR :Ping timeout: ") != -1:
-                    exit(f"[EXIT][{server} Ping timeout]")
+                    elif mfind(message, ["join "]) and name.lower() in adminnames:
+                        newchan = message.split(" ")[1].strip()
+                        channels = joinchan(newchan, chan, channels)
+                    elif mfind(message, ["eightball", "8ball", "8b"]):
+                        if message.endswith("?"):
+                            log = open("eightball.txt", "r")
+                            q = log.readlines()
+                            sel = (
+                                str(r.sample(q, 1))
+                                .strip("[]'")
+                                .replace("\\n", "")
+                                .strip('"')
+                            )
+                            sendmsg(f"The magic eightball says: {sel}", chan)
+                            log.close()
+                        else:
+                            sendmsg("Please pose a Yes or No question.", chan)
+                    elif (
+                        mfind(message, ["debug", "dbg"]) and name.lower() in adminnames
+                    ):
+                        sendmsg(f"[DEBUG] NICKLEN={nicklen}", chan)
+                        sendmsg(f"[DEBUG] ADMINS={adminnames}", chan)
+                        sendmsg(f"[DEBUG] CHANNELS={channels}", chan)
+                    elif (
+                        mfind(message, [f"reboot {rebt}", f"reboot {gblrebt}"], False)
+                        and name.lower() in adminnames
+                    ):
+                        for i in channels:
+                            sendmsg("Rebooting...", i)
+                        ircsock.send(bytes("QUIT :Rebooting\n", e))
+                        __import__("os").system(f"python3 -u ircbot.py {server}")
+                        exit(f"[EXIT][{server}] Inner layer exited or crashed")
+                    elif (
+                        name.lower() in adminnames
+                        and message.rstrip().lower() == exitcode
+                    ):
+                        sendmsg("oh...okay. :'(", chan)
+                        for i in channels:
+                            # print(f'[LOG][{server}] i="{i}" vs chan="{chan}"')
+                            if i != chan.strip():
+                                sendmsg("goodbye... :'(", i)
+                        ircsock.send(bytes("QUIT :Shutting down\n", "UTF-8"))
+                        print(f"[LOG][{server}] QUIT")
+                        exit(f"[EXIT][{server}] goodbye :'(")
+                        # raise EOFError
+                    elif sucheck(message):
+                        if name.lower() in adminnames:
+                            sendmsg(
+                                "Error - system failure, contact system operator", chan
+                            )
+                        elif "bot" in name.lower():
+                            print(f"[LOG][{server}] lol, no.")
+                        else:
+                            sendmsg("Access Denied", chan)
+                    elif np.search(message):
+                        x02 = "\x02"
+                        sendmsg(
+                            f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
+                            chan,
+                        )
+                    elif len(message.split("\x01")) == 3:
+                        if not CTCPHandler(message, name):
+                            CTCP = message.split("\x01")[1]
+                            if CTCP == "ACTION ducks":
+                                sendmsg("\x01ACTION gets hit by a duck\x01", chan)
+                            elif CTCP.startswith("ACTION ducks"):
+                                sendmsg(
+                                    f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01",
+                                    chan,
+                                )
+                    if chan in channels and channels[chan] >= interval:
+                        r.seed()
+                        channels[chan] = 0
+                        log = open("mastermessages.txt", "r")
+                        q = log.readlines()
+                        sel = decode_escapes(
+                            str(r.sample(q, 1))
+                            .strip("[]'")
+                            .replace("\\n", "")
+                            .strip('"')
+                        )
+                        sendmsg(f"[QUOTE] {sel}", chan)
+                        log.close()
+                else:
+                    if ircmsg.find("PING") != -1:
+                        ping(ircmsg)
+                    if ircmsg.find("Closing Link") != -1:
+                        exit(f"[EXIT][{server}] I got killed :'(")
+                    if ircmsg.find("ERROR :Ping timeout: ") != -1:
+                        exit(f"[EXIT][{server} Ping timeout]")
     except KeyboardInterrupt:
         pass
 
