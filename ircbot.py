@@ -25,6 +25,7 @@ servers = {
         "address": "localhost",
         "port": 6601,
         "interval": 200,
+        "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, botnick: 0},
         "admins": ["firepup", "h|thelounge"],
     },
@@ -58,10 +59,11 @@ adminnames = servers[server]["admins"]
 exitcode = f"bye {botnick.lower()}"
 ircmsg = ""
 blanks = 0
+npbase = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|^]{1,MAX} (is listening|last listened) to: \x02.+ - .+\x02 \([0-9]+ plays\)( \[.*\])?"
 np = re.compile(
-    "\[\x0303last\.fm\x03\] [A-Za-z0-9_]+ (is listening|last listened) to: \x02.+ - .+\x02 \([0-9]+ plays\)( \[.*\])?"
+    npbase.replace("MAX", f"{nicklen}")
 )
-
+npallowed = ["FireBitBot"]
 ESCAPE_SEQUENCE_RE = re.compile(
     r"""
     ( \\U........      # 8-digit hex escapes
@@ -143,7 +145,8 @@ def CTCPHandler(msg: str, sender: str = "", isRaw: bool = False):
 
 
 def joinserver():
-    global e, nicklen
+    print(f"[LOG][{server}] Joining {server}...")
+    global e, nicklen, npbase, np, botnick
     ircsock.connect((address, port))
     ircsock.send(bytes(f"USER {botnick} {botnick} {botnick} {botnick}\n", e))
     ircsock.send(bytes(f"NICK {botnick}\n", e))
@@ -157,13 +160,15 @@ def joinserver():
             if ircmsg.find("NICKLEN=") != -1:
                 global nicklen
                 nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
+                np = re.compile(
+                    npbase.replace("MAX", f"{nicklen}")
+                )
                 print(f"[LOG][{server}] NICKLEN set to {nicklen}")
             if ircmsg.find("Nickname already in use") != -1:
                 print(f"[LOG][{server}] My nickname's in use? lemme try that again...")
-                ircsock.send(
-                    bytes(f"USER {botnick} {botnick} {botnick} {botnick}\n", e)
-                )
-                ircsock.send(bytes(f"NICK {botnick+r.randint(0,1000)}\n", e))
+                botnick = f"{botnick}{r.randint(0,1000)}"
+                ircsock.send(bytes(f"NICK {botnick}\n", e))
+                print(f"[LOG][{server}] botnick is now {botnick}")
             if ircmsg.find("PING :") != -1:
                 # pong = "PONG :" + input("Ping?:") + "\n"
                 # pong = pong.replace("\\\\", "\\")
@@ -184,6 +189,7 @@ def mfind(message: str, find: list, usePrefix: bool = True):
 
 
 def joinchan(chan: str, origin: str, chanList: dict, lock: bool = True):
+    print(f"[LOG][{server}] Joining {chan}...")
     chan = chan.replace(" ", "")
     if "," in chan:
         chans = chan.split(",")
@@ -236,9 +242,10 @@ def op(name, chan):
 def main():
     try:
         global ircmsg, channels, e, gmode, prefix, rebt, gblrebt, lrebt, lgblrebt, blanks
+        print(f"[LOG][{server}] Starting connection..")
         joinserver()
         if "pass" in servers[server]:
-            sendmsg(f"IDENTIFY {servers[server]['pass']}", "NickServ")
+            sendmsg(f"IDENTIFY FireBot {servers[server]['pass']}", "NickServ")
             sleep(0.5)
         for chan in channels:
             joinchan(chan, "null", channels, False)
@@ -409,7 +416,7 @@ def main():
                             print(f"[LOG][{server}] lol, no.")
                         else:
                             sendmsg("Access Denied", chan)
-                    elif np.search(message):
+                    elif np.search(message) and name in npallowed:
                         x02 = "\x02"
                         sendmsg(
                             f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
