@@ -17,7 +17,7 @@ class bytes(bbytes):
         return str(e)[2:-1]
 
 
-__version__ = "v1.0.2"
+__version__ = "v1.0.5"
 ircsock = socket(AF_INET, SOCK_STREAM)
 botnick = "FireBot"
 servers = {
