@@ -61,8 +61,7 @@ server = ""
 
 def log(message: str, origin: str = "serv", time: dt = dt.now(), level: str = "LOG") -> None:
     if origin == "serv":
-        global server
-        origin = server
+        origin = args[1]
     print(f"[{level}][{origin}][{time}] {message}")
 
 def exit(message: object) -> None:
@@ -234,7 +233,7 @@ def joinchan(chan: str, origin: str, chanList: dict, lock: bool = True):
         for subchan in chans:
             chanList = joinchan(subchan, origin, chanList)
         return chanList
-    if chan.startswith("0") or chan == "#main":
+    if chan.startswith("0") or (chan == "#main" and lock):
         if origin != "null":
             sendmsg("Refusing to join channel 0", origin)
         return chanList
