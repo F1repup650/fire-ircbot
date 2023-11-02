@@ -3,7 +3,7 @@ from os import system
 from time import sleep
 from sys import argv as args
 from threading import Thread
-
+from datetime import datetime as dt
 
 def launch(server: str) -> None:
     system(f"python3 -u ircbot.py {server}")
@@ -30,15 +30,15 @@ def start(server):
 
 
 if __name__ == "__main__":
-    print("[LOG][CORE] Begin initialization")
+    print(f"[LOG][CORE][{dt.now()}] Begin initialization")
     for server in servers:
         threads[server] = start(server)
-    print("[LOG][CORE] Started all instances. Idling...")
+    print(f"[LOG][CORE][{dt.now()}] Started all instances. Idling...")
     while 1:
         sleep(60)
-        print("[LOG][CORE] Running a checkup on all running instances")
+        print(f"[LOG][CORE][{dt.now()}] Running a checkup on all running instances")
         for server in threads:
             t = threads[server]
             if is_dead(t):
-                print(f"[LOG][CORE] The thread for {server} died, restarting it...")
+                print(f"[WARN][CORE][{dt.now()}] The thread for {server} died, restarting it...")
                 threads[server] = start(server)
