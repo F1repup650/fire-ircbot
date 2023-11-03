@@ -89,6 +89,7 @@ if __name__ == "__main__":
     np = re.compile(
         npbase.replace("MAX", f"{nicklen}")
     )
+    queue = []
     log(f"Start init for {server}")
 npallowed = ["FireBitBot"]
 ESCAPE_SEQUENCE_RE = re.compile(
@@ -119,7 +120,14 @@ def send(command: str, encoding: str = "UTF-8") -> int:
 
 
 def recv() -> bytes:
-    return bytes(ircsock.recv(2048).strip(b"\r\n"))
+    global queue
+    if queue:
+        return bytes(queue.pop(0))
+    data = bytes(ircsock.recv(2048).strip(b"\r\n"))
+    if b'\r\n' in data:
+        queue.extend(data.split(b'\r\n'))
+        return bytes(queue.pop(0))
+    return data
 
 
 def ping(ircmsg: str) -> int:
@@ -206,7 +214,7 @@ def joinserver():
                 botnick = f"{botnick}{r.randint(0,1000)}"
                 send(f"NICK {botnick}\n")
                 log(f"botnick is now {botnick}")
-            if ircmsg.find("PING :") != -1:
+            if ircmsg.startswith("PING "):
                 # pong = "PONG :" + input("Ping?:") + "\n"
                 # pong = pong.replace("\\\\", "\\")
                 ping(ircmsg)
@@ -247,8 +255,8 @@ def joinchan(chan: str, origin: str, chanList: dict, lock: bool = True):
         ircmsg = recv().decode()
         if ircmsg != "":
             print(bytes(ircmsg).lazy_decode())
-            if ircmsg.find("PING :") != -1:
-                ping()
+            if ircmsg.startswith("PING "):
+                ping(ircmsg)
             if len(ircmsg.split("\x01")) == 3:
                 CTCPHandler(ircmsg, isRaw=True)
         if ircmsg.find("No such channel") != -1:
