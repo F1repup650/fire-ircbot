@@ -303,7 +303,7 @@ def main():
             else:
                 print(raw.lazy_decode(), sep="\n")
                 if ircmsg.find("PRIVMSG") != -1:
-                    # Format of ":[Nick]!~[hostname]@[IP Address] PRIVMSG [channel] :[message]”
+                    # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
                     name = ircmsg.split("!", 1)[0][1:]
                     helpErr = False
                     if (name.startswith("saxjax") and server == "efnet") or (
@@ -487,12 +487,12 @@ def main():
                         sendmsg(f"[QUOTE] {sel}", chan)
                         mm.close()
                 else:
-                    if ircmsg.find("PING") != -1:
+                    if ircmsg.startswith("PING "):
                         ping(ircmsg)
                     if ircmsg.find("Closing Link") != -1:
                         exit("I got killed :'(")
                     if ircmsg.find("ERROR :Ping timeout: ") != -1:
-                        exit("Ping timeout]")
+                        exit("Ping timeout")
     except KeyboardInterrupt:
         pass
 
