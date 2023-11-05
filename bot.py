@@ -30,10 +30,16 @@ class bot:
         log(f"Start init for {server}", self.server)
 
     def send(self, command: str) -> int:
-        pass
+        return ircsock.send(bytes(command))
 
     def recv(self) -> bytes:
-        pass
+        if self.queue:
+            return bytes(self.queue.pop(0))
+        data = bytes(self.socket.recv(2048).strip(b"\r\n"))
+        if b"\r\n" in data:
+            self.queue.extend(data.split(b"\r\n"))
+            return bytes(self.queue.pop(0))
+        return data
 
     def log(self, message: object) -> None:
         log(message, self.server)
