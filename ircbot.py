@@ -308,6 +308,8 @@ def main():
                     if len(name) > nicklen:
                         log(f"Name too long ({len(name)} > {nicklen})", server)
                         continue
+                    elif chan == botnick:
+                        pass # TODO: Somehow combine into other checks
                     elif chan not in channels:
                         log(f"Channel not in channels ({chan} not in {channels})", server)
                         continue
