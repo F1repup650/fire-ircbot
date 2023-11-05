@@ -315,6 +315,12 @@ def main():
                         channels[chan] += 1
                     if mfind(
                         message.lower(),
+                        ["!botlist"],
+                        False,
+                    ):
+                        sendmsg(f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins are {adminnames}.", chan)
+                    if mfind(
+                        message.lower(),
                         [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
                         False,
                     ):
