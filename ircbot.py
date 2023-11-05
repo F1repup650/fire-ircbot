@@ -330,6 +330,8 @@ def main():
                         )
                     elif mfind(message, ["help"]):
                         if not helpErr:
+                            sendmsg("Command list needs rework", name)
+                            continue
                             sendmsg("List of commands:", name)
                             sendmsg(f'Current prefix is "{prefix}"', name)
                             sendmsg(f"{prefix}help - Sends this help list", name)
