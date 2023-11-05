@@ -257,7 +257,7 @@ def op(name, chan):
 
 def main():
     try:
-        global ircmsg, channels, e, gmode, prefix, rebt, gblrebt, lrebt, lgblrebt, blanks
+        global channels, e, gmode, prefix, rebt, gblrebt, lrebt, lgblrebt, blanks
         log("Starting connection..", server)
         joinserver()
         if "pass" in servers[server]:
@@ -266,19 +266,19 @@ def main():
         for chan in channels:
             joinchan(chan, "null", channels, False)
         while 1:
-            global ircmsg, gmode
+            global gmode
             raw = recv()
             ircmsg = raw.decode()
             if ircmsg == "":
                 exit("Probably a netsplit")
             else:
                 print(raw.lazy_decode(), sep="\n")
-                if ircmsg.find("PRIVMSG") != -1:
-                    try:
-                        ircmsg.split("PRIVMSG", 1)[1]
-                    except IndexError:
-                        log("Fake message recieved", server, "WARN")
-                        continue
+                action = "Unknown"
+                try:
+                    action = ircmsg.split(" ", 2)[1].strip()
+                except IndexError:
+                    pass
+                if action == "PRIVMSG":
                     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
                     name = ircmsg.split("!", 1)[0][1:]
                     helpErr = False
