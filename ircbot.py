@@ -357,7 +357,7 @@ def main():
                         op(name, chan)
                     elif mfind(message, ["ping"]):
                         sendmsg(
-                            f"{name} pong",
+                            f"{name}: pong",
                             chan,
                         )
                     elif mfind(message, ["amIAdmin"]):
