@@ -11,7 +11,7 @@ def log(
     else:
         stream = stdout
     if time == "now":
-        dt.now()
+        time = dt.now()
     if not "\n" in message:
         print(f"[{level}][{origin}][{time}] {message}")
     else:
