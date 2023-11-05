@@ -274,6 +274,11 @@ def main():
             else:
                 print(raw.lazy_decode(), sep="\n")
                 if ircmsg.find("PRIVMSG") != -1:
+                    try:
+                        ircmsg.split("PRIVMSG", 1)[1]
+                    except IndexError:
+                        log("Fake message recieved", server, "WARN")
+                        continue
                     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
                     name = ircmsg.split("!", 1)[0][1:]
                     helpErr = False
