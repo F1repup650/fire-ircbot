@@ -416,11 +416,8 @@ def main():
                         mfind(message, [f"reboot {rebt}", f"reboot {gblrebt}"], False)
                         and name.lower() in adminnames
                     ):
-                        for i in channels:
-                            sendmsg("Rebooting...", i)
                         send("QUIT :Rebooting\n")
-                        __import__("os").system(f"python3 -u ircbot.py {server}")
-                        exit("Inner layer exited or crashed")
+                        exit("Reboot")
                     elif (
                         name.lower() in adminnames
                         and message.rstrip().lower() == exitcode
