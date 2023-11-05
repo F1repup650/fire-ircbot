@@ -22,7 +22,7 @@ servers = {
         "interval": 200,
         "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0},
-        "admins": ["firepup", "h|thelounge"],
+        "admins": ["firepup", "h|thelounge", "firepup|lounge"],
     },
     "efnet": {
         "address": "irc.mzima.net",
