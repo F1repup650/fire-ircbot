@@ -328,6 +328,12 @@ def main():
                         sendmsg(f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {adminnames}.", chan)
                     if mfind(
                         message.lower(),
+                        ["bugs bugs bugs"],
+                        False,
+                    ):
+                        sendmsg(f"\x01ACTION realizes {name} looks like a bug, and squashes {name}\x01", chan)
+                    if mfind(
+                        message.lower(),
                         [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
                         False,
                     ):
