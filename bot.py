@@ -3,7 +3,7 @@ from socket import socket, AF_INET, SOCK_STREAM
 from overrides import bytes, bbytes
 from logs import log
 import re
-
+from typing import NoReturn
 
 class bot:
     def __init__(server: str):
@@ -44,6 +44,6 @@ class bot:
     def log(self, message: object) -> None:
         log(message, self.server)
 
-    def exit(message: object) -> None:
+    def exit(message: object) -> NoReturn:
         log(message, self.server, "EXIT")
         exit(1)
