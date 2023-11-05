@@ -4,6 +4,8 @@ from time import sleep
 from sys import argv as args
 from threading import Thread
 from datetime import datetime as dt
+from logs import log
+
 
 def launch(server: str) -> None:
     system(f"python3 -u ircbot.py {server}")
@@ -17,12 +19,12 @@ servers = [
 ]
 
 
-def is_dead(thr):
+def is_dead(thr: Thread) -> bool:
     thr.join(timeout=0)
     return not thr.is_alive()
 
 
-def start(server):
+def start(server: str) -> Thread:
     t = Thread(target=launch, args=(server,))
     t.daemon = True
     t.start()
@@ -30,15 +32,15 @@ def start(server):
 
 
 if __name__ == "__main__":
-    print(f"[LOG][CORE][{dt.now()}] Begin initialization")
+    log("Begin initialization", "CORE")
     for server in servers:
         threads[server] = start(server)
-    print(f"[LOG][CORE][{dt.now()}] Started all instances. Idling...")
+    log("Started all instances. Idling...", "CORE")
     while 1:
         sleep(60)
-        print(f"[LOG][CORE][{dt.now()}] Running a checkup on all running instances")
+        log("Running a checkup on all running instances", "CORE")
         for server in threads:
             t = threads[server]
             if is_dead(t):
-                print(f"[WARN][CORE][{dt.now()}] The thread for {server} died, restarting it...")
+                log(f"The thread for {server} died, restarting it...", "CORE", "WARN")
                 threads[server] = start(server)
