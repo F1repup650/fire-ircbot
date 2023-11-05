@@ -442,19 +442,6 @@ def main():
                     ):
                         send("QUIT :Rebooting\n")
                         exit("Reboot")
-                    elif (
-                        name.lower() in adminnames
-                        and message.rstrip().lower() == exitcode
-                    ):
-                        sendmsg("oh...okay. :'(", chan)
-                        for i in channels:
-                            # print(f'[LOG][{server}] i="{i}" vs chan="{chan}"')
-                            if i != chan.strip():
-                                sendmsg("goodbye... :'(", i)
-                        send("QUIT :Shutting down\n", "UTF-8")
-                        log("QUIT", server)
-                        exit("goodbye :'(")
-                        # raise EOFError
                     elif sucheck(message):
                         if name.lower() in adminnames:
                             sendmsg(
