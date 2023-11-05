@@ -320,7 +320,7 @@ def main():
                         ["!botlist"],
                         False,
                     ):
-                        sendmsg(f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins are {adminnames}.", chan)
+                        sendmsg(f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {adminnames}.", chan)
                     if mfind(
                         message.lower(),
                         [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
