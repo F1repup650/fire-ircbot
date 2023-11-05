@@ -355,6 +355,11 @@ def main():
                         mfind(message, ["op me"], False) and name.lower() in adminnames
                     ):
                         op(name, chan)
+                    elif mfind(message, ["ping"]):
+                        sendmsg(
+                            f"{name} pong",
+                            chan,
+                        )
                     elif mfind(message, ["amIAdmin"]):
                         sendmsg(
                             f"{name.lower()} in {adminnames} == {name.lower() in adminnames}",
