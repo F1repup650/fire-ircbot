@@ -38,6 +38,7 @@ servers = {
 }
 server = args[1] if args else "UNSTABLE BOT MODE"
 
+
 def exit(message: object) -> None:
     log(message, server, "EXIT")
     xit(1)
@@ -127,7 +128,10 @@ def notice(msg, target, silent: bool = False):
     if not silent:
         log(f"Sending {bytes(msg).lazy_decode()} to {target} (NOTICE)", server)
     send(f"NOTICE {target} :{msg}\n")
+
+
 "{fg"
+
 
 def CTCPHandler(msg: str, sender: str = "", isRaw: bool = False):
     if isRaw:
@@ -304,7 +308,7 @@ def main():
                     chan = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
                     log(
                         f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}"',
-                        server
+                        server,
                     )
                     if "goat" in name.lower() and gmode == True:
                         log("GOAT DETECTED", server)
@@ -314,9 +318,12 @@ def main():
                         log(f"Name too long ({len(name)} > {nicklen})", server)
                         continue
                     elif chan == botnick:
-                        pass # TODO: Somehow combine into other checks
+                        pass  # TODO: Somehow combine into other checks
                     elif chan not in channels:
-                        log(f"Channel not in channels ({chan} not in {channels})", server)
+                        log(
+                            f"Channel not in channels ({chan} not in {channels})",
+                            server,
+                        )
                         continue
                     else:
                         channels[chan] += 1
@@ -325,13 +332,19 @@ def main():
                         ["!botlist"],
                         False,
                     ):
-                        sendmsg(f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {adminnames}.", chan)
+                        sendmsg(
+                            f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {adminnames}.",
+                            chan,
+                        )
                     if mfind(
                         message.lower(),
                         ["bugs bugs bugs"],
                         False,
                     ):
-                        sendmsg(f"\x01ACTION realizes {name} looks like a bug, and squashes {name}\x01", chan)
+                        sendmsg(
+                            f"\x01ACTION realizes {name} looks like a bug, and squashes {name}\x01",
+                            chan,
+                        )
                     if mfind(
                         message.lower(),
                         [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
