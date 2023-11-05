@@ -32,7 +32,7 @@ servers = {
     "replirc": {
         "address": "localhost",
         "pass": env["replirc_pass"],
-        "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0},
+        "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0},
         "admins": ["firepup", "firepup|lounge", "h|tl"],
     },
 }
