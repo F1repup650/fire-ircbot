@@ -34,16 +34,17 @@ class bot:
         self.sock.connect((self.address, self.port))
         self.send(f"USER {self.nick} {self.nick} {self.nick} {self.nick}\n")
         self.send(f"NICK {self.nick}\n")
+        ircmsg = ""
         while (
-            ircmsg.find("MODE " + self.nick) == -1
-            and ircmsg.find("PRIVMSG " + self.nick) == -1
+            ircmsg.find(f"MODE {self.nick}") == -1
+            and ircmsg.find(f"PRIVMSG {self.nick}") == -1
         ):
             ircmsg = self.recv().decode()
             if ircmsg != "":
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.find("NICKLEN=") != -1:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
-                    self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
+                    self.np = re.compile(npbase.replace("MAX", f"{self.nicklen}"))
                     self.log(f"NICKLEN set to {nicklen}")
                 elif ircmsg.find("Nickname") != -1:
                     self.log("Nickname in use", "WARN")
@@ -80,22 +81,27 @@ class bot:
         while True:
             ircmsg = self.recv().decode()
             if ircmsg != "":
+                code = 0
+                try:
+                    code = int(ircmsg.split(" ", 2)[1].strip())
+                except (IndexError, ValueError):
+                    pass
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.startswith("PING "):
                     ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
                     CTCPHandler(ircmsg, isRaw=True)
-                elif ircmsg.find("No such channel") != -1:
+                elif code == 403:
                     self.log(f"Joining {chan} failed", "WARN")
                     if origin != "null":
                         sendmsg(f"{chan} is an invalid channel", origin)
                     break
-                elif ircmsg.find("Cannot join channel (+i)") != -1:
+                elif code == 473:
                     self.log(f"Joining {chan} failed (Private)", "WARN")
                     if origin != "null":
                         sendmsg(f"Permission denied to channel {chan}", origin)
                     break
-                elif ircmsg.find("End of") != -1:
+                elif code == 366:
                     log(f"Joining {chan} succeeded", server)
                     if origin != "null":
                         sendmsg(f"Joined {chan}", origin)
