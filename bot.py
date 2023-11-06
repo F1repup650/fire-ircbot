@@ -101,6 +101,10 @@ class bot:
                     if origin != "null":
                         sendmsg(f"{chan} is +i, and I'm not invited.", origin)
                     break
+                elif code == 520:
+                    self.log(f"Joining {chan} failed (+O)", "WARN")
+                    if origin != "null":
+                        sendmsg(f"{chan} is +O, and I'm not an operator.", origin)
                 elif code == 366:
                     log(f"Joining {chan} succeeded", server)
                     if origin != "null":
