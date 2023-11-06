@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from pythonlangutil.overload import Overload, signature
 from datetime import datetime as dt
 from logs import log
+from subprocess import run, PIPE
 
 load_dotenv()
 
@@ -358,6 +359,12 @@ def main():
                     elif mfind(message, ["ping"]):
                         sendmsg(
                             f"{name}: pong",
+                            chan,
+                        )
+                    elif mfind(message, ["uptime"]):
+                        uptime = run(["uptime","-p"], stdout=PIPE).stdout.decode().strip()
+                        sendmsg(
+                            f"Uptime: {uptime}",
                             chan,
                         )
                     elif mfind(message, ["amIAdmin"]):
