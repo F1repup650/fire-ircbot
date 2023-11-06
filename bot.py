@@ -135,32 +135,32 @@ class bot:
         if isRaw:
             sender = msg.split("!", 1)[0][1:]
             message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-        CTCP = msg.split("\x01")[1].split(" ", 1)[0]
-        self.log(f"Responding to CTCP {CTCP} from {sender}")
-        if CTCP == "VERSION":
+        kind = msg.split("\x01")[1].split(" ", 1)[0]
+        self.log(f"Responding to CTCP {kind} from {sender}")
+        if kind == "VERSION":
             self.notice(
                 f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
                 sender,
                 True,
             )
             return True
-        elif CTCP == "USERINFO":
+        elif kind == "USERINFO":
             self.notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender, True)
             return True
-        elif CTCP == "SOURCE":
+        elif kind == "SOURCE":
             self.notice(
                 "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01",
                 sender,
                 True,
             )
             return True
-        elif CTCP == "FINGER":
+        elif kind == "FINGER":
             self.notice("\x01FINGER Firepup's bot\x01", sender, True)
             return True
-        elif CTCP == "CLIENTINFO":
+        elif kind == "CLIENTINFO":
             self.notice(
                 "\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True
             )
             return True
-        self.log(f"Unknown CTCP {CTCP}")
+        self.log(f"Unknown CTCP {kind}")
         return False
