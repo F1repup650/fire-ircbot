@@ -8,7 +8,7 @@ from config import npbase, servers, __version__
 
 
 class bot:
-    def __init__(server: str):
+    def __init__(self, server: str):
         self.gmode = False
         self.server = server
         self.nicklen = 30
@@ -27,7 +27,7 @@ class bot:
         self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
         self.queue = []
         self.sock = socket(AF_INET, SOCK_STREAM)
-        log(f"Start init for {server}", self.server)
+        self.log(f"Start init for {server}")
 
     def connect(self) -> None:
         self.log(f"Joining {server}...")
