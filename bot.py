@@ -6,6 +6,7 @@ import re
 from typing import NoReturn
 from config import npbase, servers, __version__
 
+
 class bot:
     def __init__(server: str):
         self.gmode = False
@@ -35,7 +36,8 @@ class bot:
         self.send(f"USER {botnick} {botnick} {botnick} {botnick}\n")
         self.send(f"NICK {botnick}\n")
         while (
-            ircmsg.find("MODE " + botnick) == -1 and ircmsg.find("PRIVMSG " + botnick) == -1
+            ircmsg.find("MODE " + botnick) == -1
+            and ircmsg.find("PRIVMSG " + botnick) == -1
         ):
             ircmsg = self.recv().decode()
             if ircmsg != "":
