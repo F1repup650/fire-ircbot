@@ -60,6 +60,48 @@ class bot:
                 self.exit("Lost connection to the server")
         self.log(f"Joined {server} successfully!")
 
+    def join(self, chan: str) -> None:
+        log(f"Joining {chan}...", server)
+        chan = chan.replace(" ", "")
+        if "," in chan:
+            chans = chan.split(",")
+            for subchan in chans:
+                joinchan(subchan, origin, chanList)
+            return
+        if chan.startswith("0") or (chan == "#main" and lock):
+            if origin != "null":
+                sendmsg(f"Refusing to join channel {chan} (protected)", origin)
+            return
+        if chan in channels and lock:
+            if origin != "null":
+                sendmsg(f"I'm already in {chan}.", origin)
+            return
+        send(f"JOIN {chan}\n")
+        while True:
+            ircmsg = self.recv().decode()
+            if ircmsg != "":
+                print(bytes(ircmsg).lazy_decode())
+                if ircmsg.startswith("PING "):
+                    ping(ircmsg)
+                elif len(ircmsg.split("\x01")) == 3:
+                    CTCPHandler(ircmsg, isRaw=True)
+                elif ircmsg.find("No such channel") != -1:
+                    self.log(f"Joining {chan} failed", "WARN")
+                    if origin != "null":
+                        sendmsg(f"{chan} is an invalid channel", origin)
+                    break
+                elif ircmsg.find("Cannot join channel (+i)") != -1:
+                    self.log(f"Joining {chan} failed (Private)", "WARN")
+                    if origin != "null":
+                        sendmsg(f"Permission denied to channel {chan}", origin)
+                    break
+                elif ircmsg.find("End of") != -1:
+                    log(f"Joining {chan} succeeded", server)
+                    if origin != "null":
+                        sendmsg(f"Joined {chan}", origin)
+                    self.channels[chan] = 0
+                    break
+
     def send(self, command: str) -> int:
         return ircsock.send(bytes(command))
 
