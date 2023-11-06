@@ -148,7 +148,9 @@ class bot:
             notice("\x01FINGER Firepup's bot\x01", sender, True)
             return True
         elif CTCP == "CLIENTINFO":
-            notice("\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True)
+            notice(
+                "\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True
+            )
             return True
         log(f"Unknown CTCP {CTCP}", server)
         return False
