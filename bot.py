@@ -61,23 +61,23 @@ class bot:
                 self.exit("Lost connection to the server")
         self.log(f"Joined {server} successfully!")
 
-    def join(self, chan: str) -> None:
-        log(f"Joining {chan}...", server)
+    def join(self, chan: str, origin: str) -> None:
+        self.log(f"Joining {chan}...")
         chan = chan.replace(" ", "")
         if "," in chan:
             chans = chan.split(",")
             for subchan in chans:
-                joinchan(subchan, origin, chanList)
+                self.join(subchan, origin)
             return
         if chan.startswith("0") or (chan == "#main" and lock):
             if origin != "null":
-                sendmsg(f"Refusing to join channel {chan} (protected)", origin)
+                self.sendmsg(f"Refusing to join channel {chan} (protected)", origin)
             return
         if chan in channels and lock:
             if origin != "null":
-                sendmsg(f"I'm already in {chan}.", origin)
+                self.sendmsg(f"I'm already in {chan}.", origin)
             return
-        send(f"JOIN {chan}\n")
+        self.send(f"JOIN {chan}\n")
         while True:
             ircmsg = self.recv().decode()
             if ircmsg != "":
@@ -90,7 +90,7 @@ class bot:
                 if ircmsg.startswith("PING "):
                     self.ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
-                    CTCPHandler(ircmsg, isRaw=True)
+                    self.CTCP(ircmsg, isRaw=True)
                 elif code == 403:
                     self.log(f"Joining {chan} failed", "WARN")
                     if origin != "null":
@@ -99,21 +99,21 @@ class bot:
                 elif code == 473:
                     self.log(f"Joining {chan} failed (+i)", "WARN")
                     if origin != "null":
-                        sendmsg(f"{chan} is +i, and I'm not invited.", origin)
+                        self.sendmsg(f"{chan} is +i, and I'm not invited.", origin)
                     break
                 elif code == 520:
                     self.log(f"Joining {chan} failed (+O)", "WARN")
                     if origin != "null":
-                        sendmsg(f"{chan} is +O, and I'm not an operator.", origin)
+                        self.sendmsg(f"{chan} is +O, and I'm not an operator.", origin)
                 elif code == 366:
                     log(f"Joining {chan} succeeded", server)
                     if origin != "null":
-                        sendmsg(f"Joined {chan}", origin)
+                        self.sendmsg(f"Joined {chan}", origin)
                     self.channels[chan] = 0
                     break
 
     def send(self, command: str) -> int:
-        return ircsock.send(bytes(command))
+        return self.sock.send(bytes(command))
 
     def recv(self) -> bytes:
         if self.queue:
@@ -127,7 +127,7 @@ class bot:
     def log(self, message: object, level: str = "LOG") -> None:
         log(message, self.server)
 
-    def exit(message: object) -> NoReturn:
+    def exit(self, message: object) -> NoReturn:
         log(message, self.server, "EXIT")
         exit(1)
 
