@@ -46,16 +46,16 @@ class bot:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
                     self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
                     self.log(f"NICKLEN set to {nicklen}")
-                if ircmsg.find("Nickname") != -1:
+                elif ircmsg.find("Nickname") != -1:
                     self.warn("Nickname in use")
                     self.botnick = f"{botnick}{r.randint(0,1000)}"
                     self.send(f"NICK {botnick}\n")
                     self.log(f"botnick is now {botnick}")
-                if ircmsg.startswith("PING "):
+                elif ircmsg.startswith("PING "):
                     self.ping(ircmsg)
-                if len(ircmsg.split("\x01")) == 3:
+                elif len(ircmsg.split("\x01")) == 3:
                     self.CTCPHandler(ircmsg, isRaw=True)
-                if ircmsg.find("Closing Link") != -1:
+                elif ircmsg.find("Closing Link") != -1:
                     self.exit("Closing Link")
             else:
                 self.exit("Lost connection to the server")
@@ -75,6 +75,9 @@ class bot:
 
     def log(self, message: object) -> None:
         log(message, self.server)
+
+    def warn(self, message: object) -> None:
+        log(message, self.server, "WARN")
 
     def exit(message: object) -> NoReturn:
         log(message, self.server, "EXIT")
