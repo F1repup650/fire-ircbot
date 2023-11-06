@@ -47,7 +47,7 @@ class bot:
                     self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
                     self.log(f"NICKLEN set to {nicklen}")
                 elif ircmsg.find("Nickname") != -1:
-                    self.warn("Nickname in use")
+                    self.log("Nickname in use", "WARN")
                     self.botnick = f"{botnick}{r.randint(0,1000)}"
                     self.send(f"NICK {botnick}\n")
                     self.log(f"botnick is now {botnick}")
@@ -73,11 +73,8 @@ class bot:
             return bytes(self.queue.pop(0))
         return data
 
-    def log(self, message: object) -> None:
+    def log(self, message: object, level: str = "LOG") -> None:
         log(message, self.server)
-
-    def warn(self, message: object) -> None:
-        log(message, self.server, "WARN")
 
     def exit(message: object) -> NoReturn:
         log(message, self.server, "EXIT")
