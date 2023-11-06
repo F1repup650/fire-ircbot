@@ -55,12 +55,8 @@ if __name__ == "__main__":
     prefix = "."
     rebt = "fire"
     gblrebt = "all"
-    lrebt = 7 + len(rebt)
-    lgblrebt = 7 + len(gblrebt)
     adminnames = servers[server]["admins"]
     exitcode = f"bye {botnick.lower()}"
-    ircmsg = ""
-    blanks = 0
     npbase = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|^]{1,MAX} (is listening|last listened) to: \x02.+ - .*\x02 \([0-9]+ plays\)( \[.*\])?"
     np = re.compile(npbase.replace("MAX", f"{nicklen}"))
     queue = []
@@ -262,7 +258,7 @@ def op(name, chan):
 
 def main():
     try:
-        global channels, e, gmode, prefix, rebt, gblrebt, lrebt, lgblrebt, blanks
+        global channels, e, gmode, prefix, rebt, gblrebt
         log("Starting connection..", server)
         joinserver()
         if "pass" in servers[server]:

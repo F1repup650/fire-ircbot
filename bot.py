@@ -22,8 +22,6 @@ class bot:
         self.prefix = "."
         self.rebt = "fire"
         self.gblrebt = "all"
-        self.lrebt = 7 + len(rebt)
-        self.lgblrebt = 7 + len(gblrebt)
         self.adminnames = servers[server]["admins"]
         self.exitcode = f"bye {self.nick.lower()}"
         self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
