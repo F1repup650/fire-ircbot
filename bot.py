@@ -120,3 +120,35 @@ class bot:
     def exit(message: object) -> NoReturn:
         log(message, self.server, "EXIT")
         exit(1)
+
+    def CTCPHandler(self, msg: str, sender: str = "", isRaw: bool = False) -> bool:
+        if isRaw:
+            sender = msg.split("!", 1)[0][1:]
+            message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+        CTCP = msg.split("\x01")[1].split(" ", 1)[0]
+        log(f"Responding to CTCP {CTCP} from {sender}", server)
+        if CTCP == "VERSION":
+            notice(
+                f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
+                sender,
+                True,
+            )
+            return True
+        elif CTCP == "USERINFO":
+            notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender, True)
+            return True
+        elif CTCP == "SOURCE":
+            notice(
+                "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01",
+                sender,
+                True,
+            )
+            return True
+        elif CTCP == "FINGER":
+            notice("\x01FINGER Firepup's bot\x01", sender, True)
+            return True
+        elif CTCP == "CLIENTINFO":
+            notice("\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True)
+            return True
+        log(f"Unknown CTCP {CTCP}", server)
+        return False
