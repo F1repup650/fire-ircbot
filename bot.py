@@ -27,12 +27,12 @@ class bot:
         self.exitcode = f"bye {botnick.lower()}"
         self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
         self.queue = []
-        self.socket = socket(AF_INET, SOCK_STREAM)
+        self.sock = socket(AF_INET, SOCK_STREAM)
         log(f"Start init for {server}", self.server)
 
     def connect(self) -> None:
         self.log(f"Joining {server}...")
-        self.socket.connect((self.address, self.port))
+        self.sock.connect((self.address, self.port))
         self.send(f"USER {botnick} {botnick} {botnick} {botnick}\n")
         self.send(f"NICK {botnick}\n")
         while (
@@ -67,7 +67,7 @@ class bot:
     def recv(self) -> bytes:
         if self.queue:
             return bytes(self.queue.pop(0))
-        data = bytes(self.socket.recv(2048).strip(b"\r\n"))
+        data = bytes(self.sock.recv(2048).strip(b"\r\n"))
         if b"\r\n" in data:
             self.queue.extend(data.split(b"\r\n"))
             return bytes(self.queue.pop(0))
