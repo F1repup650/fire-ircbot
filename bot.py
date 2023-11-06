@@ -88,7 +88,7 @@ class bot:
                     pass
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.startswith("PING "):
-                    ping(ircmsg)
+                    self.ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
                     CTCPHandler(ircmsg, isRaw=True)
                 elif code == 403:
@@ -97,9 +97,9 @@ class bot:
                         sendmsg(f"{chan} is an invalid channel", origin)
                     break
                 elif code == 473:
-                    self.log(f"Joining {chan} failed (Private)", "WARN")
+                    self.log(f"Joining {chan} failed (+i)", "WARN")
                     if origin != "null":
-                        sendmsg(f"Permission denied to channel {chan}", origin)
+                        sendmsg(f"{chan} is +i, and I'm not invited.", origin)
                     break
                 elif code == 366:
                     log(f"Joining {chan} succeeded", server)
@@ -127,36 +127,36 @@ class bot:
         log(message, self.server, "EXIT")
         exit(1)
 
-    def CTCPHandler(self, msg: str, sender: str = "", isRaw: bool = False) -> bool:
+    def CTCP(self, msg: str, sender: str = "", isRaw: bool = False) -> bool:
         if isRaw:
             sender = msg.split("!", 1)[0][1:]
             message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
         CTCP = msg.split("\x01")[1].split(" ", 1)[0]
-        log(f"Responding to CTCP {CTCP} from {sender}", server)
+        self.log(f"Responding to CTCP {CTCP} from {sender}")
         if CTCP == "VERSION":
-            notice(
+            self.notice(
                 f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
                 sender,
                 True,
             )
             return True
         elif CTCP == "USERINFO":
-            notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender, True)
+            self.notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender, True)
             return True
         elif CTCP == "SOURCE":
-            notice(
+            self.notice(
                 "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01",
                 sender,
                 True,
             )
             return True
         elif CTCP == "FINGER":
-            notice("\x01FINGER Firepup's bot\x01", sender, True)
+            self.notice("\x01FINGER Firepup's bot\x01", sender, True)
             return True
         elif CTCP == "CLIENTINFO":
-            notice(
+            self.notice(
                 "\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True
             )
             return True
-        log(f"Unknown CTCP {CTCP}", server)
+        self.log(f"Unknown CTCP {CTCP}")
         return False
