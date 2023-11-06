@@ -5,6 +5,7 @@ from logs import log
 import re
 from typing import NoReturn
 
+
 class bot:
     def __init__(server: str):
         self.gmode = False
