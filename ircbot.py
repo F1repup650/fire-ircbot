@@ -451,7 +451,10 @@ def main():
                     ):
                         sendraw(message.split(" ", 1)[1])
                     elif (
-                        mfind(message, [f"reboot {rebt}", f"reboot {gblrebt}"], False)
+                        (
+                            mfind(message, [f"reboot {rebt}", f"reboot {gblrebt}"], False)
+                            or mfind(message, ["restart", "reboot"])
+                        )
                         and name.lower() in adminnames
                     ):
                         send("QUIT :Rebooting\n")
