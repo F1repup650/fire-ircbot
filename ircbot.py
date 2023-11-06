@@ -362,7 +362,9 @@ def main():
                             chan,
                         )
                     elif mfind(message, ["uptime"]):
-                        uptime = run(["uptime","-p"], stdout=PIPE).stdout.decode().strip()
+                        uptime = (
+                            run(["uptime", "-p"], stdout=PIPE).stdout.decode().strip()
+                        )
                         sendmsg(
                             f"Uptime: {uptime}",
                             chan,
