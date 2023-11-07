@@ -1,6 +1,6 @@
-#TODO: Finish this
+from subprocess import run, PIPE
 
-def goat(bot, chan: str, name: str) -> None:
+def goat(bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
     bot.msg("Hello Goat", chan)
     if mfind(
@@ -8,85 +8,70 @@ def goat(bot, chan: str, name: str) -> None:
         ["!botlist"],
         False,
     ):
-        sendmsg(
+        bot.msg(
             f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {adminnames}.",
             chan,
         )
-    if mfind(
-        message.lower(),
-        ["bugs bugs bugs"],
-        False,
-    ):
-        sendmsg(
+def bugs(bot, chan: str, name: str, message: str) -> None:
+        bot.msg(
             f"\x01ACTION realizes {name} looks like a bug, and squashes {name}\x01",
             chan,
         )
-    if mfind(
-        message.lower(),
-        [f"hi {botnick.lower()}", f"hello {botnick.lower()}"],
-        False,
-    ):
-        sendmsg(f"Hello {name}!", chan)
-    elif (
-        mfind(message, ["op me"], False) and name.lower() in adminnames
-    ):
+def hi(bot, chan: str, name: str, message: str) -> None:
+        bot.msg(f"Hello {name}!", chan)
+def op(bot, chan: str, name: str, message: str) -> None:
         op(name, chan)
-    elif mfind(message, ["ping"]):
-        sendmsg(
+def ping(bot, chan: str, name: str, message: str) -> None:
+        bot.msg(
             f"{name}: pong",
             chan,
         )
-    elif mfind(message, ["uptime"]):
+def uptime(bot, chan: str, name: str, message: str) -> None:
         uptime = (
             run(["uptime", "-p"], stdout=PIPE).stdout.decode().strip()
         )
-        sendmsg(
+        bot.msg(
             f"Uptime: {uptime}",
             chan,
         )
-    elif mfind(message, ["amIAdmin"]):
-        sendmsg(
-            f"{name.lower()} in {adminnames} == {name.lower() in adminnames}",
+def isAdmin(bot, chan: str, name: str, message: str) -> None:
+        bot.msg(
+            f"{name.lower()} in {bot.adminnames} == {name.lower() in bot.adminnames}",
             chan,
         )
-    elif mfind(message, ["help"]):
+def help(bot, chan: str, name: str, message: str) -> None:
         if not helpErr:
-            sendmsg("Command list needs rework", name)
-            continue
-            sendmsg("List of commands:", name)
-            sendmsg(f'Current prefix is "{prefix}"', name)
-            sendmsg(f"{prefix}help - Sends this help list", name)
-            sendmsg(
-                f"{prefix}quote - Sends a random firepup quote", name
+            bot.msg("Command list needs rework", name)
+            return
+            bot.msg("List of commands:", name)
+            bot.msg(f'Current bot.prefix is "{bot.prefix}"', name)
+            bot.msg(f"{bot.prefix}help - Sends this help list", name)
+            bot.msg(
+                f"{bot.prefix}quote - Sends a random firepup quote", name
             )
-            sendmsg(
-                f"{prefix}(eightball,8ball,8b) [question]? - Asks the magic eightball a question",
+            bot.msg(
+                f"{bot.prefix}(eightball,8ball,8b) [question]? - Asks the magic eightball a question",
                 name,
             )
-            sendmsg(
+            bot.msg(
                 f"(hi,hello) {botnick} - The bot says hi to you", name
             )
-            if name.lower() in adminnames:
-                sendmsg(f"reboot {rebt} - Restarts the bot", name)
-                sendmsg(exitcode + " - Shuts down the bot", name)
-                sendmsg("op me - Makes the bot try to op you", name)
-                sendmsg(
-                    f"{prefix}join [channel(s)] - Joins the bot to the specified channel(s)",
+            if name.lower() in bot.adminnames:
+                bot.msg(f"reboot {bot.rebt} - Restarts the bot", name)
+                bot.msg("op me - Makes the bot try to op you", name)
+                bot.msg(
+                    f"{bot.prefix}join [channel(s)] - Joins the bot to the specified channel(s)",
                     name,
                 )
         else:
-            sendmsg("Sorry, I can't send help to bridged users.", chan)
-    elif name.lower() in adminnames and mfind(
-        message, ["goat.mode.activate"]
-    ):
-        log("GOAT DETECTION ACTIVATED", server)
-        gmode = True
-    elif name.lower() in adminnames and mfind(
-        message, ["goat.mode.deactivate"]
-    ):
-        log("GOAT DETECTION DEACTIVATED", server)
-        gmode = False
-    elif mfind(message, ["quote"]):
+            bot.msg("Sorry, I can't send help to bridged users.", chan)
+def goatOn(bot, chan: str, name: str, message: str) -> None:
+        bot.log("GOAT DETECTION ACTIVATED")
+        bot.gmode = True
+def goatOff(bot, chan: str, name: str, message: str) -> None:
+        bot.log("GOAT DETECTION DEACTIVATED")
+        bot.gmode = False
+def quote(bot, chan: str, name: str, message: str) -> None:
         r.seed()
         mm = open("mastermessages.txt", "r")
         q = mm.readlines()
@@ -96,12 +81,13 @@ def goat(bot, chan: str, name: str) -> None:
             .replace("\\n", "")
             .strip('"')
         )
-        sendmsg(sel, chan)
+        bot.msg(sel, chan)
         mm.close()
-    elif mfind(message, ["join "]) and name.lower() in adminnames:
-        newchan = message.split(" ")[1].strip()
-        channels = joinchan(newchan, chan, channels)
-    elif mfind(message, ["eightball", "8ball", "8b"]):
+def join(bot, chan: str, name: str, message: str) -> None:
+    if name.lower() in bot.adminnames:
+        newchan = message.split(" ", 1)[1].strip()
+        channels = bot.join(newchan, chan)
+def eball(bot, chan: str, name: str, message: str) -> None:
         if message.endswith("?"):
             eb = open("eightball.txt", "r")
             q = eb.readlines()
@@ -111,64 +97,37 @@ def goat(bot, chan: str, name: str) -> None:
                 .replace("\\n", "")
                 .strip('"')
             )
-            sendmsg(f"The magic eightball says: {sel}", chan)
+            bot.msg(f"The magic eightball says: {sel}", chan)
             eb.close()
         else:
-            sendmsg("Please pose a Yes or No question.", chan)
-    elif (
-        mfind(message, ["debug", "dbg"]) and name.lower() in adminnames
-    ):
-        sendmsg(f"[DEBUG] NICKLEN={nicklen}", chan)
-        sendmsg(f"[DEBUG] ADMINS={adminnames}", chan)
-        sendmsg(f"[DEBUG] CHANNELS={channels}", chan)
-    elif (
-        mfind(message, ["raw ", "cmd "]) and name.lower() in adminnames
-    ):
+            bot.msg("Please pose a Yes or No question.", chan)
+def debug(bot, chan: str, name: str, message: str) -> None:
+    if name.lower() in bot.adminnames:
+        bot.msg(f"[DEBUG] NICKLEN={nicklen}", chan)
+        bot.msg(f"[DEBUG] ADMINS={adminnames}", chan)
+        bot.msg(f"[DEBUG] CHANNELS={channels}", chan)
+def raw(bot, chan: str, name: str, message: str) -> None:
         sendraw(message.split(" ", 1)[1])
-    elif (
-        mfind(message, [f"reboot {rebt}", f"reboot {gblrebt}"], False)
-        or mfind(message, ["restart", "reboot"])
-    ) and name.lower() in adminnames:
+def reboot(bot, chan: str, name: str, message: str) -> None:
+    if name.lower() in bot.adminnames:
         send("QUIT :Rebooting\n")
         exit("Reboot")
-    elif sucheck(message):
-        if name.lower() in adminnames:
-            sendmsg(
+def sudo(bot, chan: str, name: str, message: str) -> None:
+        if name.lower() in bot.adminnames:
+            bot.msg(
                 "Error - system failure, contact system operator", chan
             )
         elif "bot" in name.lower():
-            log("lol, no.", server)
+            bot.log("lol, no.")
         else:
-            sendmsg("Access Denied", chan)
-    elif np.search(message) and name in npallowed:
+            bot.msg("Access Denied", chan)
+def nowplaying(bot, chan: str, name: str, message: str) -> None:
+    if name in bot.npallowed:
         x02 = "\x02"
-        sendmsg(
+        bot.msg(
             f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
             chan,
         )
-    elif len(message.split("\x01")) == 3:
-        if not CTCPHandler(message, name):
-            CTCP = message.split("\x01")[1]
-            if CTCP == "ACTION ducks":
-                sendmsg("\x01ACTION gets hit by a duck\x01", chan)
-            elif CTCP.startswith("ACTION ducks"):
-                sendmsg(
-                    f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01",
-                    chan,
-                )
-    if chan in channels and channels[chan] >= interval:
-        r.seed()
-        channels[chan] = 0
-        mm = open("mastermessages.txt", "r")
-        q = mm.readlines()
-        sel = decode_escapes(
-            str(r.sample(q, 1))
-            .strip("[]'")
-            .replace("\\n", "")
-            .strip('"')
-        )
-        sendmsg(f"[QUOTE] {sel}", chan)
-        mm.close()
 
 data = {"!botlist": {"prefix": False, "aliases": []}, "bugs bugs bugs": {"prefix": False, "aliases": []}, "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]}, }
 call = {"!botlist": botlist, "bugs bugs bugs": bugs, "hi $BOTNICK": hi, }

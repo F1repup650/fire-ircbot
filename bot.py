@@ -234,8 +234,37 @@ class bot:
                         for cmd in cmds.data:
                             for alias in cmds.data[cmd]["aliases"]:
                                 if mfind(message, alias.replace("$BOTNICK", self.nick), cmds.data[cmd]["prefix"]):
-                                    cmds.call[cmd](self, chan, name)
+                                    cmds.call[cmd](self, chan, name, message)
                                     handled = True
                                     break
-                        if handled:
-                            break
+                            if handled:
+                                break
+                    if not handled:
+                        for check in cmds.checks:
+                            if re.search(check.replace("$MAX", self.nicklen).replace("$BOTNICK", self.nick), message):
+                                cmds.call[check](self, chan, name, message)
+                                handled = True
+                                break
+                    if not handled and len(message.split("\x01")) == 3:
+                        if not self.CTCP(message, name):
+                            CTCP = message.split("\x01")[1]
+                            if CTCP == "ACTION ducks":
+                                self.msg("\x01ACTION gets hit by a duck\x01", chan)
+                            elif CTCP.startswith("ACTION ducks"):
+                                self.msg(
+                                    f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01",
+                                    chan,
+                                )
+                    if chan in self.channels and self.channels[chan] >= self.interval:
+                        r.seed()
+                        self.channels[chan] = 0
+                        mm = open("mastermessages.txt", "r")
+                        q = mm.readlines()
+                        sel = decode_escapes(
+                            str(r.sample(q, 1))
+                            .strip("[]'")
+                            .replace("\\n", "")
+                            .strip('"')
+                        )
+                        self.msg(f"[QUOTE] {sel}", chan)
+                        mm.close()
