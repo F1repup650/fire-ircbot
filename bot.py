@@ -303,3 +303,10 @@ class bot:
                         )
                         self.msg(f"[QUOTE] {sel}", chan)
                         mm.close()
+                else:
+                    if ircmsg.startswith("PING "):
+                        ping(ircmsg)
+                    elif ircmsg.startswith("ERROR :Closing Link"):
+                        exit("I got killed :'(")
+                    elif ircmsg.startswith("ERROR :Ping "):
+                        exit("Ping timeout")
