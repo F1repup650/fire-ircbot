@@ -1,18 +1,16 @@
 from subprocess import run, PIPE
-
+from config import npbase, su
 
 def goat(bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
     bot.msg("Hello Goat", chan)
-    if mfind(
-        message.lower(),
-        ["!botlist"],
-        False,
-    ):
-        bot.msg(
-            f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {adminnames}.",
-            chan,
-        )
+
+
+def botlist(bot, chan: str, name: str, message: str) -> None:
+    bot.msg(
+        f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {bot.adminnames}.",
+        chan,
+    )
 
 
 def bugs(bot, chan: str, name: str, message: str) -> None:
@@ -98,7 +96,7 @@ def quote(bot, chan: str, name: str, message: str) -> None:
 def join(bot, chan: str, name: str, message: str) -> None:
     if name.lower() in bot.adminnames:
         newchan = message.split(" ", 1)[1].strip()
-        channels = bot.join(newchan, chan)
+        bot.join(newchan, chan)
 
 
 def eball(bot, chan: str, name: str, message: str) -> None:
@@ -125,8 +123,8 @@ def raw(bot, chan: str, name: str, message: str) -> None:
 
 def reboot(bot, chan: str, name: str, message: str) -> None:
     if name.lower() in bot.adminnames:
-        send("QUIT :Rebooting\n")
-        exit("Reboot")
+        bot.send("QUIT :Rebooting\n")
+        bot.exit("Reboot")
 
 
 def sudo(bot, chan: str, name: str, message: str) -> None:
@@ -151,9 +149,39 @@ data = {
     "!botlist": {"prefix": False, "aliases": []},
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
+#   [npbase, su]
+    "restart": {"prefix": True, "aliases": ["reboot"]},
+    "uptime": {"prefix": True, "aliases": []},
+    "raw ": {"prefix": True, "aliases": ["cmd "]},
+    "debug": {"prefix": True, "aliases": ["dbg"]},
+    "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
+    "join ": {"prefix": True, "aliases": []},
+    "quote": {"prefix": True, "aliases": []},
+    "goat.mode.activate": {"prefix": True, "aliases": []},
+    "goat.mode.deactivate": {"prefix": True, "aliases": []},
+    "help": {"prefix": True, "aliases": []},
+    "amIAdmin": {"prefix": True, "aliases": []},
+    "ping": {"prefix": True, "aliases": []},
+    "op me": {"prefix": False, "aliases": []},
 }
+checks = [npbase, su]
 call = {
     "!botlist": botlist,
     "bugs bugs bugs": bugs,
     "hi $BOTNICK": hi,
+    npbase: nowplaying,
+    su: sudo,
+    "restart": reboot,
+    "uptime": uptime,
+    "raw ": raw,
+    "debug": debug,
+    "8ball": eball,
+    "join ": join,
+    "quote": quote,
+    "goat.mode.activate": goatOn,
+    "goat.mode.decativate": goatOff,
+    "help": help,
+    "amIAdmin": isAdmin,
+    "ping": ping,
+    "op me": op,
 }
