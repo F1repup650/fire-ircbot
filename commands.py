@@ -27,7 +27,7 @@ def hi(bot, chan: str, name: str, message: str) -> None:
 
 
 def op(bot, chan: str, name: str, message: str) -> None:
-    op(name, chan)
+    bot.op(name, chan)
 
 
 def ping(bot, chan: str, name: str, message: str) -> None:
