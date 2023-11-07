@@ -117,6 +117,11 @@ class bot:
                     self.channels[chan] = 0
                     break
 
+    def ping(self, ircmsg: str) -> int:
+        pong = f"PONG :{ircmsg.split('PING :')[1]}\n"
+        print(pong, end="")
+        return self.send(pong)
+
     def send(self, command: str) -> int:
         return self.sock.send(bytes(command))
 
@@ -204,7 +209,7 @@ class bot:
             raw = self.recv()
             ircmsg = raw.decode()
             if ircmsg == "":
-                exit("Probably a netsplit")
+                self.exit("Probably a netsplit")
             else:
                 print(raw.lazy_decode(), sep="\n")
                 action = "Unknown"
