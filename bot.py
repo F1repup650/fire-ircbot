@@ -59,7 +59,7 @@ class bot:
                 elif ircmsg.startswith("PING "):
                     self.ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
-                    self.CTCPHandler(ircmsg, isRaw=True)
+                    self.CTCP(ircmsg, isRaw=True)
                 elif ircmsg.find("Closing Link") != -1:
                     self.exit("Closing Link")
             else:
