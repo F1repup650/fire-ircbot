@@ -5,6 +5,7 @@ import random as r
 def goat(bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
     bot.msg("Hello Goat", chan)
+    bot.gmode = False
 
 
 def botlist(bot, chan: str, name: str, message: str) -> None:
@@ -95,7 +96,6 @@ def quote(bot, chan: str, name: str, message: str) -> None:
 
 
 def join(bot, chan: str, name: str, message: str) -> None:
-    if name.lower() in bot.adminnames:
         newchan = message.split(" ", 1)[1].strip()
         bot.join(newchan, chan)
 
@@ -112,7 +112,7 @@ def eball(bot, chan: str, name: str, message: str) -> None:
 
 
 def debug(bot, chan: str, name: str, message: str) -> None:
-    if name.lower() in bot.adminnames:
+        bot.msg(f"[DEBUG] VERSION={bot.__version__}", chan)
         bot.msg(f"[DEBUG] NICKLEN={bot.nicklen}", chan)
         bot.msg(f"[DEBUG] ADMINS={bot.adminnames}", chan)
         bot.msg(f"[DEBUG] CHANNELS={bot.channels}", chan)
@@ -123,7 +123,6 @@ def raw(bot, chan: str, name: str, message: str) -> None:
 
 
 def reboot(bot, chan: str, name: str, message: str) -> None:
-    if name.lower() in bot.adminnames:
         bot.send("QUIT :Rebooting\n")
         bot.exit("Reboot")
 
@@ -151,19 +150,19 @@ data = {
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
 #   [npbase, su]
-    "restart": {"prefix": True, "aliases": ["reboot"]},
+    "restart": {"prefix": True, "aliases": ["reboot"], "admin": True},
     "uptime": {"prefix": True, "aliases": []},
-    "raw ": {"prefix": True, "aliases": ["cmd "]},
-    "debug": {"prefix": True, "aliases": ["dbg"]},
+    "raw ": {"prefix": True, "aliases": ["cmd "], "admin": True},
+    "debug": {"prefix": True, "aliases": ["dbg"], "admin": True},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
-    "join ": {"prefix": True, "aliases": []},
+    "join ": {"prefix": True, "aliases": [], "admin": True},
     "quote": {"prefix": True, "aliases": ["q"]},
-    "goat.mode.activate": {"prefix": True, "aliases": []},
-    "goat.mode.deactivate": {"prefix": True, "aliases": []},
+    "goat.mode.activate": {"prefix": True, "aliases": [], "admin": True},
+    "goat.mode.deactivate": {"prefix": True, "aliases": [], "admin": True},
     "help": {"prefix": True, "aliases": []},
     "amIAdmin": {"prefix": True, "aliases": []},
     "ping": {"prefix": True, "aliases": []},
-    "op me": {"prefix": False, "aliases": []},
+    "op me": {"prefix": False, "aliases": [], "admin": True},
 }
 checks = [npbase, su]
 call = {

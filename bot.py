@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 from socket import socket, AF_INET, SOCK_STREAM
 from overrides import bytes, bbytes
-from logs import log
+import logs
 import re
 from typing import NoReturn, Union
-from config import npbase, servers, __version__, prefix
 import commands as cmds
-from config import decode_escapes, servers
+import config as conf
 from time import sleep
+from importlib import reload
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     if usePrefix:
-        return any(message[: len(match) + 1] == prefix + match for match in find)
+        return any(message[: len(match) + 1] == conf.prefix + match for match in find)
     else:
         return any(message[: len(match)] == match for match in find)
 
@@ -20,16 +20,17 @@ class bot:
         self.gmode = False
         self.server = server
         self.nicklen = 30
-        self.address = servers[server]["address"]
-        self.port = servers[server]["port"] if "port" in servers[server] else 6667
-        self.channels = servers[server]["channels"]
+        self.address = conf.servers[server]["address"]
+        self.port = conf.servers[server]["port"] if "port" in conf.servers[server] else 6667
+        self.channels = conf.servers[server]["channels"]
         self.interval = (
-            servers[server]["interval"] if "interval" in servers[server] else 50
+            conf.servers[server]["interval"] if "interval" in conf.servers[server] else 50
         )
+        self.__version__ = conf.__version__
         self.nick = "FireBot"
         self.rebt = "fire"
         self.gblrebt = "all"
-        self.adminnames = servers[server]["admins"]
+        self.adminnames = conf.servers[server]["admins"]
         self.exitcode = f"bye {self.nick.lower()}"
         self.queue = []
         self.sock = socket(AF_INET, SOCK_STREAM)
@@ -135,10 +136,10 @@ class bot:
         return data
 
     def log(self, message: object, level: str = "LOG") -> None:
-        log(message, self.server)
+        logs.log(message, self.server)
 
     def exit(self, message: object) -> NoReturn:
-        log(message, self.server, "EXIT")
+        logs.log(message, self.server, "EXIT")
         exit(1)
 
     def CTCP(self, msg: str, sender: str = "", isRaw: bool = False) -> bool:
@@ -149,7 +150,7 @@ class bot:
         self.log(f"Responding to CTCP \"{kind}\" from {sender}")
         if kind == "VERSION":
             self.notice(
-                f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
+                f"\x01VERSION FireBot {conf.__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
                 sender,
                 True,
             )
@@ -200,8 +201,8 @@ class bot:
     def mainloop(self) -> NoReturn:
         self.log("Starting connection..")
         self.connect()
-        if "pass" in servers[self.server]:
-            self.msg(f"IDENTIFY FireBot {servers[self.server]['pass']}", "NickServ")
+        if "pass" in conf.servers[self.server]:
+            self.msg(f"IDENTIFY FireBot {conf.servers[self.server]['pass']}", "NickServ")
         sleep(0.5)
         for chan in self.channels:
             self.join(chan, "null", False)
@@ -252,6 +253,8 @@ class bot:
                             f"Channel not in channels ({chan} not in {self.channels})",
                             "WARN",
                         )
+                        if not chan.startswith(("#", "+", "&")):
+                            chan = name
                     else:
                         self.channels[chan] += 1
                     if "goat" in name.lower() and self.gmode == True:
@@ -277,9 +280,21 @@ class bot:
                                 ),
                                 message,
                             ):
-                                cmds.call[check](self, chan, name, message)
+                                if ("admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]) and name not in self.adminnames:
+                                    self.msg(f"Sorry {name}, you don't have permission to use {cmd}.", chan)
+                                else:
+                                    cmds.call[check](self, chan, name, message)
                                 handled = True
                                 break
+                    if not handled and mfind(message, ["reload"]):
+                        if name in self.adminnames:
+                            reload(conf)
+                            reload(cmds)
+                            self.__version__ = conf.__version__
+                            self.msg("Reloaded config and commands", chan)
+                        else:
+                            self.msg(f"Sorry {name}, you don't have permission to use reload.", chan)
+                        handled = True
                     if not handled and len(message.split("\x01")) == 3:
                         if not self.CTCP(message, name):
                             CTCP = message.split("\x01")[1]
@@ -295,7 +310,7 @@ class bot:
                         self.channels[chan] = 0
                         mm = open("mastermessages.txt", "r")
                         q = mm.readlines()
-                        sel = decode_escapes(
+                        sel = config.decode_escapes(
                             str(r.sample(q, 1))
                             .strip("[]'")
                             .replace("\\n", "")
