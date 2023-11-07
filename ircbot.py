@@ -4,15 +4,12 @@ from overrides import bytes, bbytes
 import re, random as r, codecs
 from sys import argv as args, exit as xit, stdout, stderr
 from socket import socket, AF_INET, SOCK_STREAM
-from os import environ as env
 from dotenv import load_dotenv
 from pythonlangutil.overload import Overload, signature
 from datetime import datetime as dt
 from logs import log
 from subprocess import run, PIPE
 from config import npbase, servers, __version__
-
-load_dotenv()
 
 ircsock = socket(AF_INET, SOCK_STREAM)
 botnick = "FireBot"
