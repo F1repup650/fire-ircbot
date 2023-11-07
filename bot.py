@@ -305,8 +305,8 @@ class bot:
                         mm.close()
                 else:
                     if ircmsg.startswith("PING "):
-                        ping(ircmsg)
+                        self.ping(ircmsg)
                     elif ircmsg.startswith("ERROR :Closing Link"):
-                        exit("I got killed :'(")
+                        self.exit("I got killed :'(")
                     elif ircmsg.startswith("ERROR :Ping "):
-                        exit("Ping timeout")
+                        self.exit("Ping timeout")
