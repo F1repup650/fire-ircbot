@@ -7,6 +7,7 @@ from typing import NoReturn
 from config import npbase, servers, __version__
 import commands as cmds
 
+
 class bot:
     def __init__(self, server: str):
         self.gmode = False
@@ -218,7 +219,7 @@ class bot:
                     elif chan not in channels:
                         self.log(
                             f"Channel not in channels ({chan} not in {channels})",
-                            "WARN"
+                            "WARN",
                         )
                     else:
                         channels[chan] += 1
@@ -226,14 +227,22 @@ class bot:
                         cmds.goat(self, chan)
                     handled = False
                     for cmd in cmds.data:
-                        if mfind(message, cmd.replace("$BOTNICK", self.nick), cmds.data[cmd]["prefix"]):
+                        if mfind(
+                            message,
+                            cmd.replace("$BOTNICK", self.nick),
+                            cmds.data[cmd]["prefix"],
+                        ):
                             cmds.call[cmd](self, chan, name)
                             handled = True
                             break
                     if not handled:
                         for cmd in cmds.data:
                             for alias in cmds.data[cmd]["aliases"]:
-                                if mfind(message, alias.replace("$BOTNICK", self.nick), cmds.data[cmd]["prefix"]):
+                                if mfind(
+                                    message,
+                                    alias.replace("$BOTNICK", self.nick),
+                                    cmds.data[cmd]["prefix"],
+                                ):
                                     cmds.call[cmd](self, chan, name, message)
                                     handled = True
                                     break
@@ -241,7 +250,12 @@ class bot:
                                 break
                     if not handled:
                         for check in cmds.checks:
-                            if re.search(check.replace("$MAX", self.nicklen).replace("$BOTNICK", self.nick), message):
+                            if re.search(
+                                check.replace("$MAX", self.nicklen).replace(
+                                    "$BOTNICK", self.nick
+                                ),
+                                message,
+                            ):
                                 cmds.call[check](self, chan, name, message)
                                 handled = True
                                 break
