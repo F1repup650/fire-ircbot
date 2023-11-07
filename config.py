@@ -38,3 +38,9 @@ ESCAPE_SEQUENCE_RE = re.compile(
     )""",
     re.UNICODE | re.VERBOSE,
 )
+prefix = "."
+def decode_escapes(s: str) -> str:
+    def decode_match(match):
+        return codecs.decode(match.group(0), "unicode-escape")
+
+    return ESCAPE_SEQUENCE_RE.sub(decode_match, s)

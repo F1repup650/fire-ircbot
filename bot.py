@@ -4,21 +4,16 @@ from overrides import bytes, bbytes
 from logs import log
 import re
 from typing import NoReturn, Union
-from config import npbase, servers, __version__
+from config import npbase, servers, __version__, prefix
 import commands as cmds
-from config import ESCAPE_SEQUENCE_RE, servers
+from config import decode_escapes, servers
+from time import sleep
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     if usePrefix:
         return any(message[: len(match) + 1] == prefix + match for match in find)
     else:
         return any(message[: len(match)] == match for match in find)
-
-def decode_escapes(s: str) -> str:
-    def decode_match(match):
-        return codecs.decode(match.group(0), "unicode-escape")
-
-    return ESCAPE_SEQUENCE_RE.sub(decode_match, s)
 
 class bot:
     def __init__(self, server: str):
@@ -32,18 +27,16 @@ class bot:
             servers[server]["interval"] if "interval" in servers[server] else 50
         )
         self.nick = "FireBot"
-        self.prefix = "."
         self.rebt = "fire"
         self.gblrebt = "all"
         self.adminnames = servers[server]["admins"]
         self.exitcode = f"bye {self.nick.lower()}"
-        self.np = re.compile(npbase.replace("MAX", f"{nicklen}"))
         self.queue = []
         self.sock = socket(AF_INET, SOCK_STREAM)
-        self.log(f"Start init for {server}")
+        self.log(f"Start init for {self.server}")
 
     def connect(self) -> None:
-        self.log(f"Joining {server}...")
+        self.log(f"Joining {self.server}...")
         self.sock.connect((self.address, self.port))
         self.send(f"USER {self.nick} {self.nick} {self.nick} {self.nick}\n")
         self.send(f"NICK {self.nick}\n")
@@ -57,8 +50,7 @@ class bot:
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.find("NICKLEN=") != -1:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
-                    self.np = re.compile(npbase.replace("MAX", f"{self.nicklen}"))
-                    self.log(f"NICKLEN set to {nicklen}")
+                    self.log(f"NICKLEN set to {self.nicklen}")
                 elif ircmsg.find("Nickname") != -1:
                     self.log("Nickname in use", "WARN")
                     self.nick = f"{self.nick}{r.randint(0,1000)}"
@@ -72,7 +64,7 @@ class bot:
                     self.exit("Closing Link")
             else:
                 self.exit("Lost connection to the server")
-        self.log(f"Joined {server} successfully!")
+        self.log(f"Joined {self.server} successfully!")
 
     def join(self, chan: str, origin: str, lock: bool = True) -> None:
         self.log(f"Joining {chan}...")
@@ -86,7 +78,7 @@ class bot:
             if origin != "null":
                 self.sendmsg(f"Refusing to join channel {chan} (protected)", origin)
             return
-        if chan in channels and lock:
+        if chan in self.channels and lock:
             if origin != "null":
                 self.sendmsg(f"I'm already in {chan}.", origin)
             return
@@ -119,7 +111,7 @@ class bot:
                     if origin != "null":
                         self.sendmsg(f"{chan} is +O, and I'm not an operator.", origin)
                 elif code == 366:
-                    log(f"Joining {chan} succeeded", server)
+                    self.log(f"Joining {chan} succeeded")
                     if origin != "null":
                         self.sendmsg(f"Joined {chan}", origin)
                     self.channels[chan] = 0
@@ -247,45 +239,35 @@ class bot:
                     self.log(
                         f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}"',
                     )
-                    if len(name) > nicklen:
-                        self.log(f"Name too long ({len(name)} > {nicklen})")
+                    if len(name) > self.nicklen:
+                        self.log(f"Name too long ({len(name)} > {self.nicklen})")
                         continue
-                    elif chan not in channels:
+                    elif chan not in self.channels:
                         self.log(
-                            f"Channel not in channels ({chan} not in {channels})",
+                            f"Channel not in channels ({chan} not in {self.channels})",
                             "WARN",
                         )
                     else:
-                        channels[chan] += 1
+                        self.channels[chan] += 1
                     if "goat" in name.lower() and self.gmode == True:
                         cmds.goat(self, chan)
                     handled = False
                     for cmd in cmds.data:
+                        triggers = [cmd]
+                        triggers.extend(cmds.data[cmd]["aliases"])
+                        triggers = list(call.replace("$BOTNICK", self.nick) for call in triggers)
                         if mfind(
                             message,
-                            cmd.replace("$BOTNICK", self.nick),
+                            triggers,
                             cmds.data[cmd]["prefix"],
                         ):
-                            cmds.call[cmd](self, chan, name)
+                            cmds.call[cmd](self, chan, name, message)
                             handled = True
                             break
                     if not handled:
-                        for cmd in cmds.data:
-                            for alias in cmds.data[cmd]["aliases"]:
-                                if mfind(
-                                    message,
-                                    alias.replace("$BOTNICK", self.nick),
-                                    cmds.data[cmd]["prefix"],
-                                ):
-                                    cmds.call[cmd](self, chan, name, message)
-                                    handled = True
-                                    break
-                            if handled:
-                                break
-                    if not handled:
                         for check in cmds.checks:
                             if re.search(
-                                check.replace("$MAX", self.nicklen).replace(
+                                check.replace("$MAX", str(self.nicklen)).replace(
                                     "$BOTNICK", self.nick
                                 ),
                                 message,

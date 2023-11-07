@@ -1,5 +1,6 @@
 from subprocess import run, PIPE
-from config import npbase, su
+from config import npbase, su, decode_escapes
+import random as r
 
 def goat(bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
@@ -112,9 +113,9 @@ def eball(bot, chan: str, name: str, message: str) -> None:
 
 def debug(bot, chan: str, name: str, message: str) -> None:
     if name.lower() in bot.adminnames:
-        bot.msg(f"[DEBUG] NICKLEN={nicklen}", chan)
-        bot.msg(f"[DEBUG] ADMINS={adminnames}", chan)
-        bot.msg(f"[DEBUG] CHANNELS={channels}", chan)
+        bot.msg(f"[DEBUG] NICKLEN={bot.nicklen}", chan)
+        bot.msg(f"[DEBUG] ADMINS={bot.adminnames}", chan)
+        bot.msg(f"[DEBUG] CHANNELS={bot.channels}", chan)
 
 
 def raw(bot, chan: str, name: str, message: str) -> None:
@@ -156,7 +157,7 @@ data = {
     "debug": {"prefix": True, "aliases": ["dbg"]},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
     "join ": {"prefix": True, "aliases": []},
-    "quote": {"prefix": True, "aliases": []},
+    "quote": {"prefix": True, "aliases": ["q"]},
     "goat.mode.activate": {"prefix": True, "aliases": []},
     "goat.mode.deactivate": {"prefix": True, "aliases": []},
     "help": {"prefix": True, "aliases": []},
