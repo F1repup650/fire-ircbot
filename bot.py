@@ -5,7 +5,7 @@ from logs import log
 import re
 from typing import NoReturn
 from config import npbase, servers, __version__
-
+import commands as cmds
 
 class bot:
     def __init__(self, server: str):
@@ -61,7 +61,7 @@ class bot:
                 self.exit("Lost connection to the server")
         self.log(f"Joined {server} successfully!")
 
-    def join(self, chan: str, origin: str) -> None:
+    def join(self, chan: str, origin: str, lock: bool = True) -> None:
         self.log(f"Joining {chan}...")
         chan = chan.replace(" ", "")
         if "," in chan:
@@ -164,3 +164,78 @@ class bot:
             return True
         self.log(f"Unknown CTCP {kind}")
         return False
+
+    def mainloop(self) -> NoReturn:
+        self.log("Starting connection..")
+        self.connect()
+        if "pass" in servers[self.server]:
+            self.msg(f"IDENTIFY FireBot {servers[self.server]['pass']}", "NickServ")
+        sleep(0.5)
+        for chan in self.channels:
+            self.join(chan, "null", False)
+        while 1:
+            raw = self.recv()
+            ircmsg = raw.decode()
+            if ircmsg == "":
+                exit("Probably a netsplit")
+            else:
+                print(raw.lazy_decode(), sep="\n")
+                action = "Unknown"
+                try:
+                    action = ircmsg.split(" ", 2)[1].strip()
+                except IndexError:
+                    pass
+                if action == "PRIVMSG":
+                    # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
+                    name = ircmsg.split("!", 1)[0][1:]
+                    helpErr = False
+                    if (name.startswith("saxjax") and server == "efnet") or (
+                        name == "ReplIRC" and server == "replirc"
+                    ):
+                        if ircmsg.find("<") != -1 and ircmsg.find(">") != -1:
+                            Nname = ircmsg.split("<", 1)[1].split(">", 1)[0].strip()
+                            if name == "ReplIRC":
+                                name = Nname[4:]
+                            else:
+                                name = Nname
+                            message = ircmsg.split(">", 1)[1].strip()
+                            helpErr = True
+                        else:
+                            message = (
+                                ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+                            )
+                    else:
+                        message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+                    if name.endswith("dsc"):
+                        helpErr = True
+                    chan = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
+                    self.log(
+                        f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}"',
+                    )
+                    if len(name) > nicklen:
+                        self.log(f"Name too long ({len(name)} > {nicklen})")
+                        continue
+                    elif chan not in channels:
+                        self.log(
+                            f"Channel not in channels ({chan} not in {channels})",
+                            "WARN"
+                        )
+                    else:
+                        channels[chan] += 1
+                    if "goat" in name.lower() and self.gmode == True:
+                        cmds.goat(self, chan)
+                    handled = False
+                    for cmd in cmds.data:
+                        if mfind(message, cmd.replace("$BOTNICK", self.nick), cmds.data[cmd]["prefix"]):
+                            cmds.call[cmd](self, chan, name)
+                            handled = True
+                            break
+                    if not handled:
+                        for cmd in cmds.data:
+                            for alias in cmds.data[cmd]["aliases"]:
+                                if mfind(message, alias.replace("$BOTNICK", self.nick), cmds.data[cmd]["prefix"]):
+                                    cmds.call[cmd](self, chan, name)
+                                    handled = True
+                                    break
+                        if handled:
+                            break
