@@ -3,10 +3,22 @@ from socket import socket, AF_INET, SOCK_STREAM
 from overrides import bytes, bbytes
 from logs import log
 import re
-from typing import NoReturn
+from typing import NoReturn, Union
 from config import npbase, servers, __version__
 import commands as cmds
+from config import ESCAPE_SEQUENCE_RE, servers
 
+def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
+    if usePrefix:
+        return any(message[: len(match) + 1] == prefix + match for match in find)
+    else:
+        return any(message[: len(match)] == match for match in find)
+
+def decode_escapes(s: str) -> str:
+    def decode_match(match):
+        return codecs.decode(match.group(0), "unicode-escape")
+
+    return ESCAPE_SEQUENCE_RE.sub(decode_match, s)
 
 class bot:
     def __init__(self, server: str):
@@ -137,7 +149,7 @@ class bot:
             sender = msg.split("!", 1)[0][1:]
             message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
         kind = msg.split("\x01")[1].split(" ", 1)[0]
-        self.log(f"Responding to CTCP {kind} from {sender}")
+        self.log(f"Responding to CTCP \"{kind}\" from {sender}")
         if kind == "VERSION":
             self.notice(
                 f"\x01VERSION FireBot {__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
@@ -163,8 +175,30 @@ class bot:
                 "\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True
             )
             return True
-        self.log(f"Unknown CTCP {kind}")
+        self.log(f"Unknown CTCP \"{kind}\"", "WARN")
         return False
+
+    def msg(self, msg: str, target: str) -> None:
+        if not (target == "NickServ" and mfind(msg, ["IDENTIFY"], False)):
+            self.log(f"Sending {bytes(msg).lazy_decode()} to {target}")
+        else:
+            self.log("Identifying myself...")
+        self.send(f"PRIVMSG {target} :{msg}\n")
+
+    def op(self, name: str, chan: str) -> Union[int, None]:
+        if name != "":
+            self.log(f"Attempting op of {name} in {chan}...")
+            return self.send(f"MODE {chan} +o {name}\n")
+
+    def notice(self, msg: str, target: str, silent: bool = False) -> int:
+        if not silent:
+            self.log(f"Sending {bytes(msg).lazy_decode()} to {target} (NOTICE)")
+        return self.send(f"NOTICE {target} :{msg}\n")
+
+    def sendraw(self, command: str) -> int:
+        self.log(f"RAW sending {command}")
+        command = f"{command}\n"
+        return self.send(command.replace("$BOTNICK", botnick))
 
     def mainloop(self) -> NoReturn:
         self.log("Starting connection..")
