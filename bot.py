@@ -196,7 +196,7 @@ class bot:
     def sendraw(self, command: str) -> int:
         self.log(f"RAW sending {command}")
         command = f"{command}\n"
-        return self.send(command.replace("$BOTNICK", botnick))
+        return self.send(command.replace("$BOTNICK", self.nick))
 
     def mainloop(self) -> NoReturn:
         self.log("Starting connection..")
@@ -269,7 +269,10 @@ class bot:
                             triggers,
                             cmds.data[cmd]["prefix"],
                         ):
-                            cmds.call[cmd](self, chan, name, message)
+                            if ("admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]) and name not in self.adminnames:
+                                self.msg(f"Sorry {name}, you don't have permission to use {cmd}.", chan)
+                            else:
+                                cmds.call[cmd](self, chan, name, message)
                             handled = True
                             break
                     if not handled:
@@ -280,10 +283,7 @@ class bot:
                                 ),
                                 message,
                             ):
-                                if ("admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]) and name not in self.adminnames:
-                                    self.msg(f"Sorry {name}, you don't have permission to use {cmd}.", chan)
-                                else:
-                                    cmds.call[check](self, chan, name, message)
+                                cmds.call[check](self, chan, name, message)
                                 handled = True
                                 break
                     if not handled and mfind(message, ["reload"]):
