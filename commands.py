@@ -119,7 +119,7 @@ def debug(bot, chan: str, name: str, message: str) -> None:
 
 
 def raw(bot, chan: str, name: str, message: str) -> None:
-    sendraw(message.split(" ", 1)[1])
+    bot.sendraw(message.split(" ", 1)[1])
 
 
 def reboot(bot, chan: str, name: str, message: str) -> None:
