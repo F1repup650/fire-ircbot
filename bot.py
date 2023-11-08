@@ -8,6 +8,7 @@ import commands as cmds
 import config as conf
 from time import sleep
 from importlib import reload
+import random as r
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     if usePrefix:
