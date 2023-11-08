@@ -2,6 +2,7 @@ from subprocess import run, PIPE
 from config import npbase, su, decode_escapes
 import random as r
 
+
 def goat(bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
     bot.msg("Hello Goat", chan)
@@ -96,8 +97,8 @@ def quote(bot, chan: str, name: str, message: str) -> None:
 
 
 def join(bot, chan: str, name: str, message: str) -> None:
-        newchan = message.split(" ", 1)[1].strip()
-        bot.join(newchan, chan)
+    newchan = message.split(" ", 1)[1].strip()
+    bot.join(newchan, chan)
 
 
 def eball(bot, chan: str, name: str, message: str) -> None:
@@ -112,10 +113,10 @@ def eball(bot, chan: str, name: str, message: str) -> None:
 
 
 def debug(bot, chan: str, name: str, message: str) -> None:
-        bot.msg(f"[DEBUG] VERSION={bot.__version__}", chan)
-        bot.msg(f"[DEBUG] NICKLEN={bot.nicklen}", chan)
-        bot.msg(f"[DEBUG] ADMINS={bot.adminnames}", chan)
-        bot.msg(f"[DEBUG] CHANNELS={bot.channels}", chan)
+    bot.msg(f"[DEBUG] VERSION={bot.__version__}", chan)
+    bot.msg(f"[DEBUG] NICKLEN={bot.nicklen}", chan)
+    bot.msg(f"[DEBUG] ADMINS={bot.adminnames}", chan)
+    bot.msg(f"[DEBUG] CHANNELS={bot.channels}", chan)
 
 
 def raw(bot, chan: str, name: str, message: str) -> None:
@@ -123,8 +124,8 @@ def raw(bot, chan: str, name: str, message: str) -> None:
 
 
 def reboot(bot, chan: str, name: str, message: str) -> None:
-        bot.send("QUIT :Rebooting\n")
-        bot.exit("Reboot")
+    bot.send("QUIT :Rebooting\n")
+    bot.exit("Reboot")
 
 
 def sudo(bot, chan: str, name: str, message: str) -> None:
@@ -149,7 +150,7 @@ data = {
     "!botlist": {"prefix": False, "aliases": []},
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
-#   [npbase, su]
+    #   [npbase, su]
     "restart": {"prefix": True, "aliases": ["reboot"], "admin": True},
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "admin": True},

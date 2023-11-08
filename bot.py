@@ -10,11 +10,13 @@ from time import sleep
 from importlib import reload
 import random as r
 
+
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     if usePrefix:
         return any(message[: len(match) + 1] == conf.prefix + match for match in find)
     else:
         return any(message[: len(match)] == match for match in find)
+
 
 class bot:
     def __init__(self, server: str):
@@ -22,10 +24,14 @@ class bot:
         self.server = server
         self.nicklen = 30
         self.address = conf.servers[server]["address"]
-        self.port = conf.servers[server]["port"] if "port" in conf.servers[server] else 6667
+        self.port = (
+            conf.servers[server]["port"] if "port" in conf.servers[server] else 6667
+        )
         self.channels = conf.servers[server]["channels"]
         self.interval = (
-            conf.servers[server]["interval"] if "interval" in conf.servers[server] else 50
+            conf.servers[server]["interval"]
+            if "interval" in conf.servers[server]
+            else 50
         )
         self.__version__ = conf.__version__
         self.nick = "FireBot"
@@ -148,7 +154,7 @@ class bot:
             sender = msg.split("!", 1)[0][1:]
             message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
         kind = msg.split("\x01")[1].split(" ", 1)[0]
-        self.log(f"Responding to CTCP \"{kind}\" from {sender}")
+        self.log(f'Responding to CTCP "{kind}" from {sender}')
         if kind == "VERSION":
             self.notice(
                 f"\x01VERSION FireBot {conf.__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
@@ -174,7 +180,7 @@ class bot:
                 "\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True
             )
             return True
-        self.log(f"Unknown CTCP \"{kind}\"", "WARN")
+        self.log(f'Unknown CTCP "{kind}"', "WARN")
         return False
 
     def msg(self, msg: str, target: str) -> None:
@@ -203,7 +209,9 @@ class bot:
         self.log("Starting connection..")
         self.connect()
         if "pass" in conf.servers[self.server]:
-            self.msg(f"IDENTIFY FireBot {conf.servers[self.server]['pass']}", "NickServ")
+            self.msg(
+                f"IDENTIFY FireBot {conf.servers[self.server]['pass']}", "NickServ"
+            )
         sleep(0.5)
         for chan in self.channels:
             self.join(chan, "null", False)
@@ -266,14 +274,22 @@ class bot:
                     for cmd in cmds.data:
                         triggers = [cmd]
                         triggers.extend(cmds.data[cmd]["aliases"])
-                        triggers = list(call.replace("$BOTNICK", self.nick.lower()) for call in triggers)
+                        triggers = list(
+                            call.replace("$BOTNICK", self.nick.lower())
+                            for call in triggers
+                        )
                         if mfind(
                             message.lower(),
                             triggers,
                             cmds.data[cmd]["prefix"],
                         ):
-                            if ("admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]) and name not in self.adminnames:
-                                self.msg(f"Sorry {name}, you don't have permission to use {cmd.strip()}.", chan)
+                            if (
+                                "admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]
+                            ) and name not in self.adminnames:
+                                self.msg(
+                                    f"Sorry {name}, you don't have permission to use {cmd.strip()}.",
+                                    chan,
+                                )
                             else:
                                 cmds.call[cmd](self, chan, name, message)
                             handled = True
@@ -296,7 +312,10 @@ class bot:
                             self.__version__ = conf.__version__
                             self.msg("Reloaded config and commands", chan)
                         else:
-                            self.msg(f"Sorry {name}, you don't have permission to use reload.", chan)
+                            self.msg(
+                                f"Sorry {name}, you don't have permission to use reload.",
+                                chan,
+                            )
                         handled = True
                     if not handled and len(message.split("\x01")) == 3:
                         if not self.CTCP(message, name):
