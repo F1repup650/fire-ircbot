@@ -8,17 +8,17 @@ _T = TypeVar("_T")
 class bytes(bbytes):
     """Local override of builtin bytes class to add "lazy_decode"
 
-bytes(iterable_of_ints) -> bytes
-bytes(string, encoding[, errors]) -> bytes
-bytes(bytes_or_buffer) -> immutable copy of bytes_or_buffer
-bytes(int) -> bytes object of size given by the parameter initialized with null bytes
-bytes() -> empty bytes object
+    bytes(iterable_of_ints) -> bytes
+    bytes(string, encoding[, errors]) -> bytes
+    bytes(bytes_or_buffer) -> immutable copy of bytes_or_buffer
+    bytes(int) -> bytes object of size given by the parameter initialized with null bytes
+    bytes() -> empty bytes object
 
-Construct an immutable array of bytes from:
-  - an iterable yielding integers in range(256)
-  - a text string encoded using the specified encoding
-  - any object implementing the buffer API.
-  - an integer
+    Construct an immutable array of bytes from:
+      - an iterable yielding integers in range(256)
+      - a text string encoded using the specified encoding
+      - any object implementing the buffer API.
+      - an integer
     """
 
     def __new__(

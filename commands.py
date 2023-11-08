@@ -113,7 +113,13 @@ def eball(bot, chan: str, name: str, message: str) -> None:
 
 
 def debug(bot, chan: str, name: str, message: str) -> None:
-    dbg_out = {"VERSION": bot.__version__, "NICKLEN": bot.nicklen, "NICK": bot.nick, "ADMINS": bot.adminnames, "CHANNELS": bot.channels}
+    dbg_out = {
+        "VERSION": bot.__version__,
+        "NICKLEN": bot.nicklen,
+        "NICK": bot.nick,
+        "ADMINS": bot.adminnames,
+        "CHANNELS": bot.channels,
+    }
     bot.msg(f"[DEBUG] {dbg_out}", chan)
 
 
