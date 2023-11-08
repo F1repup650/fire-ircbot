@@ -271,7 +271,7 @@ class bot:
                             cmds.data[cmd]["prefix"],
                         ):
                             if ("admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]) and name not in self.adminnames:
-                                self.msg(f"Sorry {name}, you don't have permission to use {cmd}.", chan)
+                                self.msg(f"Sorry {name}, you don't have permission to use {cmd.strip()}.", chan)
                             else:
                                 cmds.call[cmd](self, chan, name, message)
                             handled = True
