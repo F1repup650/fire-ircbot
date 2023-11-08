@@ -264,9 +264,9 @@ class bot:
                     for cmd in cmds.data:
                         triggers = [cmd]
                         triggers.extend(cmds.data[cmd]["aliases"])
-                        triggers = list(call.replace("$BOTNICK", self.nick) for call in triggers)
+                        triggers = list(call.replace("$BOTNICK", self.nick.lower()) for call in triggers)
                         if mfind(
-                            message,
+                            message.lower(),
                             triggers,
                             cmds.data[cmd]["prefix"],
                         ):
