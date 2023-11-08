@@ -105,21 +105,32 @@ class bot:
                 elif code == 403:
                     self.log(f"Joining {chan} failed", "WARN")
                     if origin != "null":
-                        sendmsg(f"{chan} is an invalid channel", origin)
+                        self.msg(f"{chan} is an invalid channel", origin)
                     break
                 elif code == 473:
                     self.log(f"Joining {chan} failed (+i)", "WARN")
                     if origin != "null":
-                        self.sendmsg(f"{chan} is +i, and I'm not invited.", origin)
+                        self.msg(f"{chan} is +i, and I'm not invited.", origin)
                     break
                 elif code == 520:
                     self.log(f"Joining {chan} failed (+O)", "WARN")
                     if origin != "null":
-                        self.sendmsg(f"{chan} is +O, and I'm not an operator.", origin)
+                        self.msg(f"{chan} is +O, and I'm not an operator.", origin)
+                    break
+                elif code == 405:
+                    self.log(f"Joining {chan} failed (too many channels)", "WARN")
+                    if origin != "null":
+                        self.msg(f"I'm in too many channels to join {chan}", origin)
+                    break
+                elif code == 471:
+                    self.log(f"Joining {chan} failed (+l)", "WARN")
+                    if origin != "null":
+                        self.msg(f"{chan} is +l, and is full", origin)
+                    break
                 elif code == 366:
                     self.log(f"Joining {chan} succeeded")
                     if origin != "null":
-                        self.sendmsg(f"Joined {chan}", origin)
+                        self.msg(f"Joined {chan}", origin)
                     self.channels[chan] = 0
                     break
 
