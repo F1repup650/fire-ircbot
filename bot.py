@@ -238,6 +238,8 @@ class bot:
                             message = (
                                 ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
                             )
+                    elif name == self.nick:
+                        continue
                     else:
                         message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
                     if name.endswith("dsc"):
