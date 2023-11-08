@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 from os import system
 from time import sleep
-from sys import argv as args
 from threading import Thread
-from datetime import datetime as dt
 from logs import log
 
 
