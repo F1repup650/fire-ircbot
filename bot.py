@@ -321,6 +321,10 @@ class bot:
                         )
                         self.msg(f"[QUOTE] {sel}", chan)
                         mm.close()
+                elif action == "NICK":
+                    name = ircmsg.split("!", 1)[0][1:]
+                    if name == self.nick:
+                        self.nick = ircmsg.split("NICK", 1)[1].split(":", 1)[1].strip()
                 else:
                     if ircmsg.startswith("PING "):
                         self.ping(ircmsg)
