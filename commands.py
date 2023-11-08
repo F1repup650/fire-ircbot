@@ -113,10 +113,8 @@ def eball(bot, chan: str, name: str, message: str) -> None:
 
 
 def debug(bot, chan: str, name: str, message: str) -> None:
-    bot.msg(f"[DEBUG] VERSION={bot.__version__}", chan)
-    bot.msg(f"[DEBUG] NICKLEN={bot.nicklen}", chan)
-    bot.msg(f"[DEBUG] ADMINS={bot.adminnames}", chan)
-    bot.msg(f"[DEBUG] CHANNELS={bot.channels}", chan)
+    dbg_out = {"VERSION": bot.__version__, "NICKLEN": bot.nicklen, "NICK": bot.nick, "ADMINS": bot.adminnames, "CHANNELS": bot.channels}
+    bot.msg(f"[DEBUG] {dbg_out}", chan)
 
 
 def raw(bot, chan: str, name: str, message: str) -> None:
