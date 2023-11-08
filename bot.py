@@ -35,12 +35,10 @@ class bot:
         )
         self.__version__ = conf.__version__
         self.nick = "FireBot"
-        self.rebt = "fire"
-        self.gblrebt = "all"
         self.adminnames = conf.servers[server]["admins"]
-        self.exitcode = f"bye {self.nick.lower()}"
         self.queue = []
         self.sock = socket(AF_INET, SOCK_STREAM)
+        self.npallowed = ["FireBitBot"]
         self.log(f"Start init for {self.server}")
 
     def connect(self) -> None:
