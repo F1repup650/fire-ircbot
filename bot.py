@@ -82,11 +82,11 @@ class bot:
             return
         if chan.startswith("0") or (chan == "#main" and lock):
             if origin != "null":
-                self.sendmsg(f"Refusing to join channel {chan} (protected)", origin)
+                self.msg(f"Refusing to join channel {chan} (protected)", origin)
             return
         if chan in self.channels and lock:
             if origin != "null":
-                self.sendmsg(f"I'm already in {chan}.", origin)
+                self.msg(f"I'm already in {chan}.", origin)
             return
         self.send(f"JOIN {chan}\n")
         while True:
