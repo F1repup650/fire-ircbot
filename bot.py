@@ -311,7 +311,7 @@ class bot:
                         self.channels[chan] = 0
                         mm = open("mastermessages.txt", "r")
                         q = mm.readlines()
-                        sel = config.decode_escapes(
+                        sel = conf.decode_escapes(
                             str(r.sample(q, 1))
                             .strip("[]'")
                             .replace("\\n", "")
