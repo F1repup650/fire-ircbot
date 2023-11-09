@@ -38,5 +38,5 @@ class bytes(bbytes):
         return cls.value # type: ignore
 
     @classmethod
-    def lazy_decode(self):
-        return str(self.value)[2:-1]
+    def lazy_decode(cls):
+        return str(cls.value)[2:-1]
