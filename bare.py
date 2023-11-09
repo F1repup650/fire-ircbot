@@ -55,9 +55,6 @@ class bot:
     def exit(self, message: str) -> NoReturn:
         ...
 
-    def CTCP(self, msg: str, sender: str = "", isRaw: bool = False) -> bool:
-        ...
-
     def msg(self, msg: str, target: str) -> None:
         ...
 

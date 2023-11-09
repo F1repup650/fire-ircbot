@@ -72,7 +72,7 @@ class bot(bare.bot):
                 elif ircmsg.startswith("PING "):
                     self.ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
-                    self.CTCP(ircmsg, isRaw=True)
+                    handlers.CTCP(self, ircmsg)
                 elif ircmsg.find("Closing Link") != -1:
                     self.exit("Closing Link")
             else:
@@ -108,7 +108,7 @@ class bot(bare.bot):
                 if ircmsg.startswith("PING "):
                     self.ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
-                    self.CTCP(ircmsg, isRaw=True)
+                    handlers.CTCP(self, ircmsg)
                 elif code == 403:
                     self.log(f"Joining {chan} failed", "WARN")
                     if origin != "null":
@@ -164,40 +164,6 @@ class bot(bare.bot):
     def exit(self, message: str) -> NoReturn:
         logs.log(message, self.server, "EXIT")
         exit(1)
-
-    def CTCP(self, msg: str, sender: str = "", isRaw: bool = False) -> bool:
-        if isRaw:
-            sender = msg.split("!", 1)[0][1:]
-            message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-        kind = msg.split("\x01")[1].split(" ", 1)[0]
-        self.log(f'Responding to CTCP "{kind}" from {sender}')
-        if kind == "VERSION":
-            self.notice(
-                f"\x01VERSION FireBot {conf.__version__} (https://git.amcforum.wiki/Firepup650/fire-ircbot)\x01",
-                sender,
-                True,
-            )
-            return True
-        elif kind == "USERINFO":
-            self.notice("\x01USERINFO FireBot (Firepup's bot)\x01", sender, True)
-            return True
-        elif kind == "SOURCE":
-            self.notice(
-                "\x01SOURCE https://git.amcforum.wiki/Firepup650/fire-ircbot\x01",
-                sender,
-                True,
-            )
-            return True
-        elif kind == "FINGER":
-            self.notice("\x01FINGER Firepup's bot\x01", sender, True)
-            return True
-        elif kind == "CLIENTINFO":
-            self.notice(
-                "\x01CLIENTINFO ACTION VERSION USERINFO SOURCE FINGER\x01", sender, True
-            )
-            return True
-        self.log(f'Unknown CTCP "{kind}"', "WARN")
-        return False
 
     def msg(self, msg: str, target: str) -> None:
         if not (target == "NickServ" and mfind(msg, ["IDENTIFY"], False)):

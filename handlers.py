@@ -123,13 +123,13 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
             )
         handled = True
     if not handled and len(message.split("\x01")) == 3:
-        if not bot.CTCP(message, name):
-            CTCP = message.split("\x01")[1]
-            if CTCP == "ACTION ducks":
+        if not CTCP(bot, message):
+            kind = message.split("\x01")[1]
+            if kind == "ACTION ducks":
                 bot.msg("\x01ACTION gets hit by a duck\x01", chan)
-            elif CTCP.startswith("ACTION ducks"):
+            elif kind.startswith("ACTION ducks"):
                 bot.msg(
-                    f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01",
+                    f"\x01ACTION gets hit by {kind.split(' ', 2)[2]}\x01",
                     chan,
                 )
     if chan in bot.channels and bot.channels[chan] >= bot.interval:
