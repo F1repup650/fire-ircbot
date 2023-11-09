@@ -7,7 +7,7 @@ from typing import Union, Any
 load_dotenv()
 __version__ = "v2.0.3"
 npbase = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"
-su = "^(su|sudo|(su .*|sudo .*))$"
+su = "^(su|sudo|(su .*|sudo .*))$" # type: ignore[reportInvalidStringEscapeSequence]
 servers: dict[str, dict[str, Any]] = {
     "ircnow": {
         "address": "localhost",
