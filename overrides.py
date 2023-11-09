@@ -28,14 +28,14 @@ class bytes(bbytes):
         errors: str = "strict",
     ) -> _T:
         if type(thing) == str:
-            cls.value = super().__new__(cls, thing, encoding, errors)
+            cls.value = super().__new__(cls, thing, encoding, errors) # type: ignore
         elif thing == None:
-            cls.value = super().__new__(cls)
+            cls.value = super().__new__(cls) # type: ignore
         elif thing != None:
-            cls.value = super().__new__(cls, thing)
+            cls.value = super().__new__(cls, thing) # type: ignore
         else:
-            raise AttributeError("wtf")
-        return cls.value
+            raise AttributeError("This shouldn't happen")
+        return cls.value # type: ignore
 
     @classmethod
     def lazy_decode(self):

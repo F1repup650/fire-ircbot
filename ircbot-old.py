@@ -5,7 +5,6 @@ import re, random as r, codecs
 from sys import argv as args, exit as xit, stdout, stderr
 from socket import socket, AF_INET, SOCK_STREAM
 from dotenv import load_dotenv
-from pythonlangutil.overload import Overload, signature
 from datetime import datetime as dt
 from logs import log
 from subprocess import run, PIPE
@@ -16,7 +15,7 @@ botnick = "FireBot"
 server = args[1] if args else "UNSTABLE BOT MODE"
 
 
-def exit(message: object) -> None:
+def exit(message: str) -> None:
     log(message, server, "EXIT")
     xit(1)
 
@@ -34,7 +33,7 @@ if __name__ == "__main__":
     adminnames = servers[server]["admins"]
     exitcode = f"bye {botnick.lower()}"
     np = re.compile(npbase.replace("MAX", f"{nicklen}"))
-    queue = []
+    queue: list[bbytes] = []
     log(f"Start init for {server}", server)
 npallowed = ["FireBitBot"]
 ESCAPE_SEQUENCE_RE = re.compile(

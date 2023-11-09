@@ -1,6 +1,7 @@
 from subprocess import run, PIPE
 from config import npbase, su, decode_escapes
 import random as r
+from typing import Any
 
 
 def goat(bot, chan: str, name: str, message: str) -> None:
@@ -54,6 +55,14 @@ def isAdmin(bot, chan: str, name: str, message: str) -> None:
 
 
 def help(bot, chan: str, name: str, message: str) -> None:
+    helpErr = False
+    if (name.startswith("saxjax") and bot.server == "efnet") or (
+        name == "ReplIRC" and bot.server == "replirc"
+    ):
+        if message.find("<") != -1 and message.find(">") != -1:
+            helpErr = True
+    elif name.endswith("dsc"):
+        helpErr = True
     if not helpErr:
         bot.msg("Command list needs rework", name)
         return
@@ -65,7 +74,7 @@ def help(bot, chan: str, name: str, message: str) -> None:
             f"{bot.prefix}(eightball,8ball,8b) [question]? - Asks the magic eightball a question",
             name,
         )
-        bot.msg(f"(hi,hello) {botnick} - The bot says hi to you", name)
+        bot.msg(f"(hi,hello) {bot.nick} - The bot says hi to you", name)
         if name.lower() in bot.adminnames:
             bot.msg(f"reboot {bot.rebt} - Restarts the bot", name)
             bot.msg("op me - Makes the bot try to op you", name)
@@ -150,7 +159,7 @@ def nowplaying(bot, chan: str, name: str, message: str) -> None:
         )
 
 
-data = {
+data: dict[str, dict[str, Any]] = {
     "!botlist": {"prefix": False, "aliases": []},
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},

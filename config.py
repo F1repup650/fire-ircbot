@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 from os import environ as env
 from dotenv import load_dotenv
-import re
+import re, codecs
+from typing import Union, Any
 
 load_dotenv()
 __version__ = "v2.0.3"
 npbase = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"
 su = "^(su|sudo|(su .*|sudo .*))$"
-servers = {
+servers: dict[str, dict[str, Any]] = {
     "ircnow": {
         "address": "localhost",
         "port": 6601,
@@ -47,3 +48,10 @@ def decode_escapes(s: str) -> str:
         return codecs.decode(match.group(0), "unicode-escape")
 
     return ESCAPE_SEQUENCE_RE.sub(decode_match, s)
+
+
+def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
+    if usePrefix:
+        return any(message[: len(match) + 1] == prefix + match for match in find)
+    else:
+        return any(message[: len(match)] == match for match in find)

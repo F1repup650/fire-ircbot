@@ -36,7 +36,7 @@ class bot:
         self.__version__ = conf.__version__
         self.nick = "FireBot"
         self.adminnames = conf.servers[server]["admins"]
-        self.queue = []
+        self.queue: list[bbytes] = []
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.npallowed = ["FireBitBot"]
         self.log(f"Start init for {self.server}")
@@ -53,11 +53,16 @@ class bot:
         ):
             ircmsg = self.recv().decode()
             if ircmsg != "":
+                code = 0
+                try:
+                    code = int(ircmsg.split(" ", 2)[1].strip())
+                except (IndexError, ValueError):
+                    pass
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.find("NICKLEN=") != -1:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
                     self.log(f"NICKLEN set to {self.nicklen}")
-                elif ircmsg.find("Nickname") != -1:
+                elif code == 433:
                     self.log("Nickname in use", "WARN")
                     self.nick = f"{self.nick}{r.randint(0,1000)}"
                     self.send(f"NICK {self.nick}\n")
@@ -151,10 +156,10 @@ class bot:
             return bytes(self.queue.pop(0))
         return data
 
-    def log(self, message: object, level: str = "LOG") -> None:
+    def log(self, message: str, level: str = "LOG") -> None:
         logs.log(message, self.server)
 
-    def exit(self, message: object) -> NoReturn:
+    def exit(self, message: str) -> NoReturn:
         logs.log(message, self.server, "EXIT")
         exit(1)
 
@@ -203,6 +208,7 @@ class bot:
         if name != "":
             self.log(f"Attempting op of {name} in {chan}...")
             return self.send(f"MODE {chan} +o {name}\n")
+        return None
 
     def notice(self, msg: str, target: str, silent: bool = False) -> int:
         if not silent:
@@ -240,8 +246,8 @@ class bot:
                     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
                     name = ircmsg.split("!", 1)[0][1:]
                     helpErr = False
-                    if (name.startswith("saxjax") and server == "efnet") or (
-                        name == "ReplIRC" and server == "replirc"
+                    if (name.startswith("saxjax") and self.server == "efnet") or (
+                        name == "ReplIRC" and self.server == "replirc"
                     ):
                         if ircmsg.find("<") != -1 and ircmsg.find(">") != -1:
                             Nname = ircmsg.split("<", 1)[1].split(">", 1)[0].strip()
@@ -278,7 +284,7 @@ class bot:
                     else:
                         self.channels[chan] += 1
                     if "goat" in name.lower() and self.gmode == True:
-                        cmds.goat(self, chan)
+                        cmds.goat(self, chan, name, message)
                     handled = False
                     for cmd in cmds.data:
                         triggers = [cmd]

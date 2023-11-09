@@ -4,7 +4,7 @@ from sys import argv as args
 from traceback import format_exc
 from logs import log
 
-server = args[1] if args else "UNSTABLE BOT MODE"
+server = args[1] if args else "UNSTABLE"
 
 
 if __name__ == "__main__":
@@ -15,4 +15,4 @@ if __name__ == "__main__":
         Err = format_exc()
         for line in Err.split("\n"):
             log(line, server, "CRASH")
-    exit(-1)
+    exit(1)

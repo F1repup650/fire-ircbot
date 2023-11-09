@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 from datetime import datetime as dt
 from sys import stdout, stderr
+from typing import Union
 
 
 def log(
-    message: str, origin: str = "Unknown", level: str = "LOG", time: dt = "now"
+    message: str, origin: str = "Unknown", level: str = "LOG", time: Union[dt, str] = "now"
 ) -> None:
     if level in ["EXIT", "CRASH"]:
         stream = stderr
