@@ -211,11 +211,12 @@ class bot(bare.bot):
                 except IndexError:
                     pass
                 if action == "PRIVMSG":
-                    res = handlers.PRIVMSG(self, ircmsg)
+                    res, chan = handlers.PRIVMSG(self, ircmsg)
                     if res == "reload":
                         reload(conf)
                         reload(cmds)
                         reload(handlers)
+                        self.msg("", chan)  # type: ignore
                 elif action == "NICK":
                     name = ircmsg.split("!", 1)[0][1:]
                     if name == self.nick:

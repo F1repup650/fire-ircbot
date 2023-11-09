@@ -41,7 +41,7 @@ def CTCP(bot: bare.bot, msg: str) -> bool:
     return False
 
 
-def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
+def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
     if (name.startswith("saxjax") and bot.server == "efnet") or (
@@ -57,7 +57,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
         else:
             message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
     elif name == bot.nick:
-        return  # type: ignore
+        return None, None
     else:
         message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
     chan = msg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
@@ -66,7 +66,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
     )
     if len(name) > bot.nicklen:
         bot.log(f"Name too long ({len(name)} > {bot.nicklen})")
-        return  # type: ignore
+        return None, None
     elif chan not in bot.channels:
         bot.log(
             f"Channel not in channels ({chan} not in {bot.channels})",
@@ -110,7 +110,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
                 break
     if not handled and conf.mfind(message, ["reload"]):
         if name in bot.adminnames:
-            return "reload"
+            return "reload", chan
         else:
             bot.msg(
                 f"Sorry {name}, you don't have permission to use reload.",
@@ -137,7 +137,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
         )
         bot.msg(f"[QUOTE] {sel}", chan)
         mm.close()
-    return  # type: ignore
+    return None, None
 
 
 handles = {"PRIVMSG": PRIVMSG}
