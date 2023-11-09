@@ -366,3 +366,4 @@ class bot:
                         self.exit("I got killed :'(")
                     elif ircmsg.startswith("ERROR :Ping "):
                         self.exit("Ping timeout")
+        self.exit("While loop broken")
