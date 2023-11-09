@@ -5,7 +5,10 @@ from typing import Union
 
 
 def log(
-    message: str, origin: str = "Unknown", level: str = "LOG", time: Union[dt, str] = "now"
+    message: str,
+    origin: str = "Unknown",
+    level: str = "LOG",
+    time: Union[dt, str] = "now",
 ) -> None:
     if level in ["EXIT", "CRASH"]:
         stream = stderr

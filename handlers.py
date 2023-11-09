@@ -7,6 +7,7 @@ from overrides import bytes, bbytes
 from importlib import reload
 import bare
 
+
 def CTCP(bot: bare.bot, msg: str) -> bool:
     sender = msg.split("!", 1)[0][1:]
     kind = msg.split("\x01")[1].split(" ", 1)[0]
@@ -39,6 +40,7 @@ def CTCP(bot: bare.bot, msg: str) -> bool:
     bot.log(f'Unknown CTCP "{kind}"', "WARN")
     return False
 
+
 def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
@@ -53,9 +55,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
                 name = Nname
             message = msg.split(">", 1)[1].strip()
         else:
-            message = (
-                msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-            )
+            message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
     elif name == bot.nick:
         return  # type: ignore
     else:
@@ -82,10 +82,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
     for cmd in cmds.data:
         triggers = [cmd]
         triggers.extend(cmds.data[cmd]["aliases"])
-        triggers = list(
-            call.replace("$BOTNICK", bot.nick.lower())
-            for call in triggers
-        )
+        triggers = list(call.replace("$BOTNICK", bot.nick.lower()) for call in triggers)
         if conf.mfind(
             message.lower(),
             triggers,
@@ -105,9 +102,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
     if not handled:
         for check in cmds.checks:
             if re.search(
-                check.replace("$MAX", str(bot.nicklen)).replace(
-                    "$BOTNICK", bot.nick
-                ),
+                check.replace("$MAX", str(bot.nicklen)).replace("$BOTNICK", bot.nick),
                 message,
             ):
                 cmds.call[check](bot, chan, name, message)
@@ -138,15 +133,11 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
         mm = open("mastermessages.txt", "r")
         q = mm.readlines()
         sel = conf.decode_escapes(
-            str(r.sample(q, 1))
-            .strip("[]'")
-            .replace("\\n", "")
-            .strip('"')
+            str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
         )
         bot.msg(f"[QUOTE] {sel}", chan)
         mm.close()
     return  # type: ignore
 
-handles = {
-    "PRIVMSG": PRIVMSG
-}
+
+handles = {"PRIVMSG": PRIVMSG}
