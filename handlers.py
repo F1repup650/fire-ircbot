@@ -5,11 +5,10 @@ import commands as cmds
 from typing import Union
 from overrides import bytes, bbytes
 from importlib import reload
+import bare
 
-def CTCP(bot, msg: str, sender: str = "", isRaw: bool = False) -> bool:
-    if isRaw:
-        sender = msg.split("!", 1)[0][1:]
-        message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+def CTCP(bot: bare.bot, msg: str) -> bool:
+    sender = msg.split("!", 1)[0][1:]
     kind = msg.split("\x01")[1].split(" ", 1)[0]
     bot.log(f'Responding to CTCP "{kind}" from {sender}')
     if kind == "VERSION":
@@ -40,7 +39,7 @@ def CTCP(bot, msg: str, sender: str = "", isRaw: bool = False) -> bool:
     bot.log(f'Unknown CTCP "{kind}"', "WARN")
     return False
 
-def PRIVMSG(bot, msg: str) -> Union[None, str]:
+def PRIVMSG(bot: bare.bot, msg: str) -> Union[None, str]:
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
     if (name.startswith("saxjax") and bot.server == "efnet") or (
@@ -147,3 +146,7 @@ def PRIVMSG(bot, msg: str) -> Union[None, str]:
         bot.msg(f"[QUOTE] {sel}", chan)
         mm.close()
     return  # type: ignore
+
+handles = {
+    "PRIVMSG": PRIVMSG
+}

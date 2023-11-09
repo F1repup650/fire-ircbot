@@ -9,6 +9,8 @@ import config as conf
 from time import sleep
 from importlib import reload
 import random as r
+import handlers
+import bare
 
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
@@ -18,7 +20,7 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
         return any(message[: len(match)] == match for match in find)
 
 
-class bot:
+class bot(bare.bot):
     def __init__(self, server: str):
         self.gmode = False
         self.server = server
@@ -243,118 +245,11 @@ class bot:
                 except IndexError:
                     pass
                 if action == "PRIVMSG":
-                    # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
-                    name = ircmsg.split("!", 1)[0][1:]
-                    helpErr = False
-                    if (name.startswith("saxjax") and self.server == "efnet") or (
-                        name == "ReplIRC" and self.server == "replirc"
-                    ):
-                        if ircmsg.find("<") != -1 and ircmsg.find(">") != -1:
-                            Nname = ircmsg.split("<", 1)[1].split(">", 1)[0].strip()
-                            if name == "ReplIRC":
-                                name = Nname[4:]
-                            else:
-                                name = Nname
-                            message = ircmsg.split(">", 1)[1].strip()
-                            helpErr = True
-                        else:
-                            message = (
-                                ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-                            )
-                    elif name == self.nick:
-                        continue
-                    else:
-                        message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
-                    if name.endswith("dsc"):
-                        helpErr = True
-                    chan = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
-                    self.log(
-                        f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}"',
-                    )
-                    if len(name) > self.nicklen:
-                        self.log(f"Name too long ({len(name)} > {self.nicklen})")
-                        continue
-                    elif chan not in self.channels:
-                        self.log(
-                            f"Channel not in channels ({chan} not in {self.channels})",
-                            "WARN",
-                        )
-                        if not chan.startswith(("#", "+", "&")):
-                            chan = name
-                    else:
-                        self.channels[chan] += 1
-                    if "goat" in name.lower() and self.gmode == True:
-                        cmds.goat(self, chan, name, message)
-                    handled = False
-                    for cmd in cmds.data:
-                        triggers = [cmd]
-                        triggers.extend(cmds.data[cmd]["aliases"])
-                        triggers = list(
-                            call.replace("$BOTNICK", self.nick.lower())
-                            for call in triggers
-                        )
-                        if mfind(
-                            message.lower(),
-                            triggers,
-                            cmds.data[cmd]["prefix"],
-                        ):
-                            if (
-                                "admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]
-                            ) and name not in self.adminnames:
-                                self.msg(
-                                    f"Sorry {name}, you don't have permission to use {cmd.strip()}.",
-                                    chan,
-                                )
-                            else:
-                                cmds.call[cmd](self, chan, name, message)
-                            handled = True
-                            break
-                    if not handled:
-                        for check in cmds.checks:
-                            if re.search(
-                                check.replace("$MAX", str(self.nicklen)).replace(
-                                    "$BOTNICK", self.nick
-                                ),
-                                message,
-                            ):
-                                cmds.call[check](self, chan, name, message)
-                                handled = True
-                                break
-                    if not handled and mfind(message, ["reload"]):
-                        if name in self.adminnames:
-                            reload(conf)
-                            reload(cmds)
-                            self.__version__ = conf.__version__
-                            self.msg("Reloaded config and commands", chan)
-                        else:
-                            self.msg(
-                                f"Sorry {name}, you don't have permission to use reload.",
-                                chan,
-                            )
-                        handled = True
-                    if not handled and len(message.split("\x01")) == 3:
-                        if not self.CTCP(message, name):
-                            CTCP = message.split("\x01")[1]
-                            if CTCP == "ACTION ducks":
-                                self.msg("\x01ACTION gets hit by a duck\x01", chan)
-                            elif CTCP.startswith("ACTION ducks"):
-                                self.msg(
-                                    f"\x01ACTION gets hit by {CTCP.split(' ', 2)[2]}\x01",
-                                    chan,
-                                )
-                    if chan in self.channels and self.channels[chan] >= self.interval:
-                        r.seed()
-                        self.channels[chan] = 0
-                        mm = open("mastermessages.txt", "r")
-                        q = mm.readlines()
-                        sel = conf.decode_escapes(
-                            str(r.sample(q, 1))
-                            .strip("[]'")
-                            .replace("\\n", "")
-                            .strip('"')
-                        )
-                        self.msg(f"[QUOTE] {sel}", chan)
-                        mm.close()
+                    res = handlers.PRIVMSG(self, ircmsg)
+                    if res == "reload":
+                        reload(conf)
+                        reload(cmds)
+                        reload(handlers)
                 elif action == "NICK":
                     name = ircmsg.split("!", 1)[0][1:]
                     if name == self.nick:
