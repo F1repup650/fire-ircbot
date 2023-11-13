@@ -1,45 +1,46 @@
 from subprocess import run, PIPE
 from config import npbase, su, decode_escapes
 import random as r
-from typing import Any
+from typing import Any, Callable
+import bare
 
 
-def goat(bot, chan: str, name: str, message: str) -> None:
+def goat(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
     bot.msg("Hello Goat", chan)
     bot.gmode = False
 
 
-def botlist(bot, chan: str, name: str, message: str) -> None:
+def botlist(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
         f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {bot.adminnames}.",
         chan,
     )
 
 
-def bugs(bot, chan: str, name: str, message: str) -> None:
+def bugs(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
         f"\x01ACTION realizes {name} looks like a bug, and squashes {name}\x01",
         chan,
     )
 
 
-def hi(bot, chan: str, name: str, message: str) -> None:
+def hi(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(f"Hello {name}!", chan)
 
 
-def op(bot, chan: str, name: str, message: str) -> None:
+def op(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.op(name, chan)
 
 
-def ping(bot, chan: str, name: str, message: str) -> None:
+def ping(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
         f"{name}: pong",
         chan,
     )
 
 
-def uptime(bot, chan: str, name: str, message: str) -> None:
+def uptime(bot: bare.bot, chan: str, name: str, message: str) -> None:
     uptime = run(["uptime", "-p"], stdout=PIPE).stdout.decode().strip()
     bot.msg(
         f"Uptime: {uptime}",
@@ -47,14 +48,14 @@ def uptime(bot, chan: str, name: str, message: str) -> None:
     )
 
 
-def isAdmin(bot, chan: str, name: str, message: str) -> None:
+def isAdmin(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
         f"{name.lower()} in {bot.adminnames} == {name.lower() in bot.adminnames}",
         chan,
     )
 
 
-def help(bot, chan: str, name: str, message: str) -> None:
+def help(bot: bare.bot, chan: str, name: str, message: str) -> None:
     helpErr = False
     if (name.startswith("saxjax") and bot.server == "efnet") or (
         name == "ReplIRC" and bot.server == "replirc"
@@ -86,17 +87,17 @@ def help(bot, chan: str, name: str, message: str) -> None:
         bot.msg("Sorry, I can't send help to bridged users.", chan)
 
 
-def goatOn(bot, chan: str, name: str, message: str) -> None:
+def goatOn(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTION ACTIVATED")
     bot.gmode = True
 
 
-def goatOff(bot, chan: str, name: str, message: str) -> None:
+def goatOff(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTION DEACTIVATED")
     bot.gmode = False
 
 
-def quote(bot, chan: str, name: str, message: str) -> None:
+def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
     r.seed()
     mm = open("mastermessages.txt", "r")
     q = mm.readlines()
@@ -105,12 +106,12 @@ def quote(bot, chan: str, name: str, message: str) -> None:
     mm.close()
 
 
-def join(bot, chan: str, name: str, message: str) -> None:
+def join(bot: bare.bot, chan: str, name: str, message: str) -> None:
     newchan = message.split(" ", 1)[1].strip()
     bot.join(newchan, chan)
 
 
-def eball(bot, chan: str, name: str, message: str) -> None:
+def eball(bot: bare.bot, chan: str, name: str, message: str) -> None:
     if message.endswith("?"):
         eb = open("eightball.txt", "r")
         q = eb.readlines()
@@ -121,7 +122,7 @@ def eball(bot, chan: str, name: str, message: str) -> None:
         bot.msg("Please pose a Yes or No question.", chan)
 
 
-def debug(bot, chan: str, name: str, message: str) -> None:
+def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
     dbg_out = {
         "VERSION": bot.__version__,
         "NICKLEN": bot.nicklen,
@@ -132,16 +133,16 @@ def debug(bot, chan: str, name: str, message: str) -> None:
     bot.msg(f"[DEBUG] {dbg_out}", chan)
 
 
-def raw(bot, chan: str, name: str, message: str) -> None:
+def raw(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.sendraw(message.split(" ", 1)[1])
 
 
-def reboot(bot, chan: str, name: str, message: str) -> None:
+def reboot(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.send("QUIT :Rebooting\n")
     bot.exit("Reboot")
 
 
-def sudo(bot, chan: str, name: str, message: str) -> None:
+def sudo(bot: bare.bot, chan: str, name: str, message: str) -> None:
     if name.lower() in bot.adminnames:
         bot.msg("Error - system failure, contact system operator", chan)
     elif "bot" in name.lower():
@@ -150,11 +151,11 @@ def sudo(bot, chan: str, name: str, message: str) -> None:
         bot.msg("Access Denied", chan)
 
 
-def nowplaying(bot, chan: str, name: str, message: str) -> None:
+def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
     if name in bot.npallowed:
         x02 = "\x02"
         bot.msg(
-            f"f.sp {message.split(':')[1].split('(')[0].strip(f' {x02}')}",
+            f"f.sp {message.split(x02)[1]}",
             chan,
         )
 
@@ -178,8 +179,8 @@ data: dict[str, dict[str, Any]] = {
     "ping": {"prefix": True, "aliases": []},
     "op me": {"prefix": False, "aliases": [], "admin": True},
 }
-checks = [npbase, su]
-call = {
+checks: list[str] = [npbase, su]
+call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "!botlist": botlist,
     "bugs bugs bugs": bugs,
     "hi $BOTNICK": hi,

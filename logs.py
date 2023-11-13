@@ -15,7 +15,12 @@ def log(
     else:
         stream = stdout
     if time == "now":
-        time = dt.now()
+        dtime = dt.now()
+    if type(time) == str:
+        raise ValueError("Only \"now\" is an accepted string argument for time")
+    else:
+        dtime = time # type: dt #type: ignore
+    time = dtime.strftime("%H:%M:%S")
     if not "\n" in message:
         print(f"[{level}][{origin}][{time}] {message}", file=stream)
     else:

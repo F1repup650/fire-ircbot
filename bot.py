@@ -216,7 +216,7 @@ class bot(bare.bot):
                         reload(conf)
                         reload(cmds)
                         reload(handlers)
-                        self.msg("", chan)  # type: ignore
+                        self.msg("Reloaded successfully", chan)  # type: ignore
                 elif action == "NICK":
                     name = ircmsg.split("!", 1)[0][1:]
                     if name == self.nick:
