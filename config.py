@@ -5,7 +5,7 @@ import re, codecs
 from typing import Union, Any
 
 load_dotenv()
-__version__ = "v2.0.3"
+__version__ = "v2.0.4"
 npbase: str = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"
 su = "^(su|sudo|(su .*|sudo .*))$"
 servers: dict[str, dict[str, Any]] = {
@@ -28,6 +28,11 @@ servers: dict[str, dict[str, Any]] = {
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0},
         "admins": ["firepup", "firepup|lounge", "h|tl"],
     },
+    "backupbox": {
+        "address": "172.23.11.5",
+        "channels": {"#default": 0},
+        "admins": ["firepup650", "thelounge87"]
+    }
 }
 ESCAPE_SEQUENCE_RE = re.compile(
     r"""

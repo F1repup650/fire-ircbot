@@ -14,6 +14,7 @@ servers = [
     "ircnow",
     "replirc",
     "efnet",
+    "backupbox",
 ]
 
 
