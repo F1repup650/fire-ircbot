@@ -43,7 +43,7 @@ class bytes(bbytes):
         return str(cls.value)[2:-1]
 
     @classmethod
-    def safe_decode(cls):
+    def safe_decode(cls) -> str:
         'Calls cls.decode(cls, errors = "ignore"), if that errors, returns a blank bytes object'
         try:
             return cls.decode(cls, errors = "ignore")  # type: ignore
