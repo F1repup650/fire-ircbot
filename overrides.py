@@ -44,5 +44,8 @@ class bytes(bbytes):
 
     @classmethod
     def safe_decode(cls):
-        'Calls cls.decode(cls, errors = "ignore")'
-        return cls.decode(cls, errors = "ignore")  # type: ignore
+        'Calls cls.decode(cls, errors = "ignore"), if that errors, returns a blank bytes object'
+        try:
+            return cls.decode(cls, errors = "ignore")  # type: ignore
+        except TypeError:
+            return bytes(b'')
