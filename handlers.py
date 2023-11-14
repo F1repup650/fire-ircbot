@@ -68,10 +68,11 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
         bot.log(f"Name too long ({len(name)} > {bot.nicklen})")
         return None, None
     elif chan not in bot.channels:
-        bot.log(
-            f"Channel not in channels ({chan} not in {bot.channels})",
-            "WARN",
-        )
+        if not chan == bot.nick:
+            bot.log(
+                f"Channel not in channels ({chan} not in {bot.channels})",
+                "WARN",
+            )
         if not chan.startswith(("#", "+", "&")):
             chan = name
     else:
