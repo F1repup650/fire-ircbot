@@ -50,7 +50,7 @@ class bot(bare.bot):
         self.send(f"NICK {self.nick}\n")
         ircmsg = ""
         while True:
-            ircmsg = self.recv().decode()
+            ircmsg = self.recv().safe_decode()
             if ircmsg != "":
                 code = 0
                 try:
@@ -100,7 +100,7 @@ class bot(bare.bot):
             return
         self.send(f"JOIN {chan}\n")
         while True:
-            ircmsg = self.recv().decode()
+            ircmsg = self.recv().safe_decode()
             if ircmsg != "":
                 code = 0
                 try:
@@ -203,7 +203,7 @@ class bot(bare.bot):
             self.join(chan, "null", False)
         while 1:
             raw = self.recv()
-            ircmsg = raw.decode()
+            ircmsg = raw.safe_decode()
             if ircmsg == "":
                 self.exit("Probably a netsplit")
             else:
