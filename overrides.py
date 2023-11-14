@@ -39,4 +39,10 @@ class bytes(bbytes):
 
     @classmethod
     def lazy_decode(cls):
+        "Lazily decode the bytes object using string manipulation"
         return str(cls.value)[2:-1]
+
+    @classmethod
+    def safe_decode(cls):
+        'Calls cls.decode(cls, errors = "ignore")'
+        return cls.decode(cls, errors = "ignore")  # type: ignore
