@@ -48,4 +48,4 @@ class bytes(bbytes):
         try:
             return cls.decode(cls, errors = "ignore")  # type: ignore
         except TypeError:
-            return ""
+            return "nul"
