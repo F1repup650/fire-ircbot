@@ -49,10 +49,7 @@ class bot(bare.bot):
         self.send(f"USER {self.nick} {self.nick} {self.nick} {self.nick}\n")
         self.send(f"NICK {self.nick}\n")
         ircmsg = ""
-        while (
-            ircmsg.find(f"MODE {self.nick}") == -1
-            and ircmsg.find(f"PRIVMSG {self.nick}") == -1
-        ):
+        while True:
             ircmsg = self.recv().decode()
             if ircmsg != "":
                 code = 0
@@ -69,6 +66,12 @@ class bot(bare.bot):
                     self.nick = f"{self.nick}{r.randint(0,1000)}"
                     self.send(f"NICK {self.nick}\n")
                     self.log(f"nick is now {self.nick}")
+                elif code in [376, 422]:
+                    self.log(f"Success by code: {code}")
+                    break
+                elif ircmsg.find(f"MODE {self.nick}") or ircmsg.find(f"PRIVMSG {self.nick}"):
+                    self.log(f"Success by MSG/MODE")
+                    break
                 elif ircmsg.startswith("PING "):
                     self.ping(ircmsg)
                 elif len(ircmsg.split("\x01")) == 3:
