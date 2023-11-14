@@ -16,7 +16,7 @@ def log(
         stream = stdout
     if time == "now":
         dtime = dt.now()
-    if type(time) == str:
+    elif type(time) == str:
         raise ValueError("Only \"now\" is an accepted string argument for time")
     else:
         dtime = time # type: dt #type: ignore
