@@ -20,7 +20,7 @@ servers: dict[str, dict[str, Any]] = {
     "efnet": {
         "address": "irc.mzima.net",
         "channels": {"#random": 0, "#dice": 0},
-        "admins": ["firepup", "h|tl"],
+        "admins": ["firepup", "h|tl", "fire|tl"],
     },
     "replirc": {
         "address": "localhost",
