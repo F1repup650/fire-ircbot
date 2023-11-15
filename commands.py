@@ -1,5 +1,5 @@
 from subprocess import run, PIPE
-from config import npbase, su, decode_escapes
+import config as conf
 import random as r
 from typing import Any, Callable
 import bare
@@ -101,7 +101,7 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
     r.seed()
     mm = open("mastermessages.txt", "r")
     q = mm.readlines()
-    sel = decode_escapes(str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"'))
+    sel = conf.decode_escapes(str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"'))
     bot.msg(sel, chan)
     mm.close()
 
@@ -143,7 +143,7 @@ def reboot(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def sudo(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    if name.lower() in bot.adminnames:
+    if conf.adminCheck(bot, name):
         bot.msg("Error - system failure, contact system operator", chan)
     elif "bot" in name.lower():
         bot.log("lol, no.")
@@ -179,13 +179,13 @@ data: dict[str, dict[str, Any]] = {
     "ping": {"prefix": True, "aliases": []},
     "op me": {"prefix": False, "aliases": [], "admin": True},
 }
-checks: list[str] = [npbase, su]
+checks: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "!botlist": botlist,
     "bugs bugs bugs": bugs,
     "hi $BOTNICK": hi,
-    npbase: nowplaying,
-    su: sudo,
+    conf.npbase: nowplaying,
+    conf.su: sudo,
     "restart": reboot,
     "uptime": uptime,
     "raw ": raw,
