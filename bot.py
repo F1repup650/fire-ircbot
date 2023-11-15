@@ -56,27 +56,27 @@ class bot(bare.bot):
                 try:
                     code = int(ircmsg.split(" ", 2)[1].strip())
                 except (IndexError, ValueError):
-                    pass
+                    self.log("Err - No code")
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.find("NICKLEN=") != -1:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
                     self.log(f"NICKLEN set to {self.nicklen}")
-                elif code == 433:
+                if code == 433:
                     self.log("Nickname in use", "WARN")
                     self.nick = f"{self.nick}{r.randint(0,1000)}"
                     self.send(f"NICK {self.nick}\n")
                     self.log(f"nick is now {self.nick}")
-                elif code in [376, 422]:
+                if code in [376, 422]:
                     self.log(f"Success by code: {code}")
                     break
-                elif ircmsg.find(f"MODE {self.nick}") or ircmsg.find(f"PRIVMSG {self.nick}"):
+                if ircmsg.find(f"MODE {self.nick}") >= 0 or ircmsg.find(f"PRIVMSG {self.nick}") >= 0:
                     self.log(f"Success by MSG/MODE")
                     break
-                elif ircmsg.startswith("PING "):
+                if ircmsg.startswith("PING "):
                     self.ping(ircmsg)
-                elif len(ircmsg.split("\x01")) == 3:
+                if len(ircmsg.split("\x01")) == 3:
                     handlers.CTCP(self, ircmsg)
-                elif ircmsg.find("Closing Link") != -1:
+                if ircmsg.find("Closing Link") != -1:
                     self.exit("Closing Link")
             else:
                 self.exit("Lost connection to the server")

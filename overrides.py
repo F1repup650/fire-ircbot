@@ -48,4 +48,5 @@ class bytes(bbytes):
         try:
             return cls.decode(cls.value, errors = "ignore")  # type: ignore
         except TypeError:
+            print("panik - invalid UTF-8")
             return "nul"
