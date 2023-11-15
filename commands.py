@@ -101,7 +101,9 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
     r.seed()
     mm = open("mastermessages.txt", "r")
     q = mm.readlines()
-    sel = conf.decode_escapes(str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"'))
+    sel = conf.decode_escapes(
+        str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
+    )
     bot.msg(sel, chan)
     mm.close()
 
@@ -127,7 +129,8 @@ def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
         "VERSION": bot.__version__,
         "NICKLEN": bot.nicklen,
         "NICK": bot.nick,
-        "ADMINS": str(conf.servers[bot.server]["admins"]) + " (Does not include hostname checks)",
+        "ADMINS": str(conf.servers[bot.server]["admins"])
+        + " (Does not include hostname checks)",
         "CHANNELS": bot.channels,
     }
     bot.msg(f"[DEBUG] {dbg_out}", chan)

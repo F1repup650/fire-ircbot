@@ -45,9 +45,11 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
     host = msg.split("@", 1)[1].split(" ", 1)[0]
-    if (name.startswith("saxjax") and bot.server == "efnet") or (
-        name == "ReplIRC" and bot.server == "replirc"
-    ) or (name == "FirePyLink_" and bot.server == "ircnow"):
+    if (
+        (name.startswith("saxjax") and bot.server == "efnet")
+        or (name == "ReplIRC" and bot.server == "replirc")
+        or (name == "FirePyLink_" and bot.server == "ircnow")
+    ):
         if "<" in msg and ">" in msg:
             Nname = msg.split("<", 1)[1].split(">", 1)[0].strip()
             if name == "ReplIRC":

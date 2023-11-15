@@ -46,7 +46,7 @@ class bytes(bbytes):
     def safe_decode(cls) -> str:
         'Calls cls.decode(cls, errors = "ignore"), if that errors, returns a blank string'
         try:
-            return cls.decode(cls.value, errors = "ignore")  # type: ignore
+            return cls.decode(cls.value, errors="ignore")  # type: ignore
         except TypeError:
             print("panik - invalid UTF-8")
             return "nul"

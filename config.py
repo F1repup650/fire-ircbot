@@ -37,7 +37,7 @@ servers: dict[str, dict[str, Any]] = {
         "channels": {"#default": 0, "#botrebellion": 0},
         "admins": [],
         "hosts": ["172.20.171.225", "169.254.253.107"],
-    }
+    },
 }
 admin_hosts: list[str] = ["firepup.firepi", "47.221.227.180"]
 ESCAPE_SEQUENCE_RE = re.compile(
@@ -67,5 +67,10 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     else:
         return any(message[: len(match)] == match for match in find)
 
+
 def adminCheck(bot: bare.bot, name: str, host: Optional[str] = "nul") -> bool:
-    return name.lower() in servers[bot.server]["admins"] or host in admin_hosts or host in servers[bot.server]["hosts"]
+    return (
+        name.lower() in servers[bot.server]["admins"]
+        or host in admin_hosts
+        or host in servers[bot.server]["hosts"]
+    )
