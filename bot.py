@@ -58,7 +58,7 @@ class bot(bare.bot):
                 except (IndexError, ValueError):
                     self.log("Err - No code")
                 print(bytes(ircmsg).lazy_decode())
-                if ircmsg.find("NICKLEN=") != -1:
+                if "NICKLEN" in ircmsg:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
                     self.log(f"NICKLEN set to {self.nicklen}")
                 if code == 433:
@@ -69,14 +69,14 @@ class bot(bare.bot):
                 if code in [376, 422]:
                     self.log(f"Success by code: {code}")
                     break
-                if ircmsg.find(f"MODE {self.nick}") >= 0 or ircmsg.find(f"PRIVMSG {self.nick}") >= 0:
+                if "MODE" in ircmsg or "PRIVMSG" in ircmsg:
                     self.log(f"Success by MSG/MODE")
                     break
                 if ircmsg.startswith("PING "):
                     self.ping(ircmsg)
                 if len(ircmsg.split("\x01")) == 3:
                     handlers.CTCP(self, ircmsg)
-                if ircmsg.find("Closing Link") != -1:
+                if "Closing link" in ircmsg:
                     self.exit("Closing Link")
             else:
                 self.exit("Lost connection to the server")

@@ -60,7 +60,7 @@ def help(bot: bare.bot, chan: str, name: str, message: str) -> None:
     if (name.startswith("saxjax") and bot.server == "efnet") or (
         name == "ReplIRC" and bot.server == "replirc"
     ):
-        if message.find("<") != -1 and message.find(">") != -1:
+        if "<" in message and "<" in message:
             helpErr = True
     elif name.endswith("dsc"):
         helpErr = True
