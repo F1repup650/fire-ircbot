@@ -68,4 +68,4 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
         return any(message[: len(match)] == match for match in find)
 
 def adminCheck(bot: bare.bot, name: str, host: Optional[str] = "nul") -> bool:
-    return name in servers[bot.server]["admins"] or host in admin_hosts or host in servers[bot.server]["hosts"]
+    return name.lower() in servers[bot.server]["admins"] or host in admin_hosts or host in servers[bot.server]["hosts"]
