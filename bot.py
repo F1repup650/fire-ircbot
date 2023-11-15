@@ -69,7 +69,7 @@ class bot(bare.bot):
                 if code in [376, 422]:
                     self.log(f"Success by code: {code}")
                     break
-                if "MODE" in ircmsg or "PRIVMSG" in ircmsg:
+                if " MODE " in ircmsg or " PRIVMSG " in ircmsg:
                     self.log(f"Success by MSG/MODE")
                     break
                 if ircmsg.startswith("PING "):
