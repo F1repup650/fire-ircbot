@@ -17,22 +17,26 @@ servers: dict[str, dict[str, Any]] = {
         "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0},
         "admins": ["firepup", "h|thelounge", "firepup|lounge"],
+        "hosts": [],
     },
     "efnet": {
         "address": "irc.mzima.net",
         "channels": {"#random": 0, "#dice": 0},
         "admins": ["firepup", "h|tl", "fire|tl"],
+        "hosts": [],
     },
     "replirc": {
         "address": "localhost",
         "pass": env["replirc_pass"],
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0},
         "admins": ["firepup", "firepup|lounge", "h|tl"],
+        "hosts": [],
     },
     "backupbox": {
         "address": "172.23.11.5",
         "channels": {"#default": 0},
-        "admins": []
+        "admins": [],
+        "hosts": ["172.20.171.225", "169.254.253.107"],
     }
 }
 admin_hosts: list[str] = ["firepup.firepi", "owner.firepi", "47.221.227.180"]
@@ -64,4 +68,4 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
         return any(message[: len(match)] == match for match in find)
 
 def adminCheck(bot: bare.bot, name: str, host: Optional[str] = "nul") -> bool:
-    return name in servers[bot.server]["admins"] or host in admin_hosts
+    return name in servers[bot.server]["admins"] or host in admin_hosts or host in servers[bot.server]["hosts"]
