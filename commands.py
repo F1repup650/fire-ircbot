@@ -50,7 +50,7 @@ def uptime(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 def isAdmin(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
-        f"{name.lower()} in {bot.adminnames} == {name.lower() in bot.adminnames}",
+        f"{conf.adminCheck(bot, name)} (hostname is not checked)",
         chan,
     )
 
