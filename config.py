@@ -2,7 +2,7 @@
 from os import environ as env
 from dotenv import load_dotenv
 import re, codecs
-from typing import Union, Any
+from typing import Optional, Any
 import bare
 
 load_dotenv()
@@ -32,7 +32,7 @@ servers: dict[str, dict[str, Any]] = {
     "backupbox": {
         "address": "172.23.11.5",
         "channels": {"#default": 0},
-        "admins": ["firepup650", "thelounge87"]
+        "admins": []
     }
 }
 admin_hosts: list[str] = ["firepup.firepi", "owner.firepi", "47.221.227.180"]
@@ -63,5 +63,5 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     else:
         return any(message[: len(match)] == match for match in find)
 
-def adminCheck(bot: bare.bot, name: str, host: str) -> bool:
+def adminCheck(bot: bare.bot, name: str, host: Optional[str] = "nul") -> bool:
     return name in servers[bot.server]["admins"] or host in admin_hosts
