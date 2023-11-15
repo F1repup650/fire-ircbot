@@ -175,7 +175,7 @@ data: dict[str, dict[str, Any]] = {
     "goat.mode.activate": {"prefix": True, "aliases": [], "admin": True},
     "goat.mode.deactivate": {"prefix": True, "aliases": [], "admin": True},
     "help": {"prefix": True, "aliases": []},
-    "amIAdmin": {"prefix": True, "aliases": []},
+    "amiadmin": {"prefix": True, "aliases": []},
     "ping": {"prefix": True, "aliases": []},
     "op me": {"prefix": False, "aliases": [], "admin": True},
 }
@@ -196,7 +196,7 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "goat.mode.activate": goatOn,
     "goat.mode.decativate": goatOff,
     "help": help,
-    "amIAdmin": isAdmin,
+    "amiadmin": isAdmin,
     "ping": ping,
     "op me": op,
 }
