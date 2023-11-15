@@ -44,6 +44,7 @@ def CTCP(bot: bare.bot, msg: str) -> bool:
 def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
+    host = msg.split("@", 1)[1].split(" ", 1)[0]
     if (name.startswith("saxjax") and bot.server == "efnet") or (
         name == "ReplIRC" and bot.server == "replirc"
     ) or (name == "FirePyLink_" and bot.server == "ircnow"):
@@ -91,7 +92,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
         ):
             if (
                 "admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]
-            ) and name not in bot.adminnames:
+            ) and not conf.adminCheck(bot, name, host):
                 bot.msg(
                     f"Sorry {name}, you don't have permission to use {cmd.strip()}.",
                     chan,
@@ -110,7 +111,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
                 handled = True
                 break
     if not handled and conf.mfind(message, ["reload"]):
-        if name in bot.adminnames:
+        if conf.adminCheck(bot, name, host):
             return "reload", chan
         else:
             bot.msg(

@@ -3,6 +3,7 @@ from os import environ as env
 from dotenv import load_dotenv
 import re, codecs
 from typing import Union, Any
+import bare
 
 load_dotenv()
 __version__ = "v2.0.4"
@@ -34,6 +35,7 @@ servers: dict[str, dict[str, Any]] = {
         "admins": ["firepup650", "thelounge87"]
     }
 }
+admin_hosts: list[str] = ["firepup.firepi", "owner.firepi", "47.221.227.180"]
 ESCAPE_SEQUENCE_RE = re.compile(
     r"""
     ( \\U........      # 8-digit hex escapes
@@ -60,3 +62,6 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
         return any(message[: len(match) + 1] == prefix + match for match in find)
     else:
         return any(message[: len(match)] == match for match in find)
+
+def adminCheck(bot: bare.bot, name: str, host: str) -> bool:
+    return name in servers[bot.server]["admins"] or host in admin_hosts
