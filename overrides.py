@@ -4,6 +4,7 @@ from typing import TypeVar, Type, Any
 
 _T = TypeVar("_T")
 
+bbytes = bbytes
 
 class bytes(bbytes):
     """Local override of builtin bytes class to add "lazy_decode"
