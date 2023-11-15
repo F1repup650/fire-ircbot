@@ -34,7 +34,7 @@ servers: dict[str, dict[str, Any]] = {
     },
     "backupbox": {
         "address": "172.23.11.5",
-        "channels": {"#default": 0},
+        "channels": {"#default": 0, "#botrebellion": 0},
         "admins": [],
         "hosts": ["172.20.171.225", "169.254.253.107"],
     }
