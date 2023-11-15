@@ -127,7 +127,7 @@ def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
         "VERSION": bot.__version__,
         "NICKLEN": bot.nicklen,
         "NICK": bot.nick,
-        "ADMINS": bot.adminnames,
+        "ADMINS": conf.servers[bot.server]["hosts"] + " (Does not include hostname checks)",
         "CHANNELS": bot.channels,
     }
     bot.msg(f"[DEBUG] {dbg_out}", chan)
