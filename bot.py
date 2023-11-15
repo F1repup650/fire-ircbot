@@ -56,7 +56,7 @@ class bot(bare.bot):
                 try:
                     code = int(ircmsg.split(" ", 2)[1].strip())
                 except (IndexError, ValueError):
-                    self.log("Err - No code")
+                    pass
                 print(bytes(ircmsg).lazy_decode())
                 if "NICKLEN" in ircmsg:
                     self.nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
