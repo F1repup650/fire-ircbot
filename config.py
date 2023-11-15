@@ -29,7 +29,7 @@ servers: dict[str, dict[str, Any]] = {
         "address": "localhost",
         "pass": env["replirc_pass"],
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0},
-        "admins": ["h|tl"],
+        "admins": ["h-tl"],
         "hosts": ["owner.firepi"],
     },
     "backupbox": {
