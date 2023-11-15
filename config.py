@@ -17,7 +17,7 @@ servers: dict[str, dict[str, Any]] = {
         "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0},
         "admins": ["firepup", "h|thelounge", "firepup|lounge"],
-        "hosts": ["firepup.firepi", "9pfs.repl.co"],
+        "hosts": ["9pfs.repl.co"],
     },
     "efnet": {
         "address": "irc.mzima.net",
@@ -39,7 +39,7 @@ servers: dict[str, dict[str, Any]] = {
         "hosts": ["172.20.171.225", "169.254.253.107"],
     }
 }
-admin_hosts: list[str] = ["47.221.227.180"]
+admin_hosts: list[str] = ["firepup.firepi", "47.221.227.180"]
 ESCAPE_SEQUENCE_RE = re.compile(
     r"""
     ( \\U........      # 8-digit hex escapes
