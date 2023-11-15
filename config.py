@@ -16,20 +16,20 @@ servers: dict[str, dict[str, Any]] = {
         "interval": 200,
         "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0},
-        "admins": ["firepup", "h|thelounge", "firepup|lounge"],
+        "admins": [],
         "hosts": ["9pfs.repl.co"],
     },
     "efnet": {
         "address": "irc.mzima.net",
         "channels": {"#random": 0, "#dice": 0},
-        "admins": ["firepup", "h|tl", "fire|tl"],
+        "admins": ["firepup"],
         "hosts": [],
     },
     "replirc": {
         "address": "localhost",
         "pass": env["replirc_pass"],
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0},
-        "admins": ["firepup", "firepup|lounge", "h|tl"],
+        "admins": ["h|tl"],
         "hosts": ["owner.firepi"],
     },
     "backupbox": {
