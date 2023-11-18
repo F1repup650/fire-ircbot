@@ -162,7 +162,7 @@ class bot(bare.bot):
         return data
 
     def log(self, message: str, level: str = "LOG") -> None:
-        logs.log(message, self.server)
+        logs.log(message, self.server, level)
 
     def exit(self, message: str) -> NoReturn:
         logs.log(message, self.server, "EXIT")
