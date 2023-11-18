@@ -169,6 +169,9 @@ def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
             chan,
         )
 
+def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    bot.msg(f"I think you are {name}", chan)
+
 
 data: dict[str, dict[str, Any]] = {
     "!botlist": {"prefix": False, "aliases": []},
@@ -188,6 +191,7 @@ data: dict[str, dict[str, Any]] = {
     "amiadmin": {"prefix": True, "aliases": []},
     "ping": {"prefix": True, "aliases": []},
     "op me": {"prefix": False, "aliases": [], "admin": True},
+    "whoami": {"prefix": True, "aliases": []},
 }
 checks: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
@@ -209,4 +213,5 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "amiadmin": isAdmin,
     "ping": ping,
     "op me": op,
+    "whoami": whoami
 }
