@@ -90,7 +90,7 @@ class bot(bare.bot):
             for subchan in chans:
                 self.join(subchan, origin)
             return
-        if chan.startswith("0") or (chan == "#main" and lock):
+        if chan.startswith("0") or (chan == "#main" and lock and self.server != "replirc"):
             if origin != "null":
                 self.msg(f"Refusing to join channel {chan} (protected)", origin)
             return
@@ -213,17 +213,13 @@ class bot(bare.bot):
                     action = ircmsg.split(" ", 2)[1].strip()
                 except IndexError:
                     pass
-                if action == "PRIVMSG":
-                    res, chan = handlers.PRIVMSG(self, ircmsg)
+                if action in handlers.handles:
+                    res, chan = handlers.handles[action](self, ircmsg)
                     if res == "reload":
                         reload(conf)
                         reload(cmds)
                         reload(handlers)
                         self.msg("Reloaded successfully", chan)  # type: ignore
-                elif action == "NICK":
-                    name = ircmsg.split("!", 1)[0][1:]
-                    if name == self.nick:
-                        self.nick = ircmsg.split("NICK", 1)[1].split(":", 1)[1].strip()
                 else:
                     if ircmsg.startswith("PING "):
                         self.ping(ircmsg)

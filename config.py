@@ -15,7 +15,7 @@ servers: dict[str, dict[str, Any]] = {
         "port": 6601,
         "interval": 200,
         "pass": env["ircnow_pass"],
-        "channels": {"#random": 0, "#dice": 0, "#offtopic": 0},
+        "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, "#main/replirc": 0},
         "admins": [],
         "hosts": ["9pfs.repl.co"],
     },

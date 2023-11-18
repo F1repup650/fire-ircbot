@@ -151,5 +151,30 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
         mm.close()
     return None, None
 
+def NICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+    name = msg.split("!", 1)[0][1:]
+    if name == bot.nick:
+        bot.nick = msg.split("NICK", 1)[1].split(":", 1)[1].strip()
+    return None, None
 
-handles = {"PRIVMSG": PRIVMSG}
+def KICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+    important = msg.split("KICK", 1)[1].split(":", 1)[0].strip().split(" ")
+    channel = important[0]
+    kicked = important[1]
+    if kicked == bot.nick:
+        bot.channels.pop(channel, None)
+    return None, None
+
+def PART(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+    parted = msg.split("!", 1)[0][1:]
+    channel =  msg.split("PART", 1)[1].split(":", 1)[0].strip()
+    if parted == bot.nick:
+        bot.channels.pop(channel, None)
+    return None, None
+
+handles = {
+    "PRIVMSG": PRIVMSG,
+    "NICK": NICK,
+    "KICK": KICK,
+    "PART": PART,
+}
