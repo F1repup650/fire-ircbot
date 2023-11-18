@@ -18,8 +18,10 @@ def log(
         dtime = dt.now()
     elif type(time) == str:
         raise ValueError('Only "now" is an accepted string argument for time')
+    elif type(time) == dt:
+        dtime = time
     else:
-        dtime = time  # type: dt #type: ignore
+        raise ValueError("time must either be a string or a dt object")
     time = dtime.strftime("%H:%M:%S")
     if not "\n" in message:
         print(f"[{level}][{origin}][{time}] {message}", file=stream)

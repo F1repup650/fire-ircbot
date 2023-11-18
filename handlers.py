@@ -2,7 +2,7 @@ import random as r
 import config as conf
 import re
 import commands as cmds
-from typing import Union
+from typing import Union, Callable
 from overrides import bytes, bbytes
 from importlib import reload
 import bare
@@ -41,7 +41,7 @@ def CTCP(bot: bare.bot, msg: str) -> bool:
     return False
 
 
-def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]]:
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
     host = msg.split("@", 1)[1].split(" ", 1)[0]
@@ -152,14 +152,14 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
     return None, None
 
 
-def NICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+def NICK(bot: bare.bot, msg: str) -> tuple[None, None]:
     name = msg.split("!", 1)[0][1:]
     if name == bot.nick:
         bot.nick = msg.split("NICK", 1)[1].split(":", 1)[1].strip()
     return None, None
 
 
-def KICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+def KICK(bot: bare.bot, msg: str) -> tuple[None, None]:
     important = msg.split("KICK", 1)[1].split(":", 1)[0].strip().split(" ")
     channel = important[0]
     kicked = important[1]
@@ -168,7 +168,7 @@ def KICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     return None, None
 
 
-def PART(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
+def PART(bot: bare.bot, msg: str) -> tuple[None, None]:
     parted = msg.split("!", 1)[0][1:]
     channel = msg.split("PART", 1)[1].split(":", 1)[0].strip()
     if parted == bot.nick:
@@ -176,7 +176,7 @@ def PART(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     return None, None
 
 
-handles = {
+handles: dict[str, Callable[[bare.bot, str], Union[tuple[None, None], tuple[str, str]]]] = {
     "PRIVMSG": PRIVMSG,
     "NICK": NICK,
     "KICK": KICK,

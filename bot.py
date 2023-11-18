@@ -217,11 +217,11 @@ class bot(bare.bot):
                     pass
                 if action in handlers.handles:
                     res, chan = handlers.handles[action](self, ircmsg)
-                    if res == "reload":
+                    if res == "reload" and type(chan) == str:
                         reload(conf)
                         reload(cmds)
                         reload(handlers)
-                        self.msg("Reloaded successfully", chan)  # type: ignore
+                        self.msg("Reloaded successfully", chan)
                 else:
                     if ircmsg.startswith("PING "):
                         self.ping(ircmsg)
