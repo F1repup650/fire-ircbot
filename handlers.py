@@ -45,15 +45,20 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
     host = msg.split("@", 1)[1].split(" ", 1)[0]
+    bridge = False
     if (
         (name.startswith("saxjax") and bot.server == "efnet")
         or (name == "ReplIRC" and bot.server == "replirc")
         or (name == "FirePyLink_" and bot.server == "ircnow")
+        or (name  == "FirePyLink" and bot.server == "backupbox")
     ):
         if "<" in msg and ">" in msg:
+            bridge = True
             Nname = msg.split("<", 1)[1].split(">", 1)[0].strip()
             if name == "ReplIRC":
                 name = Nname[4:]
+            elif name in ["FirePyLink_", "FirePyLink"]:
+                name = Nname.lstrip("@%~+")[3:-1]
             else:
                 name = Nname
             message = msg.split(">", 1)[1].strip()
@@ -69,7 +74,10 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
     )
     if len(name) > bot.nicklen:
         bot.log(f"Name too long ({len(name)} > {bot.nicklen})")
-        return None, None
+        if not bridge:
+            return None, None
+        else:
+            bot.log("This user is a bridge, overriding")
     elif chan not in bot.channels:
         if not chan == bot.nick:
             bot.log(
