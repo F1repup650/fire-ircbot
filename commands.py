@@ -169,6 +169,7 @@ def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
             chan,
         )
 
+
 def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(f"I think you are {name}", chan)
 
@@ -213,5 +214,5 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "amiadmin": isAdmin,
     "ping": ping,
     "op me": op,
-    "whoami": whoami
+    "whoami": whoami,
 }

@@ -90,7 +90,9 @@ class bot(bare.bot):
             for subchan in chans:
                 self.join(subchan, origin)
             return
-        if chan.startswith("0") or (chan == "#main" and lock and self.server != "replirc"):
+        if chan.startswith("0") or (
+            chan == "#main" and lock and self.server != "replirc"
+        ):
             if origin != "null":
                 self.msg(f"Refusing to join channel {chan} (protected)", origin)
             return

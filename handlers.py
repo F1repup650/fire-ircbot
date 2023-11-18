@@ -50,7 +50,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
         (name.startswith("saxjax") and bot.server == "efnet")
         or (name == "ReplIRC" and bot.server == "replirc")
         or (name == "FirePyLink_" and bot.server == "ircnow")
-        or (name  == "FirePyLink" and bot.server == "backupbox")
+        or (name == "FirePyLink" and bot.server == "backupbox")
     ):
         if "<" in msg and ">" in msg:
             bridge = True
@@ -151,11 +151,13 @@ def PRIVMSG(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]
         mm.close()
     return None, None
 
+
 def NICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     name = msg.split("!", 1)[0][1:]
     if name == bot.nick:
         bot.nick = msg.split("NICK", 1)[1].split(":", 1)[1].strip()
     return None, None
+
 
 def KICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     important = msg.split("KICK", 1)[1].split(":", 1)[0].strip().split(" ")
@@ -165,12 +167,14 @@ def KICK(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
         bot.channels.pop(channel, None)
     return None, None
 
+
 def PART(bot: bare.bot, msg: str) -> tuple[Union[None, str], Union[None, str]]:
     parted = msg.split("!", 1)[0][1:]
-    channel =  msg.split("PART", 1)[1].split(":", 1)[0].strip()
+    channel = msg.split("PART", 1)[1].split(":", 1)[0].strip()
     if parted == bot.nick:
         bot.channels.pop(channel, None)
     return None, None
+
 
 handles = {
     "PRIVMSG": PRIVMSG,
