@@ -2,7 +2,7 @@ from subprocess import run, PIPE
 import config as conf
 import random as r
 from typing import Any, Callable
-import bare
+import bare, re
 
 
 def goat(bot: bare.bot, chan: str, name: str, message: str) -> None:
@@ -98,9 +98,16 @@ def goatOff(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    qfilter = ".*"
+    query = "null"
+    if " " in message:
+        query = message.split(" ", 1)[1]
+        qfilter = f".*{query}.*"
     r.seed()
     mm = open("mastermessages.txt", "r")
-    q = mm.readlines()
+    q = list(filter(lambda x: re.match(qfilter, x), mm.readlines()))
+    if q == []:
+        q = [f'No results for "{query}" ']
     sel = conf.decode_escapes(
         str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
     )
