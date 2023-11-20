@@ -31,6 +31,7 @@ class bot:
     queue: list[bbytes]
     sock: socket
     npallowed: list[str]
+    current: str
 
     def __init__(self, server: str):
         ...
