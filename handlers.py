@@ -1,11 +1,11 @@
+#!/usr/bin/python3
 import random as r
 import config as conf
-import re
 import commands as cmds
 from typing import Union, Callable
 from overrides import bytes, bbytes
 from importlib import reload
-import bare
+import bare, re, checks
 
 
 def CTCP(bot: bare.bot, msg: str) -> bool:
@@ -46,14 +46,15 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     name = msg.split("!", 1)[0][1:]
     host = msg.split("@", 1)[1].split(" ", 1)[0]
     bridge = False
+    bot.current = "user"
     if (
         (name.startswith("saxjax") and bot.server == "efnet")
         or (name == "ReplIRC" and bot.server == "replirc")
-        or (name == "FirePyLink_" and bot.server == "ircnow")
-        or (name == "FirePyLink" and bot.server == "backupbox")
+        or (name in ["FirePyLink_", "FirePyLink"] and bot.server in ["ircnow", "backupbox"])
     ):
         if "<" in msg and ">" in msg:
             bridge = True
+            bot.current = "bridge"
             Nname = msg.split("<", 1)[1].split(">", 1)[0].strip()
             if name == "ReplIRC":
                 name = Nname[4:]
@@ -70,7 +71,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
     chan = msg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
     bot.log(
-        f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}"',
+        f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}" ({bot.current})',
     )
     if len(name) > bot.nicklen:
         bot.log(f"Name too long ({len(name)} > {bot.nicklen})")
@@ -101,18 +102,16 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
             cmds.data[cmd]["prefix"],
         ):
             if (
-                "admin" in cmds.data[cmd] and cmds.data[cmd]["admin"]
-            ) and not conf.adminCheck(bot, name, host):
-                bot.msg(
-                    f"Sorry {name}, you don't have permission to use {cmd.strip()}.",
-                    chan,
-                )
+                "check" in cmds.data[cmd] and cmds.data[cmd]["check"]
+            ):
+                if cmds.data[cmd]["check"](bot, name, host, chan, cmd):
+                    cmds.call[cmd](bot, chan, name, message)
             else:
                 cmds.call[cmd](bot, chan, name, message)
             handled = True
             break
     if not handled:
-        for check in cmds.checks:
+        for check in cmds.regexes:
             if re.search(
                 check.replace("$MAX", str(bot.nicklen)).replace("$BOTNICK", bot.nick),
                 message,
@@ -121,13 +120,8 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
                 handled = True
                 break
     if not handled and conf.mfind(message, ["reload"]):
-        if conf.adminCheck(bot, name, host):
+        if checks.admin(bot, name, host, chan, "reload"):
             return "reload", chan
-        else:
-            bot.msg(
-                f"Sorry {name}, you don't have permission to use reload.",
-                chan,
-            )
         handled = True
     if not handled and len(message.split("\x01")) == 3:
         if not CTCP(bot, message):

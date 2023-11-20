@@ -1,8 +1,9 @@
+#!/usr/bin/python3
 from subprocess import run, PIPE
 import config as conf
 import random as r
 from typing import Any, Callable
-import bare, re
+import bare, re, checks
 
 
 def goat(bot: bare.bot, chan: str, name: str, message: str) -> None:
@@ -50,19 +51,14 @@ def uptime(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 def isAdmin(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
-        f"{conf.adminCheck(bot, name)} (hostname is not checked)",
+        f"{checks.admin(bot, name)} (hostname is not checked)",
         chan,
     )
 
 
 def help(bot: bare.bot, chan: str, name: str, message: str) -> None:
     helpErr = False
-    if (name.startswith("saxjax") and bot.server == "efnet") or (
-        name == "ReplIRC" and bot.server == "replirc"
-    ):
-        if "<" in message and "<" in message:
-            helpErr = True
-    elif name.endswith("dsc"):
+    if bot.current == "bridge":
         helpErr = True
     if not helpErr:
         bot.msg("Command list needs rework", name)
@@ -102,10 +98,11 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
     query = "null"
     if " " in message:
         query = message.split(" ", 1)[1]
-        qfilter = f".*{query}.*"
+        qfilter = f".*{query}.*".replace(" ", "\s")
     r.seed()
     mm = open("mastermessages.txt", "r")
-    q = list(filter(lambda x: re.match(qfilter, x), mm.readlines()))
+    quotes = mm.readlines()
+    q = list(filter(lambda x: re.match(qfilter, x), quotes))
     if q == []:
         q = [f'No results for "{query}" ']
     sel = conf.decode_escapes(
@@ -153,7 +150,7 @@ def reboot(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def sudo(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    if conf.adminCheck(bot, name):
+    if checks.admin(bot, name):
         bot.msg("Error - system failure, contact system operator", chan)
     elif "bot" in name.lower():
         bot.log("lol, no.")
@@ -179,22 +176,22 @@ data: dict[str, dict[str, Any]] = {
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
     #   [npbase, su]
-    "restart": {"prefix": True, "aliases": ["reboot"], "admin": True},
+    "restart": {"prefix": True, "aliases": ["reboot"], "check": checks.admin},
     "uptime": {"prefix": True, "aliases": []},
-    "raw ": {"prefix": True, "aliases": ["cmd "], "admin": True},
-    "debug": {"prefix": True, "aliases": ["dbg"], "admin": True},
+    "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
+    "debug": {"prefix": True, "aliases": ["dbg"], "check": checks.admin},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
-    "join ": {"prefix": True, "aliases": [], "admin": True},
+    "join ": {"prefix": True, "aliases": [], "check": checks.admin},
     "quote": {"prefix": True, "aliases": ["q"]},
-    "goat.mode.activate": {"prefix": True, "aliases": [], "admin": True},
-    "goat.mode.deactivate": {"prefix": True, "aliases": [], "admin": True},
+    "goat.mode.activate": {"prefix": True, "aliases": [], "check": checks.admin},
+    "goat.mode.deactivate": {"prefix": True, "aliases": [], "check": checks.admin},
     "help": {"prefix": True, "aliases": []},
     "amiadmin": {"prefix": True, "aliases": []},
     "ping": {"prefix": True, "aliases": []},
-    "op me": {"prefix": False, "aliases": [], "admin": True},
+    "op me": {"prefix": False, "aliases": [], "check": checks.admin},
     "whoami": {"prefix": True, "aliases": []},
 }
-checks: list[str] = [conf.npbase, conf.su]
+regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "!botlist": botlist,
     "bugs bugs bugs": bugs,

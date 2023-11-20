@@ -41,6 +41,7 @@ class bot(bare.bot):
         self.queue: list[bbytes] = []
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.npallowed = ["FireBitBot"]
+        self.current = "user"
         self.log(f"Start init for {self.server}")
 
     def connect(self) -> None:
