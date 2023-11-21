@@ -50,7 +50,10 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     if (
         (name.startswith("saxjax") and bot.server == "efnet")
         or (name == "ReplIRC" and bot.server == "replirc")
-        or (name in ["FirePyLink_", "FirePyLink"] and bot.server in ["ircnow", "backupbox"])
+        or (
+            name in ["FirePyLink_", "FirePyLink"]
+            and bot.server in ["ircnow", "backupbox"]
+        )
     ):
         if "<" in msg and ">" in msg:
             bridge = True
@@ -101,9 +104,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
             triggers,
             cmds.data[cmd]["prefix"],
         ):
-            if (
-                "check" in cmds.data[cmd] and cmds.data[cmd]["check"]
-            ):
+            if "check" in cmds.data[cmd] and cmds.data[cmd]["check"]:
                 if cmds.data[cmd]["check"](bot, name, host, chan, cmd):
                     cmds.call[cmd](bot, chan, name, message)
             else:
@@ -138,7 +139,10 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         bot.channels[chan] = 0
         with open("mastermessages.txt", "r") as mm:
             sel = conf.decode_escapes(
-                str(r.sample(mm.readlines(), 1)).strip("[]'").replace("\\n", "").strip('"')
+                str(r.sample(mm.readlines(), 1))
+                .strip("[]'")
+                .replace("\\n", "")
+                .strip('"')
             )
             bot.msg(f"[QUOTE] {sel}", chan)
     return None, None
@@ -168,7 +172,9 @@ def PART(bot: bare.bot, msg: str) -> tuple[None, None]:
     return None, None
 
 
-handles: dict[str, Callable[[bare.bot, str], Union[tuple[None, None], tuple[str, str]]]] = {
+handles: dict[
+    str, Callable[[bare.bot, str], Union[tuple[None, None], tuple[str, str]]]
+] = {
     "PRIVMSG": PRIVMSG,
     "NICK": NICK,
     "KICK": KICK,

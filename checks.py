@@ -4,7 +4,14 @@ import random as r
 from typing import Any, Callable, Optional
 import bare, re
 
-def admin(bot: bare.bot, name: str, host: Optional[str] = "nul", chan: Optional[str] = "nul", cmd: Optional[str] = "nul") -> bool:
+
+def admin(
+    bot: bare.bot,
+    name: str,
+    host: Optional[str] = "nul",
+    chan: Optional[str] = "nul",
+    cmd: Optional[str] = "nul",
+) -> bool:
     if (
         name.lower() in conf.servers[bot.server]["admins"]
         or host in conf.admin_hosts
