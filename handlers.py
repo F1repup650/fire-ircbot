@@ -136,13 +136,11 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     if chan in bot.channels and bot.channels[chan] >= bot.interval:
         r.seed()
         bot.channels[chan] = 0
-        mm = open("mastermessages.txt", "r")
-        q = mm.readlines()
-        sel = conf.decode_escapes(
-            str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
-        )
-        bot.msg(f"[QUOTE] {sel}", chan)
-        mm.close()
+        with open("mastermessages.txt", "r") as mm:
+            sel = conf.decode_escapes(
+                str(r.sample(mm.readlines(), 1)).strip("[]'").replace("\\n", "").strip('"')
+            )
+            bot.msg(f"[QUOTE] {sel}", chan)
     return None, None
 
 
