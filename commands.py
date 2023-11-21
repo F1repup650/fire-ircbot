@@ -94,22 +94,21 @@ def goatOff(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    qfilter = ".*"
-    query = "null"
+    qfilter = ""
+    query = ""
     if " " in message:
         query = message.split(" ", 1)[1]
-        qfilter = f".*{query}.*".replace(" ", "\s")
+        qfilter = query.replace(" ", "\s")
     r.seed()
-    mm = open("mastermessages.txt", "r")
-    quotes = mm.readlines()
-    q = list(filter(lambda x: re.match(qfilter, x), quotes))
-    if q == []:
-        q = [f'No results for "{query}" ']
-    sel = conf.decode_escapes(
-        str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
-    )
-    bot.msg(sel, chan)
-    mm.close()
+    with open("mastermessages.txt", "r") as mm:
+        quotes = mm.readlines()
+        q = list(filter(lambda x: re.search(qfilter, x), quotes))
+        if q == []:
+            q = [f'No results for "{query}" ']
+        sel = conf.decode_escapes(
+            str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
+        )
+        bot.msg(sel, chan)
 
 
 def join(bot: bare.bot, chan: str, name: str, message: str) -> None:
