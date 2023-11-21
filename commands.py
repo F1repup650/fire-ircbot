@@ -101,8 +101,7 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
         qfilter = query.replace(" ", "\s")
     r.seed()
     with open("mastermessages.txt", "r") as mm:
-        quotes = mm.readlines()
-        q = list(filter(lambda x: re.search(qfilter, x), quotes))
+        q = list(filter(lambda x: re.search(qfilter, x), mm.readlines()))
         if q == []:
             q = [f'No results for "{query}" ']
         sel = conf.decode_escapes(
