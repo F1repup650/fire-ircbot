@@ -157,7 +157,7 @@ def sudo(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    if name in bot.npallowed:
+    if name in bot.npallowed and not bot.current == "bridge":
         x02 = "\x02"
         bot.msg(
             f"f.sp {message.split(x02)[1]}",

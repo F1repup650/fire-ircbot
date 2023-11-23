@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "Repl_IRC_Bot"
-version = "0.1.0"
-description = "A bot I made for irc chats"
+name = "fire-ircbot"
+version = "1.0.0"
+description = "An ircbot"
 authors = ["Firepup Sixfifty <firepup650@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 apiclient = "^1.0.4"
 
 [tool.poetry.dev-dependencies]
