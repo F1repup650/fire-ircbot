@@ -66,3 +66,11 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
         return any(message[: len(match) + 1] == prefix + match for match in find)
     else:
         return any(message[: len(match)] == match for match in find)
+
+def sub(message: str, bot: bare.bot, chan: Optional[str], name: Optional[str]):
+    result = message.replace("$BOTNICK", bot.nick).replace("$NICK", bot.nick)
+    if chan:
+        result = result.replace("$CHANNEL", chan).replace("$CHAN", chan)
+    if name:
+        result = result.replace("$SENDER", name).replace("$NAME", name)
+    return result
