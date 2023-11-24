@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from os import environ as env
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # type: ignore
 import re, codecs
 from typing import Optional, Any
 import bare
