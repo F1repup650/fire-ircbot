@@ -99,9 +99,9 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     for cmd in cmds.data:
         triggers = [cmd]
         triggers.extend(cmds.data[cmd]["aliases"])
-        triggers = list(call.replace("$BOTNICK", bot.nick.lower()) for call in triggers)
+        triggers = list(conf.sub(call, bot, chan, name).lower() for call in triggers)
         if conf.mfind(
-            message.lower(),
+            conf.sub(message, bot, chan, name).lower(),
             triggers,
             cmds.data[cmd]["prefix"],
         ):
@@ -115,7 +115,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     if not handled:
         for check in cmds.regexes:
             if re.search(
-                check.replace("$MAX", str(bot.nicklen)).replace("$BOTNICK", bot.nick),
+                conf.sub(check, bot, chan, name),
                 message,
             ):
                 cmds.call[check](bot, chan, name, message)

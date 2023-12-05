@@ -67,8 +67,9 @@ def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
     else:
         return any(message[: len(match)] == match for match in find)
 
-def sub(message: str, bot: bare.bot, chan: Optional[str], name: Optional[str]):
+def sub(message: str, bot: bare.bot, chan: Optional[str] = "", name: Optional[str] = "") -> str:
     result = message.replace("$BOTNICK", bot.nick).replace("$NICK", bot.nick)
+    result = result.replace("$NICKLEN", str(bot.nicklen)).replace("$MAX", str(bot.nicklen))
     if chan:
         result = result.replace("$CHANNEL", chan).replace("$CHAN", chan)
     if name:
