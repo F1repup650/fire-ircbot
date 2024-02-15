@@ -45,6 +45,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     # Format of ":[Nick]![ident]@[host|vhost] PRIVMSG [channel] :[message]”
     name = msg.split("!", 1)[0][1:]
     host = msg.split("@", 1)[1].split(" ", 1)[0]
+    bot.tmpHost = host
     bridge = False
     bot.current = "user"
     if (
@@ -128,13 +129,13 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     if not handled and len(message.split("\x01")) == 3:
         if not CTCP(bot, message):
             kind = message.split("\x01")[1]
-            if kind == "ACTION ducks":
-                bot.msg("\x01ACTION gets hit by a duck\x01", chan)
-            elif kind.startswith("ACTION ducks"):
+            if kind.startswith("ACTION ducks") and len(kind.split(' ', 2)) == 3:
                 bot.msg(
                     f"\x01ACTION gets hit by {kind.split(' ', 2)[2]}\x01",
                     chan,
                 )
+            elif kind == "ACTION ducks":
+                bot.msg("\x01ACTION gets hit by a duck\x01", chan)
     if chan in bot.channels and bot.channels[chan] >= bot.interval:
         r.seed()
         bot.channels[chan] = 0

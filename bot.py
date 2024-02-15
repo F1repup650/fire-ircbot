@@ -38,7 +38,7 @@ class bot(bare.bot):
         self.__version__ = conf.__version__
         self.nick = "FireBot"
         self.adminnames = conf.servers[server]["admins"]
-        self.queue: list[bbytes] = []
+        self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.npallowed = ["FireBitBot"]
         self.current = "user"
@@ -216,10 +216,12 @@ class bot(bare.bot):
                     action = ircmsg.split(" ", 2)[1].strip()
                 except IndexError:
                     pass
+                self.tmpHost = ""
                 if action in handlers.handles:
                     res, chan = handlers.handles[action](self, ircmsg)
                     if res == "reload" and type(chan) == str:
                         reload(conf)
+                        self.__version__ = conf.__version__
                         reload(cmds)
                         reload(handlers)
                         self.msg("Reloaded successfully", chan)

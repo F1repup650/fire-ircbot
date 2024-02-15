@@ -14,20 +14,18 @@ def admin(
 ) -> bool:
     if (
         name.lower() in conf.servers[bot.server]["admins"]
-        or host in conf.admin_hosts
-        or host in conf.servers[bot.server]["hosts"]
+        or (host or bot.tmpHost) in conf.admin_hosts
+        or (host or bot.tmpHost) in conf.servers[bot.server]["hosts"]
     ):
         if bot.current != "bridge":
             return True
+        elif not chan:
+            return False
         else:
-            if not chan:
-                return False
-            else:
-                bot.msg(f"Sorry {name}, bridged users can't use admin commands.", chan)
-                return False
+            bot.msg(f"Sorry {name}, bridged users can't use admin commands.", chan)
+            return False
+    elif not chan:
+        return False
     else:
-        if not chan:
-            return False
-        else:
-            bot.msg(f"Sorry {name}, {cmd} is an admin only command.", chan)
-            return False
+        bot.msg(f"Sorry {name}, {cmd} is an admin only command.", chan)
+        return False

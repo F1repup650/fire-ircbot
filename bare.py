@@ -28,10 +28,11 @@ class bot:
     __version__: str
     nick: str
     adminnames: list[str]
-    queue: list[bbytes]
+    queue: list[bbytes]  # pyright: ignore [reportInvalidTypeForm]
     sock: socket
     npallowed: list[str]
     current: str
+    tmpHost: str
 
     def __init__(self, server: str):
         ...

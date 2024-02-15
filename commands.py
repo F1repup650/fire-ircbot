@@ -14,7 +14,7 @@ def goat(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 def botlist(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
-        f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! My admins on this server are {bot.adminnames}.",
+        f"Hi! I'm FireBot (https://git.amcforum.wiki/Firepup650/fire-ircbot)! {'My admins on this server are' + bot.adminnames + '.' if bot.adminnames else ''}",  # pyright: ignore [reportOperatorIssue]
         chan,
     )
 
@@ -51,7 +51,7 @@ def uptime(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 def isAdmin(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
-        f"{checks.admin(bot, name)} (hostname is not checked)",
+        f"{'Yes' if checks.admin(bot, name) else 'No'}",
         chan,
     )
 
@@ -72,7 +72,7 @@ def help(bot: bare.bot, chan: str, name: str, message: str) -> None:
             name,
         )
         bot.msg(f"(hi,hello) {bot.nick} - The bot says hi to you", name)
-        if name.lower() in bot.adminnames:
+        if checks.admin(bot, name):
             bot.msg(f"reboot {bot.rebt} - Restarts the bot", name)
             bot.msg("op me - Makes the bot try to op you", name)
             bot.msg(
@@ -98,7 +98,7 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
     query = ""
     if " " in message:
         query = message.split(" ", 1)[1]
-        qfilter = query.replace(" ", "\s")
+        qfilter = query.replace(" ", "\s")  # pyright: ignore [reportInvalidStringEscapeSequence]
     r.seed()
     with open("mastermessages.txt", "r") as mm:
         q = list(filter(lambda x: re.search(qfilter, x), mm.readlines()))
@@ -166,7 +166,7 @@ def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    bot.msg(f"I think you are {name}", chan)
+    bot.msg(f"I think you are {name} {'(bridge)' if bot.current == 'bridge' else ''}", chan)
 
 
 data: dict[str, dict[str, Any]] = {
