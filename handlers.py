@@ -50,7 +50,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     bot.current = "user"
     if (
         (name.startswith("saxjax") and bot.server == "efnet")
-        or (name == "ReplIRC" and bot.server == "replirc")
+        or (name in ["ReplIRC", "sshchat"] and bot.server == "replirc")
         or (
             name in ["FirePyLink_", "FirePyLink"]
             and bot.server in ["ircnow", "backupbox"]
@@ -144,7 +144,6 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
                 str(r.sample(mm.readlines(), 1))
                 .strip("[]'")
                 .replace("\\n", "")
-                .strip('"')
             )
             bot.msg(f"[QUOTE] {sel}", chan)
     return None, None

@@ -6,6 +6,13 @@ from typing import Any, Callable
 import bare, re, checks
 
 
+def fpmp(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    bot.msg("Firepup's master playlist", chan)
+    bot.msg("https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM", chan)
+
+def version(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    bot.msg("Version: " + bot.__version__, chan)
+
 def goat(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
     bot.msg("Hello Goat", chan)
@@ -105,7 +112,7 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
         if q == []:
             q = [f'No results for "{query}" ']
         sel = conf.decode_escapes(
-            str(r.sample(q, 1)).strip("[]'").replace("\\n", "").strip('"')
+            str(r.sample(q, 1)).strip("[]'").replace("\\n", "")
         )
         bot.msg(sel, chan)
 
@@ -177,17 +184,19 @@ data: dict[str, dict[str, Any]] = {
     "restart": {"prefix": True, "aliases": ["reboot"], "check": checks.admin},
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
-    "debug": {"prefix": True, "aliases": ["dbg"], "check": checks.admin},
+    "debug": {"prefix": True, "aliases": ["dbg","d"], "check": checks.admin},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
     "join ": {"prefix": True, "aliases": [], "check": checks.admin},
     "quote": {"prefix": True, "aliases": ["q"]},
-    "goat.mode.activate": {"prefix": True, "aliases": [], "check": checks.admin},
-    "goat.mode.deactivate": {"prefix": True, "aliases": [], "check": checks.admin},
-    "help": {"prefix": True, "aliases": []},
+    "goat.mode.activate": {"prefix": True, "aliases": ["g.m.a"], "check": checks.admin},
+    "goat.mode.deactivate": {"prefix": True, "aliases": ["g.m.d"], "check": checks.admin},
+    "help": {"prefix": True, "aliases": ["?"]},
     "amiadmin": {"prefix": True, "aliases": []},
     "ping": {"prefix": True, "aliases": []},
     "op me": {"prefix": False, "aliases": [], "check": checks.admin},
     "whoami": {"prefix": True, "aliases": []},
+    "fpmp": {"prefix": True, "aliases": []},
+    "version": {"prefix": True, "aliases": ["ver","v"]},
 }
 regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
@@ -210,4 +219,6 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "ping": ping,
     "op me": op,
     "whoami": whoami,
+    "fpmp": fpmp,
+    "version": version,
 }
