@@ -125,6 +125,11 @@ class bot(bare.bot):
                     if origin != "null":
                         self.msg(f"{chan} is +i, and I'm not invited.", origin)
                     break
+                elif code == 474:
+                    self.log(f"Joining {chan} failed (+b)", "WARN")
+                    if origin != "null":
+                        self.msg(f"I'm banned from {chan}.", origin)
+                    break
                 elif code == 520:
                     self.log(f"Joining {chan} failed (+O)", "WARN")
                     if origin != "null":
