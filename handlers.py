@@ -124,7 +124,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
                 cmds.call[check](bot, chan, name, message)
                 handled = True
                 break
-    if not handled and conf.mfind(message, ["reload"]):
+    if not handled and conf.mfind(message, ["reload", "r"]):
         if checks.admin(bot, name, host, chan, "reload"):
             return "reload", chan
         handled = True
