@@ -6,7 +6,7 @@ from typing import Optional, Any
 import bare
 
 load_dotenv()
-__version__ = "v2.0.12"
+__version__ = "v2.0.13"
 npbase: str = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 su = "^(su|sudo|(su .*|sudo .*))$"
 servers: dict[str, dict[str, Any]] = {
@@ -16,12 +16,14 @@ servers: dict[str, dict[str, Any]] = {
         "interval": 200,
         "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, "#main/replirc": 0},
+        "ignores": ["#main/replirc"],
         "admins": [],
         "hosts": ["9pfs.repl.co"],
     },
     "efnet": {
         "address": "irc.mzima.net",
         "channels": {"#random": 0, "#dice": 0},
+        "ignores": [],
         "admins": [],
         "hosts": ["154.sub-174-251-241.myvzw.com"],
     },
@@ -29,12 +31,14 @@ servers: dict[str, dict[str, Any]] = {
         "address": "localhost",
         "pass": env["replirc_pass"],
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0, "#sshchat": 0},
+        "ignores": [],
         "admins": ["h-tl"],
         "hosts": ["owner.firepi"],
     },
     "backupbox": {
         "address": "172.23.11.5",
         "channels": {"#default": 0, "#botrebellion": 0, "#main/replirc": 0},
+        "ignores": ["#main/replirc"],
         "admins": [],
         "hosts": ["172.20.171.225", "169.254.253.107"],
     },
@@ -52,7 +56,7 @@ ESCAPE_SEQUENCE_RE = re.compile(
     re.UNICODE | re.VERBOSE,
 )
 prefix = "."
-
+npallowed: list[str] = ["FireBitBot"]
 
 def decode_escapes(s: str) -> str:
     def decode_match(match):

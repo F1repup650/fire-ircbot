@@ -33,6 +33,7 @@ class bot:
     npallowed: list[str]
     current: str
     tmpHost: str
+    ignores: list[str]
 
     def __init__(self, server: str):
         ...

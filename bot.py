@@ -30,17 +30,18 @@ class bot(bare.bot):
             conf.servers[server]["port"] if "port" in conf.servers[server] else 6667
         )
         self.channels = conf.servers[server]["channels"]
+        self.adminnames = conf.servers[server]["admins"]
+        self.ignores = conf.servers[server]["ignores"]
+        self.__version__ = conf.__version__
+        self.npallowed = conf.npallowed
         self.interval = (
             conf.servers[server]["interval"]
             if "interval" in conf.servers[server]
             else 50
         )
-        self.__version__ = conf.__version__
         self.nick = "FireBot"
-        self.adminnames = conf.servers[server]["admins"]
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.sock = socket(AF_INET, SOCK_STREAM)
-        self.npallowed = ["FireBitBot"]
         self.current = "user"
         self.log(f"Start init for {self.server}")
 
@@ -236,7 +237,15 @@ class bot(bare.bot):
                     res, chan = handlers.handles[action](self, ircmsg)
                     if res == "reload" and type(chan) == str:
                         reload(conf)
+                        self.adminnames = conf.servers[self.server]["admins"]
+                        self.ignores = conf.servers[self.server]["ignores"]
                         self.__version__ = conf.__version__
+                        self.npallowed = conf.npallowed
+                        self.interval = (
+                            conf.servers[self.server]["interval"]
+                            if "interval" in conf.servers[self.server]
+                            else 50
+                        )
                         reload(cmds)
                         reload(handlers)
                         self.msg("Reloaded successfully", chan)
@@ -247,4 +256,6 @@ class bot(bare.bot):
                         self.exit("I got killed :'(")
                     elif ircmsg.startswith("ERROR :Ping "):
                         self.exit("Ping timeout")
+                    else:
+                        self.log("Unrecognized server request!", "WARN")
         self.exit("While loop broken")

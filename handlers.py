@@ -75,6 +75,8 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         message = msg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
     chan = msg.split("PRIVMSG", 1)[1].split(":", 1)[0].strip()
     message = conf.sub(message, bot, chan, name)
+    if chan in bot.ignores:
+        return None, None
     bot.log(
         f'Got "{bytes(message).lazy_decode()}" from "{name}" in "{chan}" ({bot.current})',
     )
