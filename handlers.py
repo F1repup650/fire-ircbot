@@ -141,9 +141,9 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         bot.channels[chan] = 0
         with open("mastermessages.txt", "r") as mm:
             sel = conf.decode_escapes(
-                str(r.sample(mm.readlines(), 1))
-                .strip("[]'")
+                r.sample(mm.readlines(), 1)[0]
                 .replace("\\n", "")
+                .replace("\n", "")
             )
             bot.msg(f"[QUOTE] {sel}", chan)
     return None, None

@@ -112,7 +112,7 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
         if q == []:
             q = [f'No results for "{query}" ']
         sel = conf.decode_escapes(
-            str(r.sample(q, 1)).strip("[]'").replace("\\n", "")
+            r.sample(q, 1)[0].replace("\\n", "").replace("\n", "")
         )
         bot.msg(sel, chan)
 
