@@ -8,6 +8,7 @@ authors = ["Firepup Sixfifty <firepup650@gmail.com>"]
 python = "^3.9"
 apiclient = "^1.0.4"
 python-dotenv = "^1.0.0"
+pylast = "^5.2.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -3,10 +3,10 @@ from os import environ as env
 from dotenv import load_dotenv  # type: ignore
 import re, codecs
 from typing import Optional, Any
-import bare
+import bare, pylast
 
 load_dotenv()
-__version__ = "v2.0.14"
+__version__ = "v3.0.0"
 npbase: str = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 su = "^(su|sudo|(su .*|sudo .*))$"
 servers: dict[str, dict[str, Any]] = {
@@ -19,6 +19,7 @@ servers: dict[str, dict[str, Any]] = {
         "ignores": ["#main/replirc"],
         "admins": [],
         "hosts": ["9pfs.repl.co"],
+        "threads": [],
     },
     "efnet": {
         "address": "irc.mzima.net",
@@ -26,21 +27,25 @@ servers: dict[str, dict[str, Any]] = {
         "ignores": [],
         "admins": [],
         "hosts": ["154.sub-174-251-241.myvzw.com"],
+        "threads": [],
     },
     "replirc": {
         "address": "localhost",
         "pass": env["replirc_pass"],
-        "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0, "#sshchat": 0},
-        "ignores": [],
+        "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0, "#sshchat": 0, "#firemc": 0, "#fp-radio": 0},
+        "ignores": ["#fp-radio"],
         "admins": ["h-tl"],
         "hosts": ["owner.firepi"],
+        "threads": ["radio"],
     },
     "backupbox": {
-        "address": "172.23.11.5",
+        "address": "localhost",
+        "port": 6607,
         "channels": {"#default": 0, "#botrebellion": 0, "#main/replirc": 0},
         "ignores": ["#main/replirc"],
         "admins": [],
-        "hosts": ["172.20.171.225", "169.254.253.107"],
+        "hosts": ["172.20.171.225", "169.254.253.107", "2600-6c5a-637f-1a85-0000-0000-0000-6667.inf6.spectrum.com"],
+        "threads": [],
     },
 }
 admin_hosts: list[str] = ["firepup.firepi", "47.221.227.180"]
@@ -56,6 +61,7 @@ ESCAPE_SEQUENCE_RE = re.compile(
     re.UNICODE | re.VERBOSE,
 )
 prefix = "."
+lastfmLink = pylast.LastFMNetwork(env["FM_KEY"], env["FM_SECRET"])
 npallowed: list[str] = ["FireBitBot"]
 
 def decode_escapes(s: str) -> str:

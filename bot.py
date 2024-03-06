@@ -8,9 +8,11 @@ import commands as cmds
 import config as conf
 from time import sleep
 from importlib import reload
+import timers
 import random as r
 import handlers
 import bare
+from threading import Thread
 
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
@@ -43,6 +45,8 @@ class bot(bare.bot):
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
+        self.threads = conf.servers[server]["threads"]
+        self.lastfmLink = conf.lastfmLink
         self.log(f"Start init for {self.server}")
 
     def connect(self) -> None:
@@ -220,6 +224,16 @@ class bot(bare.bot):
         sleep(0.5)
         for chan in self.channels:
             self.join(chan, "null", False)
+        tMgr = None
+        if self.threads:
+            tdict = {}
+            for thread in self.threads:
+                tdict[thread] = timers.data[thread]
+                if thread in ["radio"]:
+                    tdict[thread]["args"] = [self]
+            tMgr = Thread(target=timers.threadManager, args=(tdict,))
+            tMgr.daemon = True
+            tMgr.start()
         while 1:
             raw = self.recv()
             ircmsg = raw.safe_decode()

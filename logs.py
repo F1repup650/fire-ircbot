@@ -10,7 +10,7 @@ def log(
     level: str = "LOG",
     time: Union[dt, str] = "now",
 ) -> None:
-    if level in ["EXIT", "CRASH"]:
+    if level in ["EXIT", "CRASH", "FATAL"]:
         stream = stderr
     else:
         stream = stdout

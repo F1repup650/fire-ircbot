@@ -2,6 +2,7 @@
 from socket import socket
 from overrides import bytes, bbytes
 from typing import NoReturn, Union
+from pylast import LastFMNetwork
 
 logs = ...
 re = ...
@@ -34,6 +35,8 @@ class bot:
     current: str
     tmpHost: str
     ignores: list[str]
+    threads: list[str]
+    lastfmLink: LastFMNetwork
 
     def __init__(self, server: str):
         ...
