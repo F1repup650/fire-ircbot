@@ -11,7 +11,7 @@ npbase: str = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listen
 su = "^(su|sudo|(su .*|sudo .*))$"
 servers: dict[str, dict[str, Any]] = {
     "ircnow": {
-        "address": "localhost",
+        "address": "0::1",
         "port": 6601,
         "interval": 200,
         "pass": env["ircnow_pass"],
@@ -30,7 +30,7 @@ servers: dict[str, dict[str, Any]] = {
         "threads": [],
     },
     "replirc": {
-        "address": "localhost",
+        "address": "0::1",
         "pass": env["replirc_pass"],
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0, "#sshchat": 0, "#firemc": 0, "#fp-radio": 0},
         "ignores": ["#fp-radio"],
@@ -39,7 +39,7 @@ servers: dict[str, dict[str, Any]] = {
         "threads": ["radio"],
     },
     "backupbox": {
-        "address": "localhost",
+        "address": "0::1",
         "port": 6607,
         "channels": {"#default": 0, "#botrebellion": 0, "#main/replirc": 0},
         "ignores": ["#main/replirc"],
