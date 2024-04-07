@@ -32,8 +32,12 @@ class bot(bare.bot):
             conf.servers[server]["port"] if "port" in conf.servers[server] else 6667
         )
         self.channels = conf.servers[server]["channels"]
-        self.adminnames = conf.servers[server]["admins"]
-        self.ignores = conf.servers[server]["ignores"]
+        self.adminnames = (
+            conf.servers[server]["admins"] if "admins" in conf.servers[server] else []
+        )
+        self.ignores = (
+            conf.servers[server]["ignores"] if "ignores" in conf.servers[server] else 6667
+        )
         self.__version__ = conf.__version__
         self.npallowed = conf.npallowed
         self.interval = (
@@ -45,7 +49,9 @@ class bot(bare.bot):
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
-        self.threads = conf.servers[server]["threads"]
+        self.threads = (
+            conf.servers[server]["threads"] if "threads" in conf.servers[server] else []
+        )
         self.lastfmLink = conf.lastfmLink
         self.log(f"Start init for {self.server}")
 
@@ -251,8 +257,12 @@ class bot(bare.bot):
                     res, chan = handlers.handles[action](self, ircmsg)
                     if res == "reload" and type(chan) == str:
                         reload(conf)
-                        self.adminnames = conf.servers[self.server]["admins"]
-                        self.ignores = conf.servers[self.server]["ignores"]
+                        self.adminnames = (
+            conf.servers[self.server]["admins"] if "admins" in conf.servers[self.server] else []
+        )
+                        self.ignores = (
+            conf.servers[self.server]["ignores"] if "ignores" in conf.servers[self.server] else []
+        )
                         self.__version__ = conf.__version__
                         self.npallowed = conf.npallowed
                         self.interval = (

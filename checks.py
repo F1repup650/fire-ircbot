@@ -13,7 +13,7 @@ def admin(
     cmd: Optional[str] = "",
 ) -> bool:
     if (
-        name.lower() in conf.servers[bot.server]["admins"]
+        name.lower() in bot.adminnames
         or (host or bot.tmpHost) in conf.admin_hosts
         or (host or bot.tmpHost) in conf.servers[bot.server]["hosts"]
     ):

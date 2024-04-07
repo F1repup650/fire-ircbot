@@ -138,7 +138,7 @@ def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
         "VERSION": bot.__version__,
         "NICKLEN": bot.nicklen,
         "NICK": bot.nick,
-        "ADMINS": str(conf.servers[bot.server]["admins"])
+        "ADMINS": str(bot.adminnames)
         + " (Does not include hostname checks)",
         "CHANNELS": bot.channels,
     }
@@ -172,8 +172,14 @@ def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
         )
 
 
+def fmpull(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    try:
+        bot.msg("Firepup is currently listening to: " + bot.lastfmLink.get_user("Firepup650").get_now_playing().__str__(), chan)
+    except:
+        bot.msg("Sorry, the music api isn't cooperating, please try again in a minute", chan)
+
 def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    bot.msg(f"I think you are {name} {'(bridge)' if bot.current == 'bridge' else ''}", chan)
+    bot.msg(f"I think you are {name}{' (bridge)' if bot.current == 'bridge' else '@{bot.tmpHost}'}", chan)
 
 
 data: dict[str, dict[str, Any]] = {
@@ -197,6 +203,7 @@ data: dict[str, dict[str, Any]] = {
     "whoami": {"prefix": True, "aliases": []},
     "fpmp": {"prefix": True, "aliases": []},
     "version": {"prefix": True, "aliases": ["ver","v"]},
+    "np": {"prefix": True, "aliases": []},
 }
 regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
@@ -221,4 +228,5 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "whoami": whoami,
     "fpmp": fpmp,
     "version": version,
+    "np": fmpull,
 }

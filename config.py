@@ -6,31 +6,26 @@ from typing import Optional, Any
 import bare, pylast
 
 load_dotenv()
-__version__ = "v3.0.0"
+__version__ = "v3.0.2-dev"
 npbase: str = "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 su = "^(su|sudo|(su .*|sudo .*))$"
 servers: dict[str, dict[str, Any]] = {
     "ircnow": {
-        "address": "0::1",
+        "address": "127.0.0.1",
         "port": 6601,
         "interval": 200,
         "pass": env["ircnow_pass"],
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, "#main/replirc": 0},
         "ignores": ["#main/replirc"],
-        "admins": [],
         "hosts": ["9pfs.repl.co"],
-        "threads": [],
     },
     "efnet": {
         "address": "irc.mzima.net",
         "channels": {"#random": 0, "#dice": 0},
-        "ignores": [],
-        "admins": [],
         "hosts": ["154.sub-174-251-241.myvzw.com"],
-        "threads": [],
     },
     "replirc": {
-        "address": "0::1",
+        "address": "127.0.0.1",
         "pass": env["replirc_pass"],
         "channels": {"#random": 0, "#dice": 0, "#main": 0, "#bots": 0, "#firebot": 0, "#sshchat": 0, "#firemc": 0, "#fp-radio": 0},
         "ignores": ["#fp-radio"],
@@ -39,13 +34,11 @@ servers: dict[str, dict[str, Any]] = {
         "threads": ["radio"],
     },
     "backupbox": {
-        "address": "0::1",
+        "address": "127.0.0.1",
         "port": 6607,
         "channels": {"#default": 0, "#botrebellion": 0, "#main/replirc": 0},
         "ignores": ["#main/replirc"],
-        "admins": [],
         "hosts": ["172.20.171.225", "169.254.253.107", "2600-6c5a-637f-1a85-0000-0000-0000-6667.inf6.spectrum.com"],
-        "threads": [],
     },
 }
 admin_hosts: list[str] = ["firepup.firepi", "47.221.227.180"]
