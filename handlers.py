@@ -131,7 +131,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
     if not handled and len(message.split("\x01")) == 3:
         if not CTCP(bot, message):
             kind = message.split("\x01")[1]
-            if kind.startswith("ACTION ducks") and len(kind.split(' ', 2)) == 3:
+            if kind.startswith("ACTION ducks") and len(kind.split(" ", 2)) == 3:
                 bot.msg(
                     f"\x01ACTION gets hit by {kind.split(' ', 2)[2]}\x01",
                     chan,
@@ -143,9 +143,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         bot.channels[chan] = 0
         with open("mastermessages.txt", "r") as mm:
             sel = conf.decode_escapes(
-                r.sample(mm.readlines(), 1)[0]
-                .replace("\\n", "")
-                .replace("\n", "")
+                r.sample(mm.readlines(), 1)[0].replace("\\n", "").replace("\n", "")
             )
             bot.msg(f"[QUOTE] {sel}", chan)
     return None, None

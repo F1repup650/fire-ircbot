@@ -36,7 +36,9 @@ class bot(bare.bot):
             conf.servers[server]["admins"] if "admins" in conf.servers[server] else []
         )
         self.ignores = (
-            conf.servers[server]["ignores"] if "ignores" in conf.servers[server] else 6667
+            conf.servers[server]["ignores"]
+            if "ignores" in conf.servers[server]
+            else 6667
         )
         self.__version__ = conf.__version__
         self.npallowed = conf.npallowed
@@ -144,7 +146,9 @@ class bot(bare.bot):
                 elif code == 480:
                     self.log(f"Joining {chan} failed (+S)", "WARN")
                     if origin != "null":
-                        self.msg(f"{chan} is +S, and I'm not connected over SSL.", origin)
+                        self.msg(
+                            f"{chan} is +S, and I'm not connected over SSL.", origin
+                        )
                     break
                 elif code == 519:
                     self.log(f"Joining {chan} failed (+A)", "WARN")
@@ -258,11 +262,15 @@ class bot(bare.bot):
                     if res == "reload" and type(chan) == str:
                         reload(conf)
                         self.adminnames = (
-            conf.servers[self.server]["admins"] if "admins" in conf.servers[self.server] else []
-        )
+                            conf.servers[self.server]["admins"]
+                            if "admins" in conf.servers[self.server]
+                            else []
+                        )
                         self.ignores = (
-            conf.servers[self.server]["ignores"] if "ignores" in conf.servers[self.server] else []
-        )
+                            conf.servers[self.server]["ignores"]
+                            if "ignores" in conf.servers[self.server]
+                            else []
+                        )
                         self.__version__ = conf.__version__
                         self.npallowed = conf.npallowed
                         self.interval = (

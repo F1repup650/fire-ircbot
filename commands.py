@@ -10,8 +10,10 @@ def fpmp(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg("Firepup's master playlist", chan)
     bot.msg("https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM", chan)
 
+
 def version(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg("Version: " + bot.__version__, chan)
+
 
 def goat(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.log("GOAT DETECTED")
@@ -105,7 +107,9 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
     query = ""
     if " " in message:
         query = message.split(" ", 1)[1]
-        qfilter = query.replace(" ", "\s")  # pyright: ignore [reportInvalidStringEscapeSequence]
+        qfilter = query.replace(
+            " ", "\s"
+        )  # pyright: ignore [reportInvalidStringEscapeSequence]
     r.seed()
     with open("mastermessages.txt", "r") as mm:
         q = list(filter(lambda x: re.search(qfilter, x), mm.readlines()))
@@ -138,8 +142,7 @@ def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
         "VERSION": bot.__version__,
         "NICKLEN": bot.nicklen,
         "NICK": bot.nick,
-        "ADMINS": str(bot.adminnames)
-        + " (Does not include hostname checks)",
+        "ADMINS": str(bot.adminnames) + " (Does not include hostname checks)",
         "CHANNELS": bot.channels,
     }
     bot.msg(f"[DEBUG] {dbg_out}", chan)
@@ -174,12 +177,22 @@ def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 def fmpull(bot: bare.bot, chan: str, name: str, message: str) -> None:
     try:
-        bot.msg("Firepup is currently listening to: " + bot.lastfmLink.get_user("Firepup650").get_now_playing().__str__(), chan)
+        bot.msg(
+            "Firepup is currently listening to: "
+            + bot.lastfmLink.get_user("Firepup650").get_now_playing().__str__(),
+            chan,
+        )
     except:
-        bot.msg("Sorry, the music api isn't cooperating, please try again in a minute", chan)
+        bot.msg(
+            "Sorry, the music api isn't cooperating, please try again in a minute", chan
+        )
+
 
 def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    bot.msg(f"I think you are {name}{' (bridge)' if bot.current == 'bridge' else '@{bot.tmpHost}'}", chan)
+    bot.msg(
+        f"I think you are {name}{' (bridge)' if bot.current == 'bridge' else '@{bot.tmpHost}'}",
+        chan,
+    )
 
 
 data: dict[str, dict[str, Any]] = {
@@ -190,19 +203,23 @@ data: dict[str, dict[str, Any]] = {
     "restart": {"prefix": True, "aliases": ["reboot", "stop"], "check": checks.admin},
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
-    "debug": {"prefix": True, "aliases": ["dbg","d"], "check": checks.admin},
+    "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
     "join ": {"prefix": True, "aliases": [], "check": checks.admin},
     "quote": {"prefix": True, "aliases": ["q"]},
     "goat.mode.activate": {"prefix": True, "aliases": ["g.m.a"], "check": checks.admin},
-    "goat.mode.deactivate": {"prefix": True, "aliases": ["g.m.d"], "check": checks.admin},
+    "goat.mode.deactivate": {
+        "prefix": True,
+        "aliases": ["g.m.d"],
+        "check": checks.admin,
+    },
     "help": {"prefix": True, "aliases": ["?"]},
     "amiadmin": {"prefix": True, "aliases": []},
     "ping": {"prefix": True, "aliases": []},
     "op me": {"prefix": False, "aliases": [], "check": checks.admin},
     "whoami": {"prefix": True, "aliases": []},
     "fpmp": {"prefix": True, "aliases": []},
-    "version": {"prefix": True, "aliases": ["ver","v"]},
+    "version": {"prefix": True, "aliases": ["ver", "v"]},
     "np": {"prefix": True, "aliases": []},
 }
 regexes: list[str] = [conf.npbase, conf.su]

@@ -5,6 +5,7 @@ from threading import Thread
 from logs import log
 from timers import threadManager
 
+
 def launch(server: str) -> None:
     system(f"python3 -u ircbot.py {server}")
 

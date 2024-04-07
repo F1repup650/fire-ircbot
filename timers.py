@@ -8,6 +8,7 @@ from threading import Thread
 from time import sleep
 from traceback import format_exc
 
+
 def is_dead(thr: Thread) -> bool:
     thr.join(timeout=0)
     return not thr.is_alive()
@@ -45,7 +46,12 @@ def startThread(data: dict) -> Thread:
     return t
 
 
-def threadManager(threads: dict[str, dict[str, Any]], output: bool = False, mgr: str = "TManager", interval: int = 60) -> NoReturn:
+def threadManager(
+    threads: dict[str, dict[str, Any]],
+    output: bool = False,
+    mgr: str = "TManager",
+    interval: int = 60,
+) -> NoReturn:
     if output:
         log("Begin init of thread manager", mgr)
     running = {}
@@ -79,7 +85,9 @@ def radio(instance: bare.bot) -> NoReturn:
                 if thisTrack != lastTrack:
                     lastTrack = thisTrack
                     instance.msg("f.sp " + thisTrack, "#fp-radio")
-                    instance.sendraw(f"TOPIC #fp-radio :Firepup radio ({thisTrack}) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM")
+                    instance.sendraw(
+                        f"TOPIC #fp-radio :Firepup radio ({thisTrack}) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM"
+                    )
         except Exception:
             Err = format_exc()
             for line in Err.split("\n"):
@@ -87,6 +95,7 @@ def radio(instance: bare.bot) -> NoReturn:
         sleep(2)
     instance.log("Thread while loop broken", "FATAL")
     exit(1)
+
 
 data: dict[str, dict[str, Any]] = {
     "radio": {"noWrap": True, "func": radio, "args": []},
