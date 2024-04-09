@@ -77,10 +77,12 @@ def threadManager(
 
 def radio(instance: bare.bot) -> NoReturn:
     lastTrack = ""
+    complained = False
     while 1:
         try:
             newTrack = instance.lastfmLink.get_user("Firepup650").get_now_playing()
             if newTrack:
+                complained = False
                 thisTrack = newTrack.__str__()
                 if thisTrack != lastTrack:
                     lastTrack = thisTrack
@@ -88,6 +90,10 @@ def radio(instance: bare.bot) -> NoReturn:
                     instance.sendraw(
                         f"TOPIC #fp-radio :Firepup radio ({thisTrack}) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM"
                     )
+            elif not complained:
+                instance.msg("Firepup seems to have stopped the music by mistake :/", "#fp-radio")
+                instance.sendraw("TOPIC #fp-radio :Firepup radio (Offline) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM")
+                complained = True
         except Exception:
             Err = format_exc()
             for line in Err.split("\n"):

@@ -200,7 +200,7 @@ data: dict[str, dict[str, Any]] = {
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
     #   [npbase, su]
-    "restart": {"prefix": True, "aliases": ["reboot", "stop"], "check": checks.admin},
+    "restart": {"prefix": True, "aliases": ["reboot", "stop", "hardreload"], "check": checks.admin},
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
     "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},
