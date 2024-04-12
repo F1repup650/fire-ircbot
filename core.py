@@ -13,7 +13,7 @@ def launch(server: str) -> None:
 servers = {
     "ircnow": {"noWrap": True, "func": launch, "args": ["ircnow"]},
     "replirc": {"noWrap": True, "func": launch, "args": ["replirc"]},
-    # "efnet": {"noWrap": True, "func": launch, "args": ["efnet"]},
+    "efnet": {"noWrap": True, "func": launch, "args": ["efnet"]},
     "backupbox": {"noWrap": True, "func": launch, "args": ["backupbox"]},
 }
 
