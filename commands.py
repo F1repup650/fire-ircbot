@@ -176,16 +176,21 @@ def nowplaying(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def fmpull(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    song = None
     try:
-        bot.msg(
-            "Firepup is currently listening to: "
-            + bot.lastfmLink.get_user("Firepup650").get_now_playing().__str__(),
-            chan,
-        )
+        song = bot.lastfmLink.get_user("Firepup650").get_now_playing()
     except:
         bot.msg(
             "Sorry, the music api isn't cooperating, please try again in a minute", chan
         )
+    if song:
+        bot.msg(
+            "Firepup is currently listening to: "
+            + song.__str__(),
+            chan,
+        )
+    else:
+        bot.msg("Firepup currently has his music stopped :/", chan)
 
 
 def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
@@ -200,7 +205,7 @@ data: dict[str, dict[str, Any]] = {
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
     #   [npbase, su]
-    "restart": {"prefix": True, "aliases": ["reboot", "stop", "hardreload"], "check": checks.admin},
+    "restart": {"prefix": True, "aliases": ["reboot", "stop", "hardreload", "hr"], "check": checks.admin},
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
     "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},

@@ -6,7 +6,7 @@ from typing import Optional, Any
 import bare, pylast
 
 load_dotenv()
-__version__ = "v3.0.3"
+__version__ = "v3.0.4"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -22,7 +22,7 @@ servers: dict[str, dict[str, Any]] = {
         "hosts": ["9pfs.repl.co"],
     },
     "efnet": {
-        "address": "irc.mzima.net",
+        "address": "irc.underworld.no",
         "channels": {"#random": 0, "#dice": 0},
         "hosts": ["154.sub-174-251-241.myvzw.com"],
     },
