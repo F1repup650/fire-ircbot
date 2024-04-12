@@ -38,7 +38,7 @@ class bot(bare.bot):
         self.ignores = (
             conf.servers[server]["ignores"]
             if "ignores" in conf.servers[server]
-            else 6667
+            else []
         )
         self.__version__ = conf.__version__
         self.npallowed = conf.npallowed
