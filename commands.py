@@ -185,8 +185,7 @@ def fmpull(bot: bare.bot, chan: str, name: str, message: str) -> None:
         )
     if song:
         bot.msg(
-            "Firepup is currently listening to: "
-            + song.__str__(),
+            "Firepup is currently listening to: " + song.__str__(),
             chan,
         )
     else:
@@ -205,7 +204,11 @@ data: dict[str, dict[str, Any]] = {
     "bugs bugs bugs": {"prefix": False, "aliases": []},
     "hi $BOTNICK": {"prefix": False, "aliases": ["hello $BOTNICK"]},
     #   [npbase, su]
-    "restart": {"prefix": True, "aliases": ["reboot", "stop", "hardreload", "hr"], "check": checks.admin},
+    "restart": {
+        "prefix": True,
+        "aliases": ["reboot", "stop", "hardreload", "hr"],
+        "check": checks.admin,
+    },
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
     "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},

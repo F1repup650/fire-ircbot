@@ -96,8 +96,12 @@ def radio(instance: bare.bot) -> NoReturn:
                 if not firstMiss:
                     firstMiss = True
                     continue
-                instance.msg("Firepup seems to have stopped the music by mistake :/", "#fp-radio")
-                instance.sendraw("TOPIC #fp-radio :Firepup radio (Offline) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM")
+                instance.msg(
+                    "Firepup seems to have stopped the music by mistake :/", "#fp-radio"
+                )
+                instance.sendraw(
+                    "TOPIC #fp-radio :Firepup radio (Offline) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM"
+                )
                 complained = True
                 lastTrack = "null"
         except Exception:
