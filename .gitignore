@@ -1,3 +1,8 @@
 .env
 __pycache__/**
+venv/**
 tmpbkp/**
+.mypy_caache/**
+.replit
+replit.nix
+modres.sh
