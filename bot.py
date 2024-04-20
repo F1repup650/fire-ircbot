@@ -45,12 +45,21 @@ class bot(bare.bot):
             if "interval" in conf.servers[server]
             else 50
         )
-        self.nick = "FireBot"
+        self.nick = conf.servers[server]["nick"] if "nick" in conf.servers[server] else "FireBot"
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
         self.threads = (
             conf.servers[server]["threads"] if "threads" in conf.servers[server] else []
+        )
+        self.onIdntCmds = (
+            conf.servers[server]["onIdntCmds"] if "onIdntCmds" in conf.servers[server] else []
+        )
+        self.onJoinCmds = (
+            conf.servers[server]["onJoinCmds"] if "onJoinCmds" in conf.servers[server] else []
+        )
+        self.onStrtCmds = (
+            conf.servers[server]["onStrtCmds"] if "onStrtCmds" in conf.servers[server] else []
         )
         self.lastfmLink = conf.lastfmLink
         self.log(f"Start init for {self.server}")
@@ -58,6 +67,14 @@ class bot(bare.bot):
     def connect(self) -> None:
         self.log(f"Joining {self.server}...")
         self.sock.connect((self.address, self.port))
+        self.send("\n") # Just for sanity
+        if self.onStrtCmds:
+            for cmd in self.onStrtCmds:
+                self.send(cmd + "\n")
+        if "serverPass" in conf.servers[self.server]:
+            self.send(
+                f"PASS {conf.servers[self.server]['serverPass']}\n"
+            )
         self.send(f"USER {self.nick} {self.nick} {self.nick} {self.nick}\n")
         self.send(f"NICK {self.nick}\n")
         ircmsg = ""
@@ -124,6 +141,8 @@ class bot(bare.bot):
                 print(bytes(ircmsg).lazy_decode())
                 if ircmsg.startswith("PING "):
                     self.ping(ircmsg)
+                elif ircmsg.startswith("ERROR "):
+                    self.exit("Lost connection to the server while joining a channel")
                 elif len(ircmsg.split("\x01")) == 3:
                     handlers.CTCP(self, ircmsg)
                 elif code == 403:
@@ -230,8 +249,14 @@ class bot(bare.bot):
                 f"IDENTIFY FireBot {conf.servers[self.server]['pass']}", "NickServ"
             )
         sleep(0.5)
+        if self.onIdntCmds:
+            for cmd in self.onIdntCmds:
+                self.send(cmd + "\n")
         for chan in self.channels:
             self.join(chan, "null", False)
+        if self.onJoinCmds:
+            for cmd in self.onJoinCmds:
+                self.send(cmd + "\n")
         tMgr = None
         if self.threads:
             tdict = {}

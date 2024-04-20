@@ -6,7 +6,7 @@ from typing import Optional, Any
 import bare, pylast
 
 load_dotenv()
-__version__ = "v3.0.4"
+__version__ = "v3.0.5-dev"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -54,6 +54,18 @@ servers: dict[str, dict[str, Any]] = {
             "169.254.253.107",
             "2600-6c5a-637f-1a85-0000-0000-0000-6667.inf6.spectrum.com",
         ],
+        "onIdntCmds": [
+            "OPER e e"
+        ],
+    },
+    "twitch": {
+        "nick": "fireschatbot",
+        "address": "irc.chat.twitch.tv",
+        "serverPass": env["twitch_pass"],
+        "channels": {
+            "#firepup650": 0,
+        },
+        "admins": ["firepup650"],
     },
 }
 admin_hosts: list[str] = ["firepup.firepi", "47.221.227.180"]

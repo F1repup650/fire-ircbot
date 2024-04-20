@@ -36,6 +36,9 @@ class bot:
     ignores: list[str]
     threads: list[str]
     lastfmLink: LastFMNetwork
+    onIdntCmds: list[str]
+    onJoinCmds: list[str]
+    onStrtCmds: list[str]
 
     def __init__(self, server: str): ...
 
