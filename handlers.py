@@ -173,6 +173,10 @@ def PART(bot: bare.bot, msg: str) -> tuple[None, None]:
     return None, None
 
 
+def NULL(bot: bare.bot, msg: str) -> tuple[None, None]:
+    return None, None
+
+
 handles: dict[
     str, Callable[[bare.bot, str], Union[tuple[None, None], tuple[str, str]]]
 ] = {
@@ -180,4 +184,6 @@ handles: dict[
     "NICK": NICK,
     "KICK": KICK,
     "PART": PART,
+    "MODE": NULL,
+    "TOPIC": NULL,
 }
