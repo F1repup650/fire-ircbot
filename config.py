@@ -54,9 +54,7 @@ servers: dict[str, dict[str, Any]] = {
             "169.254.253.107",
             "2600-6c5a-637f-1a85-0000-0000-0000-6667.inf6.spectrum.com",
         ],
-        "onIdntCmds": [
-            "OPER e e"
-        ],
+        "onIdntCmds": ["OPER e e"],
     },
     "twitch": {
         "nick": "fireschatbot",

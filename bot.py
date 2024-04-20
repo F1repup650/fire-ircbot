@@ -45,7 +45,11 @@ class bot(bare.bot):
             if "interval" in conf.servers[server]
             else 50
         )
-        self.nick = conf.servers[server]["nick"] if "nick" in conf.servers[server] else "FireBot"
+        self.nick = (
+            conf.servers[server]["nick"]
+            if "nick" in conf.servers[server]
+            else "FireBot"
+        )
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
@@ -53,13 +57,19 @@ class bot(bare.bot):
             conf.servers[server]["threads"] if "threads" in conf.servers[server] else []
         )
         self.onIdntCmds = (
-            conf.servers[server]["onIdntCmds"] if "onIdntCmds" in conf.servers[server] else []
+            conf.servers[server]["onIdntCmds"]
+            if "onIdntCmds" in conf.servers[server]
+            else []
         )
         self.onJoinCmds = (
-            conf.servers[server]["onJoinCmds"] if "onJoinCmds" in conf.servers[server] else []
+            conf.servers[server]["onJoinCmds"]
+            if "onJoinCmds" in conf.servers[server]
+            else []
         )
         self.onStrtCmds = (
-            conf.servers[server]["onStrtCmds"] if "onStrtCmds" in conf.servers[server] else []
+            conf.servers[server]["onStrtCmds"]
+            if "onStrtCmds" in conf.servers[server]
+            else []
         )
         self.lastfmLink = conf.lastfmLink
         self.log(f"Start init for {self.server}")
@@ -67,14 +77,12 @@ class bot(bare.bot):
     def connect(self) -> None:
         self.log(f"Joining {self.server}...")
         self.sock.connect((self.address, self.port))
-        self.send("\n") # Just for sanity
+        self.send("\n")  # Just for sanity
         if self.onStrtCmds:
             for cmd in self.onStrtCmds:
                 self.send(cmd + "\n")
         if "serverPass" in conf.servers[self.server]:
-            self.send(
-                f"PASS {conf.servers[self.server]['serverPass']}\n"
-            )
+            self.send(f"PASS {conf.servers[self.server]['serverPass']}\n")
         self.send(f"USER {self.nick} {self.nick} {self.nick} {self.nick}\n")
         self.send(f"NICK {self.nick}\n")
         ircmsg = ""
