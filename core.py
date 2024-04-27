@@ -15,6 +15,7 @@ servers = {
     "replirc": {"noWrap": True, "func": launch, "args": ["replirc"]},
     "efnet": {"noWrap": True, "func": launch, "args": ["efnet"]},
     "backupbox": {"noWrap": True, "func": launch, "args": ["backupbox"]},
+    "twitch": {"noWrap": True, "func": launch, "args": ["twitch"]},
 }
 
 
