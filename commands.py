@@ -194,7 +194,7 @@ def fmpull(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 def whoami(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(
-        f"I think you are {name}{' (bridge)' if bot.current == 'bridge' else '@{bot.tmpHost}'}",
+        f"I think you are {name}{' (bridge)' if bot.current == 'bridge' else '@'+bot.tmpHost}",
         chan,
     )
 
