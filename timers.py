@@ -112,7 +112,11 @@ def radio(instance: bare.bot) -> NoReturn:
     instance.log("Thread while loop broken", "FATAL")
     exit(1)
 
+def mcDown(instance: bare.bot) -> None:
+    instance.sendraw("TOPIC #firemc :FireMC Relay channel (offline)")
+
 
 data: dict[str, dict[str, Any]] = {
     "radio": {"noWrap": True, "func": radio, "args": []},
+    "mc-down": {"noWrap": False, "func": mcDown, "args": [], "interval": 60}
 }
