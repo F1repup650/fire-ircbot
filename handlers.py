@@ -174,9 +174,8 @@ def PART(bot: bare.bot, msg: str) -> tuple[None, None]:
 
 def QUIT(bot: bare.bot, msg: str) -> tuple[None, None]:
     if bot.server == "replirc":
-        quitter = msg.split(" ", 2)[0][1:].strip()
-        bot.log("Someone quit - " + quitter)
-        if quitter == "FireMCBot":
+        quitter = msg.split("!", 1)[0][1:]
+        if quitter == "FireMCbot":
             bot.send("TOPIC #firemc :FireMC Relay channel (offline)\n")
     return None, None
 
