@@ -42,7 +42,7 @@ servers: dict[str, dict[str, Any]] = {
         "ignores": ["#fp-radio"],
         "admins": ["h-tl"],
         "hosts": ["owner.firepi"],
-        "threads": ["radio", "mc-down"],
+        "threads": ["radio"],
     },
     "backupbox": {
         "address": "127.0.0.1",
