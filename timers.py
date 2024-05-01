@@ -17,7 +17,7 @@ def is_dead(thr: Thread) -> bool:
 def threadWrapper(data: dict) -> NoReturn:
     if not data["noWrap"]:
         while 1:
-            if ignoreErrors:
+            if data["ignoreErrors"]:
                 try:
                     data["func"](*data["args"])
                 except Exception:
@@ -118,5 +118,5 @@ def mcDown(instance: bare.bot) -> None:
 
 data: dict[str, dict[str, Any]] = {
     "radio": {"noWrap": True, "func": radio, "args": []},
-    "mc-down": {"noWrap": False, "func": mcDown, "args": [], "interval": 60}
+    "mc-down": {"noWrap": False, "func": mcDown, "args": [], "interval": 60, "ignoreErrors": True}
 }
