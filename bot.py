@@ -286,7 +286,7 @@ class bot(bare.bot):
                 try:
                     action = ircmsg.split(" ", 2)[1].strip()
                 except IndexError:
-                    pass
+                    self.log("Failed to detect message type!", "WARN")
                 self.tmpHost = ""
                 if action in handlers.handles:
                     res, chan = handlers.handles[action](self, ircmsg)
