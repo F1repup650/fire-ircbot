@@ -172,12 +172,14 @@ def PART(bot: bare.bot, msg: str) -> tuple[None, None]:
         bot.channels.pop(channel, None)
     return None, None
 
+
 def QUIT(bot: bare.bot, msg: str) -> tuple[None, None]:
     if bot.server == "replirc":
         quitter = msg.split("!", 1)[0][1:]
         if quitter == "FireMCbot":
             bot.send("TOPIC #firemc :FireMC Relay channel (offline)\n")
     return None, None
+
 
 def NULL(bot: bare.bot, msg: str) -> tuple[None, None]:
     return None, None
@@ -192,5 +194,5 @@ handles: dict[
     "PART": PART,
     "MODE": NULL,
     "TOPIC": NULL,
-    "QUIT": QUIT
+    "QUIT": QUIT,
 }
