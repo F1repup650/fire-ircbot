@@ -270,7 +270,7 @@ class bot(bare.bot):
             tdict = {}
             for thread in self.threads:
                 tdict[thread] = timers.data[thread]
-                if thread in ["radio"]:
+                if tdict[thread]["passInstance"]:
                     tdict[thread]["args"] = [self]
             tMgr = Thread(target=timers.threadManager, args=(tdict,))
             tMgr.daemon = True
