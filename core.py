@@ -3,7 +3,7 @@ from os import system
 from time import sleep
 from threading import Thread
 from logs import log
-from timers import threadManager
+from threads import threadManager
 
 
 def launch(server: str) -> None:

@@ -8,7 +8,7 @@ import commands as cmds
 import config as conf
 from time import sleep
 from importlib import reload
-import timers
+import threads
 import random as r
 import handlers
 import bare
@@ -269,10 +269,10 @@ class bot(bare.bot):
         if self.threads:
             tdict = {}
             for thread in self.threads:
-                tdict[thread] = timers.data[thread]
+                tdict[thread] = threads.data[thread]
                 if tdict[thread]["passInstance"]:
                     tdict[thread]["args"] = [self]
-            tMgr = Thread(target=timers.threadManager, args=(tdict,))
+            tMgr = Thread(target=threads.threadManager, args=(tdict,))
             tMgr.daemon = True
             tMgr.start()
         while 1:
