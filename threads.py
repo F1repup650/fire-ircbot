@@ -104,6 +104,7 @@ def radio(instance: bare.bot) -> NoReturn:
                         f"TOPIC #fp-radio :Firepup radio ({thisTrack}) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM"
                     )
             elif not complained:
+                missChunk = 0
                 if misses < 0:
                     misses += 1
                     continue
