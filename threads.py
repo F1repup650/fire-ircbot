@@ -87,21 +87,22 @@ def radio(instance: bare.bot) -> NoReturn:
         try:
             newTrack = instance.lastfmLink.get_user("Firepup650").get_now_playing()
             if newTrack:
-                complained = False
-                thisTrack = newTrack.__str__()
-                if thisTrack != lastTrack:
+                if complained:
+                    complained = False
                     misses = 0
                     missChunk = 0
-                    lastTrack = thisTrack
-                    instance.msg("f.sp " + thisTrack, "#fp-radio")
-                    instance.sendraw(
-                        f"TOPIC #fp-radio :Firepup radio ({thisTrack}) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM"
-                    )
                 elif misses > missCap:
                     missChunk += 1
                     if missChunk >= perChunk:
                         misses -= 1
                         missChunk = 0
+                thisTrack = newTrack.__str__()
+                if thisTrack != lastTrack:
+                    lastTrack = thisTrack
+                    instance.msg("f.sp " + thisTrack, "#fp-radio")
+                    instance.sendraw(
+                        f"TOPIC #fp-radio :Firepup radio ({thisTrack}) - https://open.spotify.com/playlist/4ctNy3O0rOwhhXIKyLvUZM"
+                    )
             elif not complained:
                 if misses < 0:
                     misses += 1
