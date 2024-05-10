@@ -83,7 +83,7 @@ def radio(instance: bare.bot) -> NoReturn:
     missChunk = 0
     missCap = -5
     perChunk = 10
-    debug = instance.server == "replirc"
+    debug = False # instance.server == "replirc"
     while 1:
         try:
             newTrack = instance.lastfmLink.get_user("Firepup650").get_now_playing()

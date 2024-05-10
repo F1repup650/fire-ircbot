@@ -13,6 +13,7 @@ import random as r
 import handlers
 import bare
 from threading import Thread
+from markov import MarkovBot
 
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
@@ -72,6 +73,11 @@ class bot(bare.bot):
             else []
         )
         self.lastfmLink = conf.lastfmLink
+        with open("mastermessages.txt") as f:
+            TMFeed = []
+            for line in f.readlines():
+                TMFeed.extend([line.strip().split()])
+            self.markov = MarkovBot(TMFeed)
         self.log(f"Start init for {self.server}")
 
     def connect(self) -> None:

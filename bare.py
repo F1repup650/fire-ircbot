@@ -3,6 +3,7 @@ from socket import socket
 from overrides import bytes, bbytes
 from typing import NoReturn, Union
 from pylast import LastFMNetwork
+from markov import MarkovBot
 
 logs = ...
 re = ...
@@ -39,6 +40,7 @@ class bot:
     onIdntCmds: list[str]
     onJoinCmds: list[str]
     onStrtCmds: list[str]
+    markov: MarkovBot
 
     def __init__(self, server: str): ...
 

@@ -4678,18 +4678,6 @@ lmao
 s/wont/will/
 lmao
 thinks
-22:32:44 <@Guest6132> 9pfs it was nice knowing you
-22:32:54 <@Guest6132> i know this will be your last moment on earth
-22:32:59 <@Guest6132> as you're going to freeze to death
-22:33:01 <@Guest6132> in a pool
-22:33:03 <@Guest6132> in october
-22:33:07 <@h|tl> Guest6132: ✨ swimming pools inside buildings ✨
-22:33:35 <@Guest6132> still october
-22:33:38 <@Guest6132> it's illegal
-22:33:52 <@Guest6132> i wont pay your bail
-22:34:05 <@firepup|lounge> s/wont/will/
-22:34:05 <+FireBitBot> [Sed] <Guest6132> i will pay your bail
-22:34:21 *** @PurryCat2022 (Meow@127.0.0.1) has quit (Killed (h|tl (The bail price just went up from me committing murder)))
 Quote block
 >bef
 Nuh uh
@@ -5220,17 +5208,10 @@ Fun fact
 It can't read what the bit bots say most of the time
 idk, it just reads it as "blob data"
 >help
-Oct 15 22:24:56 firepi python3[312286]: [LOG] Got ">help" from "firepup|lounge" in "#main"
-Oct 15 22:24:56 firepi python3[312286]: [211B blob data]
-Oct 15 22:24:56 firepi python3[312286]: [206B blob data]
 It's just
 blob
 >echo
 >echo ‌
-Oct 15 22:26:26 firepi python3[312286]: :firepup|lounge!thelounge@owner.firepi PRIVMSG #main :>echo ‌
-Oct 15 22:26:26 firepi python3[312286]: [LOG] Got ">echo ‌" from "firepup|lounge" in "#main"
-Oct 15 22:26:26 firepi python3[312286]: [62B blob data]
-Oct 15 22:26:26 firepi python3[312286]: [57B blob data]
 :>
 idk why it just sees blob data
 but it does
@@ -5317,10 +5298,6 @@ lmao, probably
 Oh also
 the only reason I knew it joined #random after leaving #main was from my bot'slogs
 s/slogs/s logs
-Oct 15 23:32:20 firepi python3[325579]: :_9pfs-bitbot!h-bitbot@127.0.0.1 QUIT :Remote host closed the connection
-Oct 15 23:32:30 firepi python3[325579]: :_9pfs-bitbot!h-bitbot@127.0.0.1 JOIN #random
-Oct 15 23:32:59 firepi python3[325579]: :firepup|lounge!thelounge@owner.firepi PRIVMSG #main :???
-Oct 15 23:32:59 firepi python3[325579]: [LOG] Got "???" from "firepup|lounge" in "#main"
 h|tl: Probably
 Though LAN shouldn't happen
 h|tl: You ask questions and don't respond when I ask bacl 🙃
@@ -5917,9 +5894,6 @@ s/\|lounge//
 h|tl: Really? On Replit or no?
 f.isup tilde
 Lmao
-12:58:37 [015] ** aPhone.local (recently split)
-12:58:37 [015] ** pylink.hellirc.repl.co (recently split)
-12:58:37 [015] ** ReplSearch.repl.co (recently split)
 False
 notes the util got viewed
 > 13:02:56 <@h|tl> firepup: Could you explain why that exists?
@@ -6295,26 +6269,15 @@ f.pnp
 Ugh
 R
 f.pnp
-:FireBitBot!bitbot@bitbot.firepi PRIVMSG #main :[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+:FireBitBot!bitbot@bitbot.firepi PRIVMSG #main :
 Hmm
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
-[03last] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
-[04last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
 10Cyan
 Cool
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
 I need to make  recognize that string
 e
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
 ...
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
 Ugh
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
 Wait.
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays)
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays)
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
 FINALLY
 f.pnp
 f.pnp
@@ -6325,8 +6288,6 @@ f.pnp
 f.pnp
 Cool
 I'm glad that works
-[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
-[03last.fm] Firepup650 is listening to: Lolbit Gaming - Please Stand By (177 plays)
 lmao
 Very incorrect
 f.pnp
@@ -6896,9 +6857,6 @@ goes to figure out which one it is
 I'd just jupe replirc.devarsh.me
 right?
 lmao
-22:06:58 -irc.firepi.amcforum.wiki- *** Notice -- ssld error for replirc.devarsh.me: Read error: Connection reset by peer
-22:06:58 -irc.firepi.amcforum.wiki- *** Notice -- Netsplit irc.firepi.amcforum.wiki <-> replirc.devarsh.me (1S 1C) (Read error: Connection reset by peer)
-22:06:58 -irc.firepi.amcforum.wiki- *** Notice -- replirc.devarsh.me was connected for 148791 seconds.  5081/71 sendK/recvK.
 NeoRoll: What did you do? lmao
 You just delinked yourself from the main net
 lmao
@@ -7613,8 +7571,6 @@ Don't spam just to get a duck
 And also
 no way that was actually you
 sub 1 sec response
-20:38:12 <@FireBitBot> ・゜゜・。。・゜゜\_o< QUACK!
-20:38:12 <@NeoRoll> f.bef
 Within 1sec
 Probability without script is low, and you've used one before.
 Poke it
@@ -7839,7 +7795,6 @@ I expected purry to fight that
 Just set +M on a bunch of channels
 f.np
 ...
-
 f.np firepup
 blinks
 makes replirc.i2p load operpeace
@@ -7887,18 +7842,6 @@ Fluff.
 Internet seems to be out h|tl 
 My Wi-Fi seems down
 At least partially
-13:43:35 Ping timeout, disconnecting…
-13:43:35 Disconnected from the network. Reconnecting in 5 seconds… (Attempt 1)
-13:43:50 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
-13:43:50 Disconnected from the network. Reconnecting in 4 seconds… (Attempt 2)
-13:44:03 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
-13:44:03 Disconnected from the network. Reconnecting in 6 seconds… (Attempt 3)
-13:44:19 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
-13:44:19 Disconnected from the network. Reconnecting in 11 seconds… (Attempt 4)
-13:44:40 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
-13:44:40 Disconnected from the network. Reconnecting in 19 seconds… (Attempt 5)
-13:45:10 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
-13:45:10 Disconnected from the network. Reconnecting in 37 seconds… (Attempt 6)
 Yeah
 Double ping timeout
 Windows says no internet nwo
@@ -7944,8 +7887,6 @@ h|tl: What chars are allowed in a nick?
 U3
 OOps
 08,04E
-16:07:00 <@h|tl> 01:54:20 PM <@firepup|lounge> h|tl: What chars are allowed in a nick?
-16:07:00 <@h|tl> https://tryitands.ee/ :)
 I need to know for the regex that  uses to parse now playing messages
 h|tl: really?
 wants to validate in case anyone is trying to abuse it
@@ -8476,7 +8417,6 @@ Such as...?
 lmfao
 FireBitBot having the lastfm settings
 .raw PRIVMSG #main :This command could be something much worse :)
-[03Admin] Sent: PRIVMSG #main :.raw PRIVMSG #main :This command could be something much worse :)
 Yeah I know
 No good easy way to fix though
 idk wtf you just said
@@ -8544,7 +8484,6 @@ f.bef
 lmao
 Okay good
 :firepup|lounge!thelounge@owner.firepi NOTICE #main :PRIVMSG
-[WARN][replirc][2023-11-04 21:39:00.184474] Fake message recieved
 h|tl: can there be spaces in vhost, ident, or nick?
 ,bef
 But not normally, so I'll take it
@@ -8873,7 +8812,6 @@ f.bef
 Sopel's entire code became ...
 lol
 *k
-4,99[20:23] 99,99 15,99* 11,99guest8715,99!~guest87@aqcajm.lan has disconnected (K-Lined)
 f.bef
 stabs the server py6606 connected from
 f.np
@@ -8951,7 +8889,6 @@ Okay...
 .dbg
 Prepare for netsplit
 lmao, Sopel corrupted the disk
-4,99[17:18] 99,99 9,99Sopel|MNA:99,99 Unexpected error ((sqlite3.DatabaseError) database disk image is malformed[SQL: SELECT nicknames.nick_id AS nicknames_nick_id, nicknames.slug AS nicknames_slug, nicknames.canonical AS nicknames_canonical FROM nicknames WHERE nicknames.slug = ?][parameters: ('coderelijah_amcdsc',)](Background on this error at: https://sqlalche.me/e/14/4xp6)) from coderelijah_amcdsc at 2023-11-07 23:18:38.005594. Message was: darkshayan_a
 Hi I have like 5% battery
 Desperatly trying not to have it die, I have like 489 hours of uptime 
 I am not
@@ -9081,8 +9018,6 @@ h|tl: Must have been a relay here at some point under that name
 shrugs
 What happened to Sopel?
 Uh
-20:51:23 -tilde.amcforum.wiki- *** Notice -- Connection to shell.oddprotocol.org activated
-20:51:23 -tilde.amcforum.wiki- *** Notice -- Error connecting to shell.oddprotocol.org[255.255.255.255]: Error during connect() (Connection refused)
 Isn't that a probem
 s/m/m?/
 s/probem/problem?/
@@ -9140,11 +9075,6 @@ shush
 Does yours end up sourcing the new user's bashrc?
 mine does, unintentonally
 h|tl:
-22:03:26 -solanum2.repl- *** Notice -- Connection to hellosmile6.tilde.pink activated
-22:04:07 -solanum2.repl- *** Notice -- Connection to hellosmile6.tilde.pink activated
-22:04:24 -ircd.9pfs.repl.co- *** Notice -- Connection to hellosmile6.tilde.pink activated
-22:04:25 -ircd.9pfs.repl.co- *** Notice -- Error connecting to hellosmile6.tilde.pink[255.255.255.255]: Error during connect() (Connection refused)
-22:04:48 -solanum2.repl- *** Notice -- Connection to hellosmile6.tilde.pink activated
 It doesn't end up making it most of the time
 when it does it gets refused
 ...
@@ -9229,10 +9159,6 @@ s/ AMC.*der/ david/
 ...
 There we go
 lmao 
-[EXIT][ircnow][2023-11-08 09:34:11.801769] Probably a netsplit
-[EXIT][ircnow][2023-11-08 10:19:48.185369] Probably a netsplit
-[EXIT][ircnow][2023-11-08 10:33:14.546668] Probably a netsplit
-[EXIT][ircnow][2023-11-08 13:05:52.054765] Probably a netsplit
 My phone doesn't run identd?
 And can't, not if I need a port below like 2048
 h|tl: idk
@@ -9279,7 +9205,6 @@ It wouldn't be stable
 and sshfs would be unreliable for a few reasons)
 That's not my business really.
 That'd be a david question
-17:29:55 <@firepup|lounge> That'd be a david question
 f.bef
 lmfao
 ~22:57 remaining
@@ -9572,16 +9497,9 @@ lmao
 I'm not, no
 lmao
 .quote
-16:30:15 *** @doxr (doxr@the.most.sussy.doxr) has quit (Killed (firepup-lounge (I'M NOT AI)))
-16:30:21 *** doxr (doxr@the.most.sussy.doxr) [doxr] (Izaan Shaik) has joined the channel
-16:30:21 *** @PurryCat2022 sets mode +o doxr
-16:30:24 *** @doxr (doxr@the.most.sussy.doxr) has quit (Killed (h|tl (that's firepup650, lmao)))
 lol
 <whoami
 ^^^
-16:31:25 *** @doxr (doxr@the.most.sussy.doxr) has quit (Killed (firepup-lounge (Wanna bet? I could suspend you on AMC for this)))
-16:31:31 *** doxr (doxr@the.most.sussy.doxr) [doxr] (Izaan Shaik) has joined the channel
-16:31:31 *** @PurryCat2022 sets mode +o doxr
 readies the ban hammer
 How about
 I start by logging you out
@@ -9658,9 +9576,6 @@ That's 's prefix sopel
 +remote enzo connect
 +link enzo
 f.bef
-17:17:24 -enzo.thebackupbox.net- Client connecting: FirePyLink (pylink@172.20.171.225) [172.20.171.225] - User
-17:19:00 -enzo.thebackupbox.net- Client exiting: FirePyLink (pylink@172.20.171.225) [Client closed connection]
-17:19:05 -enzo.thebackupbox.net- Client connecting: FirePyLink (pylink@172.20.171.225) [172.20.171.225] - User
 >bef
 it is connected
 ngircd chaos?
@@ -9671,8 +9586,6 @@ ngircd chaos?
 +identify
 lol
 ah
-17:24:22 *** firepup650|enzo (firepi@47.221.227.180) (PyLink Relay Mirror Client) has joined the channel
-17:24:22 *** @PurryCat2022 sets mode +o firepup650|enzo
 Huh?
 !why firepup650|enzo
 lmao
@@ -9680,8 +9593,6 @@ IP match
 & name
 pylink doesn't let it have admin though, lmao
 Sad no op
-17:26:38 *** firepup650 sets mode +o firepup650
-17:26:38 *** @FirePyLink sets mode -o firepup650
 Owner status
 Huh
 let me try smth
@@ -9737,10 +9648,7 @@ dft-bitbot: die
 ,die
 doxr: run /oper doxr certfp
 Just directly
-18:31:22 -tilde.amcforum.wiki- *** Notice -- doxr (doxr@the.most.sussy.doxr) is now an operator
 And your on-connects go in the server config
-18:32:54 -irc.firepi.amcforum.wiki- *** Notice -- firepup-lounge!firepup@owner.firepi{fp-tl} is using oper-override on #firepup (banwalking)
-18:32:59 -irc.firepi.amcforum.wiki- *** Notice -- firepup-lounge!firepup@owner.firepi{fp-tl} is using oper-override on #private (banwalking)
 lol
 I'll walk those bans
 (I'm not banned is the thing)
@@ -9791,7 +9699,6 @@ First and Last
 jason from friday the 13th
 🙃
 Why'd you ping h|tl to say hi to ethan JayAySeaOhBee14_amcdsc?
-18:59:08 <+> [QUOTE] I wanted it out of the beta before i publicly released it
 ^ ACNHBASIC
 Discord does it's own sed
 lol
@@ -10187,8 +10094,6 @@ Hi
 I had to switch the PI's monitor, the one I usually use for it is failing
 There
 Was busy & doing a hostname check
-4,99[21:46] 99,99 15,99* 12,99|ircnow15,99 is now known as 11,99NgircdServ|ircnow99,99
-4,99[21:46] 99,99 15,99* 4,99h|thelounge|ircnow15,99 is now known as 10,99KlineServ|ircnow
 lmao why?
 ,bef
 .ping
@@ -10304,13 +10209,6 @@ No one can touch the message
 ETA on AMC?
 +disconnect enzo
 shrugs
-12:35:43 -ShElL.OdDpRoToCoL.OrG- *** Notice -- ssld error for irc1.Reykr.repl.co: Remote host closed the connection
-12:35:43 -irc.firepi.amcforum.wiki- *** Notice -- Netsplit ShElL.OdDpRoToCoL.OrG <-> irc1.Reykr.repl.co (1S 0C) (Remote host closed the connection)
-12:35:44 -ircd.9pfs.repl.co- *** Notice -- Connection to irc1.reykr.repl.co activated
-12:35:50 -ircd.9pfs.repl.co- *** Notice -- No response from irc1.reykr.repl.co, closing link
-12:36:38 -ShElL.OdDpRoToCoL.OrG- *** Notice -- End of burst (emulated) from irc1.Reykr.repl.co (0 seconds)
-12:36:38 -irc1.Reykr.repl.co- *** Notice -- End of burst (emulated) from ShElL.OdDpRoToCoL.OrG (0 seconds)
-12:36:38 -irc.firepi.amcforum.wiki- *** Notice -- Netjoin ShElL.OdDpRoToCoL.OrG <-> irc1.Reykr.repl.co (1S 0C)
 reykr breaking case folding again
 it only responds to the uppercase one
 don't ask me why
@@ -10613,14 +10511,6 @@ Ugh
 f.ping
 It also said that
 On the botbot kills IIRC
-4,99[22:36] 99,99 12,99firepup:99,99 +mkill *BitBot*
-4,99[22:36] 99,99 13,99FirePyLink:99,99 Masskilled 0/0 users.
-4,99[22:36] 99,99 12,99firepup:99,99 Ugh
-4,99[22:36] 99,99 12,99firepup:99,99 Y tho
-4,99[22:36] 99,99 12,99firepup:99,99 +mkill *bitbot
-4,99[22:36] 99,99 13,99FirePyLink:99,99 Masskilled 0/0 users.
-4,99[22:36] 99,99 9,99h-tl:99,99 +mkill *bitbot*!*@*
-4,99[22:36] 99,99 13,99FirePyLink:99,99 Masskilled 4/4 users.
 👀
 Um
 Glad it didn't do that

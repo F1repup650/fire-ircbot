@@ -6,7 +6,7 @@ from typing import Optional, Any
 import bare, pylast
 
 load_dotenv()
-__version__ = "v3.0.11"
+__version__ = "v3.0.12"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
