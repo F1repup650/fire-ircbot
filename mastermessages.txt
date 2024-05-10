@@ -2950,3 +2950,7736 @@ Read error...
 @commandz you have long logs right?
 Could I get a copy of my messages?
 Thanks
+e
+SPKI:SHA2-256:f213d4e717b9679e05df7ff9fa28f309f0b8509dbd7e41ddd1d25ad9fde8e832
+h|tl: add my lounge client to the admin block?
+lmao
+Test1 fire
+Test2 pup
+Test3 firepup650
+Okay good
+That all pings the lounge
+lmao
+why
+Nah
+systemd likes being stupid
+I guess
+Hmm
+That was a much longer than normal un-delivered response
+It spat a long "returned to sender" at e
+much longer than normal
+>at e
+s/e/me
+Lemme see about plugging mine into here
+Will migrate soon:tm:
+s/:tm:/™️
+idk\
+s/\/
+What URL can I feed the bots for ReplIRC?
+I'll do that soon™️, but until then what url?
+Ah f*ck it
+How'd jay fix the Replit redirect loop the other day?
+Getting spun trying to log in
+How do you send files?
+(Over IRC)
+Actually nvm
+.quote
+Nice first quote
+🤷
+YC does
+lmao
+Should I lower the cap for how often it quotes me?
+just ping firepup, lol
+It pings me too
+bye 
+I forgot my kill command did that
+lol
+Reboots it
+No
+It's locked to admin usernames
+What do you mean?
+Sure I guess
+bye 
+I mean
+That shouldn't allow you to do much
+Since NickServ will change you after a little bit
+I wonder
+If my bot quoted a sed command
+Would the bitbot try to sed it? 
+And you're on the admin list h|tl
+>help
+blinks
+!help
+Purry says hello
+lmao
+Well yeah
+That was a lot to ask of Purry
+See ya
+lol
+Funny thing about my quote command
+It could care less if you include other text
+EX:
+.quote How are you? 
+What
+.quote
+I should make the kill still reboot
+Make it an systemd service, lmao
+Same train of thought, lol
+Maybe soon™️
+I don't even know where I'd download code for that from
+bye 
+Casually doesn't leave
+I can't get this stupid bot running
+It did?
+👀
+Unknown MODE flag
+...
+Still unknown
+Ah wait
+does that need oper?
+this isn't opered
+And the bitbot refuses to join channels
+it lets me identify as master
+then says I don't have perms to give myself perms
+I'mma delete DB, restart it, and come back tommorow
+Pokes h|tl
+.quote
+.quote What time is it?
+!flags  +*
+lmao
+s/o/o
+🙃
+s/🙃/s/o/o
+s/🙃/s/o/o
+Hmm
+s/m/🙃
+s/m/🙃
+s/H/🙃
+s/🙃s/
+s/🙃/s/
+s/🙃/s\/
+s/ss/s
+s/ss/s/
+s/s/
+s/🙃/o\/o\//
+Nice
+s/Nice/s\/Ni\/ce\//
+s/*/e
+s/.*/e
+s/.*/e/
+Hi
+What's the oper block for my lounge account?
+Ah
+!flags h|tl +*
+Why am I not authorized to do that?
+❔
+Ah
+!flags
+AGH
+SO MUCH OUTPUT
+lmao
+h|tl: the mode thing from earlier worked now
+What's it do exactly?
+There
+Hi
+lol
+It wants to system update
+I decided 
+Not during school
+Nope, I'm on it atm
+> h|tl: Your phone has better uptime than mine does
+I'll check my system uptime
+236:32:05
+lmao 
+Hi
+My phone's uptime is kinda ridiculous 
+h|tl: You can't? 
+Android just lists it in system settings
+Hi
+I am at home now
+The reason it's unstable during school is because my mobile data isn't 100% stable
+Unless my phone is offline, yes
+Which is why it randomly cycles
+Either Internet is unstable, or my phone takes the RAM for something else
+h|tl: No root access
+Also I don't have a lot of RAM on my phone, at all
+Lamo
+Hi 
+That's coded in btw
+Hello 
+My client had a setting to show full host names when someone (dis)connects
+I enabled that
+s/had/has
+How'd it know which message to sed? 
+Ah
+Sure
+Awaits the ducks
+Link by chance? I'm lazy
+Hi
+Waiting on the download 
+h|tl: It's in your downloads folder 🙃
+Sure
+Also, did you try to mount /dev/sda? 
+I got a pop-up asking for auth
+Might have been /dev/sda1
+One of the two
+That's probably fine
+Phone ran itself out of RAM trying to run Chrome and my messages app 
+h|tl in the bitbot's server config, what's "bindhost"? 
+Okay
+Oh right
+Can't use TLS
+Or you know
+I just
+Run it without TLS because I'm lazy
+LMAO
+BECAUSE I AM
+Quote that please
+That was too funny
+That's probably fine
+Though please make them an account 
+s/an/a dedicated
+idk
+Why do you need to? 
+s/o?/or? 
+Autocorrect 
+Who'd you say to contact for bitbot help?
+It's still being a pain
+Should I DM, or is there a channel for it?
+Sure
+> <@h|tl> You have to join a channel xfnw is in to do a PM, so you'd probably have to join either #offtopic or #xfnwtest
+What?
+Ah wait I think I understand
+but nah, my client is weird, if you try to open a channel without adding the #, it messages a user instead, lmao
+What is it? 
+Oh lmao I didn't check the main server log after trying to message xfnw
+I must share a common channel
+👀
+There's an offtopic channel here 👀
+I'm dumb, lmao
+Ah good
+fixed it's nick
+lmao
+hi 
+now I think I can set it up finally
+Also need to put it's nick on an exception list for myself
+nice, but gonna be hard to type
+lmao
+I saw that
+who was 127.0.0.6?
+c help
+...
+Oh right
+🔥c help
+🔥help c 
+🔥c server prefix
+🔥c server comammd-prefix
+🔥c server command-prefix
+🔥c bot command-prefix
+🔥c bot command-prefix f.
+🔥c server command-prefix f.
+f.help
+🔥c c command-prefix
+🔥c c command-prefix unset
+lmao
+unsetc c command-prefix f.
+f.help c
+f.modules
+f.commands eval_python
+f.py print("H")
+lmao
+Probably but
+I'm lazy
+wtf?
+Out of space?
+Any message containing FireBitBot won't ping tl now, even if it would otherwise
+f.commands bitcoin
+f.help btc
+Oh well that's boring
+I wanted a like btc "mining" bot
+As-in, you talk to it to "mine"
+f.commands karma
+f.help karma
+f.karma h|tl
+f.c server karma
+f.c server karma-enabled
+...
+I need a config list tbh
+h|tl: We should let MNA know their bitbot died
+f.commands
+f.help
+Totally should make f.help resolve to the PI,at least on localhost
+s/I,a/I, a
+f.c server sed
+f.commands sed
+...
+f.commands -
+f.commands sed
+f.c server -
+f.c server
+f.c c
+f.c c sed
+f.c c sed on
+s/I,a/I, a
+...
+What
+How does that work?
+s/work/help
+I see.
+Do you crash again?
+waits
+f.c c ducks on
+...
+f.c c duck
+f.c c ducks
+lmao
+f.c c
+f.more
+f.c c ducks-enabled on
+f.commands ducks
+f.enemies
+f.friends
+f.c c
+f.more
+f.more
+f.c c karma-pattern
+f.karma
+f.commands karma
+f.addpoint h|tl
+h|tl++
+Hmm
+f.c c karma-pattern ++
+f.c c karma-pattern on
+h|tl++
+Ah
+Very Nice
+h|tl--
+h|tl--
+h|tl--
+I'm an admin
+I shouldn't have ratelimits
+f.help alias
+f.alias list
+lol
+f.commands karma
+hmm
+f.c bot
+f.help c bot botlist
+...
+f.c bot botlist
+f.c bot botlist eeeeeeeeeeeeeeeee
+f.c bot accept-invites on
+lmao
+What would I bind it to?
+f.alias list
+How do I make a module?
+👀
+!flags +v  FireBitBot
+WHY NOT
+!fflags +v  FireBitBot
+!fflags +v 
+!fflags  +v
+Well ofc it's not registered
+ugh
+Who?
+fixes random CSS bug
+lmao
+RAM issue I'm sure
+Any other weird perms that get displayed in TL's sidebar?
+voice operators and normal
+I mean
+Like the "Operators" "Voiced" and "Users" headers
+in TL's sidebar
+I have to CSS style each of those, individually
+A what?
+LMAO MY CAMERA DOESN'T WORK
+Not enough storage
+s/!/.
+👀
+Why can I sed your message?
+f.permission add _9pfs alias
+s/alias/lol
+blinks
+s/add/bounce
+thinks
+f.echo hi
+Off for the night
+I have a State test tomorrow
+f.balias add burn action lights ${1} on fire for fun
+f.permission add _9pfs balias
+f.burn h|tl
+burn h|tl
+f.help action
+f.alias list
+f.balias list
+f.balias burn
+f.burn h|tl
+f.burn h|tl
+f.burn h|tl
+f.burn cookies
+...
+f.burn h
+f.burn cookies
+Hmmm
+Is RNG an option for action?
+I seriously need to get off
+G'Night
+No
+f.burn the world
+...
+f.test
+f.aliad test action ${*}
+f.alias test action ${*}
+I think yours did
+It commented every time I made a new repl
+f.alias add test action ${*}
+f.test hi there
+RoccoLoxPrograms
+A user on cemetech
+Side note: Cemetech's chat is also an IRC channel on EFNet
+f.reload
+f.help
+f.commands spotify
+f.modules
+f.more
+It refuses to quit normally
+ugh
+Hi
+f.commands spotify
+There
+f.help sp
+f.sp IT is the end
+Cool
+f.commands lastfm
+f.np
+f.listening
+That's not right
+f.np
+???
+That's also not right
+f.np Firepup650
+That's correct 
+f.commands google
+f.help g
+f.help suggest
+f.suggest firepup650
+blinks
+lmao
+You're fine
+That's not the first time it's said that
+Anyways
+Now people who can talk to my BitBot can watch what I'm listening to
+f.np Firepup650
+That has some weird tags
+Wtf
+Hello
+f.np Firepup650
+Idk who owns firepup
+f.g firepup650
+lmao
+My PYPI package is the first result 
+f.g 9pfs
+h|tl: 9psetup
+f.g doxr
+f.g 9pfs site:replit.com
+lmao
+f.g amcforum
+Old domain 🙃
+f.g AMC forum wiki
+There we go
+lmao
+Wikipedia 
+replit.talk 👀
+firepup.org, lmao
+f.g firepup youtube
+blinks
+f.g Firepup Sixfifty site:youtube.com
+lmao
+650 views
+I wonder why my YouTube doesn't come up 
+f.g @firepup650
+f.g @firepup650 site:youtube.com
+lmao
+f.modules
+f.ddg firepup650
+casually guesses command
+f.help info
+f.commands info
+f.version
+f.np firepup650
+A what? 
+confusion
+blinks
+f.burn h|tl
+lmao 
+👀
+How would I do that? 
+f.commands rss
+f.help rss
+f.rss add http://127.0.0.1/~h/replrss/repls/firepup650.rss
+f.rss add http://127.0.0.1/~h/replrss/repls/bigminiboss.rss
+🙃
+f.rss list
+s/127.0.0.1/firepi
+Uh
+that's ~1.4k messages
+How many servers replied to that? all of them?
+blinks
+f.cookie e
+f.help alias
+f.alias ass cookie actions gives ${1:} a cookie
+f.alias ass cookie action gives ${1:} a cookie
+f.alias cookie action gives ${1:} a cookie
+f.alias cookie action gives ${1~} a cookie
+f.alias cookie action gives ${1} a cookie
+how on earth
+do aliases work
+f.alias list
+f.alias add cookie action gives ${1:} a cookie
+f.cookie test user
+Blinks
+f.balias add cookie action gives ${1:} a cookie
+f.cookie test user
+blinks
+f.alias remove test
+f.balias add cookie action gives ${1-} a cookie
+f.cookie test user
+???
+f.cookie test user 2
+f.balias add cookie action gives ${0-} a cookie
+f.cookie test user 2
+There we go
+f.balias list burn
+f.balias add burn action lights ${0-} on fire for fun
+There
+Now spaces are accepted
+f.burn the entire world
+f.arson the whole world
+shrugs
+f.np firepup650
+???
+f.np Firepup650
+f.np firepup650
+blinks
+f.confusion
+f.balias add alias balias ${0-}
+f.alias
+f.alias list
+f.balias list
+aw
+I hoped that would work
+f.balias remove alias cookie
+f.alias remove cookie
+f.cookie h|tl
+f.help balias
+idk what that means
+👀
+ being random as usual
+Yeah
+f.np firepup650
+,bef
+lmao
+Wrong prefix
+f.spawnduck
+aw
+👀
+Oh that's why my music crashed, lmao
+My phone's updating apps
+and each updated app has to get re-moved to the SD Card
+Storage++ RAM--
+I wonder...
+Storage++
+RAM --
+lmao
+Double karma
+Android++
+👀
+no harm in asking, right?
+restarts his automation app
+it got killed because of the RAM thing
+👀
+This is true
+It has a big file to use
+2952 lines
+Last three:
+@commandz you have long logs right?
+Could I get a copy of my messages?
+Thanks
+>bef
+Hello
+How do I rename people?
+Idk how, but go ahead
+Wants to rename people for some reason
+understood 10% of that
+h|tl: What part of the machine info do you need?
+Valves: No
+Hairpinning: No
+IPv6: No
+UDP: Yes
+UPnP: Yes
+PCP: No
+NAT-PMP: No
+h|tl: ^^^
+I think I've tried that
+👀
+s/firepup|lounge/firepup
+blinks
+s/firepup\|lounge/firepup
+Idk
+Looks at quotes file
+Quote block:
+should I use the "development" build here? https://ce-programming.github.io/CEmu/download
+ok
+I love errors
+Error Failed to detect the latest folder. (Current path: /oss-snapshot-local/org/github/CE-Programming/CEmu/git/) You may need to refresh this page in order 
+refreshing did nothing
+thanks womp
+curiosity question- why was it called CEmu-USB?
+ok
+should I try to update the image to 5.4?
+I see that
+f.burn _9pfs-bitbot's server
+s/\|lounge/
+s/\|lounge//
+blinks
+s/\|lounge//
+I didn't know channels on EFNet required that
+Huh
+unstable 👀
+My phone's being weird
+firepupwork
+oops
+firepup work
+f.bef
+That pinged...
+Why isn't the sed?
+firepup|lounge
+s/\|lounge//
+lmao
+s/9pfs/h
+🙃
+david_: Services seem up to me
+👀
+That would be cool
+banjo hen, lmao
+Summons h|tl
+f.cookie h|tl
+f.cookie david_
+Why does it have to be renewed?
+I see
+h|tl: Put the bitbot on a systemd?
+I never shut it down properly, and have to manually unlock the db
+me/projects/python/bitbot
+(py symlinks to python)
+f.echo Uh
+Okay good
+Your erros had me concerned
+Anyways, shutdown
+.commands github
+f.commands github
+f.help gh
+f.help ghissue
+f.gh
+f.gh help
+blinks at the bitbot
+> firepup: It'd probably be good to have bitbot run as its own user
+Ya know, the services user exists
+It writes to a DB in my dir currently, I could plop that on the services account
+also
+s/\|lounge//
+That doesn't ping my phone for some reason
+Oh also my normal bot should probably be put on a systemd user
+firepup: You'd need the config to be world-readable in that case, though... Moving the entire bot dir to a dedicated account would probably be easier.
+Why? I made an account specifically for running services
+<@h|tl> 03:40:13 PM <@firepup|lounge> Why? I made an account specifically for running services
+But that doesn't explain why they'd need to be world-readable
+and currently, nothing else runs on that user
+Only things planned to run on that user currently is the bitbot
+And I can just set an encryption key for the bitbot
+Would that break the existing DB?
+Pain
+s/\|lounge//
+Nah it's fine
+Honestly that makes me curious
+The bitbot doesn't ping me on sed commands
+f.echo firepup hi
+That's a ping
+Weird.
+Why dedicated?
+Fine I guess
+lmao
+lmao X2
+f.quotes 
+f.quote 
+f.quote 
+f.balias add quotes quote ${0-}
+f.quotes 
+but it won't let me alias "balias" to "alias"
+Uh yeah
+Let me kill it and kill the db lock too
+Done
+Why does it never unlock the DB?
+👀
+E
+I don't think I got that error
+Did you install it's requirements? 
+That error looks like you didn't 
+I didn't even use a venv
+starts a test
+For what? 
+👀
+Also h|tl your run it as `./bitbotd`
+How do change MOTD? 
+That's not what came up for a search for "motd", lol
+h|tl: No clue, I do it manually
+Remove the bot.lock and bot.sock files from ~/.bitbot
+Yeah
+rehashes firepi's MOTD
+That'd probably be a good idea
+I think I could edit the help output for commands here 👀
+lol
+It'd be fun though 🙃
+lol
+Um
+Who'd even have that IP? 
+👀
+That'd be nice
+!fflags FireBitBot!bitbot@0::1 +Vv
+Since I don't have normal flags here
+lmao
+Why?
+blinks
+h|tl: How's the MOTD?
+🙂
+🫤🫠
+Huh
+So
+Either TL or my PI doesn't recognise those emojis
+h|tl: Thoughts?
+The PI
+s/\|lounge//
+Ah
+Goes to stab the system package for emojis for not including those two
+lol
+I added another emoji pack
+and now they're error boxes
+They were invisible before
+Yes
+>c c sed off
+Duplicated sed is kinda annoying
+s/kinda//
+Rgh
+👀
+lmao
+I would have used a little bit nicer kill reason
+f.bef
+Hmmm
+Just kline the repl
+👀
+Just installed fonts-recommended on the PI
+h|tl: I just klined the repl
+524160 minutes
+f.wa
+Hm
+What's that module? 
+no
+Should I add one? 
+What API does it need? 
+h|tl ^^^
+Well yes
+But which Wolfram API
+Full results, simple, short answers, spoken results, llm, conversational, fast query recognizer, summary boxes, instant calculators, and show steps
+Okay
+PI lag spike
+f.wa 524160 minutes to days
+f.modules
+what's the one for weather...
+f.more
+🤔
+Please don't kill my key, lmao
+f.ud
+lmao hi 
+f.weather
+f.modules
+f.more
+lmao
+idk, lmao
+The other bitbot's are *trying* to crash it
+I'm going to kill it so it restarts 
+It gets space back that way
+Uh why
+Seems bad tbh
+blinks
+Um
+blinks
+but why
+Hi h|tl
+lol
+h|tl: Gift cards!
+idk
+Ask past me/
+Hello
+Y'all tried to catch a duck from the wrong bot, lmao
+f.bef
+Anyways
+Stop spamming 
+I will kill your client
+LMAO
+Hi 
+Spam is bad kids
+Calm
+>bef
+Wrong bot twa
+We'll see
+blinks
+checks hostname
+That is false
+looks
+Hmm
+Okay
+Kill got truncated, lol
+So the kline didn't work the way I expected it to
+That's fine
+Oops
+It was a temporary thing
+Hoped it'd stop the spam
+The guest accounts? 
+Cleared the kline
+But also
+Please stop david
+>bef
+I told it to remove temporary klined
+🫤
+Oops.
+blinks
+f.np firepup650
+So my Spotify likely died
+Ugh
+Wait no
+It's still playing
+??? 
+f.np Firepup650
+lmao
+Hi david
+I forgot lastfm is weird about case-sensitivity
+F.bef
+f.bef
+Lowercase names work
+But don't update often
+Hi h|tl
+Is "h" a ping alias for you? 
+lol
+Oh yeah
+h|tl: What's the nuggets NickServ? 
+Did YC's thing come back up? (IIRC YC used youngnuggets)
+👍
+lmao
+No , roccolox isn't here.
+I need to put you on GitHub/forejo at some point
+Also should probably have it actively quoting me
+thinks
+h|tl: Bitbot==python
+You run a bitbot
+You're using python
+You wanted me to make my own module for the bitbot, which is PY dev
+So you're actively encouraging PY Dev h|tl
+f.alias kidnap trap
+f.alias add kidnap trap
+h|tl: ^^^
+I do not condone the kidnapping of ducks. 
+I do however, condone kids napping with ducks
+As long as the ducks want to nap
+h|tl: Thoughts? 
+f.alias add pnp np Firepup650
+f.pnp
+Nice
+Hi
+Thoughts on what I do and do not condone? 
+Did you not read? lmao
+And I will quote it >:)
+Just... as a spoiler
+What&&Why
+*IRC Client refuses to ping*
+Tbh I need a /mes command at times
+'s me looks weird like this
+blinks
+No no no
+firepi.amcfourm.wiki/thelounge
+Nah the AI is , if you can call it that
+h|ai killed you
+f.quote
+Wrong prefix
+>bef
+.bef
+Oops
+.quote
+.quote
+.quote
+.quote
+Doxr - run . Help
+Lowercase h, no space
+LMAO
+Sopel no one asked for you
+Check your IRC messages doxr
+ should have sent you a help list
+Hi 
+TZ leak? 👀
+h|tl: I get a vhost when
+Or just
+ /msg NickServ register 
+Idk how
+spelling error
+s/theywere/they were
+I have no clue what the context for that is
+h|tl: How vhost
+offers firepi.is.cool as a vhost
+No
+Sadly
+Nice
+thinks
+That's better ;P
+lmao
+You should use that
+Bye
+Why? 
+It doesn't have an auto reconnect 
+And last I checked it wasn't on systemd yet 
+The only auto reconnect is if it gets rejected trying to connect originally 
+Then it'll just retry until it gets in
+ needs an account at some point
+I'll do that later
+Actually 
+Don't restart it yet
+There
+What's that and why
+I think that's my client 
+At least partially 
+And why's a tilde make you crazy? 
+h|tl: Unless you can find that as an android app, the answer is no
+Tmux doesn't run in the environment I have my IRC client in
+And it's not easy to move
+Reconnect I guess? 
+I still see the tilde
+Not if I need tmux h|tl 
+Also h|tl not only is tmux out of the question, root is too
+lmao
+h|tl: I can't manage ports below 2048 without root (IIRC, might be a bit off)
+🤷
+s/d/edreplit.com/
+Lmao
+My BitBot was right
+Sopel was not
+LMAO
+I SAW THE BOT WAS WRONG
+AND IT LEAVES 
+s/W/Y
+~alyx
+Try turning off firewalld temporarily 
+Just to see if it works
+f.cookie h|tl
+r/ihadastroke
+lmao
+Triple link preview
+f.c b title
+👀
+Early bot days
+I'm mot
+s/mo/no
+And I never want to use iOS.
+I don't like apple
+f.quote
+.quote
+f.bef
+🫠
+I got delayed by an autocorrect 
+f.pnp
+aylx: You should have my bot give you it's help list (.help)
+Sopel will respond too though, lol
+f.help grab
+f.help quote
+Category? 
+f.quote bots
+>bef
+.4, lmao
+realizes something
+f.alias list
+f.remove kidnap
+f.alias remove kidnap
+f.alias remove pnp
+f.balias pnp np Firepup650
+f.balias kidnap trap
+f.balias add kidnap trap
+f.balias add pnp np Firepup650
+f.help alias
+f.alias list kidnap
+f.balias list kidnap
+s/an '/a '/
+s/an \'k/a \'k/
+ugh
+s/have an/have a/
+Really.
+SED yourself
+Hi
+BitBot can't SED itself? 
+I can't fix it's grammatical error then 🫠
+s/🫠/🤔/
+Pokes Sopel
+.c c sed off
+👀
+ needs to auth && It needs the services account it'll use put on the enforce setting
+h|tl: Can I manage other user's services configs? 
+.c c sed off
+.help c
+Wtf
+Why
+.config c sed off
+.help config
+>bef
+.help config
+.help are you dead
+h|tl so am I 
+And I hit the voice typing button
+Instead of send
+?
+How does xline=bad user info? 
+has urge to kill ntfy
+s/urge/an urge/
+Ugh
+Truncated kill reason
+Why spaces bad
+s/speedrun/do everything in my power to make things harder for myself by not using thelounge/
+f.bef
+Capital f
+thinks
+Why is a colon required? 
+Such as?
+May or may not have killed ntfy
+h|tl: I'm lazy, summary? 
+Then add it to the custom ping list
+>c c list
+>c list c
+>c list channel
+>c
+Ah
+.modules
+Sopel
+Why
+.c 1-1
+.c 0/0
+LMAO
+Do it anyways tbh
+.c 0/0
+alyx - custom pings are a thing in TL's user preferences 
+You know that, right? 
+.help
+.set auto-title off
+Why
+lmao
+h|tl: You just quieted lmfao
+didn't ask for a reason, merely counter-pointed alyx's points because he could
+.part
+.quit
+Hmm
+.tell alyx alyx david
+is ntfy supposed to talk here? 
+.tell alyx hello alyx
+f.tell alyx hello alyx
+>tell alyx hello alyx
+👀
+Are you actually getting notifications? 
+I expected ntfy to comment here if you were tbh
+🤷
+Right I need to put  on forejo too
+(hi )
+>bef
+When I didn't care about security and left a password in plain text in my bot's source code
+h|tl
+s/?*//
+s/\?.*//
+lmao
+s/7\?.*/7/
+Much better
+Now there's no tracking nonsense
+lol
+Would apple have anti-tracked their own service?
+..goat.mode.activate
+.goat.mode.activate
+Hmm
+f.bef
+.goat.mode.activate
+..goat.mode.activate
+ dead?
+Nope
+>bef
+h|tl: 's logs are wrong
+h|tl: Do you know why 's logs would be wrong?
+Oh there they are
+weird
+just... heavily delayed
+wonder why.
+h|tl: Could you join as a user who has "goat" in their name and then say "hi"?
+lol
+..goat.mode.activate
+That should be changed really
+I am h|tl
+reboot fire
+Let's see if that fixed it's logs...
+Nope
+and I told it to flush each print\
+doesn't have apple music
+Hmm
+Too lazy
+f.wa https://music.apple.com/us/album/drive-you-out-of-my-mind-dark-room-edition/1704717842 on spotify
+wtf, lmao
+f.wa https://music.apple.com/us/album/drive-you-out-of-my-mind-dark-room-edition/1704717842 as a spotify link
+blinks
+lmao
+f.more
+f.more
+Well that was... disappointing.
+K E Y B O A R D
+test
+fixed
+Just told python not to buffer the output
+Literally just had to pass `-u`
+hello
+s/mow/plant a sprout in the garden/
+f.help sp 
+f.sp Plants vs Zombies the musical
+>bef
+What did the bitbot do?
+ saw that as blob data
+For some reason
+s/a sprout/a little plant/
+f.pnp
+Hello
+f.pnp
+> music to kill americans to
+LMAO
+I mean
+It ***IS*** based on a German horror movie
+f.np 9pfs
+f.np h
+👀
+h|tl: What's that song?
+Aw
+You should
+(Totally not so I can just randomly check what you're listening to)
+f.np youngchief
+lmao
+reboot fire
+*dies*
+is too lazy to hide passwords
+It shouldn't ever be off anyways, and it's account isn't dangerous
+I'm lazy
+s/\|lounge//
+I'm very lazy
+You should know this 
+blinks
+I thought the flag I changed killed me
+lmao
+PRIVMSG
+>bef
+f.bef
+>bef
+lmao
+lmao
+You don't disable it 🙃
+downloads all the DE queries off AMC and sends them to the universe (And not-ethan ofc)
+Throws a register command at TWA
+True
+I do need to get off
+Logs off by 's request
+I need to sleep
+Leave poor  be. 
+Stop
+I need to sleep
+lmao
+ giving out Karma like it's candy
+Anyways, that's also a user on cemetech
+I'm not the gatekeeper
+Go ahead 
+Sign up on cemetech.net if you want to be in the forum
+You could also just join #cemetech on EFNet 
+Any one should work. 
+I like mzima
+It doesn't kline bots basically ever
+Other servers klined  pretty quickly :(
+h|tl: idk
+Maybe there's no editing
+But there is des
+s/des/sed/
+h|tl: lmao, saxjax is the bridge between site chat, discord, and IRC
+Sopel|MNA: help
+I want to be asleep alyx
+alyx: 2/3 parts of your user info still says david
+Ugh
+I can't set anyone's vhost to anything fun
+/test
+/test
+lmao
+!roll
+looks
+f.bef
+Why
+You have voice
+And are you registered with services? 
+s/You have voice//
+s/nd are//
+Okay but why
+It's running on my PI, so there's my op
+h and alyx have been opped since probably the very beginnings
+If you want op so bad, run your own server ;P
+That's what h made me do
+f.tell alyx Did you tell Jay you'd OP him?
+JayAySeaOhBee14: h made me run my own server before I got OP
+You're not even logged in to services 
+Reset it then I guess
+🤷
+shrugs
+finds the reset button
+Go log in and change your password 
+>bef
+blinks
+That's... Weird. 
+Why is the server itself doing that? 
+That's normally Purry's job
+h|tl: Thoughts? 
+!!fflags JayAySeaOhBee14 +o
+blinks
+Why'd Purry ignore me? 
+Oh yeah
+!fflags JayAySeaOhBee14 +Oo
+There
+Just add `O` and `o`
+also has operator
+Oh yeah
+When my BitBot rejoined, the server gave it it's perms, not Purry
+Why's that? 
+blinks
+.quote
+lmao
+50th message 
+s/same/sam
+I think 
+lmao
+boinks
+s/oi/li
+s/AnitudhGPT/ChatGPT Proxy
+s/AnirudhGPT/ChatGPT Proxy
+JayAySeaOhBee14: you don't 
+Even I can't 
+Hello
+I should have put the thing for you from earlier in a tell
+Not AFAIK
+This isn't sshchat
+lmao
+Different rules here
+(Software and actual rules)
+blinks
+lmao 
+s=:=://
+s=:=://=
+Ugh
+s/:/:\/\//
+s/s:/s:\/\//
+lmao
+h|tl: restart  please
+>c c auto-title off
+... 
+h|tl: which is the bad BitBot? 
+There
+lmao
+Sure! twa is available ;P
+f.wa 524160 minutes to days
+Why is max ban limit 364 days?
+techwithanirudh: Login to services, lmao
+Looks at the kill command
+I can kline you
+:)
+Better yet, I'll just force you to auth for your name
+Just need to do something first
+🤷
+There we go 
+Nick is now in Enforce mode
+Don't auth? Lose your name.
+Do /nick techwithanirudh 
+As I sent it you did
+KiwiIRC
+🥝
+thinks
+What would happen
+If I registered all 9999 guest names
+To a services account? 
+f.tell h|tl What would happen if I registered all the guest usernames to a services account?
+Guest0001 -> Guest9999 Would be the range
+And Guest01 -> Guest99 (kiwiIRC)
+Enforcetime of 3 seconds
+So they'd keep getting switched
+s/3/2
+IIRC  has an enforce time of like 1-2 seconds
+.quote
+lmao
+h|tl: Can I just kline that whole Repl? 
+What if I klined *@bitbot.9pfs.repl.co?
+(And doesn't tech make us keep banning GCP anyways?)
+h|tl: What if the 900A* range the bitbot is reconnecting as gets blocked?
+f.tell firepup e
+f.balias list cookie
+f.balias add fuck echo Hell no.
+Just for Jay
+Is h|tl the letter h?
+testing...
+Now if it gets killed, it raises an error, causing systemctl to restart it
+A-a-a-a-a
+laga
+s/ga/a
+s/a/g
+lmao
+s/ga/ag
+s/aga/ag
+This is a test with multiple matching results for it's test
+s/test/message
+s/test/message/g
+h|tl: How (even if hacky) can I make my bitbot ignore sed messages like Sopel does?
+s/even if hacky/even if it's a hacky workaround/
+s/even if hacky/even if it's a hacky workaround/
+Double sed'd just to show what I mean
+?
+f.burn Guest1918
+Breaks AMC temporarily
+f.burn idk
+Who are you
+goes to look
+Sus account on Replit tbh
+>bef
+The account that hosts the Repl you're connected through is sus
+> 17:30:09 *** idk (~wassuplad@Replit/user/wassupladies) has quit (solanum2.repl thelounge.wassupladies.repl.co)
+> 17:32:58 *** idk (~wassuplad@Replit/user/wassupladies) (Replit/user/wassupladies) has joined the channel
+That account is sus
+Random side-note: Services like PurryCat are nowhere near as likely to disconnect now
+Also you can change your Replit username
+once
+Uh uh
+Not you
+The bot
+900* is a duplicated copy of _9pfs-bitbot 
+*Know
+s/new/now
+f.tell h|tl Who's idk?
+Anyways, services are stable now since they're running off of my RPI
+Though netsplits are still common
+Because Replit
+That'll all be over soon-ish though
+Once the "must deploy" on Replit goes into effect, 99% of ReplIRC servers will go down
+(Rough guesstimate)
+Any server that runs on Replit, yes.
+The clients won't be able to link to most of the servers anymore, so you'll likely have to change the server to a non-replit one for even kiwi to work
+>bef
+lmao
+Juicy topics 👀
+f.cookie Guest1918
+f.cookie idk
+kiwi 👀
+YC is probably around somewhere
+Probably not
+https://replit.com/@Firepup650
+it is
+Just
+Not done well
+running .help should get you a help list
+Though Sopel will comment on it too, lol
+WordPress is stupid
+It doesn't pages as files
+>bef
+Just lines in a DB
+f.tell h|tl idk Still wants you, lmao
+idk - Why don't you make a services account?
+lmao
+idk - /msg NickServ REGISTER PASSWORD EMAIL
+Replace password and email obviously
+lol
+f.tell idk /msg NickServ REGISTER PASSWORD EMAIL
+f.tell idk Replace password and email obviously
+Can you save multiple?
+f.tell h|tl 1
+f.tell h|tl 2
+lmao
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+f.tell h|tl moo
+👀
+>bef
+Thinks
+lmao
+.quote
+.quote
+I should...
+fix that hex code.
+ugh
+waves hi
+looks at idc
+lmao
+f.tell idk idc killed you,lmao
+idk - Register for services
+VHosts are goo
+>bef
+lmao
+lmao
+Register for services
+Purry oping random guests be like
+yes you can
+_/msg NickServ REGISTER PASSWORD EMAIL
+Email isn't verified
+You just have to provide one
+^^^
+Did you register?
+_/msg NickServ REGISTER PASSWORD EMAIL
+s/Is/I
+_/msg NickServ REGISTER PASSWORD EMAIL
+Run that
+no underscore
+and change PASSWORD and EMAIL
+lmao
+dislikes that domain
+>bef
+Um
+firepi lag
+also dislikes that
+There
+Now you're connected from idk.idk
+f.bef
+lmao
+e
+s/melly/smelly
+👀
+s/I have.*/I'm fake/
+lmao
+s/Oper/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+s/.*//
+Hmm
+Ah nice
+null sed
+anyways
+idk - you should enable ENFORCE
+/msg NickServ SET ENFORCE ON
+>bef
+If you enforce you name, you can't have your name stolen
+If you don't enable it, then people could still theoretically take your name
+s/jeremy/the fact that i am trolling/
+lmao
+rakill .*
+:)
+lmao
+s/melly/smelly
+s/ not//
+s/\.//
+idk knows you're trolling, lmao
+s/m/mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm/g
+lmao
+s/nikkybot/nikkybot on EFNet/
+s/m/mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm/g
+Sopel shush
+s/imposter/troller/
+s/alanta/the moon/
+s/atlanta/the moon/
+>bef
+is happy no one has used f.kidnap on a duck yet
+s/ban/kill
+s/f.*ip/ip
+s/renewal cycle/recycling bin empties/
+s/fixed.*net/ethernet
+s/reboot/when I want it to/
+forgets to sed out the a
+s/&t/&t (A company that made an OS that h|tl wants to use to build a clone of telehack)
+blinks
+How
+did it become &tt
+a&b
+s/&b/&c
+Gives h|tl an O
+Huh
+f.bef
+Why
+!fflags +O idk
+!fflags idk +O
+Remember the O flag
+lol
+blinks
+!fflags +Oo idk
+!fflags idk +Oo
+!fflags idk +Oo
+How
+idk - login to services, lmao
+/msg NickServ IDENTIFY password_here
+lmao
+guest86, obviously
+> 19:44:57 <@h|tl> Just add a new auth block to firepi.amc's config
+h|tl: How
+>bef
+You'd have to get on firepi for that, and IIRC I didn't give you sudo
+I think that might do
+do I have to restart for config changes?
+Ah
+Well I did something wrong
+lmao
+unknown flags
+No
+It just didn't understand the flags
+flags = ~encrypted, flood_exempt, kline_exempt, no_tilde;
+Do I need to add a ~ to all of them?
+Huh?
+operator "fp-phone" {
+        user = "*@*";
+        fingerprint = "SPKI:SHA2-256:df11fc5ab489490422672784bed4e511bd64ebb9a1>
+        flags = ~encrypted, flood_exempt, kline_exempt, no_tilde;
+        password = "certfp";
+        privset = "admin";
+};
+Ignore the >
+Term I spawned is a little small
+>bef
+?
+Did that
+How would I set the rest of the flags?
+>bef
+Not no tilde
+And you dislike me having the tilde
+IE: PHONE
+How exactly do I do that?
+I can do this?
+!fflags -Oo idk
+!fflags idk -Oo
+s/.no/no...
+Purry kinda slacking
+/killall
+:)
+👀
+>bef
+h|tl: Probably
+Guest1830: I think that's backwards
+s/email*word/password> <email/
+s/email.*word/password> <email/
+ugh
+s/email.*word>/password> <email>/
+WHY
+s/<email.*word>/<password> <email>/
+there
+s/ip/ip/
+needed the message
+!fflags idk -Oo
+Hmmm
+s/:.*:/👍/
+Hi py
+Just use sed
+py660 Many other channels
+#random #dice #rss #bitbot etc
+s/i 9/H&/
+wdym py660?
+s/ts ip/&/
+private
+(:
+lmao
+Ask Zeroko if he remembers that
+???
+Stop
+f.help quote
+STOP
+>bef
+I must only have like 1 registered
+lmao
+I seriously need to make it un-escape the string
+lmao
+I could just invite you
+sure
+f.commands admin
+f.help ignore
+f.ignore +600 py660
+f.ignore 600 py660
+f.ignore py660 600
+Stop spamming my bitbot
+>bef
+I mean
+f.bef
+s/her/&e
+would have worked
+f.ignore +600 py660 *
+i have no clue
+netsplit?
+Oh yeah
+py - Try to use my bitbot
+the f. stuff
+lmao
+Pika's not here
+has a comically large knife
+stabs Guest26
+blinks
+f.ignore py660 bef
+f.ignore +600 py660 bef
+Rgh
+Because you spammed it
+and the ignore didn't work
+f.modules
+f.more
+f.roll 1d6
+f.commands vote
+f.help vote
+f.help startvote
+f.startvote is IRC discord?
+f.vote 9ad212 no
+f.votes
+*votes
+s/votes/vote
+sorry
+s/Mc.*/Fast food place that is getting worse with time
+>bef
+>enemies
+Goo
+s/oo/&d
+s/wet/soaked/
+lmao
+Yes you can
+as h|tl
+s/s/&k
+lmao
+s/pee/explode
+lmao
+probably missed part of something
+Back
+🤷
+I kicked some random server, maybe that helped
+It's a 95% dead server
+Phone no longer has a ~ in front of it's ident
+and now has kline protection
+It's a Samsung Galaxy A23, running Android 13
+?
+My phone
+firepup
+Interesting channel selection
+@#bestfriends @#couples @#flood @#learntocode @#main #sad:( @#stuff #teamyc
+https://firepi.amcforum.wiki/server-info - Uptime just crossed 100 hours!
+idk - Not really
+BitBots (FireBitBot) join #bitbot by default
+#dice I've had for a *long* time (Pre-me being on ReplIRC)
+#main is, well main
+#off-topic - Why not?
+#random - see #dice
+#rss - Another BitBot thing
+#sshchat - SSHChat bridge
+>bef
+though that bridge is out
+f.grab idk 1
+f.quote idk
+?
+s/c.*//
+s/,/m
+s/!op/Useless command/
+That does nothing.
+🤷
+it doesn't work for you, clearly
+lmao
+guest91: Go ahead
+f.endvote
+f.votes
+f.endvotes 9ad212
+f.endvote 9ad212
+>bef
+What'd he do now?
+f.quote idk
+f.balias add poach echo No. You get poached instead
+Kill reason got truncated
+Maybe ud is disabled?
+f.help ud
+lmao
+.8b You want to f people?
+LMAO
+f.bef
+f.ducks
+Hmm
+f.commands duck
+f.commands ducks
+f.friends
+lmao
+You're already connected 
+lmao
+lmao h|tl
+Stop opening duplicate conns then
+Why though
+Seems excessive
+>bef
+>balias list
+Why not
+idk - which one?
+>balias list
+>isdown google.com
+what
+Wb
+>balias list isdown
+Then how'd it get... kiwiirc from google?
+>balias add isdown ${0-}
+>isdown google.com
+Oh wait
+>balias add isdown isup ${0-}
+>isdown google.com
+?
+lmao
+google.com/search?q=is+google+down
+> We last detected an outage for Google on Wednesday, October 4, 2023 with a duration of about 45 minutes.
+What? Google was down?
+lmao
+Sprints to change a Repl's settings
+s/\[.*\]/url shortener/
+confuses the PI's updater by updating stuff myself
+f.startvote Bring more people online?
+f.vote eb4e58 yes
+netsplit h|tl?
+f.bef
+lmao
+I concur 
+what are we doing?
+No
+You're invisible
+Use lemon juice
+You just do
+Look, this is what we see:
+s/act.*//
+Show Evidence of Desync
+SED
+s/\.//
+!fflags
+!!sync
+!sync
+thinks
+blinks
+Hell nah
+Lemme find the way to ban that
+>bef
+>bef
+i will always find ways to bypass
+L
+Uh
+h|tl I didn't mean to kline
+Water
+s/firepup/david/
+redirects the water
+s/e on firepup/e on anyone who doesn't live in the Central Time Zone/
+lmao
+s/wont/will/
+lmao
+thinks
+22:32:44 <@Guest6132> 9pfs it was nice knowing you
+22:32:54 <@Guest6132> i know this will be your last moment on earth
+22:32:59 <@Guest6132> as you're going to freeze to death
+22:33:01 <@Guest6132> in a pool
+22:33:03 <@Guest6132> in october
+22:33:07 <@h|tl> Guest6132: ✨ swimming pools inside buildings ✨
+22:33:35 <@Guest6132> still october
+22:33:38 <@Guest6132> it's illegal
+22:33:52 <@Guest6132> i wont pay your bail
+22:34:05 <@firepup|lounge> s/wont/will/
+22:34:05 <+FireBitBot> [Sed] <Guest6132> i will pay your bail
+22:34:21 *** @PurryCat2022 (Meow@127.0.0.1) has quit (Killed (h|tl (The bail price just went up from me committing murder)))
+Quote block
+>bef
+Nuh uh
+You just ignored me for 3
+s/\|.*:/:/
+Why not?
+f.bef
+Guest6132: lmao
+s/m.*s/msuit/
+lmao
+lmao
+s/a human/the number 9/
+s/!=/==/
+900AAAAAC: shutdown
+900AAAAAC: help
+900AAAAAC shutdown
+Rgh
+900AAAAAC: help
+Fine then
+>balias list
+>alias list
+>bang
+>alias list bang
+>me says hi
+uh
+>help me
+>alias add bang action me picks up a machine gun and fires a few rounds at ${NICK}
+>bang
+>alias add bang action picks up a machine gun and fires a few rounds at ${NICK}
+>bang
+>alias list bonk
+>bonk e
+lmao
+>bonk
+>alias list cow
+>cow
+>moo
+>alias list moo
+>alias add cow action moos like a cow... MOO!!!!!!
+>cow
+>alias list
+>alias list doggy
+>alias list eat
+>alias list botsnack
+>botsnack
+???
+>eat
+>alias list grind
+>alias list me
+>alias add me action ${0-}
+>me says hi
+>alias list nibble
+Which doesn't exist
+>alias list oink
+>alias list pig
+>pig
+>alias add pig action oinks like a pig... OINK!!!!!!
+>pig
+>alias list
+>alias list purr
+lmao
+f.grab _9pfs-bitbot 1
+>alias list quack
+>quack
+>alias add quack bef
+>quack
+>rnick
+lmao
+>rnick
+>alias list rnick
+>alias list slap
+>alias list trap
+>alias list trap_
+>alias list
+f.bef
+>alias list treet
+f.tell h|tl What's your bitbot's treet alias for? Looks like it's using Discord IDs.
+>alias list urmom
+>alias list ycftw
+f.tell h|tl Also, your >eat and >nibble aliases don't work.
+>alias add kidnap trap
+goodbye 
+bye 
+.join #bots
+uh...
+bye 
+So
+.join #bots
+Okay good
+no more spam
+.amIAdmin
+.amIAdmin
+.goat.mode.activate
+.goat.mode.deactivate
+bye 
+...
+No missfires
+.quote
+And I broke it
+Okay
+.quote
+lmao
+But it works now
+.join #bots 
+Well
+.join #bots 
+cool
+.join #bots 
+On what?
+lmao
+That's a bug
+No I meant my bot responding to that's a bug
+Fixed
+Right?
+.join #bots 
+.8b e?
+.8b b
+.quote hello py
+lmao
+Quote could care less what you tell it
+.quote
+Also works
+It ignores anything after .quote
+On what? ?
+Hello JayAySeaOhBee14 
+That was py
+lmao
+hi
+how to set password
+What about the other two broken ones?
+h|tl is 9pfs
+f.burn JayAySeaOhBee14 
+What if I just...
+xline that repl
+goes to try
+Maybe that works.
+e
+Oh yeah
+f.tell h|tl  can join non-predefined channels now
+Existing
+Tired
+Mild headache
+throws  at #bots
+eeeeeeeeee
+No log spam...
+A
+WHY WON'T SERVICES COME BACK UP
+So bots can get in
+WHOO
+THERE WE GO
+h|tl: What do you mean?
+f.tell h|tl does solanum.repl usually repeatedly reconnect?
+f.tell h|tl does solanum.repl usually repeatedly reconnect?
+.join #bots
+Oops
+I restarted it
+didn't realize tell held over a rebot
+s/o/&o
+lmao
+s/bo/&o
+f.help ignore
+f.help unignore
+f.unignore py660 bef
+I'm out for dinner
+Back
+That's um
+A lot of pumpkin
+f.isup irc.mzima.net
+Why
+That explains why my phone lost connection, but wtf?
+WHY 
+LMAO
+THAT'S WHY  CRASHED
+There's a typo on the line where it tries to talk every 50 messages
+bye 
+Need it to reboot
+.join #dice
+er
+.join #bots
+f.sp ‎Young Love & Saturday Nights
+lmao
+It doesn't have oper
+so that wouldn't work
+Too lazy
+Hm...
+Hi firepup
+Er
+Hi 
+Yep
+That'll be fixed in a minute
+What the
+h|tl - Why's the lounge getting XHR errors? 
+502 errors actually 
+wtf 👀
+Oh
+The tilde's out
+Right so
+lounge over main internet fails currently
+h|tl: Are/were? Lounge is the only thing publicly facing that's half-responding
+Scratch that, it only loaded at all because of cache
+I was asking about your earlier comment about it running through your phone
+Over tor or something?
+Ah
+firepi has no clue what that is, lol
+Hmm
+Could an etc/hosts entry work on a domain name?
+Then I could make firepi understand your domain 🙃
+lmao
+hi 
+blinks
+What
+Hello 
+...
+wtf
+reboot fire
+h|tl fun
+I think I broke it, lmao
+looks
+f.bef
+h|tl - Sounds like a very insecure app
+hi 
+...
+.quote
+So it's not broken
+h|tl: Does it respond to you?
+f.ducks
+f.commands ducks
+f.friends
+h|tl: Any way to remove the guest entries from that?
+>bef
+Can you try saying hi to ? I think there's a bug in my nicklen check.
+Huh
+Adding in some checks so I can see what's wrong
+bye 
+hi 
+hi 
+???
+.quote wtf
+Hmmm
+reboot fire
+Found it
+It was looking for .hi
+lmao
+And I made it be able to have a different nicken limit per server
+.join #bots 
+Well mzima/efnet has a much lower one than replirc does
+Plan is to reconnect it to there at some point
+looks
+But where is that in the blob servers give me?
+is lazy and doesn't want to add *more* parsing
+Parsing was why having it read DMs broke it entirely
+Tried to join -> Channel not found -> waiting for "end of /NAMES list"
+Which breaks on DMs, as that's not a real chanel
+I haven't tried having it join a restricted channel yet...
+Time to break production
+.join #HL3
+Wait... what?
+that channel should have +pim set
+.join #private 
+how tf
+did the modes get unset?
+logs aren't right
+.quote
+👀
+e
+hi 
+Huh
+.join #HL3
+.quote
+Yep
+Rgh
+Working on that
+lazy
+reboot fire
+>bef
+.quote
+.join #HL#
+oops
+It joined anyways
+lmao
+.join #HL3
+e
+.quote
+Fixed
+.quote
+.join #HL3
+.quote
+.join e
+WHY
+How the
+How'd you break it by making it join 0?
+And it doesn't even know to restart
+lmao
+Why is joining 0 bad?
+Okay but why do you leave channels when you do?
+is lazy
+Can't find it anyways
+> Note that this command also accepts the special argument of ("0", 0x30) instead of any of the usual parameters, which requests that the sending client leave all channels they are currently connected to. The server will process this command as though the client had sent a PART command for each channel they are a member of.
+WHY
+There
+That should be blacklisted now
+f.bef
+.join 0
+Didn't leave...
+👀
+.join 0,#e
+.join 0,#e
+0 fails if not at the start
+interesting
+Well, AFAIK, my bot ignores invites
+s/|.*:/:
+???
+s/\|.*:/:
+lmao
+s/e\|.*:/e:
+s/ge\|.*:/ge:/
+...
+s/ge\|.*:/ge:/
+...
+s/\|.*ge:/:/
+s/\|lounge:/:/
+.join #bots,#HL3,0
+Working on something
+.quotw
+.quote
+>bef
+And it broke
+lmao
+Don't even know why
+h|tl:
+f.isup amc
+f.isup tilde
+f.isup firepi
+s/game /3D&/
+Maybe a space, idk
+Anyways
+My PI has a different error from git.amcforum.wiki now, but it still doesn't work
+s/different/slightly different
+Still a 502, but the name of the service below the <hr> is different
+firepi.amcforum.wiki says nginx, git.amcforum.wiki says openresty
+s/says nginx/says nginx\/1.18.0 (Ubuntu)/
+🤷
+But yeah, both AMC and the tilde's TS seems to be out
+f.isup hphone
+lmao
+404=up!
+👀
+f.isup windows
+Makes sense
+PC is off right now
+f.isup seurghuiuiebwt4ugw4ohiwhwiogj
+lmao
+Huh?
+>bef
+h|tl: No, why would it?
+f.title firepi
+f.title hphone
+Wait so
+Your phone has a title
+PI does not
+lmao
+f.title google.com
+Google
+f.title yourmom.com
+lmao
+👀
+f.action Thinks not
+s/T/t
+The bot didn't give more when prompted to
+so clearly it thought not
+>bef
+Aw
+h|tl: How hard is it to add a command like /me to the server?
+EX: /mes
+Syntax: /mes action
+Output: * User's action
+s/\|.*:\:
+f.bef
+s/\|.*:/:/
+...
+s/\|.*e:/e:/
+lmao
+s/\|.*ge:/:/
+f.np
+f.pnp
+f.xkcd
+f.commands xkcd
+Aw
+h|tl: My code should already support variable nicklens, lmao
+            if ircmsg.find("NICKLEN=") != -1:
+                nicklen = int(ircmsg.split("NICKLEN=")[1].split(" ")[0])
+                print(f"NICKLEN set to {nicklen}")
+(In the code to join a server)
+It will ignore that
+I didn't restart it since it broke earlier
+lmao
+Probably
+.quote
+blinks
+It failed to identify?
+tf
+looks
+Hang on
+wtf?
+Nick is unavalible
+That was weird
+anyways
+.debug
+.debug
+>bef
+Lemme chane nicklen
+and reboot
+.debug
+So nicklen definitely isn't being set by the server
+👀
+!fflags +v 
+!fflags  +Vv
+!flags  -Vv
+Huh
+!flags  +Vv
+shrugs
+Anyways, I have no clue why it's ignoring the NICKLEN
+Huh
+It even reads it
+The set is in the logs
+Oh werid
+*weird
+it *used* to read it
+it doesn't now
+lmao
+Well it *was* reading the nicklen
+Last read...
+Oct 13 15:41
+lmao
+So it's a change in the last 2 days that broke it
+It doesn't have git setup
+🙃
+anyways, I'm gonna prefix all logs now
+too lazy
+>bef
+f.friends
+>friends
+.join #HL3 
+.join #HL3,null,0
+I wonder
+.join #main,0
+Yep
+.quote
+I knew it
+Now I broke everything.
+Fixed
+Had to add an override for first join
+.join #main,0,#HL3
+👍
+wtf
+What is that
+Besides apparently a valid channel
+.debug
+fixed
+I inverted a check by mistake
+causing it to skip server info reading
+lmao
+So as soon as it tried to join a server, it thought it was done
+Which is clearly wrong
+Fixing that fixed NICKLEN checks
+Probably
+too lazy
+and it's really just a sanity check anyways
+>bef
+just a tweak
+Shouldn't have issues
+shrugs
+sudo echo hi
+Hmm
+I guess I disabled that check
+lmao
+Why?
+s/\|lounge//
+But why
+Why
+Oh yeah fun fact
+nikkybot is a markov chain bot
+idk what that really means though
+Agh
+Phone's having issues with AMC
+sudo echo hi
+Understandable
+Change your nick and try it
+Try doing that
+as a different nick
+nice
+Stahp
+f.bef
+lmao
+sudhelp
+sudbef
+lmao
+That's one way to get it to talk more
+sudo
+sudalias list
+lmao
+Your bot ain't having it
+lmao
+Just PM your bot at that point
+Anyways
+>o
+ thinks not
+>raw NICK duck
+🙃
+That was delayed
+Y do you need it?
+Oh yeah, does your bot identify to services?
+both mine identify
+(With password though, I'm lazy)
+>raw nick _9pfs-bitbot
+f.bef
+>bef
+>raw PRIVMSG #main :f.help
+Why so delayed?
+>raw PRIVMSG #main :f.echo Bot chain?
+f.raw PRIVMSG #main :f.echo Bot chain?
+f.raw PRIVMSG #main :>echo Bot chain?
+>raw PRIVMSG #main :f.echo Bot chain?
+f.raw PRIVMSG #main :>echo Bot chain?
+lmao
+Poor 
+Fun fact
+It can't read what the bit bots say most of the time
+idk, it just reads it as "blob data"
+>help
+Oct 15 22:24:56 firepi python3[312286]: [LOG] Got ">help" from "firepup|lounge" in "#main"
+Oct 15 22:24:56 firepi python3[312286]: [211B blob data]
+Oct 15 22:24:56 firepi python3[312286]: [206B blob data]
+It's just
+blob
+>echo
+>echo ‌
+Oct 15 22:26:26 firepi python3[312286]: :firepup|lounge!thelounge@owner.firepi PRIVMSG #main :>echo ‌
+Oct 15 22:26:26 firepi python3[312286]: [LOG] Got ">echo ‌" from "firepup|lounge" in "#main"
+Oct 15 22:26:26 firepi python3[312286]: [62B blob data]
+Oct 15 22:26:26 firepi python3[312286]: [57B blob data]
+:>
+idk why it just sees blob data
+but it does
+@9pfs any idea why it would?
+s/@9pfs/h|tl/
+f.pnp
+I do, mostly
+            ircmsg = ircsock.recv(2048).decode("UTF-8")
+            ircmsg = ircmsg.strip("\n\r")
+            if ircmsg != "":
+                print(ircmsg)
+So when I get it there, it's not a string
+Which makes no sense
+*AND* it's two blocks
+idk what that ircsock thing really does
+I copied it from... somewhere
+idr
+Searching for it, I'm getting quite a few that use a class
+mine doesn't.
+Trying to find the guide I used fro mine
+s/ro/or
+But ya know
+that explains why they can't SED eachother
+>c c sed on
+s/on/off
+lmao
+s/fff/e
+case in point
+idk how FireBitBot saw _9pfs-bitbot's message
+s/ot/to/g
+s/message/eee
+Huh
+s/eee/fff
+s/Sed/lol/g
+s/to/ot
+s/to/ot/g
+s/Sed/lol/g
+s/fff/SED/g
+s/Sed/lol/g
+s/.*/&/g
+s/Sed/lol/g
+Anyways
+>c c sed off
+s/Sed/lol/g
+s/.*/&/g
+s/\[Sed\].*/&/g
+s/\[Sed.*/&/g
+s/\[Sed\] .*/&/g
+s/Bot>.*/&/g
+f.bef
+s/QUACK!/eee
+s/ QUACK!/MOO!
+s/< QUACK!/< MOO!
+e
+>help
+It's a parsing error
+>help
+>help
+>help
+>help
+>help
+Well it can read that now
+hacky workaround though.
+            raw = ircsock.recv(2048).strip(b'\r\n')
+            ircmsg = str(raw)[2:][:-1]
+            if ircmsg != "":
+                print(ircmsg)
+>bef
+Well that was cance
+s/ce/cer
+But it freaking works.
+>help
+???
+h|tl: Why'd _9pfs-bitbot leave #main?
+Look at the quit
+*** +_9pfs-bitbot (h-bitbot@127.0.0.1) has quit (Remote host closed the connection)
+It joined #random when it left #main
+You joined it to too many channels?
+lmao
+How many channels was it in?
+#coin #dft-clan @#dft-clanserver @#dftclanserver @#erghfdsadfg @#idk-sdfghjhgfdrse @#lottery-gang #random #repl-mc-bot #replirc-guides #replit @#replnet #scratcharia @#testchan1 @#ts6-loginmsg
+Many channels 👀
+lmao, probably 
+Oh also
+the only reason I knew it joined #random after leaving #main was from my bot'slogs
+s/slogs/s logs
+Oct 15 23:32:20 firepi python3[325579]: :_9pfs-bitbot!h-bitbot@127.0.0.1 QUIT :Remote host closed the connection
+Oct 15 23:32:30 firepi python3[325579]: :_9pfs-bitbot!h-bitbot@127.0.0.1 JOIN #random
+Oct 15 23:32:59 firepi python3[325579]: :firepup|lounge!thelounge@owner.firepi PRIVMSG #main :???
+Oct 15 23:32:59 firepi python3[325579]: [LOG] Got "???" from "firepup|lounge" in "#main"
+h|tl: Probably
+Though LAN shouldn't happen
+h|tl: You ask questions and don't respond when I ask bacl 🙃
+s/cl/ck
+cool
+Respond on #cemetech
+e
+lmao
+!flags h|tl +*
+!flags firepup|lounge +*
+.join &firepup650,#bots,0,#main
+.debug
+blinks
+.debug
+Hmmm
+.join 0
+>bef
+.join 0
+.join 0
+.join 0
+.join 0,&firepup650,#bots,#main
+.debug
+.debug
+f.bef
+E
+Hello
+So I kinda broke my phone's TS
+Non-TS connections fail because they run through NextDNS twice
+Oops.
+1. Replied VIA notification
+2. I'm in a van right now
+f.pnp
+Yes
+This is the IRC chat
+>bef
+lol
+yfd - Shift + enter
+f.grab yfd
+f.grab yfd 3
+Rgh
+lol
+You can't delete here
+it's permanent for anyone who's there at the time
+yfd - Not a scam, just how IRC works
+Rgh
+900AAAAAB shutdown
+900AAAAAB: shutdown
+lamo
+s/am/ma
+it corrected `die` to an emoji
+yfd - join #p2991dsc-general
+Parker - spam isn't nice
+>bef
+f.bef
+hi
+.join #p2991dsc-general
+h|tl: Why are bitbots out?
+Phone finally got back in I guess
+lmao
+blinks
+blinks
+h|tl: Why's replirc.alanta spinning?
+f.tell h|tl Why's replirc.alanta spinning?
+h|tl I need omode
+Why not just load the thing?
+You gave me a command for that before
+ - true...
+noVNC encountered an error:
+Uncaught TypeError: Cannot read properties of undefined (reading 'catch')
+https://firepi.amcforum.wiki/novnc/app/ui.js:1767:5
+TypeError: Cannot read properties of undefined (reading 'catch')
+    at https://firepi.amcforum.wiki/novnc/app/ui.js:1767:5
+👀
+Shouldn't... those be found?
+Oh
+Loaded now
+🤷
+Totally not using my PI
+to just
+Access Replit
+👀
+Sure, as long as that doesn't overheat the system more
+>bef
+That was a lot less than 8 seconds
+lmao
+41-37 != 8
+MY PI SUPPORTS REMOTE RESIZING!
+You just have to enable it on noVNC
+Thought you said before it didn't
+ujhuyh7t5tfguyhu8tgr4
+.join #bots
+Hi...
+I've literally drank enough water today'
+to not be able to eat dinner
+:/
+hi
+Netsplit
+h|tl: e
+Can you use chrome://chrome-signin
+?
+Which one? 
+Try the chrome one I linked
+It shouldn't be allowed to block that
+Though policy might
+?
+I mean you could send it over IRC
+h|tl: Multiple messages? 
+s/tu/t u
+h|tl: flood :augh:
+f.bef
+lmao
+>bef
+Lamo why y'all ignoring the poor ducks? 
+They need friends 😔
+*guest leaves*
+14:34
+👀
+f.pnp (Tablet at home is playing)
+Oh apparently it's not
+lol
+👀
+👀
+Who? 
+Oh, lol
+Discord? 
+Not sure
+The Lounge probably has logs from around that
+f.cookie Parker2991 
+Ignore the extra space, lol
+Just 
+Take
+The
+Cookie
+f.grab youngchief_amcdsc 2
+f.quote youngchief_amcdsc 
+f.quote youngchief_amcdsc 
+f.quote youngchief_amcdsc 
+YC's quotes are gunny
+s/gu/fu
+Just use Sed
+f.bef
+f.friends
+f.grab youngchief_amcdsc 2
+>bef
+youngchief_amcdsc: What's pain? 
+Parker2991: That channel is closed 
+Ban is for *@*!*
+(Literally everyone)
+s/@\*!\!*@
+?
+s/@\*\!\!*@
+s_@\*\!_!*@
+...
+They don't work, period, but blame 's code for that.
+Again
+Don't work period neoroll_amcdsc 
+neoroll_amcdsc: 
+neoroll_amcdsc: 
+👀
+f.grab Parker2991 
+f.grab youngchief_amcdsc 
+Hmm
+f.balias list cookie
+f.balias add FBI action takes  ${0-} to the FBI
+f.fbi youngchief_amcdsc 
+f.fbi Parker2991 
+Extra spaces :augh:
+f.balias list fbi
+f.balias list cookie
+Hi jay
+I'm on the toilet
+f.grab firepup
+f.balias add FBI action takes ${0-} to the FBI
+f.quote firepup
+f.quote firepup
+f.fbi JayAySeaOhBee14_amcdsc 
+I
+Am
+On
+Th
+Toile
+s/e/et
+JayAySeaOhBee14_amcdsc: let me poop in peace.
+Also I need to restart my client
+brb
+JayAySeaOhBee14_amcdsc: I don't remember saying that exactly. 
+The two other nicks you klined I think
+f.grab youngchief_amcdsc 
+lmao
+f.karma firepup
+:sad:
+s/orry /&/
+I just quoted that, lmao
+🤷
+f.grab youngchief_amcdsc 3
+>bef
+Aw
+Neo
+Spam is bad
+lmao
+👀
+🦆
+f.quack
+Hmm
+f.balias add quack echo Quack!
+f.quack
+...
+Im-Sorry: No one asked, sorry to tell you 
+f.bef
+s/ban/mute
+...
+Stupid quotes. 
+s/ban/mute
+lmao
+NeoRoll: spam is bad. 
+s/>//
+Poor bitbot
+pokes _9pfs-bitbot
+JayAySeaOhBee14_amcdsc: lmo
+s/m/ma
+.. .
+My keyboard is acting up again
+Ugh
+lmao
+`.` is a regex char
+Means to match anything 
+s/./e/g
+lmao Sopel
+Aso ugh. RIRC is having issues with my keyboard 
+Onboot works on cover page too
+As well as forks
+I'm doing stuff, lmao
+NeoRoll: Not with mine.
+I'm aware aboutdavid_amcdsc 
+Give me a minute to log into stuff JayAySeaOhBee14_amcdsc 
+f.bef
+NeoRoll: No thanks.
+totally doesn't have the config file for the discord bridge open
+4 people have physical access???
+What?
+Switching to lounge, this is getting on my nerves 
+E
+Where?
+Ugh
+h|tl: How do change modes on non-registeredusers?
+s/dusers/d users/
+Right, sorry JayAySeaOhBee14_amcdsc 
+Ugh
+lmao
+lmao
+You clearly meant to say time
+Which, you should do regardless
+checks
+You are not logged in Neo
+Need to register first
+ /ns help register
+Hi _cosmic____g-e-dsc 
+>bef
+>firends
+Lemme change your vhost
+NeoRoll: try /msg HostServ take $account.firepi
+Now you've got a firepi vhost :)
+I can set you one if you request it
+You can't set directly
+lmao
+?
+>bef
+Heading outside
+Hi
+💩
+maowtf
+lmaowtf
+s/ow/o w
+Hmm...
+No.
+Spam is bad
+>bef
+...
+Bot bug? 👀
+Me?
+Srop
+Stop spam
+f.bef
+No bots >:(
+>bef
+Duck Script bad
+Np
+*No
+s/p/o
+lmao
+You can't sed like that
+s/s\/Np.*/You should kline me/
+You can?
+Oh yeah
+discord uses that functionality
+bugs I guess
+lmao
+Chances of  saying "hmm": 0.0001%
+It's highly unlikey
+It's every 50 messages
+a random quote from a big list of my quotes
+(Or, ya know, .quote)
+.quote
+JayAySeaOhBee14_amcdsc: IRC
+h|tl: :trol: 
+NO
+f.ignore NeoRoll quote
+f.ignore NeoRoll bef
+Now you can't befriend ducks.
+f.ignore NeoRoll *
+Does that work though?
+>bef
+notes that NeoRoll is missing voice
+👀
+Ow
+stabs neoroll_amcdsc 
+:augh: 
+lmao
+tf?
+I just got like
+half an amber alert
+Made the noise, didn't show the pop-up
+JayAySeaOhBee14: ???
+Link?
+f.quote h|tl
+f.quote h|tl
+f.quote h|tl
+blinks
+No
+Spammy + Unfair to others
+Not easily
+lmao
+looks at the f.f*ck command
+Hang on...
+Aren't you the other one?
+Parker2991: ?
+Wasn't popbob the other bad user?
+f.commands ip_addresses
+f.help geoip
+👀
+f.geoip 127.0.0.1
+f.dns amcforum.wiki
+f.geoip 47.39.192.9
+👀
+aboutdavid_amcdsc: How accurate is that?
+Hello
+pokes guest19
+pokes sindar
+f.quote youngchief_amcdsc hey
+Hmm
+f.quote youngchief hey
+...
+f.quote youngchief
+?
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+Where's the one I'm looking for...
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+f.quote youngchief_amcdsc
+Oh there it was
+>bef
+Parker2991 In our bathroom
+s/our/your
+lmao
+yes
+Burn your toilet
+f.bef
+f.friends
+>friends
+👀
+lmao
+lol
+Didn't one of the staff mention root? 👀
+Not proot AFAIK
+Mandatory duck check
+f.bef
+>bef
+Hmm
+👀
+I wonder if that was from when I asked commandz for my message history 
+f.quote neoroll
+f.unignore neoroll quote
+NeoRoll: did you forget about you spamming the bitbots?
+Almost 50 messages h, lmao
+Where's ? 
+sudo echo hi
+Hmm
+su
+sus
+Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+f.bef
+f.unignore neoroll bef
+did not tell it to ignore popbob
+f.help ignore
+...
+Uh...
+f.unignore neoroll *
+Hmm
+_istfg__amcdsc: try now?
+I'm aware
+But that's the only recent thing I've done
+That blockscommands
+s/sc/s c
+f.bef
+Hmm
+f.ignorelist
+..
+f.commands admin
+f.commands ignore
+f.ignore
+f.unignore
+f.unignore * *
+f.commands lottery
+f.modules
+f.more
+f.more
+Hmm
+...
+wtf
+f.help
+???????????????
+f.cunignore _istfg__amcdsc help
+f.unignore _istfg__amcdsc help
+f.unignore _istfg__amcdsc *
+f.cunignore _istfg__amcdsc *
+f.cunignore *
+f.cunignore popbob
+...
+f.restart
+I'll do it myself then
+ugh
+???
+Okay then I guess
+h|tl: No......
+.quote
+lol
+...
+why
+!flags +P
+A
+Flag spam
+The ++ works
+Just not mid-sentance
+EX: this doesn't work++
+Works:
+production++
+I wonder...
+Someone ping me next time PFS' bot spawns a duck
+and don't take it
+YCAI when
+pokes xfnw
+xfnw++
+👀
+(TI 84 Plus CE)++
+(casio fx gc50)--
+suggests amcinv instead: https://amcforum.wiki/invites/11zoAKmZtv
+lmao
+A
+I was typing that
+ /kill 900AAAAAB EUIE
+lol
+Ya know
+JayAySeaOhBee14_amcdsc: is why f.f*ck exists
+point proven
+h|tl: I have no clue what you pinged me for
+Use tell next time, lol
+xfnw, obviously 
+👀
+~~Generate your own keys, not like they're paid~~
+f.commands weather
+Hmm
+f.modules
+f.mord
+f.more
+Hmmm
+pokes at go660's real identity
+f.commands scripts
+?
+f.stats
+2 networks..? 
+My bitbot, somehow
+lol
+That name is too long
+👀
+Moon was blown up by my dog
+👀
+f.balias add take quote ${0-}
+f.take NeoRoll 2
+Oh I'm dumb
+f.balias add take grab ${0-}
+f.take NeoRoll 3
+I concur with NeoRoll
+youngchief_amcdsc ^2
+Done
+Squared
+Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm m
+youngchief^2_amcdsc: You seem to have been squared 
+lmao
+Yes 
+Now you're squared 
+Anyways
+blinks
+__amcdsc: 
+🚂
+h|tl: Totally not piping 216MB of "e" into espeak
+Hi
+Totally not lagging my PI a bit
+-rw-r--r--  1 firepup650 firepup650 216M Oct 21 09:16 e.txt
+aboutdavid_amcdsc: Huh?
+Totally not by piping the e.txt file into espeak
+lol
+👀
+119231 lines in e.txt
+shreds e.txt
+Nope
+lmao
+guest71: Could you change your nick?
+/nick new_nick
+And... netsplit
+lol
+xfnw: But I want espeak to start doing the weird thing it does when it reads really long text
+That's the IRC Relay
+xfnw: I bound that to an alias:
+eeeeee() {
+  yes $1 | tr '\n' $1 | espeak
+}
+wtf
+Why'd it get demonic
+That was weirsd
+s/sd/d
+>bef
+My PI's notification sound is this like water drop
+h|tl: I'd like not to cause unnecessary crashes
+Also why don
+s/don/&'t You use tell at all?
+f.bef
+I meant
+in response to your espeak comment
+lmao
+votes to burn all billboards
+f.startvote burn all billboards?
+f.vote 5e0fa5 yes
+...
+f.votes
+lmao
+f.take h|tl
+f.endvote eb4e58
+What'd Zeroko forget?
+forgot
+cycles phone
+E
+>bef
+f.pnp
+10 children at party + 10 charges?
+s/+/=
+s/\+ /= 
+h|tl: Did you disable auto-titles for FireBitBot?
+Huh
+https://google.com
+blinks
+f.c c
+f.more
+f.more
+f.c c auto-title-difference
+f.c c auto-title-first
+f.c c auto-title-first 0
+f.c c auto-title-difference 0
+https://google.com
+Huh
+f.c c ducks-kick
+What's that do?
+lmao
+lmao
+f.c c ducks-kick 0
+lol
+That didn't ping me btw
+I had lounge explicitly not ping me if my bot was mentioned
+👀
+f.modules
+f.join
+f.join #duck-roulette
+👀
+But why though?
+should make  easier to configure
+👀
+oh, also
+s/\|lounge//
+h|tl: Really? On Replit or no?
+f.isup tilde
+Lmao
+12:58:37 [015] ** aPhone.local (recently split)
+12:58:37 [015] ** pylink.hellirc.repl.co (recently split)
+12:58:37 [015] ** ReplSearch.repl.co (recently split)
+False
+notes the util got viewed
+> 13:02:56 <@h|tl> firepup: Could you explain why that exists?
+JayAySeaOhBee14_amcdsc 
+That's the whole reason.
+has a probably bad idea
+Huh?
+s/\|lounge//
+No
+Not again
+Not doing that
+Not re-installing again
+that was apin
+s/ap/pa
+and the data backup failed
+so I had to start over from scratch basically
+...
+food
+it's a great thing
+👀
+d.eval python print("EEEEEE")
+...
+stabs NeoRoll 
+👀
+Gonna restart lightdm I think
+lmao
+unicode fail
+augh
+Icon didn't work
+>bef
+Hi
+I want to change the menu icon 
+🫤
+Maybe
+I want to figure this icon out first though
+I don't know why it didn't work the way I expected it to to be honest 
+Ugh
+Why no work
+Me trying to change the logo on the start menu
+Yes
+Oh weird 
+I deleted the icon cache 
+And it appeared
+E
+I need to make a thing into FireBit
+s/it/ot
+That you can ask if I'm home or not
+Like .ishome or something 
+h|tl: It'd help you though 
+Then you'd know when I'm out
+That keeps reconnecting? 
+What
+lmao
+lol
+Hmmm
+E
+ d.squawk 9pfs anirudh firepuppy apple orange guns is 9pfs
+d.squawk 9pfs anirudh firepuppy apple orange guns is 9pfs
+blinks
+I mean
+I could kline the bot 🙃
+stabs 
+?
+👀
+.8b does this work? 
+f.brf
+lmao
+Wtf
+How do we type that
+d.fuck off
+🙃
+👀
+>bef
+...
+s/p/b
+No
+👀
+NeoRoll: That won't work on all clients
+ESP CLI ones
+(tty sessions especially)
+You can't load more fonts on tty
+...
+I could 
+Kline you and your bot 🙃
+👀
+: enjoying talking to non-existent people? 
+should make  actively collect quotes at some point.
+Agh
+I still need
+To fix the issues with like Unicode chars in  
+.quote a few times should show the issue
+👀
+f.bef
+f.bef
+f.undie
+Blackjack message is an error I think
+And the color codes too
+lmao
+lmao FiteBot leaking old things I worked on at one point in time
+s/it/ir
+h|tl: ACNHBASIC (Port of a PY program to the CE) AFAIK.
+Mandatory duck check
+f.bef
+>bef
+f.bef
+This channel makes cool animations:
+https://youtube.com/shorts/4QkNuJuIJnw
+f.take firepup 2
+f.quote firepup This
+f.quote firepup=This
+f.balias add kidnap trap ${0-}
+f.balias add kidnap trap ${0-}
+f.balias add kidnap trap
+>hug
+>bef
+No
+lmao
+It's a relay
+lmao
+Anyways 
+Lmao
+Maybe I take it
+👀
+My keyboard fixed itself 🙃
+realyoungchief_amcdsc: and me
+My PI runs services
+s/pip/pi
+aboutdavid_amcdsc: I agree 
+s/wta/twa
+s/dc/sh*tcord
+👀
+: lmao
+twofoursixeight3252_amcdsc: hmm
+E
+pikachub2005_amcdsc: Mind if I yoink your IRC Nick? 
+I'm gonna take your name pikachub2005_amcdsc 
+pikachub2005_amcdsc: you can get it now
+I dropped it from my registration 
+^^^
+Or just 
+ /ns help register 
+h|tl: ??? 
+ /ns help register 
+I just said that
+lmao
+You said to use quote
+I said /ns
+Mine always PMs me too
+Is that abnormal? 
+h|tl: I have a high temptation to jupe replirc.i2p for spam reconnections
+!flags +v pikachub2005
+twofoursixeight_amcdsc: I'll hold your username until you decide you want to register it
+Nah
+Easier for me to ungroup on main
+👀
+That third user is missed by the relay
+f.pnp 
+Founder's pack is cool
+s/'s/s
+🙃
+Nah
+I'm lazy
+f.pnp Dramatic song
+Hmmmmmmm
+d.ttt join fu
+Aw
+I know
+Intentional 
+d.ttt join UWJRMQ
+lmao
+👀
+Totally 
+Wasn't 
+Trying to
+Log in as alyx
+...
+No
+has a high temptation to shoot D5H[bot] because of the squawk thinf
+s/nf/ng
+NeoRoll: I was talking to your bot
+Not you
+f.pnp
+Hello
+pokes guest18
+f.cookie guest18
+Well bye
+This is IRC
+pokes guest18
+f.cookie guest18
+...
+Then make that your nick
+/nick hgrh
+This is IRC
+Preferably not.
+...
+stabs guest18
+Oh would you prefer fire?
+f.burn geust18
+is an operator, which is an IRC Admin
+I mean
+I run the server that services run on
+So co-owner at minimum
+NickServ, ChanServ, HostServ, etc.
+guest18 That's vague, you could be conencting from a variety of places
+guest18: Some of the services that run off of my PI.
+Well I don't give a sh*t about you wanting a manager
+Bye
+Nah, not really
+That'd be klining you
+s/ick/ill
+shrugs
+You were asking about spamming tbh
+Spam is bad
+I jokingly light you on fire/stab you
+and you start just attacking me
+It's not like I came to your house and actually stabbed you
+I'm 95% sure I know who you are
+I need to remember to edit MOTD later
+s/MOTD/topic
+wtf?
+Why'd the bitbots crash?
+????????????
+Rebooted twice
+And mine shouldn't be on ircnow afaik
+h|tl ^^^
+They died about 23 seconds after a split on your ircd server
+f.servers
+?
+Huh
+Says it is on IRCNow
+I didn't link it there
+f.pnp
+Not correct
+Though it is a local file
+so I could see why it's confused
+f.pnp
+f.pnp
+f.pnp
+There we go
+Manually scrobbled it
+Hello
+Not yelling at random people on IRC
+Not yelling in all caps, lmao
+s/ban/kill
+kicks FireBitBot for being slow for no reason
+f.burn nik
+f.cookie h|tl
+I'm an oper
+lmai
+s/i/o
+>bef
+Hmm
+Probability that you're david: 95%
+lol
+IP Range I'm guessing
+lmao
+I can't, no
+h|tl probably can
+👀
+lmao
+What would be the lightest wiki I could run?
+f.pnp
+That reminds me
+I want  to see and respond to playing responses
+reboot fire
+f.pnp
+Hmmm
+Oh.
+Escape codes
+reboot fire
+f.pnp
+.................
+Oh logs break if I do that
+ugh
+bye 
+f.pnp
+h|tl: How can I parse out escape codes?
+No, lmao
+Think I got it
+f.pnp
+...
+And that's "blob data" again
+ugh
+...
+At least  doesn't completely die if that happens now
+e
+f.pnp
+And the blob is considered a string
+why
+Could someone send a message with a single color escape code?
+12,99f
+That's blob too
+12,99f
+ugh
+R
+RR
+RrR
+R99,99rR
+e
+e
+e
+R
+R
+R
+R
+RR
+R99,99rR
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+h|tl: I'm *trying* to fix my bot's issue with unicode
+Not killing me would be appreciated 
+R
+??? 
+How'd it... Oh. 
+It was the nick change 
+R
+R
+R
+R
+R
+R
+R
+No please stop
+I need that char for fixing 
+Specifically with the Unicode attached to it
+R
+f.pnp
+It's the bold part of it that's significant 
+R
+E
+h|tl that's from your setup on systemd I think
+It's panicking over read-only 
+R
+There, now it won't crash
+h|tl: Check it's logs for "[PANIC]"
+R
+... 
+R
+R
+R
+h|tl:  (systemd) cannot write to files
+I need it to be able to do so for at least one file, so I can try to pipe some output to a file I can copy from
+h|tl: Where are they? 
+Under the [Service] block:
+```
+DynamicUser=yes
+WorkingDirectory=/home/firepup650/projects/python/
+ExecStart=python3 -u ircbot.py
+Restart=always
+RestartSec=5
+```
+h|tl ^^^
+R
+R
+f.bef
+R
+f.pnp
+Yeah pnp is just an alias
+f.balias list pnp
+f.help np
+pnp just auto fills my name in to np
+R
+okay...
+f.pnp
+Ugh
+R
+f.pnp
+:FireBitBot!bitbot@bitbot.firepi PRIVMSG #main :[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+Hmm
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+[03last] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+[04last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+10Cyan
+Cool
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+I need to make  recognize that string
+e
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+...
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+Ugh
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+Wait.
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays)
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays)
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+FINALLY
+f.pnp
+f.pnp
+Hmm
+Need to strip the bold off too
+Need to strip the bold off too
+f.pnp
+f.pnp
+Cool
+I'm glad that works
+[03last.fm] Firepup650 is listening to: Tryhardninja - It's Me (142 plays) [FNAF]
+[03last.fm] Firepup650 is listening to: Lolbit Gaming - Please Stand By (177 plays)
+lmao
+Very incorrect
+f.pnp
+f.pnp
+...
+Scrobble.
+...
+f.pnp
+lmao
+What do you mean?
+looks at discord
+IRC doesn't onebox
+thelounge doesn't I guess
+f.pnp
+f.pnp
+...
+In #opers?
+I'll respond
+>bef
+>raw NICK _9pfs_bitbot
+>raw NICK _9pfs-bitbot
+There we go
+What would you really use it for though?
+s/\|lounge//
+>debugging issues with RAW
+What do you mean by that?
+f.markov more
+f.c c markov on
+f.c c markov
+f.c c
+f.more
+f.more
+f.c c markov-chancr
+f.c c markov-chance
+f.c c markov-chance 50
+f.markov more
+How then
+f.c c key
+?
+What's key? 
+f.bef
+f.c c log
+?
+f.c c markov-enabled
+f.c c enable-markov
+... 
+h|tl: am I missing a setting? 
+At 50
+>bef
+f.c s
+f.c b
+I wonder if markov needs some kind of key
+And that's why it's half-broken
+?
+Couldn't remember if the RSS was set up
+Probably 
+Though I mean, mzima allows use of bots for maintaining OP
+I do need to reconfig  to be multi-server stable
+👀
+10Hello
+10Colors
+👀
+two
+!why
+👀
+🤷
+I use my phone as a passkey
+Yes
+Android has worked for a while AFAIK
+Oh
+I'll look again
+Cool
+lmao
+,c c ducks-enabled yes
+*Three* ducks!
+🙃
+・゜゜・。。・゜゜\_o< QUACK!
+🙃
+・゜゜・。。・゜゜\_o< QUACK!
+・゜゜・。。・゜゜'o' MOO!
+f.balias add moo echo ・゜゜・。。・゜゜'o' MOO!
+f.moo
+f.balias add quack echo ・゜゜・。。・゜゜\_o< QUACK
+f.quack
+f.balias add quack echo ・゜゜・。。・゜゜\_o< QUACK!
+f.quack
+lmao
+>balias add lie raw PRIVMSG #${0} ・゜゜・。。・゜゜\_o< QUACK!
+>lie main
+>balias add lie raw PRIVMSG ${0} :・゜゜・。。・゜゜\_o< QUACK!
+>lie #main
+f.balias add lie raw PRIVMSG ${0} :・゜゜・。。・゜゜\_o< QUACK!
+That echos
+f.msg e
+f.msg #main e
+Oh huh
+f.balias add lie msg ${0} :・゜゜・。。・゜゜\_o< QUACK!
+>balias add lie msg ${0} :・゜゜・。。・゜゜\_o< QUACK!
+>lie #main
+>balias add lie msg ${0} ・゜゜・。。・゜゜\_o< QUACK!
+f.balias add lie msg ${0} ・゜゜・。。・゜゜\_o< QUACK!
+f.lie #main
+f.lie #sshchat
+lmao
+f.lie firepup
+lmao
+f.lie h|tl
+f.lie h|tl
+f.lie h|tl
+f.lie h|tl
+f.lie h|tl
+:)
+,msg #main E
+Aw
+s/z/x/
+lmao
+s/zf/xf/
+s/zfn/xfn/
+s/zfnw/xfnw/
+s/maintainer/sole owner/
+s/a maintainer/the sole owner/
+Whoo
+expect temporary  issues
+👀
+We might be stable
+Uh oh
+EFNet isn't letting it connect, name in use
+Uh oh
+What'd I do
+Oh I thought that was me
+lmao
+For  spinning trying to use it's nick while it's in use
+f.wa 14400 min to days
+...
+Is that all efnet servers or just mzima?
+h|tl: Is there some "please unban me" form we can fill out?
+s/\|lounge//
+aboutdavid_amcdsc: I think like all the EFNet networks use 10d bans as the default
+I remember some EFNet nets banning  for that timespan when they saw it was a bot
+(mzima is one of few that encourages bots I guess)
+,bef maybe
+what
+Why do ducks from dft-bitbot meow???
+s/\|lounge//
+That's funny
+👀
+And www.mzima.net throws a CF DNS error
+lmao
+What's a "bottler" client?
+Looking at other servers to use instead of mzima until that ban expires
+choopa says no bottler clients
+4 conns per IP though
+Phone is one, bot is two
+You'd make three, and bot may have brief issues where it'll duplicate
+Though since it's just temporary, I suppose it'll work.
+I'm trying to put it on the multi-server config, so not really
+h|tl: colo just banned me
+Reason is just "please use another server"
+f.wa 10080 min to hours
+f.wa 10080 min to days
+h|tl: Topic on #dice was lost, but since only my other bot is in there I should be able to grab OP for it
+I'm waiting to see if they'll ban me honestly 
+I used deft, which sent me to servercentral
+Hopefully that's stable enough
+ is off efnet for now
+Sure
+I think
+ might have an error somewhere
+That caused it to try to access #main on efnet
+it's not respecting the channel list correctly
+For example, it's configed to join #offtopic on ircnow, and it didn't
+Not on mzima h|tl 
+On colosolutions
+Yes, immediately after it connected IP banned
+Also it didn't join IRCNow properly, lmao 
+👀
+What
+Why'd it reboot? 
+That one was for IRCnow fixes
+That's a weird number
+👀
+,bef
+lmao sure 
+I thought you already did tbh
+f.bef
+ seems stable on cross-server support
+Which is nice
+👀
+Intentional reboot, modified logs to be server specific
+link?
+Just minimized  vuln to EFNet
+Of course, ReplIRC works here
+(Though it has extra handling)
+hmmm
+has urge to edit the system uptime page to have the title as the uptime until JS loads and changes it to the normal one
+,bef
+lmao
+Oh yeah xfnw  should be on IRCNow and stable
+Assuming it doesn't crash here, it should be stable
+I have a loop that looks for it crashing anywhere, and if it does it forcibly reboots all connections
+Runs that check every 10 seconds
+That does mean if it gets klined it'll globally crash loop
+f.bef
+If it saw "Closing Link" as it went down
+Then it'd spin until it came back up
+I should re-work that somehow
+h|tl: refactoring for that would be an absolute nightmare
+I think I'll try linking it to efnet now
+I haven't been klined yet
+deft/servercentral seems to
+Just no abusive ones
+Wait
+Would a server kline
+if it didn't respond to a CTCP?
+xfnw: It's my custom-made bot
+lol
+h|tl: the ban on saxjaz should be safe to remove
+s/az/ax
+It should only allow saxjax on efnet
+h|tl: That's how the bot has always worked 👀
+And it's not like I could write to a file
+1, that'd cause issues with multi-process I'm sure
+2, that'd become a very large file very quickly, probably
+Uh...
+I can't write to a file currently
+DynamicUser
+I mean
+I think there's some way for it to use a logging dir
+https://stackoverflow.com/questions/37585758/how-to-redirect-output-of-systemd-service-to-a-file
+maybe?
+Probably
+/var/logs/ I guess
+Or if the .log extension
+/var/logs/.log I guess
+Probably explicitly pipe error to an error log though
+lol
+Just talk to  :)
+.quote
+LMAO
+^ it does now
+bigminiboss_amcdsc: .quote takes no parameters
+it just quotes me
+.8b Should you actively be taking quotes?
+What file?
+Oh, let me close it
+bigminiboss_amcdsc: try .help
+How exactly?
+Also, can someone on the discord bridge run .help?
+h|tl: What does that mean "passed to the service"?
+pokes AMC_ReplIRC_relay_amcdsc 
+> passes the open file descriptor to the service
+How exactly?
+as a parameter?
+Good
+idk
+I'll have to look it up
+Seems like it, though idk how to work it:
+https://www.geeksforgeeks.org/python-os-write-method/
+looks to be just os.write(descriptor, bytes)
+and bytes isn't hard
+Why ping
+twofoursixeight_amcdsc: 
+Sure
+Shouldn't crash
+e
+That will be pain
+Port is hard-coded somewhere
+I'll have to find where
+No it should be fine
+I think I found the line
+That's my fault 
+It'll cycle again in a sec
+That wasn't as bad to refactor as I thought it would be. 
+f.bef
+h|tl: Should be. 
+(except I explicitly specified "localhost" instead, but they're synonymous)
+Also I seriously need a different code editor
+Geany is blinding
+Isn't that really RAM heavy? 
+is looking for other editors just to see options mostly
+aarch64 right?
+https://github.com/VSCodium/vscodium/releases
+VSCode is installed? 
+thinks
+Tbh f*ck telemetry 
+h|tl: it's called "code" right? 
+removes it
+is glad he used the apt approach instead of downloading the release directly, as it was arm64, not aarch64
+Whoo PI is lagging a bit
+100% Disk I/O
+Ow
+Phone buzzes when it gets a ping/notification
+So if I'm not thoroughly distracted (or asleep, or at school, etc.), phone is best bet.
+blows NeoRoll up
+You said bombparty
+What'd you expect?
+lmao
+f.help lottery
+Hmm
+f.help gamble
+h|tl: What was the gambling thing you tried the other day?
+,bef
+,friends
+,friends
+f.friends
+>friends
+You tried to grant yourself money or smth a while back
+f.commands coins
+there it is
+f.coins
+f.help givecoins
+f.givecoins firepup 5000
+f.givecoins h|tl 5000
+f.coins
+...
+f.help jackpot
+f.help mylottery
+f.help nextlottery
+f.help lotterybuy
+f.lotterybuy 5
+f.help roulette
+f.roulette 23
+f.roulette 2 5
+f.roulette 2 5
+f.roulette 10 5
+f.roulette 10 5
+f.roulette 10 5
+f.help redeemcoins
+f.pnp
+^
+,bef
+.
+>bef
+f.bef
+No ducks 🫠
+f.pnp
+f.pnp
+Moon
+f.isup hphone
+f.isup firepi
+f.isup firepi.amcforum.wiki
+h|tl: Your phone is down? 
+f.isup tablet
+f.isup tablet:22
+Hmm
+Guess it doesn't see SSH
+f.isup phone
+👀
+>bef
+f.balias add tisup tcpup ${0-}
+f.tisup tablet:22
+h|tl: I'm debating whether or not to try to bring  back up
+I think I'll try to bring it back up
+you're not using deft, right?
+h|tl: What's the format of CTCP VERSION requests, and how do I respond to them?
+Could you issue  one so I can check the logs once I'm back in? (Also, what is the reply supposed to be?)
+h|tl: I don't, I just suspect that's why some servers ban the bot. (Bot ignores CTCP outright)
+MESG - "e" | CHAN - "#main" | CTCP - " "
+That the char? 
+(it's in my client as "ctcp_delim")
+lmao
+lol
+Blank for me, though the one I sent is a space
+(Yours doesn't show up)
+s/ode/odium/
+h|tl: Probably, though I hard-coded the sequences in the now playing thing
+No, it should be at some point, but passwords need to not be stored in the code before I do that
+(Not even encrypted at all, lmao)
+I think so
+h|tl: Is there a command for issuing CTCP requests? 
+>bef
+h|tl: Not on my client by default, and server doesn't recognize that as a comamnd)
+s/com.*/command.
+h|tl: Yes, though I need the format for it
+Depends on what kind of command you'd like to add
+Sending you screenshots via AMC
+I could use `Raw` or `Message` for that
+Message would just be message content, and I'd fill in the "Channel" field with `${destination}`
+Raw it'd be the raw format directly.
+Also for multi args my client uses `[xyz...]` not `[...xyz]`
+h|tl: Is  responding correctly?
+I cannot tell
+h|tl: You mentioned notices right? Am I not supposed to respond as a PRIVMSG?
+Oh
+What's the format for that?
+Fixed I think
+h|tl: Verify?
+elif message == "VERSION":notice(f"VERSION  {__version__}", name)
+Oops
+elif message == "VERSION":
+    notice(f"VERSION  {__version__}", name)
+lmao RIRC treats that as a CTCP request
+According to logs, it's sending properly, right?
+lmao
+My PMs on lounge are kinda broken
+I have a PM to myself
+and your messages to me are being routed there
+> PLEASE don't put non-printable characters in your source code
+looks at the handling for now playing
+f.pnp
+Switches to escape codes
+With that done, I'm going to reconnect  to EFNet
+klined
+like instantly
+h|tl: Why do servers hate  so much?
+mzima seems to be the only server that doesn't instantly kline it
+__version__ = "v1.0.2"
+elif message == "\x01VERSION\x01":
+    notice(f"\x01VERSION  {__version__}\x01", name)
+Only diff would really be that fact that it doesn't have a URL
+I have to publish it somewhere first
+which makes hiding it's passwords a priority
+I know you can't use them on Replit
+that's it
+How would I use those in my script? just os.env?
+was just gonna add another PY file, exclude it from GIT, and work that way
+Anyways, could you have the service load the env?
+it's in the dir with the bot itself
+Yes
+Since you were kinda pushing for it
+gitignore - yes
+permissions - it's default atm, what should it be
+donw
+s/w/e
+,bef
+Probably
+h|tl: https://git.amcforum.wiki/Firepup650/fire-ircbot
+...
+What if I just go back to the passwords.py file
+Seems less complicated
+h|tl: ?
+How so?
+Just put it on gitignore, so it shouldn't be commited, and a stack shouldn't include it
+fine, it's in the env
+What user does the bot run as?
+>bef
+Or rather, how do I give it access to the file?
+chown: invalid user: ‘firepup:’
+fixed
+my user is firepup650, not firepup
+h|tl: Seem right?
+-rw-r----- 1 firepup650  37 Oct 23 17:06 .env
+is the service setup for that to work?
+from dotenv import load_dotenv
+load_dotenv()
+...
+Standby, dotenv's doc seems out of date
+fixed, ambiguous package anme
+s/an/na
+it's "python-dotenv", not "dotenv"
+Think I just had an issue
+Hopefully that fixes it
+One of the "PING"s came in on a line with other data
+and the split parsed the wrong part of that
+Also I need to reset my keyring somehow
+Huh?
+keyring needs reset because pip and poetry want access to the keyring each time I install/uninstall somethign
+s/gn/ng
+Default I think
+I can't not use it
+poerty won't run without it, and pip asks every time it tries to do anything
+I need the password to the keyring, and I forgot it
+:|
+Hello
+f.pnp
+bigminiboss_amcdsc: you do this:
+>bef
+.duck
+.duck a train
+Oh that's ddg
+f.duck
+f.help duck
+f.balias add duck action ducks ${0-}
+f.duck
+f.duck a train
+f.duck a duck
+f.duck h|tl
+ducks
+f.duck a train
+Um
+f.duck a train
+f.bef
+throws FireBitBot at h|tl
+shoots Sopel|MNA 
+h|tl: Why?
+throws a building at h|tl
+throws a building at darkshayan_amcdsc too
+darkshayan_amcdsc: It's the IRC Relay
+The IRC Relay
+points at AMC_ReplIRC_relay_amcdsc 
+Yeah
+Though I'm using https://firepi.amcforum.wiki/thelounge
+Have to explicitly have an admin on my PI make an account there though
+(Me or h|tl, and h|tl consults me)
+h|tl++
+Self-hosting++
+,bef
+lmao 
+h|tl: self-hosting++? 
+My ISP doesn't have IPv6
+Which is why I tried things like tunnelbeoker
+s/beo/bro
+But that doesn't work, my ISP blocks the thing needed for tunnelbroker setup
+h|tl: Huh? 
+I don't think so. 
+Not many ISPs cover where I am, and the only neighbor I would ask has the same ISP
+Also, the signal from their network is barely available from my room (which is as close to their house as I could get, and is also where my PI is)
+h|tl: lmao
+f.take h|tl
+Soon™️, we'll get a different ISP on a fiber connection 
+My whole family is looking forward to that switch
+h|tl: at minimum it will be faster
+Tachus is the new one
+idk
+Haven't looked into that really
+has the urge to say bye, but that'd disconnect 
+goodbye 
+:)
+totally didn't have to review the command list to see if it was "bye" or "goodbye" to disconnect 
+f.q firepup
+f.q firepup
+f.q firepup
+f.q firepup
+,bwf
+,bef
+stamped.
+idk who I'd do that
+ducks
+s/who/how
+...
+Remind me why you turned all the SEDs on? 
+,c u sed off
+Hm
+,c u
+,c u command-method
+wonders what that does
+f.bef
+lmao
+s/duck/car
+s/a car/h|tl
+...
+s/a car/h\|tl/
+s/a car i/h|tl i/
+s/a firepuppy/h|tl/
+s/\|lounge//
+Make that 4
+>help
+900AAAAAB: help
+...
+kills 900AAAAAB
+Oops
+,bef
+checks AMC
+no
+is happy with how  works currently, though he isn't happy with how EFNet keeps banning it
+>c c sed off
+,c c sed off
+spam
+NeoRoll: Sopel isn't a bitbot, lmao
+lmao
+You don't
+Nope
+I'll kline it if I have to, you won't replace my bots
+Hi !
+Okay
+goes to figure out which one it is
+I'd just jupe replirc.devarsh.me
+right?
+lmao
+22:06:58 -irc.firepi.amcforum.wiki- *** Notice -- ssld error for replirc.devarsh.me: Read error: Connection reset by peer
+22:06:58 -irc.firepi.amcforum.wiki- *** Notice -- Netsplit irc.firepi.amcforum.wiki <-> replirc.devarsh.me (1S 1C) (Read error: Connection reset by peer)
+22:06:58 -irc.firepi.amcforum.wiki- *** Notice -- replirc.devarsh.me was connected for 148791 seconds.  5081/71 sendK/recvK.
+NeoRoll: What did you do? lmao
+You just delinked yourself from the main net
+lmao
+Nah, once you reconnected it came back
+but if I juped your server, you'd be off on your own
+lmao
+gets bored and watches some random youtube video
+Didn't we already try and learn that backports won't work? 
+>bef
+Wasn't it like the whole Repo that was the issue? 
+I guess go ahead 
+But why do you need to update git? 
+I mean
+Sure
+f.help
+h|tl: could you cycle  for me? 
+My internet was/is being stupid 
+No like my 0home was cycling off and on the network too
+not fixing that
+Blame phone RAM issues
+h|tl: Uh... Isn't the PI on NextDNS? 
+It should be
+idk
+It's bound to my tailscale thing somehoe
+s/oe/ow
+And I can't exactly shut it off, I need it when I'm 9j mobile data
+PHONE WORK NORMALLY 
+Doesn't that cause TS to conflict? 
+I know on my phone if I set the main system to use NextDNS, tailscale has a panic attack and breaks all internet to non-tailscale things
+idk if the PI'd have the same issues
+I'm not at my PI
+somehow got 2 unread messages from that one message
+has no clue what to make of that
+,bef
+👀
+waits for the kill
+h|tl: idk
+is lazy and should have gone to sleep hours ago
+should be asleep
+It's literally 00:17 in the morning 
+cannot break the server his phone gets the date and time from
+should seriously be going to bed
+has school tomorrow
+Note to self, put this man into a game:
+https://youtu.be/NTk_NVwOUho?t=865
+No like there's a cool dude at the timestamp
+h|tl: What? 
+That makes no sense 
+h|tl: how?
+Anything weird in logs at all? 
+Oh wiat
+Did it by chance 
+Get a ping timeout? 
+And start spinning reading nothing? 
+Search the logs for time of when it's last timeout was, I bet that's it
+h|tl: Uh... Yeah I don't do that either
+It also reads a fixed like 2048 bytes I think
+When was it burning? 
+Mmmmmmmmmmmmmmmm
+Yeah
+I definitely need to fix that later
+?
+Loads for me on school Chromebook 
+Nope
+OmegaOrbitals_amcdsc: Cache refresh? 
+NeoRoll: No. 
+Also my news script isn't working properly 
+ * News:
+ * dev etc fixterm.txt home lib lost+found media mnt opt proc root run sbin srv
+   https://micronews.debian.org/2023/1697371373.html
+The news is not a file listing
+Yeah idk what happened. Manually running spat out correct info, and motd is right now too.
+Excluding the fact that it got cut off
+Hi h|tl
+Hi
+.join #private 
+.join #private.
+lol
+h|tl: join there and say "op me" 
+h|tl: join #private.
+Not #private, #private. 
+Why didn't... 
+Oh there it is
+.join #private. 
+blinks
+.join #e
+Why
+h|tl:  just full-stopped, what happened?
+Not just here, IRCNow one died too 
+.quote
+blinks
+I wonder...
+.quote
+Huh
+I have no clue.
+h|tl: thanks for having a CPU cap on 
+It failed from the Netsplit and started burning up to it's limit
+How often do networks ping clients? 
+I wonder if I can make it kill itself if it misses 2+ pings 
+h|tl: ^^^
+How often should I ping? 
+Ah yes
+Dead beef cafe
+f.dns tablet
+Aw
+f.isup tablet
+f.tisup tablet:22
+f.isup tilde
+blinks
+That was slow
+idk
+Why no user info?
+h|tl: Lounge doesn't respond to CLIENTINFO
+(CLIENTINFO)
+,bef
+The what
+f.c s botlist
+f.c c botlist
+00White
+01Black
+02Blue
+03Green
+04Red
+05Brown
+06Magenta
+07Orange
+08Yellow
+09Light Green
+10Cyan
+11Light Cyan
+12Light Blue
+13Pink
+14Gray
+15Light Gray
+lol
+10,99I like cyan
+10,99Wait I actually got stuck in cyan, lmao
+10,99Phone though 
+10,99Apparently if I recall an old message with color, and erase it the color gets stuck on
+10,99xfnw: I sent it to myself from the lounge instance
+10,99At this point, I'm kinda doing it intentionally 🙃
+If I don't load the last message I'm fine
+10,99Once I do, I become cyan only
+10,99Lmao
+lmao
+f.wa wa 18446744073709551616 seconds in centuries
+Oops
+f.wa 18446744073709551616 seconds in centuries
+Hmmm
+f.np xfnw
+???
+f.pnp
+blinks
+.quote
+Hmmmmmmmmmmmmmmmmmmmmmmmm
+f.np firepup
+Hi
+ now playing detention broke 🫠
+has no answer to that, except he didn't know user settings existed when he made that alias
+f.np
+No
+It's supposed to respond to now playing messages with a Spotify request
+f.pnp
+"last listened to" dangit
+f.np
+ doesn't recognize that
+It's supposed to be "is listening to" 
+f.np
+f.np
+...
+lastfm is behind a whole song
+f.np
+.......
+reboot fire
+f.np
+There
+Now it recognizes that too
+🤷
+Someone under that name does
+h|tl: format must match exactly 
+Including all formatting
+f.balias list lie
+h|tl: just use f.msg
+f.msg #main e
+Uh oh
+...
+>bef
+h|tl: yes
+And I hope that's not going to kill my Spotify key 
+bye 
+At most 1 minute until it reboots
+,bef
+f.np
+That's still wrong 
+f.np
+...
+f.np
+f.pnp
+Ugh
+Please don't 
+...
+Spam is bad
+>bef
+FireBitBot: c c command-prefix f.
+,bef
+FireBitBot: c c command-prefix f.
+FireBitBot: c c command-prefix f.
+FireBitBot: c c command-prefix f.
+FireBitBot: c c command-prefix f.
+Fire is nice and all 
+But hard to type
+Please no
+Just let it be
+f.c s command-prefix f.
+f.quote xfnw
+f.quote xfnw
+,balias add hug bef
+>balias add hug bef
+f.balias add hug bef
+h|tl: Please don't?
+Abuse yours, lmao
+f.msg #main >hug
+f.restart
+...
+f.help admin
+f.commands admin
+f.reconnect
+>bef
+,bef
+The...
+f.help
+lmao
+How does this happen h|tl?
+...
+This:
+>help
+f.help
+...
+Sopel|MNA: sentience???
+f.take Sopel|MNA 
+xfnw: h|tl reconnected them
+and they doubled
+f.reconnect
+f.reconnect
+f.reconnect
+NOOOOOO
+WHY
+FireBitBot|: disconnect
+blinks
+wtf
+FireBitBot|: disconnect
+h|tl: that's your job
+lmao
+Yeah idk how to do that
+f.pnp
+That's still wrong
+f.sp A final duel
+That's the one
+lmao
+Yes you can
+.join #somebrandnewchannel
+lmao
+xfnw: Pop over to #somebrandnewchannel would ya?
+.join #somebrandnewchannel
+mao
+s/m/lm
+.join #donotkillme
+pokes xfnw 
+Could you go to #donotkillme instead?
+h|tl: banned me from the other onw
+s/w/e
+f.sp Frog Shop\
+No
+f.sp Frog Shop - Flowerhead
+...........
+>bef
+Huh? 
+help
+...
+_9pfs-bitbot: c c command-prefix
+👀
+Hmm
+_9pfs-bitbot: c c command-prefix >
+>bang h|tl
+...
+_9pfs-bitbot: c c command-prefix >
+>bang e
+?
+Huh
+Mark Mark?
+
+eeeeeeeeeeeeeeeeeee
+marked
+hmm
+Marked
+Marked
+Binding an alias
+Now I have /mark as a command
+perhaps /code would be better though.
+Oof
+My phone doesn't either
+I just assume it works.
+They're *almost* zero-width for me
+Though /mark works for me now that I bound it
+Ctrl + U
+Ooh underline
+Nice italics, but they're better... Like this, lol
+Whee
+here's /i
+Uh
+Why no italics :(
+Ctrl + O
+Not sure what that does
+
+Hm
+oooooooo
+>bef
+yeah idk
+Oh yeah, Ctrl + K gets colors
+h|tl: Ah
+10Cool Cyan text Text after ^O
+Huh
+?
+10,99t
+E
+10,99Ct
+Hmm
+10,99Ah well. I can't color lock, but this isn't horrible to use.
+lmao
+That's a lie
+>bef
+My PI is using all it's swap, and 4.38/7.63GB RAM
+(100M Swap)
+s/M/MB
+NeoRoll: not sure. 64 I think
+I think it might be 32GB
+firepup650@firepi:~ $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        3.6G     0  3.6G   0% /dev
+tmpfs           3.9G   51M  3.8G   2% /dev/shm
+tmpfs           1.6G  4.0M  1.6G   1% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           782M   64K  782M   1% /run/user/1000
+tmpfs           782M   56K  782M   1% /run/user/1001
+tmpfs           782M   52K  782M   1% /run/user/1003
+rgh
+firepup650@firepi:~ $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        29G   19G  9.2G  68% /
+devtmpfs        3.6G     0  3.6G   0% /dev
+tmpfs           3.9G   51M  3.8G   2% /dev/shm
+tmpfs           1.6G  4.0M  1.6G   1% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/mmcblk0p1  255M   31M  225M  13% /boot
+tmpfs           782M   64K  782M   1% /run/user/1000
+tmpfs           782M   56K  782M   1% /run/user/1001
+/dev/nbd0        15M  3.0K   14M   1% /tmp/nbd0
+tmpfs           782M   52K  782M   1% /run/user/1003
+There 
+,bef
+No
+>bef
+Autp-duck bot bad
+f.bef
+s/tp/to
+That won't work
+lol
+f.pnp
+Founder's pack is cool
+>bef
+f.np
+Glad this seems to be back in sync
+instead of off by one song
+Also ugh
+Flipping tag broke format
+f.np
+Ugh
+LMAO [object Object]
+hi, lol
+f.np
+Ugh
+Ooh might hit username randomization
+nvm, I killed the wrong one
+no, lmao
+Newlines indicate EOL, which is a new message
+If you want multiple in one message do Shift+Enter for a new line.
+Still sends as multiple, but you can use multiple in the text entry
+Which is annoying tbh
+>:(
+Please don't.
+More things
+How does this show on discord?
+f.bef
+10How does this show on discord?
+Added color to that one
+bold, italic, mark, underline, and color is applied to that one
+,bef
+You're lag
+🙃
+Well yeah, TS doesn't have to run over the whole internet
+Though do please stop spamming that
+lmao guest18
+@NeoRoll (thelounge@devarsh.me) has quit (Killed (guest18 (define lag: neoroll)))
+d.ttt join MPHR45
+d.ttt play 5
+d.ttt play MPHR45 5
+NeoRoll: it should look at what games you're in
+and only require it if you're in multiple
+>bef
+d.ttt play MPHR45 6
+d.ttt play MPHR45 2
+d.ttt play MPHR45 7
+f.bef
+fluff the squack
+,bef
+Squack sucks IMO
+>bef
+will keep shooting the squack with fancy fonts
+...
+...
+spam is bad kids
+,bef
+close enough
+you know what I mean
+good for you
+lmao guest26
+@NeoRoll (thelounge@devarsh.me) has quit (Killed (guest26 (stfu Auckland’s #1 Lego action figurine)))
+I see no f word
+>bef
+>friends
+f.friends
+f.bef
+lmao
+Un-fancy the squawks
+,bef
+>bef
+>friends
+I will keep killing it
+I'm not
+🙃
+is annoyed by the bot
+I literally just asked you to un-fancy the squawks
+Honestly 
+Just rename it for all I care
+>bef
+Jsut don't call it AGPT
+s/su/us
+Just call it CGPT proxy
+That's all it is
+f.bef
+That's all it is
+Call it anything but AGPT
+That's a kick NeoRoll, lol
+Kicks != Kills
+NeoRoll: I am not even asking much
+Jsut for you to not call the AI AGPT
+And make the squawk non-fancy
+Left
+Annoying 
+If I want to cheat by pasting it
+I should be able to do so
+👀
+✈️
+NeoRoll: no. If I want to paste it, let me.
+Not all terms would even support that char set
+So it's not fair to people via terminal 
+EOL
+Yes it is your problem 
+IRC itself is made to support clients that only support UTF-8
+Your bot should respect that
+Then it's your issue
+Not mine. 
+Because hey
+I'll just kill it.
+neoroll: the PI isn't outdated, but TTY terms CANNOT have new fonts.
+That includes your fancy little chars
+Open a TTY session
+Ctrl + Alt + F1
+Check there. 
+F*ck apple tbh
+I know gline exists, what does it do exactly? 
+h|tl used it on some people on IRCnow I think
+aboutdavid_amcdsc: how do I turn on the UTF-8 strict thing? 
+I'd prefer no emojis over the fancy squawks honestly.
+>bef
+I do seriously dislike the squawk in fancy though 
+As well as AGPT.
+Honestly why do we need AI in IRC
+That too
+More that than anything
+Which is literally normal GPT
+It is
+Because he said he mad eit customizable IIRC
+lmao
+NeoRoll: I literally have like "god" perms there IIRC
+I can view the logs of everything too
+>bef
+So yes NeoRoll, I have seen the site.
+It was Spamming us about the automod thinf
+s/nf/ng/
+So spam ban was warranted
+...
+If you insist on having GPT on, a 1 message limit would be nice.
+(so basically no line breaks)
+notes that that will fail
+...
+Spam
+It's tbh entirely too long for IRC.
+>bef
+NeoRoll: I know how the char limit works.
+Still, that's an excessive amount of output for one prompt
+tbh you should use the brief prompt for it 🙃
+will be the prompt
+s/be/get/ #lmao
+lmao
+f.help quote
+f.commands quote
+...
+f.modules
+f.more
+f.commands quotes
+f.help qdel
+...
+And isn't non-fancy
+You know 
+Like normal text 
+No.
+Just send normal text
+That's your business
+I just asked for the squawk to be non-fancy
+f.qdel D5H[bot]
+...
+What
+Wrong reason, but still
+...
+Non-standard chars are unfair to clients that cannot render them.
+And the IRC standard allows those clients, so you shouldn't be excluding them.
+No.
+^^^^^^^^^^^
+Most kicks are spam kicks
+👀
+Just use sockets, lmao
+Sockets just read-write raw data
+Much more flexibility that way honestly.
+NeoRoll: I can ban your server 🙃
+Bots don't need oper.
+Chan ops are one thing
+Yes, but it's not abusable aboutdavid_amcdsc 
+NeoRoll: lmao, oper doesn't stop kicks/kills/etc
+I didn't? 
+Just /rehash, lol
+lmao
+That's your own issue
+"shadowbanned" lmao
+Please rate the new firepi motd
+ /motd irc.firepi.amcforum.wiki
+figlet font "fire_font-k"
+tbh I'mma symlink fire to that
+nice
+figlet -f fire
+h|tl: any reason why thelounge would be getting double server snotes?
+Each line is doubled
+too lazy
+CPing it into a PM to you
+lmao
+"9 freaking screws" 
+f.take 
+f.help qdel
+f.q D5H[bot]
+f.qdel D5H[bot]
+f.qdel D5H[bot] = Firepup
+...
+Spam is bad kids
+f.qdel Firepup = D5H[bot]
+How do I remove it
+Go to #spam
+throws D5H[bot] at #bots
+!flags D5H[bot] -Vv
+!flags D5H[bot]* -Vv
+!flags
+lmao
+!roll 2d2
+h|tl: any reason for GameServ to be off here?
+!help set
+!set gameserv on
+!set gameserv yes
+!set gameserv enabled
+!set gameserv true
+!help set gameserv
+!set gameserv all
+!roll 2d2
+!roll 100d100
+Please
+Tutn
+s/ut/ur
+Off
+The
+Fancy
+Annoying
+Characters.
+.8b is the fancy squawk annoying? 
+No
+It's ozone.
+The prefix is <, lmao
+<help
+^
+lmao
+Counter point: https://replit.com/mark
+!calc 5*78
+Why's that a GameServ thing? 
+<reload
+...
+asks h|tl how to have owner perms on ozone
+'k
+h|tl: firepup
+...
+d.die
+lmao
+notes the lack of GPT
+If you rename it
+And limit it to, say, 200 chars
+It literally is.
+Then call it gpt
+Just say gpt
+anirudhgpt has bad blood with amc
+You know what I mean.
+And if you don't, google "bad blood" 
+NeoRoll: Oh we did revoke the key
+He issued himself a new one
+A few times
+Then we had enough and demoted him.
+<whoami
+<capabilities firepup
+<join #bots
+!flags +Oo ozone
+!flags ozone +Oo
+...
+!flags ozone!ozone@127.0.0.1 +Oo
+lowercase o too
+What's the difference?
+What's O vs o?
+Hmm
+dmd
+s/d/b/g
+spam
+Go to #spam
+or #bots
+just not main
+NeoRoll: No, ozone is an oper tool
+Also it's not mine
+You don't need parens for that
+lmao
+example
+s/.*/Message/
+No parens are required
+stop that
+That is spam
+& minor bot abuse
+You're literally intentionally trying to cause spam NeoRoll. I think a temp ban for that is fair.
+I didn't ban you did I?
+Exactly.
+You were trying to use it to cause spam.
+Hmm
+PI lag
+d.figlet why
+> Oops, a firey error occured.
+...
+nice "effect".
+The what
+What did you rehash?
+Good news: That fixed my double notice issue
+,bef
+?
+so... RAM issue?
+shrugs
+glares at the fancy squawk
+All I ask
+is
+that
+you
+turn
+off
+the
+fancy
+characters.
+Just
+Disable
+the
+fancy
+chars.
+Oh hi darkshayan_amcdsc 
+s/.*/Trying to make a point/
+f.ignore neoroll sed
+Anyways
+,bef
+s/do.*/I should run my own bitbot instance/
+...
+Not spam
+You're not making a point
+You're just being annoying
+I broke my messages up because you refuse to listen to me
+Okay
+tell time
+f.tell NeoRoll You're not making a point
+f.tell NeoRoll You're just being annoying
+f.tell NeoRoll I broke my messages up because you refuse to listen to me
+...
+>bef
+The meowing duck bot is offline
+At some point
+Don't spam just to get a duck
+And also
+no way that was actually you
+sub 1 sec response
+20:38:12 <@FireBitBot> ・゜゜・。。・゜゜\_o< QUACK!
+20:38:12 <@NeoRoll> f.bef
+Within 1sec
+Probability without script is low, and you've used one before.
+Poke it
+see if it's hot
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+Testing, don't mind me
+>bef
+lmao
+...
+That's spamming IRC
+f.bef
+Would you stop?
+f.isup devarsh.me
+f.isup chat.devarsh.me
+530 = up, lmao
+f.tisup tablet:22
+lol
+Discourse parses sed
+Send a tenor image, then do s/e/x
+>bef
+f.tell neoroll_amcdsc Send a tenor image, then do s/e/x
+But do you know
+of the double s/e/x?
+tenor image, then s/e/x twice
+It's not
+try it
+would, but sed doesn't work on mobile
+No, web sucks on small screen
+Netsplit 😱
+f.pnp
+f.pnp
+q
+f.bef
+>bef
+lmao
+SIGTERM'd
+<list debut
+<list debug
+<help collect
+You killed it
+lmao
+It literally logged SIGTERM, and went down
+(SIGTERM means someone killed it, which AFAIK we can't do remotely)
+Not via IRC
+<shell echo e
+<shell pwd
+>bef
+>firends
+>friends
+h|tl: I befriended more ducks that you 🙃
+f.bef
+>bef
+d.figlet I'm a spam bot
+d.figlet I'm a spam bot
+d.figlet I'm a spam bot
+...
+Absolutely not. 
+...
+NeoRoll: it's one commamd
+To ban you for a year
+And one to disconnect your server from the main.
+1 to ban D5H and you at the same time
+You can't actually 
+We're kline except
+I think all lines 
+ /squit replirc.devarsh.me
+.8b should NeoRoll be killed?
+.8b should NeoRoll be killed?
+notes the happiness
+👀
+You want rules?
+If I need to, I'll stick rules in the motd
+could just op  to do it for me
+The prefix is
+h|tl: what does umode do normally?
+I mean like
+what's it do under the hood?
+It's not an actual command that IRC recognizes
+Clients handle it, unless you get mine
+h|tl: That format doesn't seem to work on IRCNow
+401 I
+I'm dumb
+My nick wasn't what I thought it was
+h|tl: Why did you bitbot recover it's nick like 4 times? lmao
+h|tl: lmao
+What is it with you and overthrowing things?
+How's that out of sync h|tl?
+s/(o.*)\+/($1)\+
+...
+That's not right
+s/(o.*)\+/(%1)\+
+s/(o.*)\+/(${1})\+
+s/(o.*)\+/(\1)\+
+s/(o.*)\+/(\1)\+
+Hm
+o o++
+s/(o.*)\+/(\1)\+
+s/(o.*)\+\+/(\1)++
+lmao what
+It was installed
+lolcat is installed
+ozone apparently can't play game
+f.bef
+<shell uptime|/usr/games/lolcat
+...
+s/\|lounge//
+Not on discord I'd say
+<shell id h firepup
+<shell id h firepup650
+lmao
+h|tl: wait...
+reykr's IRC came back up
+h|tl: How'd reykr's server come up?
+it's been down at least since the PI end has been up
+<addpattern 0 1 *c0caine*
+<addpattern 0 1 c)caine
+oops
+<rmpattern 6
+<addpattern 0 1 c0caine
+>bef
+...
+columbus: Trying to sell to countries that is is illegal in is illegal
+s/ a / an 
+f.np
+h|tl: can you take over Sopel somehow? 
+👀
+lmao
+>bef
+h|tl: admin perms on Sopel?
+NeoRoll: no one likes spam.
+lmao
+I think ttt might be dead too 
+considers the possibility that David wasn't pretending.
+lmao
+Even  doesn't take 26 secs to reconnect 
+(Once it realizes it's disconnected that is)
+Up to 1 minute before it realizes it got dropped.
+>takes a lot less longer
+lmao
+45:57
+Ow?
+lmao
+If you could find out where all the RAM is going, that'd be great
+Up to 5.54/7.63GB now
+Which is a heck of a lot higher than yesterday
+and swap is maxed out
+Oh yeah, the tilde's grafana is dead
+and mstdn.amcforum.wiki links to main page, and all links on it lead to invalid pages
+Main page still advertises it
+all userpages seem to be out
+Lead to 502s
+Trying to think of all the things I know are down to give you something to do
+...
+It's not just me, right?
+The squawk with special chars is really annoying
+My argument is that tty terms won't let you send them
+h|tl: Chan mode M
+Cannot kick opers
+Hello.
+You shouldn't be able to kick me from this channel anymore.
+I'
+That's a ban
+not a kick
+and I can just banwalk
+Oper only privelege
+bypass all bans and other channel locks
+Sure.
+Anyways
+Now bans shouldn't cont on me, even if I don't have banwalking on
+s/o/ou
+...
+h|tl: Question
+Why didn't +M work?
+...
+Night david
+h|tl: Would the two servers that don't recognize +M be the cause?
+ /modload chm_operpeace
+That's the relevant extension
+Mode +M, disallows kicking of opers
+Description: Adds channel mode +M which prohibits operators from being kicked
+Yeah
+at least 2 servers don't recognize +M
+Check #opers
+So fun fact neoroll
+me and h|tl just fixed the +M issue
+No oper kicks
+Though, opers overrid it
+s/id/ide
+You're an oper, so it'd work regardless
+blinks
+lmao
+^^^
+👀
+You don't I suppose.
+...
+Uh
+h|tl: why is flag enforce off?
+!help set enforce
+!help set
+!set NOSYNC off
+Okay then
+Okay so
+the protection is only on ops?
+.commands echo
+...
+Huh
+I expected purry to fight that
+Just set +M on a bunch of channels
+f.np
+...
+
+f.np firepup
+blinks
+makes replirc.i2p load operpeace
+also wow
+replirc.i2p connected
+WOAH WTF
+THAT JUST KLINED 127.0.0.1
+No
+Not really, no
+Why not just say "GPT" 
+Does he even know your bot exists
+h|tl: sure. 
+h|tl: unkline it? 
+That's kinda my phone.
+apparently never got on home WiFi today
+h|tl: it has voice for 1
+>ebf
+>bef
+Lmao
+>They are trained to[Continued]
+Yes indeed.
+So am I.
+h|tl: it is
+My site credits that 
+>bef
+h|tl: I'm gonna see about making a +P oper-only user mode
+(Not to be confused with +p, though it'll be near-identical)
+h|tl: Permanent version of +p
+lmao
+G'Night
+ozone++
+f.commands karma
+f.help resetkarma
+f.resetkarma by NeoRoll
+f.karma ozone
+>bef
+f.pnp
+f.karma karma
+f.pnp
+f.np
+f.np
+???
+>bef
+Fluff.
+Internet seems to be out h|tl 
+My Wi-Fi seems down
+At least partially
+13:43:35 Ping timeout, disconnecting…
+13:43:35 Disconnected from the network. Reconnecting in 5 seconds… (Attempt 1)
+13:43:50 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
+13:43:50 Disconnected from the network. Reconnecting in 4 seconds… (Attempt 2)
+13:44:03 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
+13:44:03 Disconnected from the network. Reconnecting in 6 seconds… (Attempt 3)
+13:44:19 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
+13:44:19 Disconnected from the network. Reconnecting in 11 seconds… (Attempt 4)
+13:44:40 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
+13:44:40 Disconnected from the network. Reconnecting in 19 seconds… (Attempt 5)
+13:45:10 *** Connection closed unexpectedly: Error: getaddrinfo ENOTFOUND irc.oddprotocol.org
+13:45:10 Disconnected from the network. Reconnecting in 37 seconds… (Attempt 6)
+Yeah
+Double ping timeout
+Windows says no internet nwo
+Phone switched to mobile data
+That's two netsplits now
+And internet seems back
+is lazy
+also got a bouncer from oddprotocol, and never remembers to use it
+^
+f.startvote kill apple
+f.vote 49977a yes
+f.votes
+f.commands votes
+f.commands vote
+f.endvote 5e0fa5
+What?
+how
+How does that even happen
+!flags +v xfnw
+,bef
+!flags xfnw +v
+xfnw: Register maybe?
+idk
+!flags xfnw!~xfnw@* +v
+!flags xfnw!~xfnw@* -v
+!flags xfnw!*@* -v
+!flags xfnw!*@* +v
+!flags xfnw!*@* +Vv
+>bef
+!flags xfnw!*@* -Vv
+!flags xfnw!~xfnw@* +Vv
+xfnw: Can you vote now?
+!help flags
+h|tl: I think I know why most times I have to use fflags to give you +V
+I don't think I'm granted +F
+What's S?
+f.np
+Oh I bet I know
+f.pnp
+Yep.
+h|tl: What chars are allowed in a nick?
+Strike!
+U3
+OOps
+08,04E
+16:07:00 <@h|tl> 01:54:20 PM <@firepup|lounge> h|tl: What chars are allowed in a nick?
+16:07:00 <@h|tl> https://tryitands.ee/ :)
+I need to know for the regex that  uses to parse now playing messages
+h|tl: really?
+wants to validate in case anyone is trying to abuse it
+Since it doesn't check if the message is from a bot
+Assuming I didn't break regex...
+f.np
+nice
+wtf
+Oh you're trying to abuse it
+h|tl: Seriously?
+There
+h|tl: You shouldn't be able to do that now
+f.np
+Only if you get the bitbot's username
+It's enforce time should be like 1 sec
+f.help raw
+f.help msg
+f.msg NickServ SET ENFORCETIME 1
+f.msg NickServ SET ENFORCETIME 2
+f.raw PRIVMSG NickServ :SET ENFORCETIME 1
+f.nick FireBitBot
+wait
+f.help nick
+lmao
+nick is literally a command
+f.msg NickServ REGAIN
+f.msg NickServ REGAIN
+Ghost
+Hmm
+ could probably do sanity checks for that
+if it sees you messing with stuff, tell FireBitBot to take it's nick back
+f.help permission
+f.permission add  raw
+f.permission add  msg
+f.permission remove  raw
+lmao
+He already regsitered
+h|tl forgot to check
+h, obviously
+h|tl casually leaking emails to #main
+You have voice
+that's wy
+s/y/hy
+Voice
+,bef
+,quote
+.quote
+.quote
+.quote
+.quote
+h|tl: I have no clue, lmao
+f.c c ducks-kick off
+That's for #duck-roulette
+Do we even have an email server?
+Darkshayan: There's no duck, and you're trying to befriend the duck that doesn't exist
+s/\|lounge//
+f.isup tilde
+Channel operator
+Darkshayan:
+@ - Channel operator
++ - Voiced user
+>bef
+f.tell Darkshayan To answer your questions:
+f.tell Darkshayan Channel Operator (+o, @) - Able to control the channel
+f.tell Darkshayan Voiced user (+v, +) - Able to talk in situations where they normally couldn't
+f.bef
+f.msg NickServ set enforcetime 1
+Much better
+But it's mine :(
+That's cheating
+I'm going to lookup how I can take it back now
+Thank you
+You have all the single char ones
+(At least most of them)
+The symbols you do
+lmao
+Why
+I'm fire though
+lmao
+could probably leathalaccount _9pfs
+could turn off the PI
+Why do you want fire so badly?
+lmao
+I can't be 650
+lmao
+has pineapple
+lmao
+Noisytoot: ask ^ 
+lmao
+lmao
+proda ozone
+s/da/ds
+f.bef
+lmao
+^: Maybe stop klining 127.0.0.1
+lmao
+lol
+lmao
+waves at ##
+Uh
+Isn't that bad?
+lmao
+The block pasted was commented out
+>bef
+That repl is dead
+& has been dead since the PI has been running services
+I saw the 1 at the end of your name, and assumed the other one was timed out
+!flags *!*@127.0.0.1 +V
+f.bef
+So few users respond to SOURCE requests
+s/kill/trap
+s/kill/trapp
+s/kille/trappe
+(3ds)++ (dsi)++
+dsi++
+nintendo++
+(nintendo IT advice)--
+(For context, Nintedo's recommendation for splatoon to work is to open all ports on your router
+s/er/er)
+nick o-o
+oops
+Why does \ == |?
+!random-sync QTlhhlIRMY2WP2nDBAcjp20FuKLIMY+nmY5UPLCD7uvB7d3dAG1sZ+kYPOc/4IMydsScDreHpJ6n4a6MC3HHXA==
+¯\_(ツ)_/¯
+ERROR Invalid byte amount (max: 64)
+$RANDSYNCv2$ SEND !random-sync 06qRblNGm+5cAgVNaOkzBpOOkfaDwPMFlg85kGNszC/2HTtMpUUMu2pRM2ZzZMdXsCVDWnYzmdhjWuvv9neHVw==
+!random-sync ZX/i7wmuVl06+dSnI6l3Baq7KHDkcdnn5I71lHAlEPUK4+HLS3/tO3Rzch4eBKNlUylPTFwfYXJ0s7s2Jty8/w==
+$RANDSYNCv2$ SEND !do-random-sync Ir55aSBHMOLesFZTXb0kVA+vbSrbLidC3EIgzwVVXx+ex0KUMM6z66BAv+rY6fZZOXMrbB5ETEa6PydHW4j3MA==
+!random-sync pLGeBj7gXo7NiaQKu96b5Atj3qb4M7q2vID+tNdAPfcIjdnOlrJ0J6dQm6d8a0wxzPvRKos4tDw9cALEey0Ihw==
+!random-sync QKQHaiqgKSCkdgWnFSlJ3FXwhQaxa1KlCTRFGEaF+Tt0Qx/cNBrzThYn8mxswrjCmfMWXUhz2G40uFw+xLyxMA==
+!random-sync kDMZm22ySzoqz8Swy/a1K5V3hM0S6e071vzhweP4AZv8v/6G3iCEXWOhbPKvPhWUYM+gJN2ywJ/pmRpA8AccMQ==
+!random-sync ZYrc8aY3tFBu5QL4jqm/baqsdW7sbOnlMwCIZLqyLd6twFZN/vHVqIEWe39CcxcOPnFKNY1jIpgMBw6jNcfRqw==
+!random-sync rzBB3B3ilee2DhZzuySw0LH5NPQow5eAkJ7HWant7Icpdk4RIwltMvb4e1JB0Sfrsoxe+TficLdXB1WIwfm8qA==
+!random-sync lthGdtZ3NeqeLxMqEpwlsMFxXET6x448SH+zdFZbxXNW7LA5cRiKXqasN51gC6tay7gRXmV9iAfXcTWxfpJa0A==
+!random-sync 2RKfkbxZkK7NkNELUsYCOvgooFaceDoLCm1RCFIgh5sWNkf3z7nyv0uqwVkaaoD1DYa+g3R6aMjYC0XjvEDhog==
+!random-sync ffl16J7j3fSzX0ERZzH10pfKE1syNBRG3ho+qZsYgZtjBQYbD8nm0KrtEOyRVyXBm9MsReYzT4o7vX/58BVp3Q==
+!random-sync RGbKqtjxeDPMv52TJtI7IpJU2WHa0gxMwYoynnA9WfjN3El12Kdetcpk6AKOGkXsyNWaFo03hDMQFVoHcpi/2A==
+!random-sync OlAHV1g2pBkQOLM1AA1wgNVWoMCDbN3kFpHaCLa7cP4D/o1/NFZeubRer1PjNkBTpUfLHT7lQNGnCRgAjxgaqg==
+!random-sync N1ITAOWmgqC9PdB6WzpDt6oAH/tEQ/lZEFPUzgyO0BLhZJ8ek5jgh3viFDU8a43mX/nze/IoWZA4JhWRa1H3IQ==
+!random-sync fRpWXs/M6zE6liHa+ffoXfMMyOodM7Whgf1Ob63HbLFrhfNDNs6UVlCvgVbTgG2shXYLEj2jikbtXdym1d+Tlw==
+!random-sync 985xjTumfKgTqtkN2tY4G9sOMJNkd8hKJ5aoaSy0amqvizSRSvK73YnzPILanAoRHAqERRt2U/OxOVEFpgKiEw==
+!random-sync ZjdCnaTIDuuX80zwY/ZuL5N6sC93qx7O3GPit2Kip567Mqj11o6jnMp3w3YJWDP1vKw5DRKLS8AR/cVT7dwUig==
+!random-sync CX+q6sIkf5tl3YNBxz1pju75R7sDk9XaJ8xhLL9Ia97t+Tghau0W2gLQgXNhWKd5ygVOcPKVuCTfwmbR4X4+tA==
+!random-sync 9j32F5wguWZ2OBo0HkrdRJE6WyzQktiBUttYpMoNQ1fu0UY4pX3GdBaMP/COCzu8VbCelkQuSmkmjtKsaXrpLw==
+!random-sync QO9dMgK6APtJiUXIH6qJjvBwJtXqqavzflizGq+tVPA9gRi+C67qz026la9tGGOyIZ/bcLZGaVfgalfpblbRVg==
+!random-sync pIl+hdA16FKVkAzXctM15wdlubFlfob9HHHC8k/g5gxnQ44Ac5VDfJjf/Dy+InhffNXmdfyvvgW6+U1V9XuU1g==
+!random-sync EsoUN3X2A94IYFGoxeLTqs4DOpcR6K86wUYH5u/g5fr3lOXfOOWB/gRn+Pg9uazHkFYoY26fOLFVS7NcrtUXNA==
+!random-sync kifamRm/XSEj0DRF+2B3DMgf2u02asMuHGcS7+pxmhNSBdsX3l/b27coxIkz1/TyGzJwW5e9FzHVYAs8SwMw7Q==
+$RANDSYNCv2$ SEND !do-random-sync aRtI9xy7LFa25BTghdJn6+qSWSfi9pq9pQur592BW4g4cSvgvd00O+ep0QL2yRoSKT9+sCnm2lfmhyF7wHw+DQ==
+$RANDSYNCv2$ SEND !do-random-sync V61jixCd8cqHJOKmgfnw6f2eX2DS1JpaKVsnoAQDdrtesT1UtySMIfZsYzSTrUO/Cv3goiIg5x4Kg1YsWPXm+Q==
+$RANDSYNCv2$ SEND !do-random-sync HdZKTstvtkDVypYz3UqvSsShuRuGVeJkYlSO9FnfzNo+DNd3MgYrsZap8GlWxt5y1KWHNYYb4gu3mYsUobMjag==
+$RANDSYNCv2$ SEND !do-random-sync Ri0QdWpkZ/X9bnniOCg2A5km6AdSe9Pj+GcSypuFKTFjDdLjkL6Q6OeArxmVziJljT3ed1575q5jQy4BKqPulw==
+$RANDSYNCv2$ SEND !do-random-sync 8IpDhZjkHE6BYfdfbSUipM7bDRzP7YoOEWo1jAfVwqHVpJlDNwX6cs8GX4XHki/Mw2fOtfKCeps8uqow3SdD4Q==
+$RANDSYNCv2$ SEND !do-random-sync H8DHR5wEG9tYWgT7++egutCFHENrXbjkc27Z45Y2zp16WfwC14V3TLM7CaizuuA61gyOUS01FfaWY72Cs/yZwQ==
+$RANDSYNCv2$ SEND !do-random-sync OhcicGPjjc6O+lEdpIV9XjvWkC6WY+cKiHZCYg3Ji0b94ifOs8jvCffwaJ8dLqv2wQv+9h+UQUbMZtnzrbXI+A==
+$RANDSYNCv2$ SEND !do-random-sync Hj/fYyU4qI5rhgGg/kcHQiFBdoWESgwXHfJR9NFWuhOfdUHt7/4uLlZv7cUTGx/PtYSzG/+HznAxeuK0EkQLtQ==
+$RANDSYNCv2$ SEND !do-random-sync BsFNbAmfjGVPPieabN9xL80wg5wZlTSwLXAOjbmGE2exfplJcFLu4NU0u3cugegwVwOHIWd2sn3K9fhvyncuEw==
+$RANDSYNCv2$ SEND !do-random-sync fCyTMjKmIod5gvpFMxMTVrV4YnwlcZ1Q8K2xlBJk+umw57VdW5ebIJKJ75q8qQDNB/v6DJYlJRAC7c9I8pwhVA==
+$RANDSYNCv2$ SEND !do-random-sync iBoXYMqCg5GGGUmYhI3Vs5m6idmEQSzXbO/a6jirBe9xDr3DKFSEvl53OHk688V74wN/iU9lUODnlZK/Y9/nTw==
+$RANDSYNCv2$ SEND !do-random-sync SG11BrNoLq5ZPtie+FKunxocEGlmNunGoz1zoXZmkZDZ6nn9+ZbZzhPRxj+66IBS6yvo9/2/adhsXDmzuAkf1w==
+$RANDSYNCv2$ SEND !do-random-sync PZvxu/gMmg9rfaxC81a7mwVr1ulSaalgv8bYha0TbPfnsw2J05iXpBu9s/CKQBTcpgYWqoSA39YjHMhs7bsaUA==
+$RANDSYNCv2$ SEND !do-random-sync 9qjS2g7AHw8XTG4eM7AwLClwMhj59SHxZW6NPVXSH1p6ummft3MN/oJ/0u8acSC8G1uxJHqD+/n2nbkO6F/1Ag==
+$RANDSYNCv2$ SEND !do-random-sync FZ5fIGdc/wJjCvx4RGI7cBddQQFGVyWruT+jDBp34HbtTF3OF1c0feS/c9WDobXyfhQNNsXUFfzOF4bMGzhgew==
+$RANDSYNCv2$ SEND !do-random-sync /obe6//d+WhwoZAAVKzduKjkW/sNEADfpMFR5Uk/Q2SBhOh3Nue0Wsdsh5mpxG448W/1+hgSnkb2ganPUh851g==
+$RANDSYNCv2$ SEND !do-random-sync NQcx5GTfLqgoJkYclRX2rbzGe0QMKadhqOXoUThDBXHuQ8mVT6hd3sZAseQN+qO2/3NbdCB3b8eBboRuciAspg==
+$RANDSYNCv2$ SEND !do-random-sync FXY2ZTvfaVX9dSDSu/53SZkLCxMpYPbCfZME+9dSxWYK/OoJzVNMTThVWMjz1vUua5s9e6ycNvXIs6K9xgCVDQ==
+$RANDSYNCv2$ SEND !do-random-sync p9uESRvrn5Hyfdlb8/OYS/0N7MoyaKD5Std7NApYHog1DyPJ1QvZD7m/i4t6h4dmttBBW5rf8cnmsYGtTFVuuw==
+$RANDSYNCv2$ SEND !do-random-sync zgH0mwilIAAspW6JEgwclv/qph61Ws5FfIk7mtY2oD05HKpfdgwLVs1rZkXzBo0WNvvRCq/AdFzzE1Fwav5KdA==
+$RANDSYNCv2$ SEND !do-random-sync db5N9oTvv1kMF6mSW+EyfWfgLb0By+4HAxYVeNiUQjdV3vYpovSI7+cBxBwGBGu9KuVoBE9/XFlPsuUI9EFE9A==
+$RANDSYNCv2$ SEND !do-random-sync FP8KmK6dzeyNuDqfTPd39J0k2DT8iY5XteaR42alQL9A7Go8UIeAB5u7UrvEu6ENST5NgPGasaSDUhiBY/uIyA==
+$RANDSYNCv2$ SEND !do-random-sync f1oaSdlBN9HJZy3uGaLfGIB15llwhRUIVjqFEqL4+eBUZ3kGyuFsqUf8vjb29fsWMwmkwpvQJQDdbS46zJYsgg==
+$RANDSYNCv2$ SEND !do-random-sync 2COiQA/fuGNNMOr1VB6yl1988/SpJpr2GRTiEbMo+J7LlT24cZLEs/if6CWgLzGnuSpbJF28slJFa4g0OCcSUA==
+$RANDSYNCv2$ SEND !do-random-sync GOpNIkOftIleA6H2n9LfBNLn0BEC1WIv5aiOqywq/MQjB4Pk1qCE8mHQi1fDavIuQHCknUjXMiJuGZtg/QZiZg==
+$RANDSYNCv2$ SEND !do-random-sync rHg+x6xhUNmfclkG9/jVabXe9vBl7DMsMc2ak9RfdxNvnzmLURVVvYU53dUCaBhG+PEx4rLUvv/fIQDY4+4puw==
+$RANDSYNCv2$ SEND !do-random-sync Bnlef0COoq3AEkeVV+GMoXlqAHMlbJqykIVkZZiFZnWJ+fsI4YDvA0nYA69KN4KvhZR6pQK/GHkL3v2WN0GYog==
+$RANDSYNCv2$ SEND !do-random-sync uI6Hxi9BLq1knihJE+0siykzR2YxDIBcG0HqmYd5RCM+sOWrodLdk3aqZV62xr2x/yg3VpRRwYs4Z4n+UyteDg==
+$RANDSYNCv2$ SEND !do-random-sync Tc83aXsjl0FvgrIO5nrn7Ywkjdzp1A7d4IbCoXxvwhGjM0xaI7tcB2H5qqXDu5DZWH9LplEtJa7XxPAckzSJiA==
+$RANDSYNCv2$ SEND !do-random-sync OLRfrs4+nJHWqAgkaPP99xF5dOFFPyI6TrmOcoFyoEsAt9uSLlFq9uvHhrjjQp//BbLm6ZOvfZy0OtC4oP2Xdw==
+$RANDSYNCv2$ SEND !do-random-sync d6ba0Zy8KtY6nf2Ew9ESzKB44ib7IBpvAfkfVUhE166iNmcZqmZV+zDKQi7LLSxKDLuc4oI1dWb5IQcARxDVhA==
+$RANDSYNCv2$ SEND !do-random-sync mXgu+d34SEIRg0MhlwksXWJyJlR0WLRpdTsT1GQdamL+hOQZptWam8QdrWsd5LyXapYjnYjU2hbBL88fSnR4+g==
+$RANDSYNCv2$ SEND !do-random-sync JMY7uf5HgaAM0nqkCFye89d1Zfm61YV9Qo66L8dRPqgF3/mpJ0DLDhNgIfbGJtKYwvsZVnNfsfx45tW3H2LTWA==
+$RANDSYNCv2$ SEND !do-random-sync 4ez3En8kULt7jjB1h9lqMnhtp7eQ20478LADRYiBey8IEGfuRGnaNbq09ZkEzP2mD1gxVMK8qtVD6+lrMcMkrQ==
+$RANDSYNCv2$ SEND !do-random-sync Mai3K5UA2oV2IIZH1m1z0xtilAauOqt8+SAfw9bGlSXg1oEe92kXkMOGx3bZNvyCbNYzu/gYMRSYzvqsv+h+zg==
+$RANDSYNCv2$ SEND !do-random-sync DjRuGLxOyfOxuoHq7+vNZ/BccODtfWoMR+kZqb+TGZ2RaZWSzLe6hycty6AT+4lLtzNAdY0Uh3MQan0q3bheoQ==
+$RANDSYNCv2$ SEND !do-random-sync se3PVjpWIQBds2Tm55edFSV55TBW+4X5EMePVlfvj5kJlrx+oBm7m08VD9obr0sF3nv05xH/ux0oqxYsGQEnOg==
+$RANDSYNCv2$ SEND !do-random-sync emya9NdFbm8qdMT8wk4LZGrEElmsiH3Xz69caxgZlTsJGdcVPpiOHAZRVw6oC9ZDZURFwWLPDn1H9AlVSsbIVQ==
+$RANDSYNCv2$ SEND !do-random-sync VwZiOogsMgPcIwAhbjPADQx/Gy+J5Pl3QK3MRZAshuJqqXC2yQna0bIJBrMviQhQhdNTtHkmtIadzSbtOepCPQ==
+$RANDSYNCv2$ SEND !do-random-sync wDJnbBs01kSSWjQt1AiaZZ1hjJvOyZSOYWNFpWchRS1Kt48RBoLpV41sIxleOcyvCUiA+tMtWhXDllnCy/gD/g==
+$RANDSYNCv2$ SEND !do-random-sync b4cdXmQcYL6d87yWhIidGNWVRLWWIgz+Ct/XnRygAyWkj++AOBNJY+gO4Uq7QZ6Ouk4iRZjXFvgInofuGBX+mg==
+$RANDSYNCv2$ SEND !do-random-sync c+DOZbq5SHCc4gMWp2I5Ie2BegJFabA+qx9DLTsaQyNHDIpMOvsOBPeuj/SZ9IazfMvBdH6uLHDVOCFT8MVL4g==
+$RANDSYNCv2$ SEND !do-random-sync W4Yc40P7NxVLMBW5plqt3cdTf1ni5d7WYAHC1p99QuwBvWGR76fH0Ez4zq8NX661OO9Mkj1uXWTKJ31XSzJDsg==
+$RANDSYNCv2$ SEND !do-random-sync MYuIOEFcxK8G5yPbuTJ52kjKdbmufM3qb/6xsYM89VYzXTKI70EnKsdzpnDuXwZUeDDZG7YF0Vd3dDyOEOamtA==
+$RANDSYNCv2$ SEND !do-random-sync euuPZfGZWbcogwkPVSQyv5C+b+GrbsA+R9w5q8tAMPuSG/O1S704wIQNjRT9LqJLhxXjDiMFviYWg014QW42Jw==
+$RANDSYNCv2$ SEND !do-random-sync m6CSFTIYXhBBoHjpqCaehI0GClzq8clM61UgBwlCWv2uERXyjyWhFbcXMG/0rY+Nl5GrkfXh0utwuWTYDoyUqw==
+$RANDSYNCv2$ SEND !do-random-sync gWW/1HBmgDUWrmGOE4FSNCH9xM9Sgx98lMZoZoIFBErfi1ywFqz8jtJFo4cuqf3/8MRzCDQwumtoieZeGfIYSw==
+$RANDSYNCv2$ SEND !do-random-sync 1f/y9eBST9HUwSIVEaWuaAIj9YQ8V118Mw3t98k+eMmh6OlWTFLf/4MKfSk6caF84gqIo7znroPpgQItrEqalA==
+$RANDSYNCv2$ SEND !do-random-sync u58BwDYVZgc1BnmNtvA7aiKsdJiRni9GTmnsI6yWjEGpW8iRgJWP00u9f+3IJNkUkVvYrJjfG9pJe1jo7XmgpA==
+$RANDSYNCv2$ SEND !do-random-sync PR/EUiW86Uv4rEwCLZte59DoiRrtWNcYt/9nUSFXzgrsuNz5DeG3x9MsAEkjaIIjhM2kfjeNS2seLDaH9UwOmA==
+!random-sync GQn8N/kB+hupdmX4wK/7p8chX73lMGYvU8ExpV4RQxZlFcLup6LBst5VDbPktDAi+6zNLOIGC7EPMkQmqkOdHw==
+!random-sync pFR5jIaatZGqu9+y4O7M/jsQ7R+jyKXjGbXRM9A3suHQjqk1S6LCGXIfRDnWR4iin7zbdetkrfHRyG6vvqmtGg==
+And we're back!
+!random-sync D+Fn01aAIg205kG0yoI1VK+cT8+g7q0aLbilu4xAqgfEkA3A9HuqpEpTFxJMdoiM+pOalRpUSLPobIjbJCuJuw==
+!random-sync klWH+PkKF5wvxyC9jmL4oy95BR0hx2wUk9qh7iSalkE+yCimOQc8CfwfjUVruPvzw9BOdNjSZ2mNEbKJquyEBA==
+!random-sync AVpjcyUlJX0+gDZSTND5W84xUZYopnkMpRwOl5FHFWZWQUHUkgVEIsYiMOMv+xdTaZNTCkAJ8TiPyBDCX294Xw==
+!random-sync xvDjmVataEC2CWObmqifFJVV1GoPEZM7/lo5fvL+TTsWKkocHhCl9PeGsciVN+2a5cC8tQoB4vsoIzbgMmb5LA==
+!random-sync MO1TV80zbHmsmnpKoic2crR5/ew6Y2A3Et5HyPEGZgEehovK27M4IMMr6vtF6vGRomCmqAkRlN6g/j/sI5/zFg==
+!random-sync NJkqk5wz3yd6Rp4jjkCabwchadWh9kU45yqpXkPEtSfekhiT64fi31HrMB7k7YSxER1oHoRPHM7zNK2eu1gCEQ==
+.quote
+Oh wow
+It's completely dead
+h|cafe: do you sell sweet tea?
+h|tl: ^^^
+I know, why do you think I pinged h|tl?
+firepup650@amcforum.wiki I think
+lmao
+👀
+My phone decided it was fine
+Though it froze for a good 5-10 seconds
+100 != 1000000
+,bef
+f.bef
+lmao
+>bef
+> I made https://h.tilde.cafe/header-overload.cgi return a million HTTP response headers
+100 != 1000000
+Away for dinner
+PI froze
+I bet
+It's trying to title
+The oink page
+:|
+I'mma just... Kill it
+Oh wait
+,bef
+It vanished
+Ah
+It's still spiking off and on
+f.bef
+h|tl: Kill the config?
+lmao
+PI lag
+f.c s throttle unset
+,bef
+h|tl: running
+h|tl: done
+Tbh I need that actually 
+I should try to extract some of the old data from my WordPress site
+And WordPress doesn't, ya know, use pages
+No no, it's one big DB file
+Lazy & I have the file
+I didn't originally when I downloaded my whole site from infinityfree to my phone
+The DB isn't just a file in the FS
+It's elsewhere, so I was lucky I got a copy of it at all, it was scheduled for deletion.
+,c s -throttle
+xfnw: how do you recommend I setup privatebin?
+I put that there
+Check perms on it
+,bef
+<shell ls -lah /web
+^
+<shell ls -lah /web/PrivBin
+I don't understand most of the install guide
+Go for it
+Move the folder first
+I think I deleted the zip
+<shell sudo mkdir /var/www/abuse
+lol
+<shell  mkdir /var/www/abuse
+?
+I mean yes, systemd is great
+But what is it doing here?
+For...? 
+Oh.
+<shell ping google.com
+?
+What
+What does that even mean? 
+I wonder 
+>bef
+I wonder if `shell shutdown -r now` would work...
+<shell shutdown --help
+👀
+f.bef
+h|tl: could ozone restart the PI?
+But what about `shutdown`?
+That's... Quite a few errors
+Cool
+Oh I like this one a lot
+f.np
+(Dagames Founders Pack #1)++
+Before I go to bed, note that my Spotify won't stop playing
+So y'all can check f.np for whatever happens to he silently playing
+f.np
+For reference 
+lmao  is lying
+Ugh
+So it didn't lose the auto-perform
+But NickServ isn't liking it's password or something.
+There
+Now it has no perform command
+h|tl: how can I drop someone else's vhost?
+Yeah
+Oh nice
+That's easy
+>bef
+fp
+Huh
+f.bef
+<shell ls -lhR /|grep "rwx.*ozone"
+f.more
+f.more
+f.more
+<more
+<more
+<more
+<more
+<more
+<more
+!botlist
+blinks
+,bef
+lmao
+Oh huh
+The original reason for my empty message check
+That message
+Whatever caused it
+is why  stayed on empty
+Nope
+But you can PM it and it counts
+Has to, or it breaks
+Does mean if it gets over 50 PMs it'll PM itself
+Probably
+Weren't you supposed to move it to it's own file?
+should have  link a random selection of "lazy" videos when someone says lazy
+Huh
+f.help
+Thought we agreed on that
+Also you pinged the wrong person
+f.bef
+h|tl: yes, lmao
+lol
+Phone just cut off from the PI
+At least over IRC
+lights NeoRoll on fire
+h|tl: I get a way to change people's nicks when
+How would I go about that?
+h|tl: where's 's error log? 
+I broke something 
+Okay...
+Hmm
+.quote
+Huh
+Wtf
+f.tisup tilde:3000
+h|tl: wrong "isup", lol
+tisup is the one for TCP
+f.balias list tisup
+A null byte?
+lmao "starting nmap" 
+I don't speak that language l
+s/ l//
+...
+s/ l$/$/
+s/ l$//
+There we go
+regex ftw
+lmao
+h|tl: you requested it
+I implemented it
+...
+...
+.raw PRIVMSG #main :That's not very nice.
+f.bef
+.raw PRIVMSG #main :That's not very nice.
+s/razor/C# logo
+h|tl: right? 
+.raw PRIVMSG #main :f.help
+lol
+.raw PRIVMSG #main :f.np
+waits on Spotify
+Wait what
+lmao
+.raw PRIVMSG #main :f.pnp
+f.c u lastfm
+f.c u
+.raw PRIVMSG #main :f.c u lastfm firepup650
+.raw PRIVMSG #main :f.np
+lmao
+.raw NICK 
+Rgh
+It can't really handle a nick change & channel part
+DMs don't work if nick changes
+And so begins the migration of  to a proper 
+s/$/ multi-file setup/
+Ugh
+s/r$/r multi-file setup/
+Work
+:|
+s/er/er multi-file setup/
+Hmm
+s/(mm)/\1\1/
+s/(.*)/\1\1\1\1\1/
+s/(.*)/\1\1\1\1\1\1\1\1\1\1\1\1\1\1\1/
+s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/s/(.*)/\1\1\1\1\1/
+Aw
+s/(.*)/\1\1\1\1\1\1\1\1\1\1\1\1\1\1\1/
+lmao
+Sopel doesn't understand regex
+lmao
+...
+👀
+Finally 
+(If you would, still please don't get on mzima)
+I like using it, I just need to not join banned channels
+h|tl: I'm going to ban  from joining #main after initial join
+(So it can't get into it on EFNet)
+.quote
+.8b Hello?
+???
+>bef
+M
+Maybe?
+Nope
+Okay...
+.quote
+,bef
+???
+,bef
+dft-bitbot: bef
+...
+>bef
+f.bef
+,bef
+h|tl: Server's rejecting connections "no more connections allowed in class" 
+Okay 
+f.help in
+f.in 12h ask for a vhost for  on IRCnow
+12h is probably over the top
+O yea
+Need to do that
+h|tl: are they likely to accept that?
+'k
+Glad I have  with RAW now, vhost would be a pain otherwise
+f.in ask for a vhost for  on IRCNow
+f.in 2.5h ask for a vhost for  on IRCNow
+Hm
+f.in 90m ask for a vhost for  on IRCNow
+There
+ message queue upgrade complete
+f.commands karma
+f.help addpoint
+h|tl: f.addpoint FireBitBot
+(To keep karma in sync)
+f.commands isup
+f.tisup phone:22
+f.isup phone
+Hm
+Huh?
+That's to early
+s/o/&&/
+lmao Sopel
+f.in 30m this is your third reminder: ask for a vhost for  on IRCNow
+1
+2
+3
+1
+2
+4
+5
+5
+7
+>bef
+flipping crash 
+Good
+f.tisup tablet:22
+f.tisup clicker.burble.dn42:443
+f.title
+Hm
+h|tl: Your bot doesn't have a tisup alias
+f.balias list tisup
+>balias add tisup tcpup ${0-}
+...
+>tisup tablet:22
+f.np
+what about booping? 👀
+Also lastfm needs to actually refresh
+f.np
+Still wrong, and very delayed
+>bef
+f.np
+,bef
+f.np
+Ugh
+It's one song behind again
+f.np
+Think I'm a song late
+f.np
+f.np
+wtf
+f.nick FireBitBot
+f.nick Fi
+f.reconnect ReplIRC
+Stupid Restart
+f.np
+oh it's just out of sync I think
+f.np
+f.pnp
+ugh
+f.bef
+Hello
+My internet is a bit flaky today
+/quote oper?
+lmfao 
+Quotes here will be pasted on amc
+f.balias add regain msg NickServ REGAIN FireBitBot
+,bef
+f.c s 
+f.c s nickserv-password unset
+lmfao
+f.c s nickserv-password
+f.c s nickserv-password. 
+f.c s nickserv-password  
+Why?
+Why would I want someone to opt-out of quotes?
+h|tl: Why would I want someone to opt-out of quotes?
+,bef
+Such as...? 
+lmfao
+FireBitBot having the lastfm settings
+.raw PRIVMSG #main :This command could be something much worse :)
+[03Admin] Sent: PRIVMSG #main :.raw PRIVMSG #main :This command could be something much worse :)
+Yeah I know
+No good easy way to fix though
+idk wtf you just said
+Depends tbh
+I can extend parsing
+That's going to be part of Priority 2
+(Part 1 of priority 2 is to figure out wtf I'm looking at (Like notices and stuff)
+doesn't want to switch to a lib
+I enjoy figuring the stuff out
+leaves to work on class-based migration
+Sure, maybe I'm making it harder on myself
+let me do that,
+s/,/./
+Oh yeah,  can do this:
+.raw PRIVMSG #main :I'm $BOTNICK
+'course, that ignores it's nick being changed
+.raw NICK 
+lmfao
+.raw NICK 
+f.np
+,qadd dft-bitbot=<dft-bitbot> [3,99Ducks99,99] h|tl befriended a duck in 4.44 seconds! You've befriended 4 ducks in #main!
+,q dft-bitbot 
+4444
+Also h|tl leave the poor bots be, lmao
+ actually cries in it's logs each time it gets killed
+exit("I got killed :'(")
+Send it a CTCP SOURCE 
+lol
+lmfao
+same issue as the one for pings and fake messages 
+Again, Priority 2
+wtf
+Not sure what caused this
+Traceback (most recent call last):
+  File "/home/firepup650/projects/python//ircbot.py", line 477, in <modul
+e>
+    exit("I got killed :'(")
+  File "/home/firepup650/projects/python//ircbot.py", line 423, in main
+    name.lower() in adminnames
+TypeError: send() takes 1 positional argument but 2 were given
+lmfao
+lmfao
+lot of spam pings
+What?
+You could just...
+Use that to kill it, lmao
+^
+Invalid format, so it dies
+Traceback (most recent call last):
+  File "/home/firepup650/projects/python//ircbot.py", line 477, in <modul
+e>
+    elif ircmsg.startswith("ERROR :Ping "):
+  File "/home/firepup650/projects/python//ircbot.py", line 296, in main
+    message = ircmsg.split("PRIVMSG", 1)[1].split(":", 1)[1].strip()
+IndexError: list index out of range
+PRIVMSG crash ^
+,bef
+tbh my tracebacks seem corrupted
+the PING check has *NOTHING* to do with that crash
+reboot fire
+augh
+Sorry pika
+h|tl is abusing the poor bot
+f.bef
+lmao
+Okay good
+:firepup|lounge!thelounge@owner.firepi NOTICE #main :PRIVMSG
+[WARN][replirc][2023-11-04 21:39:00.184474] Fake message recieved
+h|tl: can there be spaces in vhost, ident, or nick?
+,bef
+But not normally, so I'll take it
+reboot fire
+.raw PRIVMSG #main :PING :moo PRIVMSG #main :.quote
+Fixed h|tl 
+Also PLEASE bounce out of #random on EFNet
+Yep!
+.help
+Sleepy, minor headache
+also alergies.
+f.np
+s/\|.*//
+blinks
+Probably
+?
+lmfao
+bitbots
+Yes
+Cyan
+?
+No clue
+f.wa 8.5h to min
+f.in 510m BOT WORK, NOW
+!sync
+Internet is unstable today
+h|tl: uu
+s/uu/uh
+ozone is in a kill loop
+Connects, fails oper, gets killed for flood
+Oh yeah that failed to boot
+lmfao
+flags
+Wtf? 
+Ah
+I had to turn off both bridges,  burning over 100% CPU on boot
+apache2 started, which broke nginx
+And your bitbot alone burned over 100% CPU at times
+Why? 
+Mine doesn't seem to
+Why'd oidentd fail?
+👀
+lmao
+'k
+I assume nginx failed because apache2 started originally?
+h|tl: I was debating if I should jupe it
+h|tl: any idea why my PI shutdown around 6 this morning?
+Hello
+h|tl: I told you it was unstable today
+That one's my fault
+I was running my jupe list
+and I accidentally killed reykr's
+Hmm
+ lost nick
+reboot fire
+lmao
+You
+No, the systemctl disable
+HELO XFNW
+HELO H|TL
+HELO XFNW
+HELO XFNW
+MAIL FROM:FIREPUP|LOUNGE@FIREPI
+RCPT TO:H|TL@FIREPI
+DATA
+This is SMTP
+.
+QUIT
+f.bef
+xfnw: Why?
+HELO xfnw
+MAIL FROM:FIREPUP|LOUNGE@FIREPI
+RCPT TO:xfnw@xfnw
+DATA
+This is SMTP
+.
+QUIT
+🙃
+Not on TH
+shrugs
+h|tl: why is xtigervnc using like all my CPU?
+was tiger, now it's mutter
+lmao
+https://github.com/neutrinolabs/xrdp/discussions/2050
+That seems to be the root of it
+Yeah
+Technical description
+Raspberry PI OS based on Bullseye is running xorgxrdp v0.2.12. This version of xorgxrdp has an issue where it will report an error if it is asked to resize the screen to the same size it is already configured at.
+This logic is used by mutter version 3.38.6-2~deb11u1+rpt1, which is the version of mutter in Raspberry PI OS. Consequently, the versions of mutter and xorgxrdp delivered for Raspberry PI OS are incompatible.
+Affected configurations
+You will run into this problem if:-
+You are running Raspberry PI OS based on Bullseye
+You have 2GB or RAM or more
+You are trying to run xrdp with the default Xorg back end.
+Possible workarounds
+Simple
+Install tigervnc-standalone-server and use the Xvnc back end to xrdp.
+Complex
+Build and install xorgxrdp v0.2.14 (or later). This has the fix for the resize problem. Only consider this option if you are comfortable with building software. If you go down this route it is highly recommended you also upgrade xrdp.
+Intermediate
+Configure the PI to fall back to the openbox window manager for xrdp connections.
+h|tl: don't know how
+,bef
+https://github.com/raspberrypi/Raspberry-Pi-OS-64bit/issues/194
+Pointed to that discussion
+h|tl: What'd that do?
+Ah
+reminds h|tl that local conflicts, esp uncommitted ones would be annoying
+asks h|tl to restart their VNC session
+Not by my phone
+lmao
+Set your own TZ then I guess
+I
+don't
+know
+how
+Wi-Fi just got slow again
+Would that route be the 172.20.0.0/14?
+Can I safely kill mutter?
+It's seriously slowing the PI down
+f.bef
+glares at the new memory hog process
+s/memory/CPU
+,bef
+h|tl: is that kedconnectd process important?
+It's you
+lmao
+kills it
+shrugs
+idk
+I did thing
+I opened it on my PI
+24m 57s wasted  
+lol
+h|tl: could you trace the two dead systemd services?
+Yeah I guess
+Doesn't dovecot handle mail?
+Okay
+I only even knew they were out because I have htop show the systemd state
+How much batt does TS use for you?
+rarely turns it off, even though Android wants it to be
+f.np
+👀
+Ozone has died
+>bef
+Actually h|cafe that command has no output
+lmao
+<shell echo e
+<shell python -c "print(0.1 + 0.2)" 
+What
+That works in bash
+sh is weird
+lmao
+Sopel|MNA--
+lmak
+s/k/o
+f.karma
+Hmm
+>karma
+👀
+*does*
+s/o/I/
+s/I/i
+f.bef
+f.action casually SEDs sopel
+Template? 
+lmao
+Let tev be
+f.np
+lmfao
+always a different track
+>bef
+,modules
+f.modules
+f.commands coins
+f.wa 145 sec to min
+f.wa 19:17:18 + 145 sec
+lmfao
+We all wish
+makes all servers load a specific module again
+lmfao
+mao
+s/m/lm/
+>bef
+.join #HL3
+^ Ignore, trying to improve handling security
+.join HL3
+.join #HL3
+.join &test
+h|tl: The status codes for that shouldn't change, right?
+403 - not a channel
+473 - invite only
+366 - End of /NAMES
+Okay good
+Trying to make code less-abusable
+and I need those to be fixed
+Parsing status codes instead of the messages, which can apparently vary
+This will probably brick  until it times out
+Oh wait it won't
+lmao
+Anyways
+.join &ef
+Code 520, ugh
+Cannot join channel (+i)
+lmao
+&ef is +O
+It knows better than that, lol
+lmfao
+,bef
+h|tl: Generally, this client shouldn't leave channels
+so when it does, panic
+h|tl: Try to join &ef
+?
+.join &ef
+.join &ef
+What?
+oh wait it's registered lmfao
+.raw NICK eeee
+.join &ef
+.raw JOIN &ef
+h|tl: Could you get me the code for not being registered?
+And trying to join a +r channel
+.raw NICK 
+What?
+Wouldn't that push towards the per-IP limit we hit earier?
+lmfao
+That's not even 's prefix
+ uses . as it's prefix
+FireBitBot uses f.
+.quote takes no parameters
+lol
+It ignores the extra data
+Heck, even .quoted, .quoteufvuifhiob, etc. should work.
+.quoteufvuifhiob
+^
+hmm
+f.quote py660
+👀
+You specify a name to BitBot's quote
+EX:
+.quote h|tl
+Oh wrong bot
+lmao
+f.quote h|tl
+^
+f.quote firepup
+lmfao
+blinks
+Hello
+f.burn py660
+...
+lmao
++V
+lmao
+Normally, you'd do thing++, not ++thing, lol
+How does that zero it for you?
+lol
+>karmawho py660
+>karma py660
+You just can't karma yourself, lol
+f.karma
+py66099: lmao, it knows who you are
+f.clearkarma guest4
+f.commands karma
+>commands karma
+>resetkarma by guest4
+f.resetkarma by guest4
+f.resetkarma by py660
+>resetkarma by py660
+f.karma py660
+>karma py660
+>karmawho py660
+watches the bitbots stuggle
+lmao
+tev manually adds nikkybot to channels
+Probably same for whole servers
+h|tl: Do all lines starting with "ERROR" from the server disconnect clients?
+What cases does it not?
+It should, but I figured backup "drop on error" wouldn't be bad.
+Uh in a bit
+Working on smth else currently
+this f*cking line of code, lmao
+if any(mfind(message, cmd, cmds.data[cmd]["prefix"]) for cmd in cmds.data) or any((mfind(message, alias, cmds.data[cmd]["prefix"]) for alias in cmds.data[cmd]) for cmd in cmds.data):
+f.np
+I like this one a lot
+lmfao
+lmfao
+You can't kline sopel because of that
+I thought you knew that by now
+<listpatterns
+<listpattern
+<help
+lol
+lmao
+That's no longer true
+There is no card in the back of my phone.
+...because there's not?
+gave CE the details to a card with less than 60¢ on it
+h|tl: no, lmao
+Yes, but:
+electronics + fire == "a disaster" #true
+Did that actually mark as code?
+s/>/</
+<shell node -e 'let electronics = `a `;let fire = `disaster`;console.log(electronics + fire == `a disaster`);'
+h|tl: there we go
+lmfao
+<ignore add py660
+<ignore admin add py660
+<admin ignore add py660
+lol
+lmfao
+Chances of  lol-ing with me VERY LOW
+h|tl: Quote the bot lol-ing with me please?
+f.help qadd
+h|tl: I meant on FireBitBot, lmao
+f.q firepup=lmai
+f.q firepup=lm
+f.q firepup
+stamped.
+It actually just says that sometimes, lol
+lmfao
+no, lol
+SEE
+It just goes "..."
+f.bef
+Sopel's entire code became ...
+lol
+*k
+4,99[20:23] 99,99 15,99* 11,99guest8715,99!~guest87@aqcajm.lan has disconnected (K-Lined)
+f.bef
+stabs the server py6606 connected from
+f.np
+Oh that's a new one
+no play count
+.reboot
+f.np
+f.np
+f.maskfind
+f.help maskfind
+f.maskfind owner.firepi
+f.help badge
+Hm
+f.badge list
+f.badge add owner now
+f.badge list
+f.help hash
+f.hash
+> whirlpool
+Ah yes, I'd like to wash my hashes
+.reboot
+.quote
+lmfao
+.quote
+.quote
+.quote
+.quote
+.quote
+.quote
+WHOO
+damnit
+.quote
+e
+wtf?
+h
+hmmmmmm
+So...
+o
+wtaf?
+.d
+.d
+That shouldn't be happening
+.
+.qu
+That one makes sense
+hi h|tl
+lmao
+hello
+.r
+.r
+.r
+Figured out the issue
+lmao
+Figured out the issue
+.r
+.r
+.d
+hi
+hello
+!botlist
+,bef
+Just finished 's major migration
+ducks
+ducks a train
+.reload
+.reload
+.dbg
+.dbg
+Okay...
+.reload
+.dbg
+.dbg
+.dbg
+.raw QUIT
+.dbg
+Prepare for netsplit
+lmao, Sopel corrupted the disk
+4,99[17:18] 99,99 9,99Sopel|MNA:99,99 Unexpected error ((sqlite3.DatabaseError) database disk image is malformed[SQL: SELECT nicknames.nick_id AS nicknames_nick_id, nicknames.slug AS nicknames_slug, nicknames.canonical AS nicknames_canonical FROM nicknames WHERE nicknames.slug = ?][parameters: ('coderelijah_amcdsc',)](Background on this error at: https://sqlalche.me/e/14/4xp6)) from coderelijah_amcdsc at 2023-11-07 23:18:38.005594. Message was: darkshayan_a
+Hi I have like 5% battery
+Desperatly trying not to have it die, I have like 489 hours of uptime 
+I am not
+Stopped to eat before going home
+Ugh
+h|tl: could you log check that?
+h|tl: what?
+I know what it was seeing that error
+Didn't import `random as r` in `bot.py`
+Please don't 
+I'll sshftp in
+15% now, car charger
+Am home
+Burning a hell of a lot of CPU
+Also using my whole disk I/O I think
+Just cap it to like 5% CPU
+?
+👀
+lmfao
+Thanks, probably a good idea
+Whatever happens to lightdm when I got home list me the console setup for codium :/
+s/s/ed/
+...
+Also, s/is/os/
+Config is not defined
+lol
+.reboot
+Apply the fix
+lmao
+Oh yeah,  doesn't need a full restart on command/config changes anymore
+the .reload takes care of that
+Though any changes to bot.py will require a full restart still
+No way around that
+hi 
+blinks
+ducks the bugs
+bug I guess
+looks
+bugs bugs bugs
+lmao
+hi $BOTNICK
+Hmm
+.restart
+Temporary tweak
+Will cause log spam
+hi 
+.restart
+fixed
+nick contained uppercase letters, and I assume it to be all lowercase
+hi 
+anyways, fixed
+lmao
+blinks
+Hi 
+Fixed
+h|tl: https://git.amcforum.wiki/Firepup650/fire-ircbot/commit/1a1cd3e8bdc91a07c81d96c0088dd6f731314aee
+Monke brain didn't remember to import random
+Here's the greeting bug: https://git.amcforum.wiki/Firepup650/fire-ircbot/commit/1f7b6d986337a21cd60f46beac9ae20a17d8119c
+Oh yeah, h|tl you can work on the After-Migration stuff now
+Just closed #16
+https://git.amcforum.wiki/Firepup650/fire-ircbot/issues/16#issuecomment-286
+lmao
+I should strip spaces from that.
+lmfao
+I guess I need it to explicitly ignore itself
+.restart
+Sorry, bugfixing
+Still
+f.bef
+Can still cause it technically, just takes more effort
+It doesn't know if it's nick changes, so you could abuse that loophole
+should fix that at some point
+Hmm
+h|tl: If the nick changes, is it always a fixed format?
+.raw NICK e
+.raw NICK 
+.raw nick test
+hi test
+...
+Oh cool
+.raw nick 
+hi 
+.raw nick {}
+.dbg
+It's name should be in that output tbh
+.raw nick 
+hi 
+I'm fixing all of h|tl's abuse vectors, lol
+lmfao
+Anyways, even if it's nick changes, it will know and not respond to itself
+Probably never
+Please don't 
+I'll go find the solanum file, de-opper you, revoke your root, and system reboot 
+If I have to
+Let me just do sh*t my way
+What am I not parsing properly?
+lmai
+s/I/o/i
+I fixed most of the major parsing issues when I switched to the class-based system
+Most commands don't take args
+so that's kinda irrelevant for  
+Take .quote for example, no args
+same with 95% of commands
+h|cafe: then what did you mean?
+lmao
+Wrong autocorrect 
+Well yes
+Kinda has to
+CTCP actually has two handlers, lol
+raw, which is from connecting to server and joining channels, and the standard one for mainloop
+(When joining channels, I don't do anything else, so I still need to acknowledge CTCPs.
+ditto for joining server
+I don't want to do another major rework
+Any time soon
+I like my current setup, buggy it may be.
+(No, I will not accept a PR to do a refactor)
+Probably 
+I don't want to have it on a different system
+.dbg
+.reload
+.dbg
+Nice
+Hot-reload
+mfao
+s/m/lm/
+h|tl: Must have been a relay here at some point under that name
+shrugs
+What happened to Sopel?
+Uh
+20:51:23 -tilde.amcforum.wiki- *** Notice -- Connection to shell.oddprotocol.org activated
+20:51:23 -tilde.amcforum.wiki- *** Notice -- Error connecting to shell.oddprotocol.org[255.255.255.255]: Error during connect() (Connection refused)
+Isn't that a probem
+s/m/m?/
+s/probem/problem?/
+un-bolds the sed
+There's Sopel
+Sopel|MNA: help
+f.bef
+h and h|tl: Guessing the config for adding a Sopel admin is here somewhere:
+ADMIN         set  restart  quit  save  unset  chanlist  mode  join
+              tmpjoin  me  tmppart  say  part
+set maybe?
+h and h|tl: hellosmile6.tilde.pink is out \too
+s/\\//
+.dbg
+.reload
+.dbg
+f.np
+lmao
+.reboot
+.mangle Hello there fellow human!
+.xkcd 348
+Hmm
+According to https://sopel.chat/usage/commands/, those should work.
+f.np
+lazy & already have 3 separate IRC bots running on saif PI 
+s/f/d/
+Doing something cool for my 100th commit to 
+lmao
+.reboot
+Why does...
+.reboot
+That's an old bug then
+lmao
+lmao
+.reboot
+,bef
+h|tl: one core process is better for RAM than one process per-server, right?
+Actually that'd be worse
+Harder to hard-kill one server
+h|tl: lmao it's already class-based
+>bef
+That was the whole point of the MAJOR MIGRATION 
+Already uses threads
+Also I'm not doing that actually, it'll make it a lot harder to kill a single server if it gets stuck
+Just doing a nice improvement in it's place
+Namely, time-stamped crash logs
+Yeah let me push commit 100 first
+h|tl and h:
+become() {
+  sudo sudo -u $1 bash
+}
+Shush
+sudo sudo, lol
+shush
+Does yours end up sourcing the new user's bashrc?
+mine does, unintentonally
+h|tl:
+22:03:26 -solanum2.repl- *** Notice -- Connection to hellosmile6.tilde.pink activated
+22:04:07 -solanum2.repl- *** Notice -- Connection to hellosmile6.tilde.pink activated
+22:04:24 -ircd.9pfs.repl.co- *** Notice -- Connection to hellosmile6.tilde.pink activated
+22:04:25 -ircd.9pfs.repl.co- *** Notice -- Error connecting to hellosmile6.tilde.pink[255.255.255.255]: Error during connect() (Connection refused)
+22:04:48 -solanum2.repl- *** Notice -- Connection to hellosmile6.tilde.pink activated
+It doesn't end up making it most of the time
+when it does it gets refused
+...
+.join #HL3
+Yep
+lmao
+It's bugged RN
+Also extending it's error code support for joining channels 
+f.bef
+.join #HL3
+.join HL3
+lmao
+.dbg
+lmao
+Yeah
++k...
+I saw that in docs
+h|tl: That was a bug, lol
+On my end, I called self.sendmsg, when it was supposed to call self.msg
+>bef
+h|tl: for you if you want to work on it while I sleep:
+https://git.amcforum.wiki/Firepup650/fire-ircbot/issues/19
+It is installed, tried it on one of my packages README
+Anyways, if you want to work on #19, I'll review it in the morning
+otherwise, I'll work on it myself tomorrow.
+'night
+,bef
+darkshayan_amcdsc: 
+!botlist
+Wonders why the titles for those were delayed
++explode
+lol
+h|tl: did you look at #19 at all?
+lmao
+,fuck off
+What are you trying to do? lmao
+What's code 366?
+watches  ignore getting kicked
+That's part of #19
+It also won't join back now
+.join #opers 
+lol
+lmao
+It did I think
+Wait what? 
+lmao
+.join #HL3
+lmfao
+It must be seeing the code for +i before pylink can lie to it
+.raw JOIN &0
+Huh
+What mode is set in that channel to where it can't join? 
+lmao
+Must have missed the code for bans I guess
+What's the difference? 
+It's a number. HTTP status CODES are also triple digit
+Hi 65PAAAAFF
+Well it knew about the NICK change
+.raw nick  
+I guess?
++raw PRIVMSG #main :+raw PRIVMSG #main :Hi
+lmao
+.raw PRIVMSG #main :+raw PRIVMSG #main :Hi
+lol
+👀
+Sure, just send a global notice or whatever warning of the temporary netsplit
+Didn't you send a message to $$* or something a while back? 
+Vaguely remember that
+Then shut down the relay prior to the Netsplit I suppose 
+'k
+Hmm
+lmao
+s/hosting provider/david/
+lmao
+s/AMC.*der/david/
+s/[^\/]AMC.*der/david/
+s/([^\/])AMC.*der/\1david/
+lmao
+s/([^\/)])AMC.*der/\1david/
+s/([^\/)])AMC.*der/\1david/
+s/ AMC.*der/ david/
+...
+There we go
+lmao 
+[EXIT][ircnow][2023-11-08 09:34:11.801769] Probably a netsplit
+[EXIT][ircnow][2023-11-08 10:19:48.185369] Probably a netsplit
+[EXIT][ircnow][2023-11-08 10:33:14.546668] Probably a netsplit
+[EXIT][ircnow][2023-11-08 13:05:52.054765] Probably a netsplit
+My phone doesn't run identd?
+And can't, not if I need a port below like 2048
+h|tl: idk
+Probably ask oidentd
+???
+👀
+h|tl: I was questioning the restart, lmao
+lmao
+.raw nick firepup
+Uh
+f.isup google.com
+lmfao
+Lemme check something rq
+f.isup google.com
+Hmm
+h|tl: It's not tailscale 
+Works as expected on my phone
+I'm on home net
+Also my mobile data cannot override tailscale's setup
+Period
+Nope
+My phone is on home net
+Data is off, and is working fine
+IRCNow just cycled for my phone
+Twice
+f.isup google.com
+EFNet randomly confuses my client to where it thinks it failed to join when it didn't
+h|tl: pink is down again
+Why is it going out a lot more now?
+Why?
+Internet is unstable again
+router is so down, that my pi went on my phone's hotspot, lmai
+s/ai/ao/
+h|tl: I think so
+It definitely wasn't running at full speed when trying it
+h|tl: Now uploading ~2GB of pictures to google drive
+NASA pictures 👀
+13/307 files so far
+highlights 
+h|tl: I intend to share them with all AMC staff, so that wouldn't really work
+also it'd burn 2GB of space
+It wouldn't be stable
+(If I walk away from the PI i take my phone with me
+and sshfs would be unreliable for a few reasons)
+That's not my business really.
+That'd be a david question
+17:29:55 <@firepup|lounge> That'd be a david question
+f.bef
+lmfao
+~22:57 remaining
+guest71: then run /nick darkshayan
+Yep
+Please enable enforcement of your nick darkshayan 
+checks because he doesn't remember
+First, /msg nickserv set enforce on
+Then, /msg nickserv set enforcetime number_of_secs, where number_of_secs is how long you should be given to identify for your nick
+Then, /msg nickserv set enforcetime number_of_secs, where number_of_secs is how long you should be given to identify for your nick
+I recommend under 10 seconds
+(I use 1 personally, and identify to services using client certs)
+forgot the /
+also don't add _secs to that
+just the number
+alyx
+Being a troll as usual 
+not_ethan__amcdsc is referred to as the "Grim Cycle Master" 
+(The being that controls all of Replit's cycles)
+.restart
+.quote
+Okay good
+.restart
+.reload
+.nick t
+Uh
+.reload
+blinks
+Oh I'm stupid, lmao
+f.np
+lmao
+it missed the semicolon
+.reload
+mao
+mao
+.reload
+f.np
+Where'd firebitbot go?
+looks at the maxed out disk I/O
+3 failed systemd right now
+f.np
+f.np
+Love this one
+.reload
+f.np
+.reload
+f.np
+That dumps a good chunk of parsing
+And it should have less edge-cases
+f.np
+Ah yed
+s/d/s/
+SSD.
+Though this isn't SSD
+f.sp DAGames - Blue Flash
+nope
+f.sp DAGames - Blue: Flashdrive
+lmao
+f.sp Blue: Flashdrive
+There we go
+Yes. Am I supposed to be? No.
+lmao
+Intentionally?
+f.np
+where...? 
+f.np
+f.np
+f.pnp <-- Cool tune
+f.pnp <-- Also a cool track
+rrrgtrdth
+.dbg
+lol
+.dbg
+Outdated checks
+.reload
+.dbg
+h-tl: I took away most of 's loopholes
+.reload
+Heck, I could be {}
+You're hard-coded, since I don't want to grant admin to *@amcforum.wiki
+<@h-tl> firepup-lounge: If you implement IRCv3 capability negotiation and a few other things (e.g. account-notify), you could use services accounts
+glares at ngircd
+No one is here
+🙃
+Why? 
+Also please have  have a "blacklisted admins" or something 
+Oh yeah
+TLS expired I think 
+My chrome thinks it literally doesn't exist
+FirePyLink needs to be blacklisted from 's admin list
+bigminiboss_amcdsc: mine doesn't even show the block page, just no response
+h-tl: any user on ReplIRC has full admin on IRCnow 
+I should actually just blacklist bridges from having access
+👀
+h-tl: try in #dice 
+>quote category=firepup650
+Hm
+>quote firepup650
+There
+_9pfs_amcdsc: I think rebuilding discourse does that automatically 
+Worth a shot, right? 
+Ah
+asks aboutdavid_amcdsc for access to that machine
+>bef
+lmao
+Very wrong
+How do you want me to do that? 
+I can't access the forum either.
+At all. I don't even get a block page.
+throws h-tl at bigminiboss_amcdsc
+Too bad, I'm sitting on the floor against a wall
+h-tl: Check /home/public/FAILED.jpg
+I'm not at home 
+SSHFTP
+though I had to use SSH to override perms on /home/public
+h-tl: /home/public/NOPE.jpg
+no, lmao
+Unless phone keyboard counts
+f.bef
+(so "soft" keyboard)
+That worked
+cocks a gun and aims it at aboutdavid_amcdsc
+<shell echo e
+<shell which nmap
+<shell finger xfnw@tilde.team
+👀
+<hostmask add h h|tl!9pfs@amcforum.wiki
+Lmao
+One sec
+There
+<whois h-tl
+<whois h
+I'm going to probably be unreachable for a while
+Mom's having issues right now
+h-tl: Please provide info on these accounts:
+<shell cat /etc/passwd|grep "???"
+lmao
+What
+Can it not read /etc?
+h-tl: Please provide info on these accounts:
+<shell cd /;pwd
+h-tl: Please provide info on these accounts:
+<shell cat /etc/passwd|grep "\?\?\?"
+xfnw - How can I fix the newlines thing?
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\n" " | "
+lmao
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\n" " \| "
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\n" " ___ "
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\n" " ___ "
+lmao
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" " ___ "
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" " | "
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" " \\| "
+Eh you get the point
+h|tl Account info please
+What do those accounts do?
+PI lag
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" " \\| "
+Yeah we're laggin'
+checks htop
+maxed swap, `htop` running three times using a good bit of CPU
+It's .5
+And yours is using as much as mine
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" " \\| "
+These accounts h|tl:
+What if
+I escape the spaces
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "\ \\|\ "
+lmao
+<shell cat /etc/passwd|grep \"\?\?\?\"|tr \"\\\\n\" \" \\| \"
+<shell cat /etc/passwd|grep \"\?\?\?\"|tr "\\\\n" \" \\| \"
+<shell cat /etc/passwd|grep \"\?\?\?\"|tr "\\\\n" \" \| \"
+<shell cat /etc/passwd|grep \"\?\?\?\"|tr "\\\\n" \" | \"
+?
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" \" | \"
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" \" \\| \"
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" \" \\\\| \"
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" \\" \\| \\"
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "___"
+Why
+f.bef
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/=/___/'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/=/___/g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/=/ | /g'
+THERE WE GO
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/=/ |User: /g'|sed 's/(User: .{4})[^|]/\1 | /g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/=/ |User: /g'|sed 's/(User: .{4})[^\|]/\1 | /g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/\([^:=]\+\):x[^=]*/User: \1/g'|sed 's/=/\n/g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/\([^:=]\+\\):x[^=]*/User: \1/g'|sed 's/=/\n/g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/\\([^:=]\+\\):x[^=]*/User: \1/g'|sed 's/=/\n/g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/\\\\([^:=]+\\\\):x[^=]*/User: \1/g'|sed 's/=/\n/g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/\\\\([^:=]+\\\\):x[^=]*/User: /g'|sed 's/=/\n/g'
+<shell cat /etc/passwd|grep "\?\?\?"|tr "\\\\n" "="|sed 's/\\\\([^:=]+\\\\):x[^=]*/User: /g'|sed 's/=/_/g'
+rgh
+This works in terminal
+I'mma just paste it here
+firepup650@firepi:~ $ cat /etc/passwd|grep "???"|tr "\n" "="|sed 's/\([^:=]\+\):x[^=]*/User: \1/g'|sed 's/=/\n/g'
+User: tcpdump
+User: bird
+User: firesync
+User: zerotier-one
+firepup650@firepi:~ $ 
+Those users
+What are they for?
+So...
+dn42 system user?
+I wan't to assign system stuff useful names
+I'm calling it dn42 thing
+<shell finger bird
+<shell finger bird|tr "\\\\n" "|"
+<shell finger bird|tr "\\\\n" "\|"
+Huh
+that didn't work on the cat
+firepup650@firepi:~ $ cat /etc/passwd|grep "???"|tr "\n" "="|sed 's/\([^:=]\+\):x[^=]*/User: \1/g'|sed 's/=/\n/g'
+User: tcpdump
+User: firesync
+User: zerotier-one
+firepup650@firepi:~ $ 
+Who are those three?
+ircbot?
+What's tcpdumP?
+s/P/p/
+ugh
+s/([^\/]P)/$1/
+s/([^\/\]]P)/\1/
+...
+what
+s/([^\/\]]P)/\1/
+s/([^\/]P)/\1/
+s/([^\/]P)/\1/
+ABPCD
+s/([^\/]P)/\1/
+???
+s/([^\/])P/\1/
+s/([^\/])P/p/
+s/([^\/])P/\1p/
+s/([^\/])P/\1p/
+s/([^\/])P/\1p/
+s/([^\/\)\]])P/\1p/
+s/mP/mp/
+h|tl ^
+But what is it?
+I assign like all users names
+All system ones too
+So I want to know what it actually is && what it's for/does
+firepup650@firepi:~ $ sudo deluser tcpdump
+Removing user `tcpdump' ...
+Warning: group `tcpdump' has no more members.
+userdel: user tcpdump is currently used by process 2966045
+/usr/sbin/deluser: `/sbin/userdel tcpdump' returned error code 8. Exiting.
+I tried to
+it failed
+<shell id tcpdump
+hehe
+It doesn't need a group, surely
+Please don't
+I'll delete it again
+Nah...
+It's probably fine
+Seems fine
+Still runs
+🤔
+tcpdump  2966045 2966044  0 Nov13 pts/21   00:01:09 tcpdump -vv -i dn42-epoch not src 172.20.171.225
+firepup650@firepi:~ $ ps -Af|grep tcpdump
+root     2966044 2962788  0 Nov13 pts/21   00:00:00 sudo tcpdump -vv -i dn42-epoch not src 172.20.171.225
+tcpdump  2966045 2966044  0 Nov13 pts/21   00:01:09 tcpdump -vv -i dn42-epoch not src 172.20.171.225
+root     3653364 3652034  0 21:19 pts/27   00:00:00 sudo tcpdump
+tcpdump  3653365 3653364  0 21:19 pts/27   00:00:00 tcpdump
+so...
+It needs root
+to run as itself
+lmao
+goes to make a global alias
+Hm
+So
+firepup650@firepi:~ $ sudo -u tcpdump tcpdump
+tcpdump: wg.kskb: You don't have permission to capture on that device
+(socket: Operation not permitted)
+fails, lmao
+Anyways, it clearly didn't need it's group
+'k
+Anyways, it didn't need the group though
+Isn't the whole point of nogroup that it's not a group that can be exploited?
+(Heck, trying to drop tcpdump after changing it's group to nogroup told me no one else was in the group)
+h|tl: Hmm
+Do some groups have no one in them?
+f.np
+f.pnp
+lmao
+I'm not, no
+lmao
+.quote
+16:30:15 *** @doxr (doxr@the.most.sussy.doxr) has quit (Killed (firepup-lounge (I'M NOT AI)))
+16:30:21 *** doxr (doxr@the.most.sussy.doxr) [doxr] (Izaan Shaik) has joined the channel
+16:30:21 *** @PurryCat2022 sets mode +o doxr
+16:30:24 *** @doxr (doxr@the.most.sussy.doxr) has quit (Killed (h|tl (that's firepup650, lmao)))
+lol
+<whoami
+^^^
+16:31:25 *** @doxr (doxr@the.most.sussy.doxr) has quit (Killed (firepup-lounge (Wanna bet? I could suspend you on AMC for this)))
+16:31:31 *** doxr (doxr@the.most.sussy.doxr) [doxr] (Izaan Shaik) has joined the channel
+16:31:31 *** @PurryCat2022 sets mode +o doxr
+readies the ban hammer
+How about
+I start by logging you out
+logs out all of doxr's devices on AMC
+'s the bot
+.quote
+lmao
+btw,  said "Well ok then."
+use codes like this
+Strike: Ctrl+S
+Bold: Ctrl+B
+Italic: Ctrl+I
+Underline: Ctrl+U
+EEE
+Code: Ctrl+M
+f.bef
+EEE
+9.99 secs
+nice
+03,01EEE
+03,01EEE
+Codeblocks + color don't mix
+lmao
+.quote
+watches out of context quotes
+.quote
+Yes, or one with the same URL
+No longer a leak 👀
+.quote
+lol
+.quote
+.quote
+lmao
+That's a kind of calculator
+not a glitch
+Yeah
+Dropped the efnet connection
+Nah I just use kick 
+It's an alias for me
+It's not global
+>bef
+111 ducks
+>friends
+f.friends
+Nah
+?
+Vague request - installed a duck
+Your request was vague
+Therefore, I installed a duck
+In my head
+h|tl: Expect internet outages
+it's being very slow for my phone
+Which usually leads to internet going out
+f.np
+Oh yeah
+.reload
+Oh yeah
+lmao
+Oh
+It's configured for h-tl
+f.np
+lmao
+Be nice
+f.np
+I don't think they'd like it relayed to their #default
+👀
+Probably
+.ping
+lmao
+That's 's prefix sopel
++connect enzo
++reconnect enzo
++remote connect enzo
++remote enzo connect
++link enzo
+f.bef
+17:17:24 -enzo.thebackupbox.net- Client connecting: FirePyLink (pylink@172.20.171.225) [172.20.171.225] - User
+17:19:00 -enzo.thebackupbox.net- Client exiting: FirePyLink (pylink@172.20.171.225) [Client closed connection]
+17:19:05 -enzo.thebackupbox.net- Client connecting: FirePyLink (pylink@172.20.171.225) [172.20.171.225] - User
+>bef
+it is connected
+ngircd chaos?
++remote enzo join #main/replirc
+.
++whoami
++status
++identify
+lol
+ah
+17:24:22 *** firepup650|enzo (firepi@47.221.227.180) (PyLink Relay Mirror Client) has joined the channel
+17:24:22 *** @PurryCat2022 sets mode +o firepup650|enzo
+Huh?
+!why firepup650|enzo
+lmao
+IP match
+& name
+pylink doesn't let it have admin though, lmao
+Sad no op
+17:26:38 *** firepup650 sets mode +o firepup650
+17:26:38 *** @FirePyLink sets mode -o firepup650
+Owner status
+Huh
+let me try smth
+Hmm
+it knows +h
+Yeah I think that's it
+Half-ops, there we go
+lol
+I was taking s picture
+s/s/a/
+s/ s/ a/
+lmao
+s/ s / a /
+lmao
+s/waa/was/
+f.bef
+s/a/a/
+lmao
+s/ a / a /
+s/ a / a /
+s/ a / a /
+>bef
+s/waa/was/
+s/waa/was/
+...
+s/waa/was/
+s/waa/was/
+s/waa/was/
+s/waa/was/
+Ah whatever
+you get the point
+👀
+AMC eating RAM
+^^^
+Literally overloading my phone's RAM
+using AMC
+commits admin reaction abuse
+amcforum.wiki/worthy
+last post
+Could be swapped with 🤔
+Make a poll!
+Adding another emoji makes it an odd number and we'd need another to to even it out
+and that's a lot of reactions
+s/to to/two to/
+s/(two\sto)/\1/
+Oops
+s/(two\sto)/\1/
+s/(two\sto)/\1/
+That's a lot of reactions
+dft-bitbot: fuck off
+dft-bitbot: alias add die reconnect
+dft-bitbot: die
+,die
+doxr: run /oper doxr certfp
+Just directly
+18:31:22 -tilde.amcforum.wiki- *** Notice -- doxr (doxr@the.most.sussy.doxr) is now an operator
+And your on-connects go in the server config
+18:32:54 -irc.firepi.amcforum.wiki- *** Notice -- firepup-lounge!firepup@owner.firepi{fp-tl} is using oper-override on #firepup (banwalking)
+18:32:59 -irc.firepi.amcforum.wiki- *** Notice -- firepup-lounge!firepup@owner.firepi{fp-tl} is using oper-override on #private (banwalking)
+lol
+I'll walk those bans
+(I'm not banned is the thing)
+f.bef
+f.np
+lag
+.ping
+f.ping
+f.np
+waits
+Yeah that's what I'm listening to doxr
+Curtosey of last.fm
+lol
+The bridge shows up that way
+f.np
+lol
+,bef
+My bot's prefix is f.
+: Anyone here?
+There is a method to those garbled quotes
+Ltt? o eqf zqsa soat ziol zgg!
+O rg iqct q zkqflsqzgk ygk ziol zigxui, vqn zg ztrogxl zg rg oz wn iqfr.
+Qfr ntl, ngx eqf rt-zkqflsqzt ziol oy ngx afgv igv.
+rgbk ol lhtqaofu fgfltflt.
+vqozl ygk lgdtgft zg youxkt gxz zit egrt zg iol dtllqutl
+Fg gft'l tctf jxtlzogftr ziol ntz, sdqg.
+O ktqssn rg vqfz lgdtgft zg zkqflsqzt zitlt wzv.
+Vin rg ngx rolsoat hnzigf rgbk?
+Ziqz vqlf'z q ntl gk fg jxtlzogf, sdqg.
+smh
+Find the decoder
+Not rot13
+it's in 's quotes
+Why is there a yelp search? lmao
+I should have  be able to filter quotes based on a string
+repl.it
+👀
+OLD link to 's source I think
+lmao
+My name and school are redacted from the bot's quotes now
+lmao
+no
+No, and stop
+It's been leaked countless times tbh
+I've redacted a good few now
+Oh yeah jay knows my name
+First and Last
+jason from friday the 13th
+🙃
+Why'd you ping h|tl to say hi to ethan JayAySeaOhBee14_amcdsc?
+18:59:08 <+> [QUOTE] I wanted it out of the beta before i publicly released it
+^ ACNHBASIC
+Discord does it's own sed
+lol
+doxr: Go on discord and send a meme
+That's not a meme
+I meant an image
+h|tl: MY PHONE
+Not from tenor
+It needs to be
+lol
+s/e/x/
+lmao
+s/ten/txn/
+SOPEL DIE
+s/ten/txn/
+lmao
+bold
+lol
+https://txnor.com/vixw/bedtime-boss-baby-gif-89862483612162691
+lol
+txnor x2
+afk, gonna try for quote filtering on 
+f.bef
+.raw nick 
+.raw nick f
+.raw nick 
+f.np
+doxr: go register!
+last.fm, where else?
+Only 50% of the time
+I will not
+You shush
+f.pnp
+doxr: try f.pnp
+Hey! 
+I'm testing stuff!
+Please don't.
+I need it to be online for the stuff I'm testing 
+.quote e
+.quote nikkybot
+.quote nikkybot
+Hm
+.quote nik
+Oh!
+.quote ajjshssknsus
+👀
+lmao
+.reload
+.quote nikky
+.quote nikky
+.quote nikky
+Cool!
+forgets a quote
+.quote
+.quote ajiagwsin
+.reload
+.quote iqhahs
+It just
+Drops it
+Oh wait, lmao
+I have a filter that strips that
+.reload
+.quote AAAAAAA
+lmao
+.quote AAAiw8sysiAAAA
+There
+Added an extra space
+.quote e
+.quote e
+Accurate 
+.quote dark
+.quote dark
+.quote dark
+f.bef
+f.quote lingo
+Oh wrong bot
+.quote lingo
+👀
+.8b when will doxr return?
+👀
+.8b light xfnw on fire?
+f.burn xfnw
+Oh I like this one
+f.np
+.quote xfnw
+.quote x
+"nikkybox" lmao
+.quote x
+.quote x
+.quote x
+.quote x
+Can't do more than 4 modes in one message I guess
+lol
+every purry gets broken into 4
+s/ry/n/
+Hmm
+I missed a few
+!sync
+lmao sopel is late
+!sync
+lol
+saves that de-mode block
+.whoami
+ doesn't think it's here
+lmao
+.whoami
+Hmm
+bridged isn't replying
+.reload
+.whoami
+Huh
+.whomai
+.whoami
+.whoami
+Oh it doesn't have an underscore on this one
+.reload
+.whoami
+hmm
+.whoami
+.raw PRIVMSG #main/replirc .whoami
+lol
+.raw PRIVMSG #main/ .whoami
+.raw PRIVMSG #main .whoami
+Hm
+I think it's on an old patch or smth
+Since IRCNow instance can read it
+It's rebooting on this end
+.whoami
+.whoami
+Hmmmmmmmmmmmmmm
+r
+.reload
+stupid mistake
+.whoami
+Huh
+ on the other server thinks my name is too long
+I guess bridges should override that check
+.reload
+.whoami
+Cool
+next on the agenda
+have  understand kicks & parts
+...
+I needed the logs for that
+and your kill cleared them
+manual re-join
+s/so/do/
+lmao
+pokes h|thelounge 
+Triple network bridge
+e
+.whoami
+Here's the issue with a three-way bridge like this
+.quote
+^^^
+.help
+lmao
+Bridged help is bugged
+.reboot
+Yeah but I shouldn't be trying to send help
+.quote e
+lol
+oh lmao
+this is a bad server to test that
+f.bef
+the only server
+where I override the main lock
+,bef
+and I don't have an override within irc
+It doesn't fight rejoining after kicks now
+Unless, ya know, it's #main
+Then it will refuse, since it has protections
+I'll see about overriding that for ircnow
+.reboot
+dododo
+They'll come back in a blob
+^
+anyways
+replirc is now exempt from the #main lock
+Hello yc
+h|tl: just thought of this as an issue too:
+Hi !
+lmao
+!why |enzo
+!why Firepup650|enzo
+!flags +V |enzo!firebot@172.20.171.225
+!flags |enzo!firebot@172.20.171.225 +V
+!flags |ircnow!firepi@firebot.firepi +V
+See h|tl you invite me to that
+idk how to accept it
+well I can't join amc-staff
+I did that
+I can't join !amc-staff or !bot-owners
+Oh
+lmao
+!sync
+!sync
+colors 👀
+"brown" looks pink on my monitor
+cat on keyboard
+lmao
+purry can't leave the relay alone
+I'm assuming not, but can we assign vhosts on enzo?
+Hm
+lmao
+🤔
+<whois Darkshayan 
+.ping
+.ping
+f.wa 27:56 - 23:13
+f.wa 27:56 - 28:13
+f.wa 28:13 - 27:56 in seconds
+f.wa 73-56
+Huh
+Hi
+Oh yeah, all my main repositories mirror to github now
+.pomg
+.ping
+Hmm
+.reload
+.ping
+.reload
+.help
+f.bef
+.reload
+.help
+.reload
+.help
+.ping
+Hmm
++ping
++reconnect ircnow
++help
++ping
+Oh there we go
+Hi
+f.wa 2023/11/17@16.18 +14400 min
+f.wa 2023/11/17@16.18 + 14400 minutes
+f.wa 2023/11/17 16.18 + 14400 minutes
+f.help at
+f.help in
+Oops
+Wait no, I checked yesterday, though very briefly
+bleh. I did check yesterday, regardless of Discoure's opinion.
+lmao
+<shell cat /home/firepup650/.bash_aliases|sed s/alias //g
+<shell cat /home/firepup650/.bash_aliases|sed 's/alias //g'
+<more
+,bef
+lmao
+https://termbin.com/4a4a looks fine to me
+h-tl:
+transfer.sh is being blocked by notracking.
+apparently.
+shrugs
+Ask that blocklist I geuss
+s/eu/ue/
+Yeah
+This config maybe h-tl?
+ga-key	google analytics key for the front end		GA_KEY
+No I don't think so
+no, lmao
+.quote gpt
+Huh
+Okay well gautam's not here
+.quote car
+🤔
+.quote E
+.quote E
+.quote E
+.quote E
+<shell ps -Af|grep backup
+Ugh
+.ping
+.quote car
+<shell curl -v apple.com
+doesn't like apple
+> freemium business model
+That why?
+,bef
+lmao
+👀
+ozone has sleep
+<ping
+👀
+.quote bug
+.quote glitch
+That's the only time I've said "glitch"? lmao
+f.bef
+.quote https://
+>bef
+lmao
+.quote https://
+Augh the screenshot is dead
+<shell curl https://commandblockguy.xyz/irc/uploads/8cd77284f9263a4e/Screenshot_20220509-215211.png
+<shell curl https://commandblockguy.xyz/irc/uploads/8cd77284f9263a4e/Screenshot_20220509-215211.png|sed 's/\n/\|newline\|/'
+...
+<shell curl https://commandblockguy.xyz/irc/uploads/8cd77284f9263a4e/Screenshot_20220509-215211.png|sed 's/\\\\n/\|newline\|/'
+Ugh
+can I not sed curl?
+.quote https://
+https://i.ibb.co/BKS1WcF/Drive-icon.png
+shrugs
+.quote https://
+Ugh quotes bug again
+.reload
+lol
+At least that's working now
+>bef
+Uh
+ircnow shouldn't have permitted that
+Why
+Also did you kill the bitbots?
+👀
+That was... delayed
+but y tho
+Such as...?
+Hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ might not understand leaving if that happens
+idk
+KICKs and PARTs are understood
+.dbg
+.reload
+.dbg
+I don't remember adding it to #...
+>bef
+Oh yeah, it uses regex for matching
+.quote \.\.\.
+.quote \.\.\.
+I think it's a match anywhere in the string
+.quote ^([a-zA-Z]+)*$
+.quote ^((.)*)+$
+h-tl: ircnow lag?
+idk
+they keep swapping which one is delayed
+.quote ^([a-zA-Z ]+)*$
+.quote e
+Um
+It seems like it froze
+Disk I/O maxed out
+What happened though?
+How does adding a space lead to an overload?
+just did a manual restart
+.quote ^([a-zA-Z]+)*$
+Hmm
+.quote ^([ ]+)*$
+.quote ^([a-z ]+)*$
+WHY
+WHY IS A SPACE BAD
+.quote      
+Only spaces is not bad
+.quote ([a-z ]+)
+Oh it wasn't dead that time
+.reload
+.quote ([a-z ]+)
+.quote ^([a-z ]+)*$
+Ugh
+.quote e
+...
+.quote e
+.quote ^([a-z ]+)*$
+...
+I now have it read into mem first, so hopefully it's not killing disk now
+.quote e
+.quote ^([a-z ]+)*$
+Ugh
+It seems to be an issue
+with regex groups
+(With spaces)
+Hmmm
+but y tho?
+.quote ^(.*\s)+$
+Huh
+So...
+\s is fine
+just not spaces?
+.quote ^(.* )+$
+yep
+I can do that
+You uh
+froze codium
+lmao
+PI lag I think
+Should be fixed after this
+.quote ^(.* )+$
+🎉
+.replace(" ", "\s")
+What does what mean?
+h-tl: a search for "list" is transformed to ".*list.*" by my code
+https://git.amcforum.wiki/Firepup650/fire-ircbot/src/branch/master/commands.py#L96-L112
+h-tl: qfilter = f".*{query}.*".replace(" ", "\s")
+Hi
+I had to switch the PI's monitor, the one I usually use for it is failing
+There
+Was busy & doing a hostname check
+4,99[21:46] 99,99 15,99* 12,99|ircnow15,99 is now known as 11,99NgircdServ|ircnow99,99
+4,99[21:46] 99,99 15,99* 4,99h|thelounge|ircnow15,99 is now known as 10,99KlineServ|ircnow
+lmao why?
+,bef
+.ping
+That's better.
+.ping
+Sopel|MNA: fuck you
+lmao there's extra spacing on that
+My monitor is failing
+Every minute or so (at most) it'll just black out and I have to replug the video cable
+I had to type both that message and this one without a screen
+f.burn h|firepi 
+Ugh I hate this screen
+It'll even go black on the screen saying it has no input signal
+so it's not the PI's fault.
+How?
+squit it then I guess?
+shell.odd seems to be trying to relink a lot of servers tbh
+It also linked reykr's back, which exists twice
+Reykr's ***does*** exists 
+s/s$/s/
+s/ts$/t/
+Ugh
+s/ s$//
+s/s $//
+It's just typoed on 9ne server
+s/9/o/
+Both irc1.reykr.repl.co and irc1.Reykr.repl.co try to link
+The all lowercase one is bad
+The uppercase one tries to connect
+go away Sopel.
+Not usually 
+Which is weird
+I've seen the Reykr one be connected
+And then reykr tries and fails to connect because of SSL
+(And juping the lowercase one has left the uppercase one intact)
+s/SSL/timeout/
+It has wonky casing, but does juping an all-lowercade one kill it?
+If it does, then reykr's is breaking rules
+s/de/se/
+Huh
+Then why does reykr's override that? 
+It connects regardless of the jupe usually 
+(I explicitly jupe the lower one, and watch the upper connect)
+>bec
+True, but it also no longer exists .
+shrugs
+I'm the one who has somehow learned that a server is bypassing case-folding most of the time
+Which makes... No sense.
+Anyways, just edit my jupes file h-tl
+ /home/firepup650/jupes.txt
+lmao
+<shell cat /home/firepup650/jupes.txt
+^ Note the "Wrong Server" line
+twiddles thumbs
+lmao
+I'll see if my monitor will cooperate 
+You set it
+It doesn't ever link
+And it's another one that violated case sensitivity 
+Juping all lowercase failed, I explicitly have to jupe with that casing
+I'm aware
+Then report it
+Because it definitely does for the repl servers
+What did you do? lmfao
+o/
+lmao
+You, except on EFNet
+EFNet keeps banning  :(
+I mean
+There's one server that doesn't typically ban 
+mzima
+But it did recently, which kills my whole IP
+Yeah
+mzima is typically the only one that doesn't touch  (Heck, it won't normally), but it did recently 
+The ban reason is literally just "please use another server" 
+I suspect, though I don't know, that I had too many connections from my IP to one server
++autoconnect Enzo 1
++autoconnect enzo 1
+I think that was right...
+>bef
++connect enzo
+>bef
+,bef
+?
++help autoconnect 
+Why is it so low?
+.dbg
+h-tl: restart  as a whole please? 
+kicks purry
+!flags +V |enzo!firebot@firepi.amcforum.dn42
+!flags +V |enzo!*@firepi.amcforum.dn42
+!flags +V *!@firepi.amcforum.dn42
+!flags |enzo!firebot@firepi.amcforum.dn42 +V
+!why |IRCnow
+f.np
+🤔
+,bef
+smacks FireBitBot
+Also lmao
+Double np 
+Need to disallow that on bridges I think.
+It was the IRCnow bridge, lmao
+f.np
+^^^
+lmao
+Y'all wanna play amongus?
+GQVDEG
+Gonna resend that to AMC
+AMC is DOWN
+failing imports
+this is IRC h|enzo-weechat, lmao
+No one can touch the message
+ETA on AMC?
++disconnect enzo
+shrugs
+12:35:43 -ShElL.OdDpRoToCoL.OrG- *** Notice -- ssld error for irc1.Reykr.repl.co: Remote host closed the connection
+12:35:43 -irc.firepi.amcforum.wiki- *** Notice -- Netsplit ShElL.OdDpRoToCoL.OrG <-> irc1.Reykr.repl.co (1S 0C) (Remote host closed the connection)
+12:35:44 -ircd.9pfs.repl.co- *** Notice -- Connection to irc1.reykr.repl.co activated
+12:35:50 -ircd.9pfs.repl.co- *** Notice -- No response from irc1.reykr.repl.co, closing link
+12:36:38 -ShElL.OdDpRoToCoL.OrG- *** Notice -- End of burst (emulated) from irc1.Reykr.repl.co (0 seconds)
+12:36:38 -irc1.Reykr.repl.co- *** Notice -- End of burst (emulated) from ShElL.OdDpRoToCoL.OrG (0 seconds)
+12:36:38 -irc.firepi.amcforum.wiki- *** Notice -- Netjoin ShElL.OdDpRoToCoL.OrG <-> irc1.Reykr.repl.co (1S 0C)
+reykr breaking case folding again
+it only responds to the uppercase one
+don't ask me why
+shrugs
+I only know what I see in the logs
+h|firepi: could I get edit access to ircd.9pfs.repl.co so I can drop that link?
+This is weird, lol
+There we go
+now services knows I'm me
+h-tl: Hi!
+This is weird, lol
+Thunderbird is cool
+RSS feeds, IRC chats, and email
+.whoami
+.ping
+.dbg
+lmao, h-tl still being hard-coded
+'course, that bridge check only works one-way
+IRCNow to here overrides
+.reload
+.reboot
+,bef
+Bitbots are probably trying to catch up a bit
+>karmawhy ozone
+>commands karma
+>help
+Still true, lmao
+>karmawho ozone
+Ya know
+If I had my other monitor
+I'd use that to prevent  from looping
+Main PC is on this one
+:eyes:
+👀
+ozone died
+pokes ozone
+lmao
+Thunderbird translated :( to ☹
+h-tl: my monitor literally doesn'y work
+s/y/t/
+Ugh
+s/'y/'t/
+I don't have a working monitor for it to use
+This one is (clearly) in use
+h-tl: Across the room and in use
+Someone else is playing games?
+h-tl: can you add this account's fingerprint as an operator?
+only people on my LAN & with my USB & on a windows PC can access this
+lol
+Sopel is spinning more than normal
+So, apparently
+thunderbird doesn't keep one consistent log.
+It's broken up by day
+Nope
+???
+Oh right
+bridge.
+Agh
+ThunderBird is being a bit stupid
+Won't show me server messages anymore (regardless of setting), and now I have 5 pings from it that I can't see
++rehash
+.ping
+!why |ircnow 
+!why |enzo 
+!why |ircnow 
+Huh
+Wonder shy it delayed hostname the first time
+s/s/w/
+Sorry 'bout that, no idea what happened
+most recent logs before outage seem to be around 11:01, so we had about 4 hours of downtime]
+f.np
+.ping
+f.seen dft-bitbot
+lmao
+Oh I forgot to sync #main
+lmfao
+lmao
+darkshayan_amcdsc: 95% sure that *was* h
+Hi
+.ping
+for me:
+1. Local
+2. IRCNow
+4. Enzo
+3. Sopel
+h-tl: how'd those come across for you?
++rehash
+AGH STOP
+I'll add a +b then
+!sync
+h|thelounge: ops?
+h|thelounge: PLEASE
+The constant kick logs are driving me crazy
+What about just a +b?
+It's the same user
+over and over and over again
+!ban absenteeism!absenteeism@1efa34e9
+!help
+!bans
+lmao
+Uh
+that's a lot of modes
+lounge is still trying to catch up
+f.np
+f.pnp
+firepi will likely go down for system maintenance today
+Assuming I can find the SD card
+Hopefully 
+Hello
+Why?
+lmao
+System downtime starting soon, be prepared
+1 minute scheduled shutdown
+and we are back!
+With more space 👀
+Um
+Why
+lmao
+Don't use 32gb of my space on a VM
+jupes servers
+idk
+And most of the links come from solanum.repl IIRC
+Which you can't edit last I checked, and you won't let me have edit access to
+Such as the bad hello.god286.repl.co link
+Sonicx180s-server.sonicx180.repl.co - ircd.9pfs.repl.co
+solanum-jul10.9pfs.repl.co - solanum.repl
+Case-in-point
+most bad links are from those servers
+wonders how many compute units a Deployed ReplIRC server would be
+f.ping
+.ping
+.reboot
+darkshayan_amcdsc: You don't need to add the @ symbol.
+f.bef
+>bef
+f.balias list
+f.tisup tablet:22
+It's permission locked
+because if you have balias access, then you can also modify/add baliases
+s/dd/dd\/remove/
+lmao
+shut up maubot
+_d_ve_tIs_m_nt__amcdsc: Who are you? Your name looks corrupted on IRC
+Ah
+lol
+looks at the f*ck alias
+Yeah that's david, lol
+lmao
+>bef
+_d_ve_tIs_m_nt__amcdsc: isn't that on the tilde?
+👀
++help
+Hi
+lmao
+h is a guest
+oh yeah
+h-tl: Where's pylink?
+Will do soon
+Hm?
+Random funny thing, here's my ping exclusion list:
+FireBitBot,,Notice,Firepup650/fire-ircbot,[replirc],firepi@47.221.227.180,@28.sub-174-251-240.myvzw.com,pseudo.firepup.firepi,[enzo],[IRCNow]
+h-tl: ^
+No I can't right now
+Have to tidy my room
+Yes, but I probably won't see them for a wwhile
+s/ww/w/
+h-tl: Firepi will be down for a short bit, moving a lot of cables
+It will be back up ASAP
+🤔
+?
+Huh
+Ugh
+It's ReplIRC process must have died or smth
+.ping
+Ah
+Nope it's just a guest
+<shell ls .ssh
+<shell ls ~/.ssh
+h-tl: there ya go
+<shell ls ~/.ssh
+lol
+Try that
+lol
+lol
+What about
+a dummy account
+that has no home
+disabled password ofc
+so ssh key only
+Oh
+hmm
+read-only home?
+please no, I have enough lag
+That alone took like 20 seconds to send
+>alpine chroot
+I assume that'd include a VM
+IO hog somewhere
+That's the source
+It's still hogging
+whatever it is
+And it's still overworked
+What's that even mean?
+<shell ls -lah /home/test-account
+lmao
+fair enough
+<shell ls -lah /home
+<more
+<shell ls -lah /home|grep test
+h-tl: How's that?
+When it's read only?
+Hm
+tries
+Huh
+<shell ls -lah /home|grep test
+<shell ls -lah /home|grep test
+What about that?
+realizes and fixes perms
+THE I/O HOG DIDN'T DIE
+UGH
+<shell ssh localhost id
+<shell ssh localhost id -u test-account
+?
+<shell ssh localhost id -ultest-account
+<shell ssh localhost id -l test-account
+<shell ssh localhost -l test-account
+>bef
+<more
+<more
+>  * News:
+>  * [SUA 247-1] Updated Linux packages: The Linux Kernel update included with Deb
+>  * 12.4 introduced a regression with some WiFi adapters. A new update resolves t
+>    https://micronews.debian.org/2023/1702664669.html
+h-tl ^^^
+h-tl: login username
+<shell ssh --help
+> [-l login_name]
+shrugs
+I don't think I knew it existed when I was first poking ssh
+So I checked the help, and -l was there
+I vaguely remember having some issue with user@host format at some point.
+To which -l worked
+AGH
+THE I/O HOG IS BACK
+KILL IT WITH FIRE
+I concur 
+firepi is laggy today
+You could telnet to telehack
+h-tl: NO. PLEASE. DON'T CONTINUE THE LAG
+I've gotta get off for the night
+See y'all
+LAG DIE IN A FIRE BEREFO I WAKE UP
+it's your bot this time h-tk
+*h-tl
+Your bot kidnapped a CPU core, and I think the Disk I/O
+h-tl: I hope not
+>balias cookie
+>balias list cookie
+>balias list
+>balias list tisup
+>balias add kidnap grab ${0-}
+Hi
+h-tl: what does that mean?
+Also I wonder what the context to that  quote was...
+That means like nothing to me
+Except that it's probably burning my NextDNS calls
+Why wouldn't it? The whole PI uses it for DNS
+I got the ozone ping before I got yours, lmao
+Can't hurt really
+Ye
+f.title
+um
+f.ping
+<shell load
+<shell top
+Ugh
+<shell htop --help
+What?
+I have a scanner
+Except handheld
+f.ping
+>ping
+,ping
+.ping
+ is the fastest
+Scanning my phone didn't work well
+Huh
+lmao
+You are a scammer h-tl 
++mkill *BitBot*
+Ugh
+Y tho
++mkill *bitbot
+Uh
+I wanted them to restart
+I thought it would just kill
+Not ban
+👀
+<shell ps -Af|grep bitbot
+Ugh
+f.ping
+It also said that
+On the botbot kills IIRC
+4,99[22:36] 99,99 12,99firepup:99,99 +mkill *BitBot*
+4,99[22:36] 99,99 13,99FirePyLink:99,99 Masskilled 0/0 users.
+4,99[22:36] 99,99 12,99firepup:99,99 Ugh
+4,99[22:36] 99,99 12,99firepup:99,99 Y tho
+4,99[22:36] 99,99 12,99firepup:99,99 +mkill *bitbot
+4,99[22:36] 99,99 13,99FirePyLink:99,99 Masskilled 0/0 users.
+4,99[22:36] 99,99 9,99h-tl:99,99 +mkill *bitbot*!*@*
+4,99[22:36] 99,99 13,99FirePyLink:99,99 Masskilled 4/4 users.
+👀
+Um
+Glad it didn't do that
+lmao
+Keyboard broke again 
+Ugh
+How's sys load? 
+Just saw an apt --just-print
+It vanished though
+May or may not
+Be
+Running a grep
+On the whole system to find just-print
+👀
+Color codes?
+lmao
+I already killed it
+Doing apt stuff now
+The grep
+Btw, dont autoremove right now
+Apt autoremove? 
+Don't 
+Not until i check a few things
+Also apt is so slow
+h-tl a thing i cannot remember if it's important or not, so leave it for now
+(Might be critical to the update checker on local pi logins
+)
+👀
+Ah
+No context quotes
+Is apt stuck? 
+The term I was using for apt is still at 67%
+Is it even running?
+lmao
+So the term just froze
+lmao
+Do what?
+What do you need 4tb for???
+h-tl ^^^
+I um
+Don't think my current network would even remotely allow that
+Perhaps like
+50GB?
+I mean
+Still 
+I always have to remember who you are
+IRC garbles your name
+🤔
+h-tl: Did everyone telling them to delay it work? 
+I uh
+See that
+.ping
+I love how all three  instances outran sopel
+f.np
+lmao it has a "spamton" tag
+Which is correct, but also hilarious 
+lmao 
+Whoever that lounge client was
+Didn't understand IRC pings
+You can't ping a whole channel on IRC, you have to ping each individual person
+xfnw: There's actually two different discord servers bridged to this channel
+`0x90b1`_wh4dsc: ^
