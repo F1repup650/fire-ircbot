@@ -6,7 +6,7 @@ from typing import Optional, Any
 import bare, pylast
 
 load_dotenv()
-__version__ = "v3.0.11-dev"
+__version__ = "v3.0.11"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -38,6 +38,7 @@ servers: dict[str, dict[str, Any]] = {
             "#sshchat": 0,
             "#firemc": 0,
             "#fp-radio": 0,
+            "#fp-radio-debug": 0,
             "#hardfork": 0,
         },
         "ignores": ["#fp-radio"],

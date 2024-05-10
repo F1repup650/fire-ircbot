@@ -83,6 +83,7 @@ def radio(instance: bare.bot) -> NoReturn:
     missChunk = 0
     missCap = -5
     perChunk = 10
+    debug = instance.server == "replirc"
     while 1:
         try:
             newTrack = instance.lastfmLink.get_user("Firepup650").get_now_playing()
@@ -107,6 +108,9 @@ def radio(instance: bare.bot) -> NoReturn:
                 missChunk = 0
                 if misses < 0:
                     misses += 1
+                    if debug:
+                        instance.msg(str({"misses": misses, "missChunk": missChunk, "misses exceed or meet limit": misses <= missCap}), "#fp-radio-debug")
+                    sleep(2)
                     continue
                 instance.msg(
                     "Firepup seems to have stopped the music by mistake :/", "#fp-radio"
@@ -120,6 +124,8 @@ def radio(instance: bare.bot) -> NoReturn:
             Err = format_exc()
             for line in Err.split("\n"):
                 instance.log(line, "WARN")
+        if debug:
+            instance.msg(str({"misses": misses, "missChunk": missChunk, "misses exceed or meet limit": misses <= missCap}), "#fp-radio-debug")
         sleep(2)
     instance.log("Thread while loop broken", "FATAL")
     exit(1)
