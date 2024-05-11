@@ -139,13 +139,17 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
             elif kind == "ACTION ducks":
                 bot.msg("\x01ACTION gets hit by a duck\x01", chan)
     if chan in bot.channels and bot.channels[chan] >= bot.interval:
-        r.seed()
-        bot.channels[chan] = 0
-        with open("mastermessages.txt", "r") as mm:
-            sel = conf.decode_escapes(
-                r.sample(mm.readlines(), 1)[0].replace("\\n", "").replace("\n", "")
-            )
-            bot.msg(f"[QUOTE] {sel}", chan)
+        sel = ""
+        if bot.autoMethod == "QUOTE":
+            r.seed()
+            bot.channels[chan] = 0
+            with open("mastermessages.txt", "r") as mm:
+                sel = conf.decode_escapes(
+                    r.sample(mm.readlines(), 1)[0].replace("\\n", "").replace("\n", "")
+                )
+        else:
+            sel = "Markov resp"
+        bot.msg(f"[{bot.autoMethod}] {sel}")
     return None, None
 
 

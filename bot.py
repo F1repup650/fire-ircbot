@@ -72,6 +72,11 @@ class bot(bare.bot):
             if "onStrtCmds" in conf.servers[server]
             else []
         )
+        self.autoMethof = (
+            conf.servers[server]["autoMethod"]
+            if "autoMethod" in conf.servers[server]
+            else "QUOTE"
+        )
         self.lastfmLink = conf.lastfmLink
         with open("mastermessages.txt") as f:
             TMFeed = []

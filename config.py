@@ -45,6 +45,7 @@ servers: dict[str, dict[str, Any]] = {
         "admins": ["h-tl"],
         "hosts": ["owner.firepi"],
         "threads": ["radio"],
+        "autoMethod": "MARKOV",
     },
     "backupbox": {
         "address": "127.0.0.1",

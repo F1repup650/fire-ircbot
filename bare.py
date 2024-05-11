@@ -41,6 +41,7 @@ class bot:
     onJoinCmds: list[str]
     onStrtCmds: list[str]
     markov: MarkovBot
+    autoMethod: str
 
     def __init__(self, server: str): ...
 
