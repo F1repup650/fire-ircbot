@@ -72,7 +72,7 @@ class bot(bare.bot):
             if "onStrtCmds" in conf.servers[server]
             else []
         )
-        self.autoMethof = (
+        self.autoMethod = (
             conf.servers[server]["autoMethod"]
             if "autoMethod" in conf.servers[server]
             else "QUOTE"
