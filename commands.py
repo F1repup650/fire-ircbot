@@ -112,11 +112,11 @@ def quote(bot: bare.bot, chan: str, name: str, message: str) -> None:
         )  # pyright: ignore [reportInvalidStringEscapeSequence]
     r.seed()
     with open("mastermessages.txt", "r") as mm:
-        q =[]
+        q = []
         try:
             q = list(filter(lambda x: re.search(qfilter, x), mm.readlines()))
         except re.error:
-            q = ['Sorry, your query is invalid regex. Please try again.']
+            q = ["Sorry, your query is invalid regex. Please try again."]
         if q == []:
             q = [f'No results for "{query}" ']
         sel = conf.decode_escapes(
@@ -209,8 +209,9 @@ def markov(bot: bare.bot, chan: str, name: str, message: str) -> None:
         word = message.split()[1]
     proposed = bot.markov.generate_text(word)
     if proposed == word:
-        proposed = f"Chain failed. (Firepup has never been recorded saying \"{word}\")"
+        proposed = f'Chain failed. (Firepup has never been recorded saying "{word}")'
     bot.msg(proposed, chan)
+
 
 data: dict[str, dict[str, Any]] = {
     "!botlist": {"prefix": False, "aliases": []},
@@ -242,7 +243,7 @@ data: dict[str, dict[str, Any]] = {
     "fpmp": {"prefix": True, "aliases": []},
     "version": {"prefix": True, "aliases": ["ver", "v"]},
     "np": {"prefix": True, "aliases": []},
-    "markov": {"prefix": True, "aliases": ["m"]}
+    "markov": {"prefix": True, "aliases": ["m"]},
 }
 regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {

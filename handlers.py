@@ -138,7 +138,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
                 )
             elif kind == "ACTION ducks":
                 bot.msg("\x01ACTION gets hit by a duck\x01", chan)
-    if chan in bot.channels and bot.channels[chan] >=bot.interval:
+    if chan in bot.channels and bot.channels[chan] >= bot.interval:
         sel = ""
         bot.channels[chan] = 0
         if bot.autoMethod == "QUOTE":
