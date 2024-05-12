@@ -83,6 +83,7 @@ class bot(bare.bot):
             for line in f.readlines():
                 TMFeed.extend([line.strip().split()])
             self.markov = MarkovBot(TMFeed)
+        conf.prefix = (conf.servers[server]["prefix"] if "prefix" in conf.servers[server] else ".")
         self.log(f"Start init for {self.server}")
 
     def connect(self) -> None:
@@ -320,6 +321,7 @@ class bot(bare.bot):
                             if "interval" in conf.servers[self.server]
                             else 50
                         )
+                        conf.prefix = (conf.servers[server]["prefix"] if "prefix" in conf.servers[server] else ".")
                         reload(cmds)
                         reload(handlers)
                         self.msg("Reloaded successfully", chan)
