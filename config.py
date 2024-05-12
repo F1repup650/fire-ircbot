@@ -67,7 +67,7 @@ servers: dict[str, dict[str, Any]] = {
             "#firepup650": 0,
         },
         "admins": ["firepup650"],
-        "prefix": "!"
+        "prefix": "!",
     },
 }
 admin_hosts: list[str] = ["firepup.firepi", "47.221.227.180"]
