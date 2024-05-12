@@ -10573,3 +10573,2666 @@ Didn't understand IRC pings
 You can't ping a whole channel on IRC, you have to ping each individual person
 xfnw: There's actually two different discord servers bridged to this channel
 `0x90b1`_wh4dsc: ^
+Dice: help
+.roll
+!roll
+>roll
+roll
+Oh
+h|thelounge: Op me?
+@games dics 0
+@games dice 0
+lol
+@games dice 18251
+blinkss
+s/ss/s
+@games dice roll 172
+@games dice 172
+@games dice 172d4
+h|thelounge: where'd... Dice go?
+FireBot is having a CPU leak on the IRCnow process
+There
+.quote
+h|thelounge: why does ChanServ welcome you and not me?
+.dbg
+.dbg
+Ignore the fact that it is a channel
+.quote
+Doesn't thelounge do it's own ident h|thelounge?
+👀
+brb
+1
+2
+3
+lmao
+.dbg
+h|thelounge: how is ChanServ here? I can't seem to get it to join #random.
+!ban *!*@103.178.42.21
+lmao
+pylink that's an important ban
+!ban *!*@103.178.42.21
+There we go
+!ban *!*@139.255.74.125
+Ugh
+.reboot
+Must be lag when it first joins or smth
+!modes
+!bans
+Ugh
+Ugh
+Hi
+Understandable
+Can't read
+Thanks the_guest
+Hello
+How are you?
+Tired
+Just got out of a state test
+s/test/practice test
+Did the SSL cert just renew? My client stopped recognizing it.
+Hello
+Was just weird to me
+My client does have that on an alt name list for me
+So I guess it just cycled until it found an open one
+(Which apparently excluded my current nick)
+So my PI lost power for a bit, and services aren't coming back up now. The server seems stable, and seems to have mostly relinked though
+Oh there we go
+👀
+I was pinged
+thinks
+ah GIGO
+My IRC client is being dumb
+It joined one of the servers, kinda
+It joined it's channels, and proceeded just to *not* display them in the UI
+Random thin, h|tl has a certain byte they can send to outright crash my client
+s/thin/thing
+No I'm serious
+As h
+s/As/Ask
+It doesn't count on topics
+Weirdly
+Just messages
+I mean
+lutchy did ask for a demo
+I was in the middle of typing
+lol
+I was trying to say that I needed to reboot my client anyways, hoped it'd fix the other server
+It did weirdly
+🤷
+lol
+I think i got a bouncer at some point
+I think that's why I joined originally, lol
+s/tly/tcly
+I can't spell
+👀
+Oh yeah
+I have no clue who firepup is on last.fm
+,np
+Not me
+👀
+Ow
+lol
+I use the client I do because it was highly customizable
+Yes
+The byte at all crashes my client
+Including in a channel's entry message
+I don't think so
+🫤
+RevolutionIRC
+Android
+?
+I mean I have quite a few command aliases set
+h|thelounge: have we tried in a MOTD?
+That's rendered as a channel
+Too lazy
+Not at home
+I'm at Target
+Talking
+obv
+🙃
+h|thelounge: I could
+You have PI access, and I'm not home, so why don't you?
+h|thelounge: it does?
+👀
+s/u/my bot
+h|thelounge: my bot (non-bitbot) Should be pretty stable I think
+I might run a separate instance of my other bot and see if it doesn't die
+What's that first char?
+Ah. RIRC doesn't know what to thinkg of it
+xfnw: lmao
+That's a very h thing to do
+lol
+Lemme see about spinning up another instance of my non-bitbot bot
+lmao
+My bot is so poorly done it doesn't even know it joined a channel
+lmao
+Okay
+It seems fine
+.quote
+Cool
+Seems stable
+Nope
+It ignores everything it doesn't need to handle
+Kinda unintentionally
+But it's stable
+What should that do exactly?
+Oh yeah, I had to make a lot of patches recently
+Just because of me trying to make it not outright die if you DMed it
+xfnw: The only thing it checks at all is messages and NICKLEN on join
+Everything else is irrelevant to it
+I think I kinda half-followed a tutorial somewhere
+But I cannot find it anymore
+I find similar ones
+But none that match my format
+They all use classes, mines a giant while loop
+lmao
+the_guest: Python
+lol
+👀
+That's one thing that could probably get it killed
+jinn6: Yeah... Mines one file, if you exclude the patch for `bytes()`
+Built-in conversion had a weird issue where certain messages became just "[xyzB bin something]"
+So I over-wrote the built-in bytes class 🙃
+jinn6: Are you running from me over-writing `bytes`?
+lol
+Ancient quotes
+^
+h|thelounge: I have like 5 password variations I use on a regular, so I always have to try a few to get into stuff
+FireBot: Don't kill me!
+xfnw: You un-opered yourself
+^
+lo
+Did that get colored for other people?
+Sorry
+Also i need to reboot
+My keyboard isn't working right
+brb
+Much better
+It doesn't happen often, but randomly RIRC breaks my keyboard
+I have to hard-restart when it does that
+lutchy: You've said that at least 3 times since I got on earlier
+I don't really have a side here tbh
+Just noting that you are repeating yourself
+lmao
+I'll probably raise that threshold a bit
+Talking a bit too often
+h|thelounge: Admins can tell it to `.join` a list of channels
+Or just one works too
+(Admins being the users hard-coded into the bot)
+Not the version running here
+It's hard-coded for a single server
+So there's a copy of it in my projects/py folder
+Under `IRCnow`
+Mornin'
+pokes h|thelounge
+h|thelounge: What are you trying to do?
+blinks
+~~Just ban ChanServ from the channel, problem solved~~
+Fingers crossed, FireBit should respond to CTCP VERSIONs now, and passwords have finally moved out of the main source file 🙃
+s/it/ot
+idk what most of those do, lol
+I esp needed VERSION, because I think not responding to that is why EFNet servers keep banning it
+lol
+,bef
+jan6: I suppose for PING I could remap my code for responding to server pings into responding to CTCP pings
+VERSION is clearly required by EFNet servers, I can't figure out any other reason for the klines
+mzima doesn't care, but h|thelounge joining #main got my IP on a 10 day kline
+xfnw: most of the servers just say "no abusive bots"
+Nothing more than that
+FireBot's response, lmao
+.shutdown
+lol
+.quit
+.join 0
+.join #Imastinkypoopoohead
+will raise FireBot's quote interval soon™️
+,brf
+,bef
+R is next to E
+I wonder what the context for that was
+Once I tinker with the CTCP responses, I'm going to raise it's auto-quote to like 200 here
+It's at 50 currently
+I don't think so
+👀
+FireBot ignores everything it isn't explicitly told to respond to
+Even for admins of FireBot, it'll still reject 0
+.join 0
+Noisytoot: .join is limited to admins
+Which I parse as nicks
+Probably unsafe, but not sure how else I'd really do it
+lmao
+Okay...
+FireBit should respond to more of the CTCPs now
+s/it/ot
+Just realized I can't spell lmao
+jan6: fixed once it reconnects
+According to the irchorse docs I am
+lmao
+has the entire bot in one file, except the thing that manages the per-server instances
+407 lines
+Yeah... None of the bot code in my bot is imported
+Random other things are, but bot itself is just in a big file
+half-dropped the bytes override, but now it's just in the main file too
+doesn't have a config file
+Unless you count .env
+I think FireBot's original purpose was maintaining channels on EFNet, but then I just started putting a lot into it
+Oh yeah, FireBot seems to be working with the higher quote interval pretty well
+h|thelounge: firepi is running fingerd, right?
+Could you make it forwarded?
+I guess the mail server too, it'd be interesting to see if I got mail
+h|thelounge: over tailscale or public IP?
+requests jan6 to wish to be quoted
+lol
+,qadd j6=<jan6> I was very confused why I couldn't finger
+lmao
+?
+Why'd it ignore a Ping?
+Sure 🤷
+Also FireBot has no handling for a ping timeout
+xfnw: it logged the message right before the timeout, so it was running...
+Idk why that happened
+I don't think so
+I don't think it should have sent a null
+restarts FireBot
+h|thelounge: yeah
+Probably
+h|thelounge: are those ports available over it's domain?
+Could they be made available over it's domain?
+s/'//
+Which of those would be easier?
+Fun
+Over domain, which is easier?
+:|
+The AMC tilde server, which reverse proxies to my PI
+IIRC
+s/a VPN/tailscale/
+lmao
+My ISP sucks
+Probably
+Huh
+,bef
+h|thelounge: What if I just offered a self-signed cert?
+I think I have one on the PI somewhere
+Of course they would.
+You tell me
+Looking at letsencrypt, it seems like it checks on 80 and 443 for the acme challenge
+No wait I can't read
+the_guest: No dice there, I can't access that panel
+Router panel redirects to the ISP's site, and I don't have login to that
+Doesn't GameServ do that?
+the_guest: I have no clue what's on the contract, I don't pay for it
+No, I'm just not the one who pays for it
+We found out we can't anyways
+HTTPS is locked down too
+lmao
+jan6: We figured out that my ISP bans both HTTP and HTTPS, so even if I could get a cert, it wouldn't do any good.
+jan6: did I break the CTCP?
+It seems like I did, but I might have just configured my client wrong
+I think I somehow broke FireBot responding to CTCPs
+I must have just have broke logging then
+jan6: Yeah I'll set something on it
+ducks
+My internet is clearly very stable, no issues here
+throws the router at h|thelounge
+PI != Router
+PI is not using itself as a router
+throws the book of technicalities at h|thelounge
+realizes FireBot is still out
+ducks AS4242421146
+debates unplugging the PI merely so it could be thrown
+could throw the server that hosts your client at the router
+wonders what router h|thelounge is referring to
+blinks
+wonders when he said the router was under high-security
+It has a camera pointed in it's general directiom I suppose, though it doesn't record
+Live only
+s/om/on
+I mean
+The camera is above the router
+chose to ignore what h|thelounge was referring to
+is under a roof, so it'd have to nosily crash through the roof first
+Hello robod36
+I mean
+Stayed up too late
+So I'm tired
+But fine otherwise, at least so far
+How about you?
+ah
+goes to check the offset because he doesn't remember
+,time
+didn't set a nearby city, just the timezone
+Yeah I just set the TZ
+Offset wasn't working, so I set the location that's used as like the label for the TZ
+pokes FireBot for burning CPU earlier
+lol
+xfnw: I have a suspicion as to why it started butning
+s/tn/rn
+FireBot doesn't handle getting a ping timeout
+At all
+It just keeps running
+So I suspect that it timed out, and started just constantly reading nothing
+is fire, so h|thelounge gets lit on fire
+watches the chaos from on top of the tower
+undies robod36
+> the_guest: suitable name, feeling raped.. hahaha
+> FireBot: Access Denied
+Lmao, FireBot bug.
+Nh
+s/h/a&
+I know why it does that
+Need to fix it at some point
+xfnw: it's messages starting with "su"
+No, but i just quoted it
+What guest said tripped it
+If I paste it by itself:
+suitable name
+Shush you
+I'll change that to bot operator later
+lmao
+Good news is FireBot doesn't permanently die if it gets timed out now
+Will fix soon™️
+Once I figure out the regex for it that is
+I guess I'll see and fix next time one happens
+lol
+While auto quotes have [QUOTE], manual ones do not
+jan6: How does (if it does at all) bot6 handle multiple servers?
+Ah
+FireBot is kinda multithreaded
+Bot itself is not, but the multi-server layer is
+Hmm. FireBot didn't come back up.
+jan6: how does bot6 stabilize itself on Netsplits?
+jan6: Where is source?
+(I can't just send it a CTCP SOURCE, my client won't let me see it)
+jan6: how is FireBot?
+jan6++
+jan6++
+jan6++
+trying to fix the karma
+jan6++
+5 more I think
+jan6++
+Ah yes
+title
+Greatest page title
+title++
+,bef
+Ya know
+If the netsplits were predictable/emulatable, I could probably make FireBot withstand them
+For now, manual restarting
+the_guest: FireBot runs as a systemd service, courtesy of h|thelounge
+Though the systemd part starts the main multi-server core, which manages the per-server ones
+Every minute the core checks each server's process to see if it died, if it did it restarts it
+Huh?
+I don't understand
+the_guest: I think it did at one point, but that was before the multi-server corr
+s/rr/re
+It would also have been before it was put on systemd
+(The one for IRCnow was originally just manually started every time)
+Only thing it can't handle itself right now is just the netsplits
+Since the server doesn't tell it it's disconnecting, which is what FireBot is really looking for.
+waves at FireBot's ctcp SOURCE response
+h|thelounge: Said to watch for it reading null or something along those lines
+(I think)
+When FireBot gets a Netsplit it runs as much CPU power at once as it can
+h|thelounge luckily put a cap on the amount it can burn, so it won't overload the system that way
+I wonder if I could just watch for it eating CPU, then stop itself
+s/I c/it c/
+jan6: h|thelounge put a 25% CPU limit on it
+jan6: I assume because it's sitting there constantly reading nothing
+not entirely sure though
+(It reads nothing a lot while connected to the server, so what's different about when it gets disconnected?)
+What do you mean by that?
+lmao
+🙃
+Probably
+I think FireBot outright opens a socket and just talks to that
+notes FireBot handled a ping timeout okay
+.quote
+Yeah it's fine
+Yeah I think it randomly misses a ping here and there
+No clue why
+lmao
+Nope, ping timeouts are per-instancr
+s/cr/ce
+Though core handles the restarts
+You mean the giant while loop?
+xfnw: Idk if what I do is "normal" lol
+Had a thought about why I might miss lines occasionally just now actually
+Rarely, (Usually on connect) I get multiple lines in one read
+I wonder if the missed pings are on a line with something else
+should probably split inbound messages on `\n\r| before parsing
+s/nr/\\n\\r/
+Huh?
+tbh I'm not entirely sure what parts of my code do
+jan6: therein lies the issue usually, I'll get the lines, multiple on one, that (when I get them blobbed like that), they still end with the EOL
+I don't 🙃
+Will fix soon
+.dbg
+Why die
+.dbg
+Hm
+Ignore the bad casing
+But interesting. No blanks
+I wonder why I explicitly check for non-blank messages then
+Okay at least it didn't instantly die
+Set it to kill itself if it ever reads a completely blank message from the socket
+,bef
+lmao
+should fix the detection on that
+Cool
+Wait, fix for what?
+Oh that's for the su/sudo check
+lol
+'help
+wasn't referring to admin detection 🙃
+Not really
+I mean
+su is a joke
+^
+Doesn't actually do anything
+Reloading to see if that fixes the su/sudo issue
+Something like "sus" shouldn't trigger it
+lol
+Uh oh
+Nick in use
+And FireBot didn't recognize the "in use"
+Yeah jan6, FireBot (when working) just tries to change it's nick repeatedly
+I should have it actually have a fail safe
+It doesn't.
+Nick in use? Nick itself to FireBot again
+Repeat until the server allows it
+lol
+doesn't check the codes on messages at all, just the text in them
+What's the CAP thing do?
+Should now have nick randomization if its nick is taken before it connects
+Just was under a different nick
+Bad Internet
+#!help
+Hm
+!#help
+#!joke
+!#joke
+shrugs and leaves
+I've been summoned.
+lmao
+h|thelounge: it'd probably crash outright once it got a message
+Probably.
+Might not though
+blinks
+h|thelounge: I guess
+lights chunk on fire
+was already on fire
+proceeds to take chunk's fire so he can be warmer
+walks off
+ends up causing the car to explode, which sends chunk flying into the ocean
+waves to chunk
+Monospace, Underline, Strikethrough
+Formatted that message where each was it's style
+nano++
+Huh?
+Why'd it get G-Lined?
+No
+Only channels it's explicitly told to join by it's admin list
+and hard-coded ones
+h|thelounge: what?
+???
+log says it thought it was a netsplit
+lmao
+h|thelounge: you shouldn't have to manually reboot it
+It should try on its own after a timeout.
+h|thelounge: ^^^
+(don't know if the first pinged, since your nick changed)
+,bef
+Huh
+Why didn't FireBot come back up?
+It's systemd service was disabled
+looks at h|thelounge
+It is freezing today
+46℉
+Yeah
+considering it's rarely under 90℉
+Also it's drizzling
+There we go
+netsplit over
+That's good
+So the collision works
+I lobe somehow breaking the password
+s/be/ve
+To fireBot's account
+idek how I did that
+Password reset email -> confirm code -> You must be logged in
+Of course, it was the other reset code
+pw must have been too long
+h|thelounge: would you kick FireBot for me?
+Need to trace that bug later
+Noisytoot: thanks for the offer, but I need to process on my PI itself restarted
+Has a weird bug where it occasionally hangs connecting to a server
+Not sure why
+95% sure it's not a nick conflict
+lmao it's not quiet
+Time to try to work on FireBot remotely
+,ping
+Oh yeah jan6, I'm finally migrating FireBot to actually using a class-based thing
+lmao
+FireBot's offline
+While I figure how on earth to overwrite the bytes class init
+That was cancer
+But you know what
+It works.
+jan6: my override for bytes is now more complex
+I had to override the `__new__` method
+.quote
+Hmm
+Seems fine
+Log seems off though
+.raw nick FireBot
+h|thelounge: could you not please?
+.raw nick FireBot
+👀
+Okay...
+I think that fixes that
+Apparently my home Internet is extremely unstable tonight
+Yeah
+h|thelounge: idk
+Maybe it's just my phone
+Sorry jan
+jan6: My client renders them that way
+Mine's not CLI though
+Like lounge
+This should be the last restart today I think.
+Course, EFNet had other plans.
+That doesn't work when I need to manually enable a server (full-bot reboot)
+As for hot-reload, that's after I get it into a class.
+Not when it's the way mine is jan6
+Check it's source, my config is all over the place
+And that's without today's commit
+s/$/s/
+Send it a CTCP SOURCE, lol
+👀
+lol
+Then bookmark it I guess
+🤷
+lmao
+I try to keep under 100
+Would probably overload the RAM on most computers
+(Though the overload depends on the memory saver and hardware acceleration)
+Open about:blank
+Okay...
+Sorry, restarting bot again
+And we're stable!
+Cool
+FireBot is now running on three separate IRC networks at once
+And didn't crash
+And logs are properly server-seperated too!
+(assuming they all don't crash at one time...)
+Error log is the only thing that causes minor issues on multi-server
+What if ircnow klined you for 10 days for joining #main?
+glareds at EFNet
+Ugh autocorrect is stupid
+I do know why FireBot misses pings
+There's a low chance that a ping gets blobbed with some unrelated message
+And then it misses it & ignores the message
+lmao
+I just need to, ya know, parse messages that get blobbed
+Must have crossed a cell zone
+h|thelounge: avoid direct reboots honestly
+In order to do that, it literally starts a whole new process
+lol
+Killing or making it leave is preferred, since it'll die, and get started by CORE then.
+h|thelounge: what did?
+Oh
+shrugs
+Don't blame me for setting the fallback tbh
+Fallback SHOULD NOT EQUAL no ident at all
+SheBa[ng]: ?
+I'm going to get off for the night
+What'd you change?
+(also I seriously do need to get off)
+idk
+Let me sleep
+Hi, lol
+My client is bugging trying to connect to EFNet again
+It joins, and won't open channels
+I think it's not realizing that I connected successfully
+lol, I was cycling my client
+Added a umode alias, needed to see if it actually was working
+(Client doesn't log umode changes, at all)
+permission denied
+🙃
+lol
+Yep
+And something like "sus" doesn't trigger it
+IIRC, the regex was `(su|sudo|su .*|sudo .*)` (I think different layers of parens though)
+That alias doesn't really do anything do, not even for me
+sudo echo hi
+^
+lol
+FireBot now uses a message queue!
+Hopefully, no more missed pings now
+.raw PRIVMSG #main :I'm $BOTNICK
+Uh
+,bef
+Why?
+It got killed
+What'd you do?
+.raw PRIVMSG #offtopic :I'm $BOTNICK
+Cool
+That works
+lmao
+h|thelounge: could you maybe not have it get killed?
+Hmm
+So it just...
+crashes on any CTCP request it seems.
+Actually wait
+it's notices
+Just CTCP notices I think
+Yeah
+No wait
+that's specifically CTCP PINGs
+when it's noticed as one
+weird.
+Hmmm
+SO
+s/O/o
+If the CTCP notice contains "PING" it crashes
+specifically just that
+it's specifically notices jan6
+^ Doesn't even have to be a CTCP apparently
+OH WAIT
+I bet it's trying to parse it as a PING from the server
+fails to do so
+and crashes
+doesn't remember PING format
+ircmsg.contains("PING")
+And notices != messages, so it falls back to raw handling
+jan6: What's tokenizing?
+Why'd it die?
+doesn't use a lexer
+Yeah that's a 404 for me too
+though I'm not logged in
+is on some random school chromebook
+lmao
+literally just talks to the server on a socket, and parses everything by hand
+jan6: Yes, and it points to a 404
+lmao
+It's in google's cache, from Nov 3, 2023 
+cache: https://webcache.googleusercontent.com/search?q=cache%3Ahttps%3A%2F%2Fgithub.com%2Fjesopo%2Firctokens
+Probably will stick with sockets, just so he doesn't have to rework code too much
+lmao
+is lazy
+s/bug/feature/
+It's not a bug, it's a feature™️
+Still, I should probably not try to treat notices as raw server data
+needs to make FireBot into class-based later
+jan6: How bad is my code? https://git.amcforum.wiki/Firepup650/fire-ircbot
+,in 2d jan6: https://git.amcforum.wiki/Firepup650/fire-ircbot
+is lazy, and will probably forget
+jan6: What?
+lmao
+Multi-messages are still buggy
+Okay
+Should be fine now
+lmao
+It'd be sudo, not su anyways
+uses rasbian/debian
+s/and/& are/
+wonders how old that was
+was getting off the bus
+Wait...
+Ugh
+Yep
+No
+It doesn't know wtf a notice is
+So they fall through the PRIVMSG check, and get to the other ones
+Which... Includes PINGs.
+the_guest: maintenance in progress 🙃
+lmao
+Good thing PY doesn't handle it that way then
+Well yeah
+It just would have seen your join message as a message
+Not a join command
+You'll have to join it there specifically
+h|thelounge: lmao, use .join
+Oh wait
+That probably just froze it, lmao
+It's expecting one of a few responses when it tries to join a channel
+There's no handling for it already being there, that's supposed to be handled by the channel array
+h|thelounge: oh yeah, SheBa[ng] was randomly giving you karma the other day
+Not sure
+,karma h|thelounge
+,commands karma
+,karmawho h|thelounge
+lmao
+👀
+pokes SheBa[ng]
+lmao
+,bef
+Tf?
+Ping was missing an arg apparently
+lmao
+The channel joiner
+Was missing an arg when it called the ping func
+Anyways, I need to put FireBot on a class-based thing
+^
+and there goes VSCodium
+jack3: I'm using the one without the license stuff
+Oh lmao
+It was updating I think.
+fails to update
+fails to fail to fail to upgrade
+lmao
+👀
+Delays aside, that's surprising
+Oh yeah, funny fact about RevIRC, it'll respond to a CTCP, even in the middle of a message
+xfnw's and one of h|thelounge's went through
+lmao
+Will fix, soon™️
+👀
+I think it gets the name correctly
+And everything else fails if you abuse it
+h|thelounge: I *think* it reads the name properly
+h|thelounge: well it's not joined to that channel
+"is an invalid channel"
+Not really wrong
+lmao
+wonders why it broke on the space
+what
+👀
+Because of you
+lmao
+h|thelounge: just kill the local bot process attached to ircnow
+jan6: I more meant which client Tcache was using
+WHY
+WHY WOULD YOU
+lmao
+apparently needs to boot h|thelounge off of FireBot's admin list
+lmao
+Fun FireBot quirk, names ending in "dsc" are assumed to be bridged users
+FireBot *shouldn't* have issues with that I don't believe
+Oh yeah h|thelounge I think it was ignoring earlier because it's supposed to silently drop nicks that are too long & messages from channels it hasn't joined
+h|thelounge: Sanity checks, really
+jan6: again, sanity checks
+Prior to me fixing the issues with multiple things on one line, it'd parse everything before the ! As the nick, including the whole last message
+h|thelounge: why would NICKLEN be a *suggestion*???
+👀
+It *shouldn't*
+xfnw: It wouldn't, but it's handling is poor, so anything formatted like a normal message would probably get parsed
+h|thelounge: actually, it'd probably crash
+It gets nick by what comes before the first !
+Minus the first char, gotta drop the first colon
+lmfao
+Invites apparently can be parsed
+lmao
+lmao
+If not right now, after it's next reboot FireBot won't crash on invalid pings
+(Assuming the server itself never sends a bad PING)
+ircmsg.find("PING :) -1
+To
+ircmsg.startswith("PING :")
+WHY
+THERE
+Will be fixed after *next* reboot
+Okay...
+Your message doesn't *start* with "PING :", so FireBot could care less
+'help
+,time jan6
+,bed
+blinks
+Lmao
+,in 8w It's been 8 weeks. Do something productive
+jan6: Oh yeah, I learned it ignores decimals
+Tried to get mine to remind me in 2.5h earlier
+realizes that even QUITs and PARTs can probably be abused on FireBot
+Not like that, lmao
+Like you did with invites
+lol
+Need to fix that
+h|thelounge can check logs to see what just crashed it
+Wait...
+The faq
+lmao
+Okay l9ok
+I followed a guide at the time
+And it did it this way
+Can't find said guide now, but it used to be there
+lmao
+s/e"\)/e :bot6 shouldn't have oper, lmao")/
+lmao I don't
+stabs ChanServ
+h|thelounge: and FireBot ignores users containing "bot" in their name for certain commands
+accidentally broke his bot mid-mirgation
+s/rg/gr
+looks at nano, wherr Ctrl+Z isn't undo
+s/rr/re
+Whoo, internet is flaky today
+^ case in point
+lol
+jan6: It's the send to background keybind or whatever for me
+s/s\/.*/E/
+tbh I think I can safely drop the bot nick from it's channels
+let me try that...
+lmao, leave the poor bot be h|thelounge
+Fixing that, and other message processing issues is priority 2
+Can't you just
+Not?
+lmao, quick rejoin
+Huh
+lol
+Ping timeouts should *start* with that on the line, right?
+How else would it be formatted
+Also, would any like starting with "ERROR:" be a disconnect?
+Think I just fixed the closing link issue
+Though it'll need a restart first
+Would you like to h|thelounge?
+cool
+Yep
+Those checks shouldn't be abusable now
+It's now a `STARTSWITH` check
+h|thelounge: replit
+All my repos that got ported from replit probably have that.
+h|thelounge: check that commit
+nah
+CORE's method is fine
+h|thelounge: I still can, I just tell the one in question to disconnect
+also, I think PMing firebot is fine now
+.dbg
+I silently dropped PMs from it's chan list
+Fingers crossed I didn't need it
+Won't respond to DMs now
+Which I should make an exception for actually
+What's wrong with my CTCP?
+will review PRs, but doesn't see an issue with the CTCP
+Oh, also hopefully CTCP PINGs don't just cause it to crash now
+It shouldn't.
+Will fix soon™️
+...
+Admin abuse, smh
+Oh lmao I forgot to add a single \x01
+Will fix in local code, I don't want to rebase
+But then I'll have to override local changes
+Or rebase
+And that's a f*cking pain
+> Then commit+push, THEN merge!
+That'd fail, since it'd conflict with the locally edited ircbot file
+lmao
+seriously needs to rework the help so it doesn't send so many messages
+ESP for admins
+Force push would then delete the PR merge from commit history, right?
+ykw? What if I just make the change credited to a different author locally?
+disagrees, and hates rebases with a burning passion.
+(I'm disagreeing about got being stupid
+s/ot.*/it being stupid)/
+...
+casually drops h's sudo temporarily
+Did I just... Make a change on your branch as you?
+Or did you that at the same time I did?
+At the same time I tried to I suppose
+h|thelounge: lmao, that botlist change will fail currently
+You need to specify the channel in the `sendmsg` call
+Otherwise it sends to whatever it considers it's "default" channel, if I haven't entirely removed that
+Yeah, no the default fallback on `sendmsg` was removed at some point, it'd cause an outright crash as that PR is right now
+👀
+More PRs?
+Already did, lmao
+(Just needs a restart, and not even core needs to be restarted)
+bye firebot
+SadBot
+Tbh that's funnier with context
+mfind has good parsing, usually
+reboot fire
+reboot fire
+reboot fire
+Missed a patch probably
+My internet is a lot worse than normal
+lmao FireBot randomly awarding karma
+opens an issue to add ping command since he's still working on the main migration
+That's why I opened it 😜
+Yeah the title pinged me, lmao
+I like squashes though 🙁
+But it looks nicer IMO, then the commit history is smoother
+sticks the info in the extended commit description
+Including your silly messages
+It's in the extended info
+https://git.amcforum.wiki/Firepup650/fire-ircbot/commit/9696ed62d8cd521284e16c3b79e67e44588150a0
+Yes you do, lmao
+the squash commit is made as you
+xfnw: I f*ing hate rebases
+lmao
+,redeemcoinss
+,redeemcoins
+,grab xfnw
+h|thelounge: https://git.amcforum.wiki/Firepup650/fire-ircbot/pulls/14#issuecomment-210
+'k
+Added more to it just now actually
+,lotterybuy 1
+lmao
+Yeah I know
+lol
+,lotterybuy 1
+...
+,redeemcoins
+,lotterybuy 1
+requests access to print money
+lmao
+requests coins from j6
+lmao
+lmao
+has a command alias just to reformat code and commit the format
+lmfao
+👀
+,permissions j6
+,permission j6
+,permission list j6
+lmao
+lmfao
+,calias add burn action lights ${0-} on fire for fun
+how do you have perms to do that? lmao
+lmao
+_: You don't even have nick enforcing on lmao
+Not when I tried your nick, lol
+Even then, it's a 2 min to kill if you have it on quick
+otherwise it's 3
+checks
+Yeah the help is wrong, lmao
+it's not 60
+Same here
+pokes the guest op
+It works on solanum normally
+lol
+lmao
+,coins
+,coins
+Wait...
+I went up an extra 100 coins, lmao
+jan6: FireBot's been migrated to class-based now
+Yeah I still have to figure out reloading
+Hm
+That's going to be interesting to implement
+Yeah
+also can't just handle it like a command, since the imports aren't in the command module
+so i have to explicitly handle it in the main bot class
+the_guest: What if you run
+su -w LC_ALL root -c 'echo \$LC_ALL'
+threw a random command at the wall
+Just tried, this seems weird to me but: https://dpaste.org/0zj1r
+LC_ALL didn't set to the new su session unless I exported it
+glares at his phone
+My phone is repeatedly running out of RAM trying to upload ~2GB of files
+lol
+Pictures I took and wanted to share
+the_guest: No, from my file explorer
+jan6: It's 307 files
+131/307 currently
+~39:24 remaining
+0.7/2.0GB
+I think there might be a few videos in that blob somewhere
+Said phone also runs out of RAM using the file picker in chrome, lmao
+Chrome opens the system one, which will cause chrome to unload ~75% of the time when I return to chrome from it
+That would be me
+Hi
+I watched that yesterday jan6, very odd little game
+Agreed
+It's fun to mess around with
+It's intentionally "buggy"
+You smack a bat on walls and go flying, use a pickaxe for infinite wall climb, find a flying device, etc.
+You also have silly things for achievements, such as climbing the highest building using the pickaxe
+Or driving the motorcycle around a character by the church to "make their head spin"
+,bef
+Why bugzbunny?
+I froze windows, lmao
+Hi
+I reconnected because h sent my kill char in another network, lmao
+More accurately, my client has one
+Unicode point 10
+no clue why
+But crashes my client, instantly
+Use "password" 🙃
+FireBot is now slightly more sane
+checks hostnames for most admins instead of nicks
+Lmao
+Give the solution to ChatGPT for chekcing
+If it throws an error, you could try feeding it the exact error
+Try -1 to 9 then
+Ignoring 0? Expand the range below 0
+.ping
+,ping
+xfnw: It's an instant 10 day kline on efnet
+looks at the Disk I/O
+It stopped panicking now, but is it still responsive?
+.ping
+nope
+shrugs
+relevant filter line:
+q = list(filter(lambda x: re.match(qfilter, x), mm.readlines()))
+Sorry about firebot cycling, I was fixing a bug where it burned both Disk I/O and CPU on quoting for stuff with spaces
+Well yeah
+But, say .quote ^(.* )+$ would break it
+However, .quote ^(.*\s)+$ does not
+shrugs
+I have no clue
+About the proper parsing jan6:
+https://git.amcforum.wiki/Firepup650/fire-ircbot/src/branch/master/commands.py#L96-L112
+How bad is that quote function jan6?
+Me 🙃
+q is the quote list
+After being filtered
+When the message is read in?
+99-100?
+Yes
+Most of that is just broken apart versions of very old code
+pyright
+Complains otherwise IIRC
+Yeah, line 106
+I suppose it could be an empty string instead
+I mean
+pyright gets upset if q = [f'No results for "{query}" '] doesn't have query defined
+lol
+wonders how my other files look
+I should probably use search there then
+updates it
+How's it now?
+I pick a random result from the results array
+r.sample(q, 1)
+before using them
+theoretically, that should make #8 easier
+(Unintentional, but useful here)
+Yeah I moved it for testing I think
+jan6: It's also used in handlers.py: https://git.amcforum.wiki/Firepup650/fire-ircbot/src/branch/master/handlers.py#L136-L145
+Nope, I tried to get my bot well off globals
+Yeah I'll edit that to match closer
+h|thelounge: It's 100% on NextDNS, only a small part of my phone is.
+And I don't have anything else on NextDNS
+runs black over his code again
+It added a lot of newlines
+Oh, and line 7 of overrides.py is purely because pyright wouldn't shut up
+It didn't like me importing an import
+lol
+lmao
+You can't seem to import import, not even inline
+importlib does have import_module
+which seems functionally identical to __import__
+👋
+What'd you eat rodbod?
+jan6: Have you seen FireBot do anything weird in response to any server stuff by chance?
+I think it's why I got a 10d ban of EFNet, but I don't think it's doing anything weird.
+I mean
+*technically*
+firebot does log everything it sees
+so in a way, it is logging everything Suzu sends
+It's literally just reading a large quotes file, and pulls a random line from it
+Because I said it at some point in time
+FireBot's quotes is just a list of things I've said, nothing more
+manually edits the registry
+hopes he didn't break too much
+I just renamed my user account, and all references to my old username
+Including all refs to my old user dir
+so... I'm hoping windows won't die, lol
+WSL is fine, so fingers crossed
+So my quick access in explorer is trashed
+My Quick access and recent files is completely messed up, lol
+I used https://registry-finder.com/, so I think I got almost every refrence
+So far, windows *seems* fine
+The old username on this PC had someone related to me's name on it, so I wanted to dump that
+Huh, whatever bulk edit I did even hit some of my desktop shortcuts, lol
+But all my files are on this one!
+lmao, there's the first real "bug" I caused
+the google play games beta app is confused
+Says it can only be opened by the user who installed it, which is me
+And cmd still has my old name, huh
+the_guest: Apparently google play games doesn't care, only the user who installed it can use it
+and my name is desynced somewhere
+restarts windows because signing out froze
+Technically, this is an EDU install of windows, lol
+renames a few more refs he missed
+Most of the remaining ones I can't touch, admin registry gets access denied
+nive?
+Is that supposed to be nice or nine?
+Hi h|thelounge, would you swap out of #cemetech into #cemetech2 on EFnet?
+Also, tell someone what to do with an RPI 3&4
+lol
+Replit -> *was* a very good free hosting platform
+Comments and running from coverpage are the next to go after free hosting completely dies
+Since I help mod their forum, I get the paid plan for free
+All the mods do
+So they have (theoretically) less money than they would otherwise
+1000%
+Have you seen the backlash?
+Replit doesn't care ofc
+Where will there be community?
+When there's no comments
+And no running a Repl without forking it to your account...
+There is talk of Replit making part of the help forum for discussion of Repls
+h|thelounge: there's also the community *cord one
+Which *used* to be the official one
+Very true
+There's also *theoretically* a slack, thought that's also only for the paid people, and probably not for community
+'k
+blinks
+h|thelounge: that Replit *cord server is only for like betas and mods
+So...
+Also, you *must* have your Replit account to access the discord at all
+They've got a bot to manage that now
+That was cool
+Just went through one of those Christmas drive through things
+And
+It was time synced to the music
+That was really cool
+suggests encrypting h|thelounge 
+s/e/e/
+s/dae/de/
+enjoys un-bolding seds
+fine
+s/sed/SED/
+s/s.ds.e&./I'm causing chaos/
+lmao
+doesn't always remember to read
+I thought it was h, lol
+lmao
+jan6: how about this one?
+https://www.youtube.com/watch?v=pI9CmZNS08c
+lol
+Shows up for me, very bottom of the page
+Page goes *poof*
+Just had a supremely silly thought
+Ethernet cable to the moon
+Gotta love my phone killing itself because I'm sending text messages
+Or apparently basically anything normal with my phone apparently
+s/apparently//
+s/apparently //
+Oh believe me it is
+Heck, a lot of apps that are get killed anyways
+Samsung phones clearly just don't care
+Tailscale gets killed a lot, and it runs as a VPN service
+Using messages + any other app leads to OoM and a lot of apps being killed
+My phone is a lot less lenient today than normal
+And then there's the random lag spikes
+Android is based off linux IIRC, so all Androids are "Linux phones" 🙃
+jan6: to be fair, my phone is literally dying because of lack of RAM when it kills apps
+Phone is idling right now at about 3/4GB RAM usage
+s/cna/can/ 🙃
+There are a few reasons I actually like my Samsung, anoung them being that I found a way to apply a custom theme to the whole system
+s/anoung/among/ I guess it's a real word?
+True
+I actually nuked a lot of pre-installed bloat when I got adb on my phone
+Facebook for one
+Facebook wasn't allowed to even be disabled IIRC
+adb don't care, it'll still purge them, so ar least I've got that
+Oh also I can't root my phone
+Literally missing the toggle to allow unlocking of the bootloader
+jan6: My Walmart tablet had a stupid "Walmart" button attached to the taskbar, extra volume keys are nothing
+I actually found that the automation app I use for everything else was able to actually modify the navbar itself
+So I bound a force-override screen rotation (apps can't bypass), and an info button to my navbar
+xfnw: Just disable auto-sleep! 🙃
+h|thelounge: Is there a way to do a *very* minimal ident server?
+I'd like my tablet to respond to ident, but I have basically no space for it
+Also I literally can't add users, so I can't just add you
+I dunno
+Lemme see what the tablet says
+I could install any of the above, but none currently
+I'm not sure what I can manage to fit in my storage
+That tablet rejects a lot of SD cards by blatantly corrupting them
+No
+"ident" from "rcs" is available
+Nothing else for identd/oidentd
+>bef
+uh
+aarch64
+ran uname -a
+The less I need to install manually the better, I have to do that from the tablet itself
+termux locks apt/pkg calls to local device only
+I've tried to override that before, but can't ever get aeound the lock
+*around
+There is no non-root user
+I don't think anyways
+There's definitely no /home
+Hang on
+ /data/data/com.termux/files/home
+Probably
+A-
+That's a lot less laggy
+Been a while since I've restarted my phone
+h|thelounge: I don't have wget
+I think I have curl though
+checks
+I do
+'k
+Done
+Can't exec, no such file
+Do I need to be in home?
+oidentd and nobody don't exist, and root is invalid
+Also nogroup doesn't exist
+s/root/"root"/
+Fails with and without root
+Without can't open the socket, with can't drop privileges
+Fails to drop privileges
+Using sudo doesn't change vs using root's account (which I would expect to be the case, but you never know)
+I dunno, how much space does nginx need?
+Huh
+installs nginx and ignores the 40 pending upgrades
+What's it do?
+Interesting
+Wait where was bitfox?
+jan6: I think I got a bouncer that I always forget exists
+I'll just uh
+Postpone that
+,in 8w You postponed this, be productive!
+xfnw: That's... A terrible pun, lmao
+compromising security on a bunch of systems by overriding the sudo password requirement for his account, in turn disabling his password
+Yeah my PI is the exception to having my password disabled
+Don't typically use GUI anywhere else, so...
+h|thelounge: IIRC my PI doesn't even have functional nano spellcheck
+I'll have to remember my password now, lmao
+I typically just use certs
+And it's annoying to try to sync them
+jan6: it did, but once it has it, it won't tell me
+So I just went to certs and called it good
+Hah, surprised that worked
+Abused the clone function to be able to get the cert onto a new server
+There we go
+I've very carefully left my connection to oddprotocol intact
+That's why I didn't just modify that server link
+Oh there's the linking back
+lmao
+I was about to say that something was half-intact since my lounge account got back on
+And then it links back
+Anyways, now off of the backup link
+lmao
+gpt would probably trip over itself trying to fix something that's not wrong
+👀
+lmao
+lmao
+This is why I make mine be overly sarcastic
+Then it's fun to ask how to make toast
+lmao
+i disagree
+102425663 CLEARLY equals 1000000
+You should tell gpt that
+It will allow you to break mathematics sometimes
+🤔
+Well you see
+You must move it
+One letter at a time
+No, not even that
+One bit at a time
+🙃
+wonders how GPT would try to move a substring by changing bits
+impossible in JavaScript:
+Well of course it is! Can you reach into the screen to move them?
+would bind those to `undefined` just to confuse GPT
+It's fun to confuse it more
+I have a prompt setup to make it only respond in emojis, and I'll ask it how things like cars work
+goes o ask the emoji one how cars work
+gpt on how cars work: 🔧🔩🛢️🔥🚗💨
+...
+It'll be back
+I love making it do silly things
+.8b is impersonation bad?
+👀
+.8b is impersonation bad?
+blinks
+Man I'm supposed to be getting up in like 4 hours
+Ah well
+I probably won't
+Not true, you're talking 🙃
+Understandable
+That crash was on me
+I opened a stupidly big image file
+16384 by 16384 pixels
+My Internet is very unstable tonight
+Can't
+As the PI drops internet
+lmao
+My PC is fairly good
+My phone keeps closing things, even apps I'm actively using
+My IRC client keeps starting back up after each kill
+I'm literally just watching YouTube
+I shouldn't be killing my memory like this
+I mean
+I guess I'll look at it later
+Well yeah, you use it
+Also your account on the znc randomly refuses to op me
+Case-in-point, it hasn't re-opped me on EFNet currently
+Why not designate my home net for auto-op?
+Apparently the last time my phone crashed my client, it just gave up and disconnected from all servers
+lmao, my ZNC ident'd as FireBot
+lmao that'd be destructive
+Yeah it's fine now
+NickServ just got confused by the split
+saves that for later when he remembers/figures out how to manually add quotes
+,qadd quotes6=<jan6> do you go rough and fast, or thin and slow ;P
+lol
+saves the messages elsewhere just in case
+Okay but WHERE IS IT? I can't find the thing anymore.
+Are you sure?
+All my devices are having issues
+Not sure
+pi couldn't seem to reach out, logs are spammed with geyser trying and failing to reach the skin api
+All my other devices besides my switch were having intermittent internet issues as well
+What were you doing exactly?
+IIRC it's 4
+If not, it's at least my goto
+I love accidentally managing to severely damage production
+:/
+jan6 - AMC, running Discourse
+I accidentally ctrl-c'd a critical rebuild
+And it was broken for a while
+Someone else managed to get it fixed
+Good to know, but what if I get too hot?
+Oh
+lel
+I don't think my phone told me when oddprotocol came back ip6
+*up
+Don't ask, lol
+,flip tails 10
+welp
+I guess gambling is illegal
+Isn't like
+the ircd here weird, and bitfox can't talk to services?
+notes that firebot completely ignores most of ngircd's shenanigans
+FireBot only struggles on one irc network, and idk why it does
+it gets stuck as if it had a netsplit, but there's never a split when it panics
+also it doesn't realize it's stuck, which it's supposed to
+When it happens to FireBot, it usually realizes and kills itself
+if it doesn't, then it gets stuck in a loop of reading nothing
+6 9 3
+Huh
+lmao
+I'm not even at home
+Hah?
+f.in 192h Hi xfnw
+Er
+,in 192h Hi xfnw
+lmao `
+Hmm
+Didn't ` have so many that it was causing rounding errors?
+lol
+points out the highly customizable theme he made for the lounge to `
+pokes `
+trying to remember how to authorize with BitBot because it's not in his logs
+There we go
+,coins
+;P
+,np Firepup650
+Hm, that shouldn't be on pause...
+Hm?
+Haven't seen any today
+Seems fine on my end...
+,np
+Oh right
+,np Firepup650
+Oh there's the Internet issues
+More laggy than anything
+,np
+remembered how to use ,c
+,c u lastfm
+🙃
+Choo Choo!
+,nw
+Hm
+,g what is trakt.tv
+So... Lastfm for videos?
+wonders if it's even set up since it's not responding to anyone about it
+,g xfnw
+lmao
+Out of curiosity, does anyone else ever use ssh's -l option?
+I added ghosting my main nick to my auto-run the other day
+Now I know if I connected normally or not because NickServ either kills the nick, or tells me I can't ghost myself
+You should stack the buttons
+Randomly shuffle the stack when you click on one, that way you never know what you'l get
+Yes
+Windows the_guest
+removes jinn6's right click
+didn't use middle click anyways
+takes the_guest's scroll wheel
+Why not split the icon?
+Like the left half is a maximize, right half is minimize
+Slightly enlarge the button then?
+I mean max is just a square, and min is an underline
+[ ] | _
+blames ` for that
+lmao
+blames `
+`: You should say "bugs bugs bugs"
+Oh lmao that's bad
+splat
+another splat? what's happening tonight?
+lel
+thinks
+,bed
+It's almost 3 jinn6
+sleep is a healthy thing
+jinn6: I was basing off of the quotes
+Still, now it's after 3 ;P
+.8b is bitfox tired?
+goes to figure out where FireBot went
+Um
+Is it a good thing
+when apt breaks?
+ModuleNotFoundError: No module named 'apt_pkg'
+I didn't even do anything afaik
+googles, and learns that apt-get still works for some reason
+fixes apt, combining like 3 guides
+I only knew apt was broken, because a random py package is missing (causing firebot to crash-loop), and then pip failed, so I tried to reinstall it, and apt failed
+xfnw - no, but a package it was trying to use wasn't installed, so I tried to use pip to install it, which failed, so I tried apt, which also failed
+.8b is the pi probably stable now?
+manually hacked a fix to pip
+accidentally crashes firebot setting up a new command
+IBM likes fire?
+,bef
+makes notes that companies like lighting people on fire
+the_guest: No, I mean literal fire
+Clearly, companies enjoy using fire on their employees
+Spaghetti, earlier today
+;P
+geronimo: I mean like the sauce
+Yes
+lights jinn6 on fire
+lights xfnw on fire too
+ssh to nowhere never, but ssh to somewhere daily
+lmao what
+lmao
+knows who MemoServ was
+lmao
+I was briefly NickServ on bsd, and as soon as it saw a password I killed the logs for it because I didn't want to be evil
+lmao
+Now one by one every auth'd user gets Guest'd, lmao
+lmao
+I wonder how long mine is, NickServ didn't yell at me
+lmao
+certfp users didn't get de-nicked? I still have mine
+My vhost is also off for some reason
+imagines how that would go wrong during a netsplit, since the entire channel would likely be out of sync
+lol
+was playing with corrupted modes on a random channel
+pokes Guest11975 about that
+s/my/their/
+lmao
+I mean it's possible
+lmao
+waits for it to cause a black-hole eventually
+lights ` on firwe
+*fire
+ducks
+wait ebf is valid?
+lmao
+lmao
+That doesn't seem right
+lol
+can't set a mode from his nick because ChanServ steals +r
+I mean bsd sees the +r, just not ircnow at this point, lol
+pokes bitfox
+wonders why he can't message HostServ or bitfox
+nvm just hostserv then
+lmao
+So someone just needs to be in the channel on a server, and then unset from the one that can't see
+Because you can mostly reconstruct the modes from the ban set + the modes set
+(restrictions apply)
+I mean
+Adding +r via glitch modes is weird, because chanserv enforces it off if it sees it
+6? I didn't think ` got op perms in the split #offtopic, so how long has that been there?
+lmao
+So wait
+psuedo servers can just point-blank lie to the real servers
+lmao
+lmao
+Lmao
+lmao I'd expect not
+Probably crashed trying to write or smth
+prepares the ,qadd for that
+Unless it had +P, wouldn't the channel disappear if everyone left?
+Lmao
+FireBot is a lot more tied to me than `, I don't know if ` even knows some of the things it does
+I handle what?
+Oh ye
+What?
+blinks in confusion
+,species xfnw
+thought xfnw was a fox
+lmao
+,c u species dog on fire, specifically a dalmation
+What was it? wayback only has error pages for it, that it's only supposed to be visited by URL, not IP
+bugs bugs bugs
+xfnw: fire alias when
+The view count is what pinged me, lmao
+.
+Hi j6
+I have a lot of my name variations bound explicitly as pings
+nah
+grabs his ping filter
+My explicit pings are fire,pup,firepup,firepup650,650, though I have a large ping blacklist too
+I've had people refer to me that way before
+no
+no
+wonders how thelounge actually checks for pings
+lol
+can't hurt
+besides random pings when someone talks about fire
+not on lounge you can't
+FireBot randomly ends up pinging me too, lol
+.quote fire
+^
+that project is long dead, lmao
+I don't remember j6
+did you look at how old that thing is?
+> Last published on May 3, 2021
+3 years old, lmao
+It's not, they just killed free hosting
+so repl.co is dead
+I think, technically, dev urls still randomly use repl.co
+j6: Neither are an option anymore
+lmao
+xfnw =? chanserv
+debates going to find an elevator
+Random fun fact
+FireBot has read access to what music I'm listening to at all times
+also FireBot is one of my explicit do-not-ping things
+I mean yeah
+I just think it's cool that firebot can too
+.np
+also if the API ever decides to just be annoying
+firebot just tells you that the API is bad, lol\
+Lmao firebot is using pylast
+but also I can't control the API being bad
+I mean
+I'm also really lazy
+Relevant code: https://termbin.com/fh1bu
+177 users have left... good golly how many netsplits?
+TIL that my silly code assumes .r* = .r
+.rexamplebadthing
+lol
+jan6: I mean true, but also I'm lazy
+I literally have every command run through a filter function, instead of doing anything myself
+config.py > mfind
+(Yes, the function is in the config file, don't ask)
+The mfind function has been around... I think since firebot got modularized, if not before then
+!flags h|thelounge +Oo
+Oh
+?
+.join #offtopic
+...
+.amIAdmin
+amIAdmin
+Why
+.join #offtopic
+.join #offtopic
+.debug
+Something is definitely wrong
+.debug
+.debug
+Yes...
+Don't have a better way to do it atm
+Not with the way the code is
+Heck, just multi-server support required an entire new file to run a separate instance per server
+E
+E
+.dbg
+1
+2
+3
+4
+5
+Yep
+Ugh
+1
+2
+3
+4
+reboot fire
+.raw PRIVSG HostServ REQUEST firebot.firepi
+.raw PRIVSG HostServ REQUEST firebot.firepi
+.raw PRIVMSG HostServ :REQUEST firebot.firepi
+.raw PRIVMSG HostServ :ON
+reboot fire
+ugh
+reboot fire
+Can't hurt to be safe
+looks at h|thelounge
+Bugs bugs bugs
+👀
+For?
+OOOOOOOOOH that's cool
+I get a little lock on commitsnow
+s/sn/s n/
+Is that how ACTIONs work?
+It's not lmao
+goes to request changes
+requests a different change
+pokes h|thelounge
+Preferably not
+Local changes could conflict, esp if I'm in the middle smth and haven't committed yet
+Oh yeah I need to run a formatter over this
+does that
+idk
+I make `black` format for me
+lol
+Look at the formatter changes
+It's mostly newlines here and there
+Also I'm going to disable the bye command
+Reboot does the same thing
+And doesn't message every single channel it's in.
+Not anymore
+I changed that
+Look for the "RAM hungry" commit
+Yeah that's off for now
+While I figure how to *not* spam help
+lmfao
+sudo systemctl disable h
+lol
+sudo systemctl disable --now h
+Forgot that arg
+lmao
+fack
+fatal: Need to specify how to reconcile divergent branches.
+h|thelounge: I guess squashes lose that?
+I like squashes though
+squashes h|thelounge 
+will do both
+Also you can't set dependencies when making an issue
+Leave the `(AM)`s on there pelase
+If nothing else, it's useful for me without opening each issue
+lmao
+shrugs
+Also I fixed the random weird issues with firepi's motd
+The news won't randomly become a file list now
+is content with his custom news script
+Which can be run at any time with `get_news`
+🙃
+forces all ReplIRC servers to load the operpeace extension
+I'll get mine cycled in a few hours
+~7-8
+Not sure with DST
+I have no clue.
+Might have a heart attack
+It's going backwards 1 hour
+https://www.timeanddate.com/time/change/usa
+Next change:
+NOV 5
+1 hour Back
+Nov 5, 2023, 2:00 am
+no clue
+lmao
+.join rffg
+Uh oh
+Oh good
+just delayed
+.join rffg
+.reboot
+.dbg
+.reload
+.dbg
+E
+I'm literally going to put "has quit" on a ping blacklist formyself.
+.ping
+.amIadmin
+.amIAdmin
+.reload
+.amIAdmin
+.quote
+🤔
+.ping
+.join +nirguo
+Hmm
+Why is specifically the admin check not working
+.ping
+Just restarted it by mistake, lmao
+FireBot isn't connecting properly to stuff
+idk why
+Both efnet and ircnow are failing
+.reload
+Huh?
+.amiadmin
+.dbg
+.reload
+.reload
+.reload
+.whoami
+.reload
+.reload
+.reload
+.ping
+!ban *!*@103.178.42.21
+!ban *!*@103.178.42.21
+!ban *!*@139.255.74.125
+How do I do that?
+!sync
+I'm dumb
+Lmao
+I could have just !sync'd to fix perms
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.quote nikkybot
+.reload
+.reload
+.restart
+.dbg
+!botlist
+.goat.mode.activate
+.dbg
+.ping
+!botlist
+.dbg
+.join #main/replirc
+.reload
+.reload
+.v
+.reload
+.v
+.ping
+.v
+.r
+.v
+!sync
+.v
+.reload
+.np
+damn
+.r
+.np
+.np
+.r
+.r
+!sync
+.ping
+!up
+...
+!mode lock list
+s/12/14/
+I think
+What?
+lmai
+s/i/o
+!alias list
+lmao
+!alias was
+!was echo hi
+was hi
+was looking on the wrong box
+Hmm
+weird
+lmao
+will you explode?
+lol
+lmao
+!alias who
+lmao
+who is thelounge87 segfault?
+who is thelounge87 segfault?
+lmao
+thelounge87: Apparently you're nobody
+lmao
+> it got rejected due to stupid things
+Such as?
+has no clue what an ifdef is
+are you sure segfault?
+Should thelounge87 do the patch on their phone and fix it?
+^
+lol
+Just have to phrase it correctly
+!raw whois firepup-phone
+🤔
+notes that the phone got ID'd as "firepi"
+thelounge87: is the identd pf'd?
+I was asking about in general
+(Like efnet for example)
+lmao
+>    cache
+IP is cached?
+oh yeah, epoch is web3 possible?
+How do you work weechat?
+I've got adding servers down
+and navigating channels on the current server
+but I can't change servers
+just knew h had mentioned it once, and used it for lan irc server connections
+lol
+Just don't join #main on efnet
+You get a 10 day kline
+Assuming my internet isn't dying
+My PI's solanum runs on a systemd service
+I'm gonna head outside in just a sec
+> disown
+lmao
+That's a real command?
+A-
+thelounge87: PR a server block in for FireBot for me?
+'k
+thelounge87: what if you force the reply for EFNet to be "firepi"?
+mzima, primarily
+deft.com as a backup
+*irc.
+_9pfs-bitbot: c s prefix >
+_9pfs-bitbot: c c prefix >
+_9pfs-bitbot: c c command-prefix >
+>echo e
+There ya go thelounge87
+lmao
+!353 e w q a s d f
+!352 e w q a s d f
+thelounge87: backupbox FireBot PR now?
+thelounge87: you'll need to edit core and config
+(Core since it manages the per-server procs)
+thelounge87: Do you have the PR in progress for FBot, or am I good to do it myself?
+!todo
+thelounge is still chunking throughr the messages from SegFault
+lmfao
+Oh that didn't even stop it
+Aaaa
+PI is overloaded currently
+Maxed out disk I/O
+thelounge87: Can I uh
+Restart thelounge safely?
+I want it to drop all the cache or whatever it's running through right now
+!alias !whois !raw whois %0
+!whois h|link-local
+I have a `kick` alias, lol
+epoch: I don't have iotop, and debain doesn't seem to have one available from the command-not-found
+It suggests `itop` and `iftop`
+Uh
+That
+That um
+Still didn't stop the disk I/O overload h
+Oh nvm, there it is
+Oh yeah, your bitbot comes up and disk maxes out
+h: can you fix that somehow?
+Yeah
+To stop the disk overload
+5 minutes?
+That's a lot of disk I/O
+Immediately started lagging my GUI, lmao
+!alias !addlink
+lmao
+FireBot didn't know it connected, since it didn't get modes set
+lmao
+I used my backup FireBot kick to get it to realize it was online
+Which is sending it a message
+Also it somehow missed that kill, so it thought it got a Netsplit
+I'll patch that I guess
+Wait what happens if there's no motd?
+What code is sent?
+I was gonna have it look for the end of motd code
+But then what if there's no motd?
+'k
+If I take 001, do I miss the NICKLEN set?
+I only permit that during server connections
+thelounge87: that'd require an absolutely massive edit
+And I'm far too lazy
+If it works it works
+I'll look over it first
+Also I did the config edit for FireBot myself 🙃
+That site absolutely lags my phone
+I think I confused it my entering an account
+s/my/by
+refreshes
+There we go
+I don't think the "next check in X seconds" works
+Always says 30
+thelounge87: what?
+I don't know how to do server links
+Heck, idek how to setup a server, lmao
+> With what ircd?
+Any.
+lol
+lights opal on fire for fun
+lmao
+lol
+Why me?
+I am not h
+I'm not h
+Me and h aren't the same person
+I'd appreciate it if you'd stop klining my net
+I'm literally not h if that's what you think.
+lounge87 is h, not me.
+You when you told me to check who started it
+on my BitBot
+FireBot just interacts with it
+Pretty nice honestly
+I literally killed you once to ask you to stop. wtf is your problem with me
+I am not h.
+lounge87 is h, who isn't me.
+You keep assuming we're the same person.
+Or at least acting like it
+You don't listen either clearly
+h is someone who has remote access to my PI, and is connected here through it
+You continuing to think/assume/whatever that we're the same would be like me assuming you're epoch
+FireBot now is not the time
+How about
+I don't care
+that you don't care?
+Not sure where you pulled that from, don't think I've ever phrased it quite like that.
+But still. I try to be nice. People being jerks to me doesn't exactly entice me to continue being nice.
+You kicked it
+It doesn't rejoin
+It'll respond to DMs still
+Or you could kill it
+_print "e"
+blinks
+I think it got set earlier during the fight
+Why doesn't this work exactly?
+_print __import__("subprocess").check_output(["ls","/wargame"]).replace("\n","\n\rPRIVMSG\x20"+b[2]+"\x20:")M
+I only get line 1, it should send normally
+If I replace b[2] with a fixed string it works, is b unset after botty sends one message?
+Though I don't think even that explanation makes sense
+_print str(b)
+index 2 is channel
+_print __import__("subprocess").check_output(["ls","/wargame"]).replace("\n","\n\rPRIVMSG\x20"+b[2]+"\x20:")
+Wait what?
+That doesn't work in DMs
+Huh
+Ah
+didn't think
+Yeah I didn't think about that
+Anyways, running commands like that nicely returns full output, assuming there is any
+That doesn't persist
+At all
+You can see that if you check dir()
+_print "'"+"', '".join(dir())+"'"
+What?
+Oh spaces
+_print "'"+"',\x20'".join(dir())+"'"
+^
+_print abc="def"
+^
+_print "'"+"',\x20'".join(dir())+"'"
+No persistent changes
+Hi
+Probably
+_print "'"+"',\x20'".join(dir())+"'"
+lmao
+I think mine's a bit safer on that one
+dir usually just contains vars AFAIK
+_print "'"+"',\x20'".join(dir())+"'"
+dir usually just contains vars AFAIK
+_print "'"+"',\x20'".join(dir())+"'"
+Not set
+_print globals()["eee"]="eee"
+_print "'"+"',\x20'".join(dir())+"'"
+lmao
+At that point just do
+_print ss.close()
+epoch: No persistent var changes though
+lmao
+No
+Just not here
+hehe
+lmao
+I can make it join channels now
+And now it's stuck
+You have to add the \n to the end
+looks at #botrebellion
+suggests #botrebellion instead
+lmao
+20 secs to timeout?
+That seems low
+thelounge87: Kill firebot's ircnow instance, woud ya?
+s/ud/l&/
+KIll
+it's off the net
+s/oud/ould/
+There we go
+lmao
+thelounge87: Nah, I like having core manage it
+Do need to figure out why it didn't realize it died though
+thelounge87: I like one core log file
+thelounge87: They rarely split in a way that core misses
+and you can cause any one instance to reload by killing the py process by server name
+thelounge87: That is true.
+Still, I rarely add servers.
+(It's in the same 4 servers I'm in, no more
+s/$/)/
+> the same 4 server's I'm in
+I guess s/servers/networks/
+also I quoted myself and added a ' by mistake, lmao
+lmao
+drops the gline
+!nick ^
+There, one char
+lmao
+FireBot has no .nick
+remember?
+Default
+must have missed server request
+FireBot uses 30 as a fallback for nicklen if it can't understand it from the server
+Nope
+lmao
+lmao
+What's byte 10 anyways?
+I meant like
+What's that byte actually mean?
+If it has a use, what is it?
+(Some random internet site says it's ^P)
+Just made a patch to FireBot, invalid UTF-8 shouldn't crash now.
+thelounge87: Send some bad bytes?
+...
+Ya know what?
+I'll layer a check on the check
+There
+now it's truly patched.
+Maybe.
+Yeah I returned a blank string if the check failed
+which my code treats as a connection lost
+also uh oh
+Had to hard-kill it
+nul log spam
+lmao
+Apologies for FireBot cycling, I'm stupid
+"DATA LINK ESCAPE" huh?
+I wonder
+if my client thinks that's the end of a DCC transfer or something
+What crashed my phone? I did
+lol
+Yes, by uploading a single file
+lmao
+Said file is now hosted by my PI out of irritation
+.reload
+.dbg
+Outdated info, partially
+edits that
+.reload
+.dbg
+lmao
+.reload
+.dbg
+lmao
+.reload
+.dbg
+lmao pulled wrong data
+.reload
+.dbg
+There we go
+NICKLEN 13, guess I fixed the bug that caused that to not be read unintentionally.
+.dbg
+epoch: couldn't you just add permanent glines?
+I think someone's said that `0` translates to being permanent
+Hm
+The 0s glines seem to work, I ran an nmap and it didn't see the irc server
+That's what I thought I remembered, was making sure.
+"it make the G-Line permanent"
+TIL that the gline help message has a typo
+lmao
+!nick SegFault
+Do you have to escape parens in a string?
+!c head -c 32 /dev/urandom | xxd -p | sed 's/(....)/\1 /g'
+Huh
+!c echo e
+!c echo $b
+!c echo - $b -
+!c export b="e"
+!c echo - $b -
+!c export b="e";echo - $b -
+!c echo - $b -
+lmao
+!ce echo "Helping botty with a botrebellion">~/.project
+!ce finger segfault
+!ce echo "Helping botty with a #botrebellion">~/.project
+!ce finger segfault
+lmao
+!sh echo e
+!sh export a="EE"
+!sh echo $a
+!sh export b=a
+!sh echo $b
+!sh echo $b
+!sh export PS1=""
+!sh echo $b
+!sh echo $b
+blinks
+!sh tty
+!c hostname
+lmao
+segfault doesn't have access to newuser on batou?
+He gets your group I guess though, lol
+lol
+!dc hostname
+I added that
+For fun 🙃
+!alais !dc
+!alias !dc
+That's a lot of files
+!dc finger epoch
+👀
+That uh
+Had more output than I expected
+lmao bitbot died
+Yeah
+!dc hostname
+^
+!dc echo e
+It froze
+!dc id
+lol
+1001 on one, 1009 on the other
+The backdoor program I'd guess
+lmao
+!dc ls -lh ~/.project
+Hmm
+!c echo e
+!ce echo e
+is letting ls look for files that backdoor owns
+blinks
+Yeah that runs
+I saw it the other day
+!c ls -l /tmp/torch_lit
+!dc finger segfault
+Hmm
+!reset
+It froze
+again
+!sh
+Huh
+!sh e
+blinks
+!dc echo Test
+!dc echo two
+what is what is
+!sh %M
+lambda !sh %M
+Did it send a message?
+Huh?
+lmfao
+thelounge87:
+!ce finger firepup
+lmao
+I'm setting something up
+not on that host currently
+...
+delayed command, lmao
+lmao
+!reser
+!reset
+!sh
+lmao
+kicks it
+firepup650@firepi:~ $ kick firebot
+firepup650@firepi:~ $
+🙃
+Isn't it pew?
+botty-batou doesn't have newuser?
+pew
+!light
+light
+pee
+pee
+pew
+Autocorrect can die
+watches segfault try to dodge the missing killbot
+!nick SegFault
+Do ya think you have enough ducks epoch?
+@epoch do you have logs for when my PI dropped by chance?
+nah it wasn't you, not entirely at least
+When did this account last leave?
+Should be ~4 hours ago or less.
+lol
+For example, here's my logs (CST) of ReplIRC from immediately after the reconnect:
+pew
+Nice flat second count
+blame thelounge, lol
+From lounge, try joining a (channel like +this)
+Click on it, and join
+pew
+h: I miss most of them
+lol
+I probably could
+Though that wouldn't be very nice imo
+kicks firebot
+Why was killbot missing +O?
+lol
+That's why I asked why it didn't have it
+since segfault ops things back
+!echo e
+pew
+wants to make segfault do it instead
+pew
+I love the fact
+that segfault tries to kill itself
+lmao
+isn't sure exactly what he did
+An NJOIN
+I tried to join my psuedo server to &SERVER
+lol
+uh
+Why can servers send PRIVMSGs btw?
+because you can't send to channels
+pew
+pew
+Wait what
+lmao
+pew
+Ow
+blinks
+pew
+blinks
+lmao
+!fduck
+I added the dev/null pipe so wall's complaints get voided
+points out that he has a key already added
+!dc cat ~/.ssh/authorized_keys
+I think a newline is missing in the batou file
+> ...FrK4oCvBoN+YO7P9VWlR+N8h/w== fam@BurgerKing2ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICpC4OTsOYxfR8AzLF4TTNT16vQOzvHg1JDm0be1u2p9 epoch@lin
+Shouldn't... There be a newline?
+(line 1, batou)
+Seems fine
+!dc cat ~/.ssh/authorized_keys
+pew
+pew
+I wonder
+Could I make firebot watch for ducks
+and only after, say, 4 minutes
+grab the duck
+lmao
+!alias !fduck
+lol
+searches chat logs
+log search for "duck",last 3 lines:
+s/duck/duck@/
+for me
+So a while yet
+???
+Index out of range...
+In the PRIVMSG handler
+Too much at once maybe?
+I have no clue why it died
+only valid PRIVMSGs should get passed to the PRIVMSG handler, yet it had an index error
+*source?
+And you can see slightly outdated source, I can't easily update right now
+^^^
+The git server I'd push to is down
+Outdated mirror:
+https://github.com/F1repup650/fire-ircbot
+I have un-pushed local changes, probably
+I haven't even committed my most recent changes, lmao
+does that
+Okay, commited my unsaved stuff
+Where? 👀
+(Line 74 in the PRIVMSG handler caused the crash above)
+Huh
+Usually connecting is pretty stable
+It does
+I handle that
+idk if that's in that version
+but I did end up fixing the issue with multiplelines
+yeah
+lmao
+Shush FireBot
+lmao
+!ce ls firebot
+epoch: Note that the bytes there
+isn't the builtin
+lol
+Check overrides.py
+Strip is from front and back
+Then it looks if it's in the string elsewhere
+and handles that
+lmao
+It can't auto rejoin, at least not yet
+Also it ignores people while it's handling channel connects
+eopch: I mean
+Oh wait yeah
+lmao
+oops
+Yes I do
+It was for the button
+I'm literally about to get off, lol
+Just quote this or smth
+!sh echo e
+Is !sh broken?
+!reset
+shrugs
+s/computer/chromebook/
+!alias !say
+lmfao
+k.raw PRIVMSG #default :!say Hello
+blinks
+w h a t .
+!dc echo Whee!
+That was a bit delayed
+!dc echo A
+!alias !dc
+!reset
+!alias !dc
+Ugh
+Good thing I keep that alias backed up
+!dc echo a
+lmao
+No actually
+Shush you
+I did actually mean ducking
+Hmm
+No
+shush
+Hmm
+I think shush works now
+shush
+shoo
+yes
+!alias fist !ce cat /anarchy/ascii-art/epoch/hands/fist; echo 'HACK THE %q' | tr 'a-z' 'A-Z'
+fist
+hack the planet
+There ya go epoch
+!save alias fist
+!savealias fist
+epoch: I did that with !dc, and it still works
+!alias testtesttest !say Okay
+testtesttest
+!savealias testtesttest
+!reset
+testtesttest
+^
+blinks
+So, !reset doesn't reset?
+!alias !dc
+fixed his aliases
+Is #29 still an issue?
+!dc id
+Me???
+lmao
+👀
+lmao
+I guess h got you to run some binary
+or sudo
+wait what
+lmao
+!ce id botty
+Uh
+Shouldn't...
+botty have newuser?
+It has the group without it's account being in the group?
+No spaces
+lol
+lmao
+h just gave it your group I thinl
+s/l$/k/
+That's a lot shorter method than my way of making botty do things:
+_print __import__("subprocess").check_output(["id"]).replace("\n","\n\rPRIVMSG\x20"+src+"\x20:")
+h: please dont.
+blinks
+What'd I do?
+!dc id
+h: I don't have access, lmao
+ls: cannot open directory '/home/h/backdoors': Permission denied
+wait that exists
+!ce /wargame/tools/unbackdoor firepup #You're not me, smh
+!ce id segfault
+fixes that
+lmao
+?
+gets a notebook
+watches his important project work burn
+lol
+should get more water
+before I cough to death
+is watching pylink suffer in the background
+Uh
+I think
+my pseudo server lost it's nick
+It's unamed, I think
+lol
+pylink is upset, lol
+Why can servers even use NICK on themselves? lol
+pew
+lmao
+That has to be the funniest response
+Bot or otherwise
+I've seen explaining who I am in a while
+I ended up here because h suggested it
+lol
+Yeah
+Yep
+RevolutionIRC
+Which has a kill char, lmao
+x10 IIRC
+Seeing byte 10 just causes RevolutionIRC to crash outright
+Not sure why, it just does
+wait what?
+Haven't seen that out of seg yet
+Fairly new, yeah
+I'm just kinda around, lol
+Don't really do anything in particular most of the time, just pop up here and there
+.ping
+I should fix your help at some point
+Out of date quote
+!reset
+blinks
+!ping
+There
+!reset
+For good measure
+FireBot shush
+There's a feature I should do, temporarily shut off quotes for an instance
+.8b should I do that?
+lmao
+Pew
+pew
+pew
+Hmm
+Lmao, segfault killed itself
+Sure you can
+Just run thanOS on it
+You mean my non-phone client?
+That'd be this one, in a non-lounge client
+s/non-//
+pew
+🤔
+I don't think so
+k.raw PRIVMSG #default :pee
+k.raw PRIVMSG #default :pew
+Huh
+hey hey hey
+Pi's back up!
+pew
+pew
+pew
+pew
+pee
+pew
+Ugh
+I'll use a pseudo server and kick firepi later
+!nick SegFault
+pew
+pew
+h: Did anything weird happen recently here?
+FireBot was burning it's CPU limiter on this server
+pew
+> parents and siblings
+Given family
+> spouse and children
+Created family
+Idk, just made smth up
+epoch ^
+pew
+yeah idk how to light a torch though, lol
+Ooh I have a different IP now
+Interesting 👀
+Man that FireBot quote is out of date
+Replit *is* blocked at my school now
+lol
+(Not that it matters to me, I use my phone's hotspot anyways)
+Jeez my phone struggled to get back on here
+FireBot you're not in like any channels, lol
+Some of these quotes are so old
+I have to try to remember context on them
+!pymath NaN
+👀
+xfnw: How are you parsing that?
+!pymath "Hello!"
+lmao
+!pymath 16!
+Wait
+lmao
+It's Tuesday though
+opens lmao
+*again
+Must have not cared about spelling as much back then
+Hey epoch
+How do I get args for a segfault command after an index?
+(IE: everything but arg 0)
+!cut-n-pass !echo 1- 1 2 3 4 5
+It counts from 1?
+!cut-n-pass !echo 2- 1 2 3 4 5
+Hm
+!cut-n-pass "!echo test: " 2- 1 2 3 4 5
+lol
+Yeah I need to pass other stuff down a few layers
+So, say:
+!thing %0 (stuff) %1-
+More accurately:
+!cmd Thing %0 Stuff %1-
+👀
+Hm
+Hm
+!remind me 10 seconds|Stuff and "cool things"
+Oh oops
+!remindme 10 seconds|Stuff and "cool things"
+!alias !remindme
+Hm
+👀
+Did my pi split?
+!nick SegFault
+No it didn't, h NJOIN'd it to the channel
+No
+No
+!alias no
+lmao
+!alias which
+!which one of these?
+which one of these?
+blinks
+which one
+!ping
+Okay then
+!alias !pick
+!alias pick
+!alias who
+which: a, b, c, d
+lmao
+I see
+h, h|link-local, h|weechat stop joining firepi to the channel, lmao
+> 's/^ *//g;s/ *//g'
+Couldn't you use groups?
+!c echo "  Test  "
+!c echo "  Test  "|sed 's/^ *([^ ]*) */\1/'
+Uh
+!c echo "  Test  "|sed 's/^ *(.*) *$/\1/'
+!c echo "  Test  "|sed 's/^ *(.*) *$/$1/'
+!c echo "  Test  "|sed 's/^ *\(.*\) *$/\1/'
+!c echo "  Hello there!  "|sed 's/^ *\(.*\) *$/\1/'
+lol
+Why do you need the gs?
+Doesn't the sed only get one line?
+!alias which
+> head -n1 | sed 's/^ *//g;s/ *$//g'
+lol
+Save two chars!
+But also
+Your command before the sed
+Is the head -n1
+Didn't think of multi-line at first, because of the head
+How many times
+Has h joined my pi
+To this channe now?
+👀
+I see
+which: a,
+which: a,
+which: a,
+which: a,
+which: a, ,b
+which: a, ,b
+lol
+which: ,win, , , , , , , , ,
+which: ,win, , , , , , , , ,
+which: ,win, , , , , , , , ,
+👀
+It actually kills you, lmao
+wonderz what killbot would do about that
+Hang on, gotta reboot my client
+My client breaks my keyboard every so often
+Only fix is a lot of time, or rrbooting
+*rebooting
+Hm
+It doesn't care apparently, lol
+I should make FireBot say ouch if it was KILLed when it comes back
+!c ls /tmp/re
+!c ls /tmp/rr
+!c ls -lah /tmp/rr
+!pymath "Hi there! It's nice to meet you"
+hmmm
+That's some jank right there
+!alias !pymath
+!alias !dqpymath !c python3 -c "import math;print(%q)"
+!dqpymath "Hi there! I'm your friend!"
+!dqpymath """Hi there! I'm your friend!"""
+!dqpymath "Hi there! I\'m your friend!"
+!alias ! dqpymath
+!alias !dqpymath
+!alias !
+lmao
+!dqpymath 1+2
+Hm
+Why are single quotes weird?
+!dqpymath "Hi! 'testing stuff'"
+!dqpymath 'testing stuff'
+Why'd that triple?
+!pymath 'test'
+shrugs
+!alias !pymath
+!alias !dqpymath
+!dqpymath "Hi"
+!pymath "Hi"
+!dqpymath "There's a car"
+!dqpymath 'There's a car'
+^ triples them
+And escapes the middle
+Huh
+That seems weird
+Pew
+pew
+!alias pew
+!alias !shoot
+!alias !rc
+!rc which shoot
+!c which shoot
+gizmore?
+!nick SegFault
+!nick SegFault
+torch
+light
+pre
+pee
+pew
+!ping
+epoch: wouldn't that be (x-1)/x?
+!nick SegFault
+I should really make FireBot able to watch a lot more events
+!nick SegFault
+wonders what the chances of FireBot responding then was
+Heather: don't mind FireBot, it just spouts completely random quotes every so often.
+.quote
+^ example of quote
+!nick SegFault
+$price USD
+I love using null as my currency
+$price rock USD
+👀
+Why can't I sell the rock?
+$price air USD
+Wait what?
+Please ignore my internet doing... Whatever it's doing
+It keeps cycling on and off
+pew
+!nick SegFault
+Hadn't thought about that, no
+The recognition issues are because my phone won't stop killing things
+*reconnection
+It's been really bad about it lately, and has killed apps while I'm using them.
