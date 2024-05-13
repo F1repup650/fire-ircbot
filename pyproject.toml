@@ -9,6 +9,7 @@ python = "^3.9"
 apiclient = "^1.0.4"
 python-dotenv = "^1.0.0"
 pylast = "^5.2.0"
+black = "^24.4.2"
 
 [tool.poetry.dev-dependencies]
 
