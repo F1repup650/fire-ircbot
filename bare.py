@@ -42,6 +42,7 @@ class bot:
     onStrtCmds: list[str]
     markov: MarkovBot
     autoMethod: str
+    dnsblMode: str
 
     def __init__(self, server: str): ...
 

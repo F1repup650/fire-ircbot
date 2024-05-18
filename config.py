@@ -4,9 +4,13 @@ from dotenv import load_dotenv  # type: ignore
 import re, codecs
 from typing import Optional, Any
 import bare, pylast
+from pydnsbl import DNSBLIpChecker, DNSBLDomainChecker
+
+ipbl = DNSBLIpChecker()
+hsbl = DNSBLDomainChecker()
 
 load_dotenv()
-__version__ = "v3.0.12"
+__version__ = "v3.0.13"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -20,11 +24,13 @@ servers: dict[str, dict[str, Any]] = {
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, "#main/replirc": 0},
         "ignores": ["#main/replirc"],
         "hosts": ["9pfs.repl.co"],
+        "dnsblMode": "kickban"
     },
     "efnet": {
         "address": "irc.underworld.no",
         "channels": {"#random": 0, "#dice": 0},
         "hosts": ["154.sub-174-251-241.myvzw.com"],
+        "dnsblMode": "kickban",
     },
     "replirc": {
         "address": "127.0.0.1",
@@ -46,6 +52,7 @@ servers: dict[str, dict[str, Any]] = {
         "hosts": ["owner.firepi"],
         "threads": ["radio"],
         "autoMethod": "MARKOV",
+        "dnsblMode": "akill",
     },
     "backupbox": {
         "address": "127.0.0.1",
@@ -58,6 +65,7 @@ servers: dict[str, dict[str, Any]] = {
             "2600-6c5a-637f-1a85-0000-0000-0000-6667.inf6.spectrum.com",
         ],
         "onIdntCmds": ["OPER e e"],
+        "dnsbl-mode": "gline",
     },
     "twitch": {
         "nick": "fireschatbot",
@@ -113,3 +121,19 @@ def sub(
     if name:
         result = result.replace("$SENDER", name).replace("$NAME", name)
     return result
+
+
+def dnsbl(hostname: str) -> Union[str, None]:
+    hosts = None
+    try:
+        hosts = ipbl.check(hostname).detected_by.keys()
+    except ValueError:
+        hosts = hsbl.check(hostname).detected_by.keys()
+    if not hosts:
+            return
+    hostStr = None
+    if len(hosts) >= 3:
+            hostStr = ', and '.join((', '.join(hosts)).rsplit(", ", 1))
+    else:
+            hostStr = ' and '.join(hosts)
+    return hostStr
