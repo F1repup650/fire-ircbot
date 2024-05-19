@@ -186,12 +186,15 @@ def QUIT(bot: bare.bot, msg: str) -> tuple[None, None]:
 
 
 def JOIN(bot: bare.bot, msg: str) -> tuple[None, None]:
+    nick = msg.split("!", 1)[0][1:]
+    hostname = msg.split("@", 1)[1].split(" ", 1)[0].strip()
+    chan = msg.split("#")[-1].strip()
     if bot.dnsblMode != "none":
         dnsblStatus = conf.dnsbl(hostname)
         if dnsblStatus:
             match bot.dnsblMode:
                 case "kickban":
-                    bot.sendraw(f"KICK {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(f"KICK #{chan} {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
                     bot.sendraw(f"MODE #{chan} +b *!*@{hostname}")
                 case "akill":
                     bot.sendraw(f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklists(s).")

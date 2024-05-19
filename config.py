@@ -2,7 +2,7 @@
 from os import environ as env
 from dotenv import load_dotenv  # type: ignore
 import re, codecs
-from typing import Optional, Any
+from typing import Optional, Any, Union
 import bare, pylast
 from pydnsbl import DNSBLIpChecker, DNSBLDomainChecker
 
@@ -124,11 +124,16 @@ def sub(
 
 
 def dnsbl(hostname: str) -> Union[str, None]:
-    hosts = None
+    hosts = []
+    hstDT = None
     try:
-        hosts = ipbl.check(hostname).detected_by.keys()
+        hstDT = ipbl.check(hostname).detected_by
     except ValueError:
-        hosts = hsbl.check(hostname).detected_by.keys()
+        hstDT = hsbl.check(hostname).detected_by
+    for host in hstDT:
+        if hstDT[host] != ["unknown"]:
+            hosts.append(host)
+            print(f'DEBUG: {host} - {hstDT[host]}')
     if not hosts:
             return
     hostStr = None

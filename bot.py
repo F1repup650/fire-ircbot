@@ -232,7 +232,10 @@ class bot(bare.bot):
     def recv(self) -> bytes:
         if self.queue:
             return bytes(self.queue.pop(0))
-        data = bytes(self.sock.recv(2048).strip(b"\r\n"))
+        data = bytes(self.sock.recv(2048))
+        while !data.endswith(b"\r\n")
+            data += bytes(self.sock.recv(2048))
+        data.rstrip(b"\r\n")
         if b"\r\n" in data:
             self.queue.extend(data.split(b"\r\n"))
             return bytes(self.queue.pop(0))
@@ -329,8 +332,8 @@ class bot(bare.bot):
                             else 50
                         )
                         conf.prefix = (
-                            conf.servers[server]["prefix"]
-                            if "prefix" in conf.servers[server]
+                            conf.servers[self.server]["prefix"]
+                            if "prefix" in conf.servers[self.server]
                             else "."
                         )
                         reload(cmds)
