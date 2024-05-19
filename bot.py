@@ -233,9 +233,9 @@ class bot(bare.bot):
         if self.queue:
             return bytes(self.queue.pop(0))
         data = bytes(self.sock.recv(2048))
-        while !data.endswith(b"\r\n")
+        while not data.endswith(b"\r\n"):
             data += bytes(self.sock.recv(2048))
-        data.rstrip(b"\r\n")
+        data = bytes(data.strip(b"\r\n"))
         if b"\r\n" in data:
             self.queue.extend(data.split(b"\r\n"))
             return bytes(self.queue.pop(0))
