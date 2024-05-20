@@ -128,8 +128,11 @@ def dnsbl(hostname: str) -> Union[str, None]:
     hstDT = None
     try:
         hstDT = ipbl.check(hostname).detected_by
-    except ValueError:
-        hstDT = hsbl.check(hostname).detected_by
+    except ValueError:  # It's not an IP
+        try:
+            hstDT = hsbl.check(hostname).detected_by
+        except ValueError:  # It's also not a hostname
+            hstDT = {}
     for host in hstDT:
         if hstDT[host] != ["unknown"]:
             hosts.append(host)
