@@ -52,6 +52,7 @@ class bot(bare.bot):
             else "FireBot"
         )
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
+        self.statuses = {'firepup': {}}
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
         self.threads = (
@@ -233,6 +234,8 @@ class bot(bare.bot):
         if self.queue:
             return bytes(self.queue.pop(0))
         data = bytes(self.sock.recv(2048))
+        if data.lazy_decode() == "":
+            return data
         while not data.endswith(b"\r\n"):
             data += bytes(self.sock.recv(2048))
         data = bytes(data.strip(b"\r\n"))

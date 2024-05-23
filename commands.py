@@ -213,6 +213,50 @@ def markov(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(proposed, chan)
 
 
+def setStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    user, stat, reas = ('', 0, '')
+    try:
+        if message.split(' ')[1] == "help":
+            bot.msg("Assuming you want help with status codes. 1 is Availiable, 2 is Busy, 3 is Unavailiable, anything else is Unknown.", chan)
+            return
+        message = message.split(' ', 1)[1]
+        user = message.split(' ')[0].lower()
+        stat = int(message.split(' ')[1])
+        reas = message.split(' ', 2)[2]
+    except IndexError:
+        bot.msg(f"Insufficent information to set a status. Expected 3 args. Only got {len(message.split(' ', 1)) - 1} args.", chan)
+        return
+    except ValueError:
+        bot.msg("Status parameter must be an int.", chan)
+        return
+    match stat:
+        case 1:
+            stat = "Availiable"
+        case 2:
+            stat = "Busy"
+        case 3:
+            stat = "Unavailiable"
+        case _:
+            stat = "Unknown"
+    if user in ["me", "my", "I"]:
+        user = 'firepup'
+    bot.statuses[user] = {'status': stat, 'reason': reas}
+    bot.msg(f"Status set for '{user}'. Raw data: {bot.statuses[user]}", chan)
+
+
+def getStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    user = ''
+    try:
+        user = message.split(' ')[1]
+    except IndexError:
+        user = 'firepup'
+    bot.msg(f"[DEBUG] {user} - {bot.statuses.get(user)} (msg in was {message.split(' ')})", chan)
+    if bot.statuses.get(user) is None:
+        bot.msg("You've gotta provide a nick I actually recognize.", chan)
+        return
+    bot.msg(f"{user}'s status: {'Unknown' if not bot.statuses[user].get('status') else bot.statuses[user]['status']} - {'Reason unset' if not bot.statuses[user].get('reason') else bot.statuses[user]['reason']}", chan)
+
+
 data: dict[str, dict[str, Any]] = {
     "!botlist": {"prefix": False, "aliases": []},
     "bugs bugs bugs": {"prefix": False, "aliases": []},
@@ -244,6 +288,8 @@ data: dict[str, dict[str, Any]] = {
     "version": {"prefix": True, "aliases": ["ver", "v"]},
     "np": {"prefix": True, "aliases": []},
     "markov": {"prefix": True, "aliases": ["m"]},
+    "setStatus": {"prefix": True, "aliases": ["sS"], "check": checks.admin},
+    "getStatus": {"prefix": True, "aliases": ["gS"]},
 }
 regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
@@ -270,4 +316,6 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "version": version,
     "np": fmpull,
     "markov": markov,
+    "setStatus": setStatus,
+    "getStatus": getStatus,
 }
