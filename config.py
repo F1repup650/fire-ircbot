@@ -10,7 +10,7 @@ ipbl = DNSBLIpChecker()
 hsbl = DNSBLDomainChecker()
 
 load_dotenv()
-__version__ = "v3.0.15"
+__version__ = "v3.0.16"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -100,6 +100,20 @@ def decode_escapes(s: str) -> str:
         return codecs.decode(match.group(0), "unicode-escape")
 
     return ESCAPE_SEQUENCE_RE.sub(decode_match, s)
+
+
+def cmdFind(message: str, find: list, usePrefix: bool = True) -> bool:
+    cmd = None
+    try:
+        cmd = message.split(' ', 1)[0]
+    except IndexError: ...
+    if not cmd:
+        return False
+    if usePrefix:
+        return any(cmd == prefix + match for match in find)
+    else:
+        return any(cmd == match for match in find)
+
 
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:

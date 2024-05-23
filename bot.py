@@ -53,6 +53,7 @@ class bot(bare.bot):
         )
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
         self.statuses = {'firepup': {}}
+        self.ops = {}
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
         self.threads = (

@@ -103,7 +103,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         triggers = [cmd]
         triggers.extend(cmds.data[cmd]["aliases"])
         triggers = list(conf.sub(call, bot, chan, name).lower() for call in triggers)
-        if conf.mfind(
+        if conf.cmdFind(
             conf.sub(message, bot, chan, name).lower(),
             triggers,
             cmds.data[cmd]["prefix"],
@@ -124,7 +124,7 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
                 cmds.call[check](bot, chan, name, message)
                 handled = True
                 break
-    if not handled and conf.mfind(message, ["reload", "r"]):
+    if not handled and conf.cmdFind(message, ["reload", "r"]):
         if checks.admin(bot, name, host, chan, "reload"):
             return "reload", chan
         handled = True
@@ -194,7 +194,22 @@ def JOIN(bot: bare.bot, msg: str) -> tuple[None, None]:
 
 
 def MODE(bot: bare.bot, msg: str) -> tuple[None, None]:
-    pass
+    chan = msg.split("#", 1)[1].split(" ", 1)[0]
+    add = True if msg.split("#", 1)[1].split(" ", 2)[1][0] == "+" else False
+    modes = msg.split("#", 1)[1].split(" ", 2)[1][1:]
+    users = ""
+    try:
+        users = msg.split("#", 1)[1].split(" ", 2)[2].split()
+    except IndexError: ...
+    if len(modes) != len(users):
+        bot.log("Refusing to handle modes that do not have corresponding users.")
+        return None, None
+    for i in range(len(modes)):
+        if users[i] == bot.nick:
+            if modes[i] == "o":
+                bot.ops[chan] = add
+                bot.log(f"{'Got' if add else 'Lost'} ops in {chan}")
+    return None, None
 
 
 def NULL(bot: bare.bot, msg: str) -> tuple[None, None]:
@@ -208,7 +223,7 @@ handles: dict[
     "NICK": NICK,
     "KICK": KICK,
     "PART": PART,
-    "MODE": NULL,
+    "MODE": MODE,
     "TOPIC": NULL,
     "QUIT": QUIT,
     "JOIN": JOIN,

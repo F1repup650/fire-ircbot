@@ -152,6 +152,26 @@ def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.msg(f"[DEBUG] {dbg_out}", chan)
 
 
+def debugInternal(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    things = dir(bot)
+    try:
+        thing = message.split(' ', 1)[1]
+    except IndexError:
+        bot.msg("You can't just ask me to lookup nothing.", chan)
+        return
+    if thing in things:
+        bot.msg(f"self.{thing} = {getattr(bot, thing)}", chan)
+    else:
+        bot.msg(f"I have nothing called \"{thing}\"", chan)
+
+
+def debugEval(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    try:
+        bot.msg(str(eval(message.split(' ', 1)[1])), chan)
+    except Exception as E:
+        bot.msg(f"Exception: {E}", chan)
+
+
 def raw(bot: bare.bot, chan: str, name: str, message: str) -> None:
     bot.sendraw(message.split(" ", 1)[1])
 
@@ -281,6 +301,8 @@ data: dict[str, dict[str, Any]] = {
     "uptime": {"prefix": True, "aliases": []},
     "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
     "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},
+    "debugInternal": {"prefix": True, "aliases": ["dbgInt", "dI"], "check": checks.admin},
+    "debugEval": {"prefix": True, "aliases": ["dbgEval", "dE"], "check": checks.admin},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
     "join ": {"prefix": True, "aliases": [], "check": checks.admin},
     "quote": {"prefix": True, "aliases": ["q"]},
@@ -314,6 +336,8 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "uptime": uptime,
     "raw ": raw,
     "debug": debug,
+    "debugInternal": debugInternal,
+    "debugEval": debugEval,
     "8ball": eball,
     "join ": join,
     "quote": quote,

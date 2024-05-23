@@ -43,6 +43,8 @@ class bot:
     markov: MarkovBot
     autoMethod: str
     dnsblMode: str
+    statuses: dict[str, dict[str, str]]
+    ops: dict[str, bool]
 
     def __init__(self, server: str): ...
 
