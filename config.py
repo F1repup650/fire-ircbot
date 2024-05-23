@@ -4,10 +4,12 @@ from dotenv import load_dotenv  # type: ignore
 import re, codecs
 from typing import Optional, Any, Union
 import bare, pylast
-from pydnsbl import DNSBLIpChecker, DNSBLDomainChecker
+from pydnsbl import DNSBLIpChecker, DNSBLDomainChecker, providers as BL
 
-ipbl = DNSBLIpChecker()
-hsbl = DNSBLDomainChecker()
+providers = BL.BASE_PROVIDERS + [BL.Provider('dnsbl.dronebl.org.org')]
+
+ipbl = DNSBLIpChecker(providers=providers)
+hsbl = DNSBLDomainChecker(providers=providers)
 
 load_dotenv()
 __version__ = "v3.0.16"
@@ -46,6 +48,7 @@ servers: dict[str, dict[str, Any]] = {
             "#fp-radio": 0,
             "#fp-radio-debug": 0,
             "#hardfork": 0,
+            "#opers": 0,
         },
         "ignores": ["#fp-radio"],
         "admins": ["h-tl"],
@@ -137,9 +140,9 @@ def sub(
     return result
 
 
-def dnsbl(hostname: str) -> str:
+def dnsbl(hostname: str) -> tuple[str, dict[str, list[str]]]:
     hosts = []
-    hstDT = None
+    hstDT = {}
     try:
         hstDT = ipbl.check(hostname).detected_by
     except ValueError:  # It's not an IP
@@ -151,18 +154,19 @@ def dnsbl(hostname: str) -> str:
         if hstDT[host] != ["unknown"]:
             hosts.append(host)
     if not hosts:
-            return ""
+            return "", hstDT
     hostStr = None
     if len(hosts) >= 3:
             hostStr = ', and '.join((', '.join(hosts)).rsplit(", ", 1))
     else:
             hostStr = ' and '.join(hosts)
-    return hostStr
+    return hostStr, hstDT
 
-def dnsblHandler(bot: bare.bot, nick: str, hostname: str, chan: str) -> str:
+def dnsblHandler(bot: bare.bot, nick: str, hostname: str, chan: str) -> tuple[str, dict[str, list[str]]]:
     dnsblStatus = 'Not enabled'
+    dnsblResps = {}
     if bot.dnsblMode != "none":
-        dnsblStatus = dnsbl(hostname)
+        dnsblStatus, dnsblResps = dnsbl(hostname)
         if dnsblStatus:
             match bot.dnsblMode:
                 case "kickban":
@@ -180,4 +184,4 @@ def dnsblHandler(bot: bare.bot, nick: str, hostname: str, chan: str) -> str:
                     bot.sendraw(f"GLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
                 case _:
                     bot.log(f'Unknown dnsbl Mode "{bot.dnsblMode}"!', "WARN")
-    return dnsblStatus
+    return dnsblStatus, dnsblResps

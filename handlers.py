@@ -6,6 +6,7 @@ from typing import Union, Callable
 from overrides import bytes, bbytes
 from importlib import reload
 import bare, re, checks
+from traceback import format_exc
 
 
 def CTCP(bot: bare.bot, msg: str) -> bool:
@@ -110,9 +111,21 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
         ):
             if "check" in cmds.data[cmd] and cmds.data[cmd]["check"]:
                 if cmds.data[cmd]["check"](bot, name, host, chan, cmd):
-                    cmds.call[cmd](bot, chan, name, message)
+                    try:
+                        cmds.call[cmd](bot, chan, name, message)
+                    except Exception:
+                        Err = format_exc()
+                        for line in Err.split("\n"):
+                            bot.log(line, "ERROR")
+                        bot.msg("Sorry, I had an error trying to execute that command. Please check error logs.", chan)
             else:
-                cmds.call[cmd](bot, chan, name, message)
+                    try:
+                        cmds.call[cmd](bot, chan, name, message)
+                    except Exception:
+                        Err = format_exc()
+                        for line in Err.split("\n"):
+                            bot.log(line, "ERROR")
+                        bot.msg("Sorry, I had an error trying to execute that command. Please check error logs.", chan)
             handled = True
             break
     if not handled:

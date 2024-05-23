@@ -14,6 +14,7 @@ import handlers
 import bare
 from threading import Thread
 from markov import MarkovBot
+from traceback import format_exc
 
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
@@ -317,6 +318,7 @@ class bot(bare.bot):
                 if action in handlers.handles:
                     res, chan = handlers.handles[action](self, ircmsg)
                     if res == "reload" and type(chan) == str:
+                      try:
                         reload(conf)
                         self.adminnames = (
                             conf.servers[self.server]["admins"]
@@ -343,6 +345,11 @@ class bot(bare.bot):
                         reload(cmds)
                         reload(handlers)
                         self.msg("Reloaded successfully", chan)
+                      except Exception:
+                        Err = format_exc()
+                        for line in Err.split("\n"):
+                            self.log(line, "ERROR")
+                        self.msg("Reload failed, likely partially reloaded. Please check error logs.", chan)
                 else:
                     if ircmsg.startswith("PING "):
                         self.ping(ircmsg)

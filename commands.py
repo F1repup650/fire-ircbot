@@ -281,8 +281,8 @@ def check(bot: bare.bot, chan: str, name: str, message: str) -> None:
         msg = message.split(' ', 1)[1]
         nick = msg.split('!')[0]
         host = msg.split('@', 1)[1]
-        dnsbl = conf.dnsblHandler(bot, nick, host, chan)
-        bot.msg("Blacklist check: " + (dnsbl if dnsbl else "Safe."), chan)
+        dnsbl, raws = conf.dnsblHandler(bot, nick, host, chan)
+        bot.msg(f"Blacklist check: {dnsbl if dnsbl else 'Safe.'} ({raws})", chan)
     except Exception as E:
         bot.msg("Blacklist lookup failed. Error recorded to bot logs.", chan)
         bot.log(str(E), "FATAL")
@@ -299,12 +299,12 @@ data: dict[str, dict[str, Any]] = {
         "check": checks.admin,
     },
     "uptime": {"prefix": True, "aliases": []},
-    "raw ": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
+    "raw": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
     "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},
     "debugInternal": {"prefix": True, "aliases": ["dbgInt", "dI"], "check": checks.admin},
     "debugEval": {"prefix": True, "aliases": ["dbgEval", "dE"], "check": checks.admin},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
-    "join ": {"prefix": True, "aliases": [], "check": checks.admin},
+    "join": {"prefix": True, "aliases": ["j"], "check": checks.admin},
     "quote": {"prefix": True, "aliases": ["q"]},
     "goat.mode.activate": {"prefix": True, "aliases": ["g.m.a"], "check": checks.admin},
     "goat.mode.deactivate": {
@@ -334,12 +334,12 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     conf.su: sudo,
     "restart": reboot,
     "uptime": uptime,
-    "raw ": raw,
+    "raw": raw,
     "debug": debug,
     "debugInternal": debugInternal,
     "debugEval": debugEval,
     "8ball": eball,
-    "join ": join,
+    "join": join,
     "quote": quote,
     "goat.mode.activate": goatOn,
     "goat.mode.decativate": goatOff,
