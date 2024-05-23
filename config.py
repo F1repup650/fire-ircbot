@@ -10,7 +10,7 @@ ipbl = DNSBLIpChecker()
 hsbl = DNSBLDomainChecker()
 
 load_dotenv()
-__version__ = "v3.0.14"
+__version__ = "v3.0.15"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -123,7 +123,7 @@ def sub(
     return result
 
 
-def dnsbl(hostname: str) -> Union[str, None]:
+def dnsbl(hostname: str) -> str:
     hosts = []
     hstDT = None
     try:
@@ -136,12 +136,34 @@ def dnsbl(hostname: str) -> Union[str, None]:
     for host in hstDT:
         if hstDT[host] != ["unknown"]:
             hosts.append(host)
-            print(f'DEBUG: {host} - {hstDT[host]}')
     if not hosts:
-            return
+            return ""
     hostStr = None
     if len(hosts) >= 3:
             hostStr = ', and '.join((', '.join(hosts)).rsplit(", ", 1))
     else:
             hostStr = ' and '.join(hosts)
     return hostStr
+
+def dnsblHandler(bot: bare.bot, nick: str, hostname: str, chan: str) -> str:
+    dnsblStatus = 'Not enabled'
+    if bot.dnsblMode != "none":
+        dnsblStatus = dnsbl(hostname)
+        if dnsblStatus:
+            match bot.dnsblMode:
+                case "kickban":
+                    bot.sendraw(f"KICK #{chan} {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(f"MODE #{chan} +b *!*@{hostname}")
+                case "akill":
+                    bot.sendraw(f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklists(s).")
+                case "kline":
+                    bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(f"KLINE 524160 *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(f"KLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                case "gline":
+                    bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(f"GLINE *@{hostname} 524160 :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(f"GLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                case _:
+                    bot.log(f'Unknown dnsbl Mode "{bot.dnsblMode}"!', "WARN")
+    return dnsblStatus

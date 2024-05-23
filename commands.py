@@ -224,7 +224,7 @@ def setStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
         stat = int(message.split(' ')[1])
         reas = message.split(' ', 2)[2]
     except IndexError:
-        bot.msg(f"Insufficent information to set a status. Expected 3 args. Only got {len(message.split(' ', 1)) - 1} args.", chan)
+        bot.msg(f"Insufficent information to set a status. Only got {len(message.split(' ')) - (1 if '.sS' in message else 0)}/3 expected args.", chan)
         return
     except ValueError:
         bot.msg("Status parameter must be an int.", chan)
@@ -250,11 +250,22 @@ def getStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
         user = message.split(' ')[1]
     except IndexError:
         user = 'firepup'
-    bot.msg(f"[DEBUG] {user} - {bot.statuses.get(user)} (msg in was {message.split(' ')})", chan)
     if bot.statuses.get(user) is None:
         bot.msg("You've gotta provide a nick I actually recognize.", chan)
         return
     bot.msg(f"{user}'s status: {'Unknown' if not bot.statuses[user].get('status') else bot.statuses[user]['status']} - {'Reason unset' if not bot.statuses[user].get('reason') else bot.statuses[user]['reason']}", chan)
+
+
+def check(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    try:
+        msg = message.split(' ', 1)[1]
+        nick = msg.split('!')[0]
+        host = msg.split('@', 1)[1]
+        dnsbl = conf.dnsblHandler(bot, nick, host, chan)
+        bot.msg("Blacklist check: " + (dnsbl if dnsbl else "Safe."), chan)
+    except Exception as E:
+        bot.msg("Blacklist lookup failed. Error recorded to bot logs.", chan)
+        bot.log(str(E), "FATAL")
 
 
 data: dict[str, dict[str, Any]] = {
@@ -290,6 +301,7 @@ data: dict[str, dict[str, Any]] = {
     "markov": {"prefix": True, "aliases": ["m"]},
     "setStatus": {"prefix": True, "aliases": ["sS"], "check": checks.admin},
     "getStatus": {"prefix": True, "aliases": ["gS"]},
+    "check": {"prefix": True, "aliases": [], "check": checks.admin},
 }
 regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
@@ -318,4 +330,5 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "markov": markov,
     "setStatus": setStatus,
     "getStatus": getStatus,
+    "check": check,
 }

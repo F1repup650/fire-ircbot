@@ -189,26 +189,13 @@ def JOIN(bot: bare.bot, msg: str) -> tuple[None, None]:
     nick = msg.split("!", 1)[0][1:]
     hostname = msg.split("@", 1)[1].split(" ", 1)[0].strip()
     chan = msg.split("#")[-1].strip()
-    if bot.dnsblMode != "none":
-        dnsblStatus = conf.dnsbl(hostname)
-        if dnsblStatus:
-            match bot.dnsblMode:
-                case "kickban":
-                    bot.sendraw(f"KICK #{chan} {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"MODE #{chan} +b *!*@{hostname}")
-                case "akill":
-                    bot.sendraw(f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklists(s).")
-                case "kline":
-                    bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"KLINE 524160 *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"KLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                case "gline":
-                    bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"GLINE *@{hostname} 524160 :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"GLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                case _:
-                    bot.log(f'Unknown dnsbl Mode "{bot.dnsblMode}"!', "WARN")
+    conf.dnsblHandler(bot, nick, hostname, chan)
     return None, None
+
+
+def MODE(bot: bare.bot, msg: str) -> tuple[None, None]:
+    pass
+
 
 def NULL(bot: bare.bot, msg: str) -> tuple[None, None]:
     return None, None
