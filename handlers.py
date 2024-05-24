@@ -240,4 +240,6 @@ handles: dict[
     "TOPIC": NULL,
     "QUIT": QUIT,
     "JOIN": JOIN,
+    "NOTICE": NULL,
+    "INVITE": NULL,
 }
