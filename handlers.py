@@ -117,15 +117,21 @@ def PRIVMSG(bot: bare.bot, msg: str) -> Union[tuple[None, None], tuple[str, str]
                         Err = format_exc()
                         for line in Err.split("\n"):
                             bot.log(line, "ERROR")
-                        bot.msg("Sorry, I had an error trying to execute that command. Please check error logs.", chan)
+                        bot.msg(
+                            "Sorry, I had an error trying to execute that command. Please check error logs.",
+                            chan,
+                        )
             else:
-                    try:
-                        cmds.call[cmd](bot, chan, name, message)
-                    except Exception:
-                        Err = format_exc()
-                        for line in Err.split("\n"):
-                            bot.log(line, "ERROR")
-                        bot.msg("Sorry, I had an error trying to execute that command. Please check error logs.", chan)
+                try:
+                    cmds.call[cmd](bot, chan, name, message)
+                except Exception:
+                    Err = format_exc()
+                    for line in Err.split("\n"):
+                        bot.log(line, "ERROR")
+                    bot.msg(
+                        "Sorry, I had an error trying to execute that command. Please check error logs.",
+                        chan,
+                    )
             handled = True
             break
     if not handled:
@@ -213,7 +219,8 @@ def MODE(bot: bare.bot, msg: str) -> tuple[None, None]:
     users = ""
     try:
         users = msg.split("#", 1)[1].split(" ", 2)[2].split()
-    except IndexError: ...
+    except IndexError:
+        ...
     if len(modes) != len(users):
         bot.log("Refusing to handle modes that do not have corresponding users.")
         return None, None

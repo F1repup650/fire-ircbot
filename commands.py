@@ -155,19 +155,19 @@ def debug(bot: bare.bot, chan: str, name: str, message: str) -> None:
 def debugInternal(bot: bare.bot, chan: str, name: str, message: str) -> None:
     things = dir(bot)
     try:
-        thing = message.split(' ', 1)[1]
+        thing = message.split(" ", 1)[1]
     except IndexError:
         bot.msg("You can't just ask me to lookup nothing.", chan)
         return
     if thing in things:
         bot.msg(f"self.{thing} = {getattr(bot, thing)}", chan)
     else:
-        bot.msg(f"I have nothing called \"{thing}\"", chan)
+        bot.msg(f'I have nothing called "{thing}"', chan)
 
 
 def debugEval(bot: bare.bot, chan: str, name: str, message: str) -> None:
     try:
-        bot.msg(str(eval(message.split(' ', 1)[1])), chan)
+        bot.msg(str(eval(message.split(" ", 1)[1])), chan)
     except Exception as E:
         bot.msg(f"Exception: {E}", chan)
 
@@ -234,17 +234,23 @@ def markov(bot: bare.bot, chan: str, name: str, message: str) -> None:
 
 
 def setStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    user, stat, reas = ('', 0, '')
+    user, stat, reas = ("", 0, "")
     try:
-        if message.split(' ')[1] == "help":
-            bot.msg("Assuming you want help with status codes. 1 is Available, 2 is Busy, 3 is Unavailable, anything else is Unknown.", chan)
+        if message.split(" ")[1] == "help":
+            bot.msg(
+                "Assuming you want help with status codes. 1 is Available, 2 is Busy, 3 is Unavailable, anything else is Unknown.",
+                chan,
+            )
             return
-        message = message.split(' ', 1)[1]
-        user = message.split(' ')[0].lower()
-        stat = int(message.split(' ')[1])
-        reas = message.split(' ', 2)[2]
+        message = message.split(" ", 1)[1]
+        user = message.split(" ")[0].lower()
+        stat = int(message.split(" ")[1])
+        reas = message.split(" ", 2)[2]
     except IndexError:
-        bot.msg(f"Insufficent information to set a status. Only got {len(message.split(' ')) - (1 if '.sS' in message else 0)}/3 expected args.", chan)
+        bot.msg(
+            f"Insufficent information to set a status. Only got {len(message.split(' ')) - (1 if '.sS' in message else 0)}/3 expected args.",
+            chan,
+        )
         return
     except ValueError:
         bot.msg("Status parameter must be an int.", chan)
@@ -259,28 +265,31 @@ def setStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
         case _:
             stat = "Unknown"
     if user in ["me", "my", "I"]:
-        user = 'firepup'
-    bot.statuses[user] = {'status': stat, 'reason': reas}
+        user = "firepup"
+    bot.statuses[user] = {"status": stat, "reason": reas}
     bot.msg(f"Status set for '{user}'. Raw data: {bot.statuses[user]}", chan)
 
 
 def getStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
-    user = ''
+    user = ""
     try:
-        user = message.split(' ')[1]
+        user = message.split(" ")[1]
     except IndexError:
-        user = 'firepup'
+        user = "firepup"
     if bot.statuses.get(user) is None:
         bot.msg("You've gotta provide a nick I actually recognize.", chan)
         return
-    bot.msg(f"{user}'s status: {'Unknown' if not bot.statuses[user].get('status') else bot.statuses[user]['status']} - {'Reason unset' if not bot.statuses[user].get('reason') else bot.statuses[user]['reason']}", chan)
+    bot.msg(
+        f"{user}'s status: {'Unknown' if not bot.statuses[user].get('status') else bot.statuses[user]['status']} - {'Reason unset' if not bot.statuses[user].get('reason') else bot.statuses[user]['reason']}",
+        chan,
+    )
 
 
 def check(bot: bare.bot, chan: str, name: str, message: str) -> None:
     try:
-        msg = message.split(' ', 1)[1]
-        nick = msg.split('!')[0]
-        host = msg.split('@', 1)[1]
+        msg = message.split(" ", 1)[1]
+        nick = msg.split("!")[0]
+        host = msg.split("@", 1)[1]
         dnsbl, raws = conf.dnsblHandler(bot, nick, host, chan)
         bot.msg(f"Blacklist check: {dnsbl if dnsbl else 'Safe.'} ({raws})", chan)
     except Exception as E:
@@ -301,7 +310,11 @@ data: dict[str, dict[str, Any]] = {
     "uptime": {"prefix": True, "aliases": []},
     "raw": {"prefix": True, "aliases": ["cmd "], "check": checks.admin},
     "debug": {"prefix": True, "aliases": ["dbg", "d"], "check": checks.admin},
-    "debugInternal": {"prefix": True, "aliases": ["dbgInt", "dI"], "check": checks.admin},
+    "debugInternal": {
+        "prefix": True,
+        "aliases": ["dbgInt", "dI"],
+        "check": checks.admin,
+    },
     "debugEval": {"prefix": True, "aliases": ["dbgEval", "dE"], "check": checks.admin},
     "8ball": {"prefix": True, "aliases": ["eightball", "8b"]},
     "join": {"prefix": True, "aliases": ["j"], "check": checks.admin},

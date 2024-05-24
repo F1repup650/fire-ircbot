@@ -53,7 +53,7 @@ class bot(bare.bot):
             else "FireBot"
         )
         self.queue: list[bbytes] = []  # pyright: ignore [reportInvalidTypeForm]
-        self.statuses = {'firepup': {}}
+        self.statuses = {"firepup": {}}
         self.ops = {}
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.current = "user"
@@ -318,38 +318,41 @@ class bot(bare.bot):
                 if action in handlers.handles:
                     res, chan = handlers.handles[action](self, ircmsg)
                     if res == "reload" and type(chan) == str:
-                      try:
-                        reload(conf)
-                        self.adminnames = (
-                            conf.servers[self.server]["admins"]
-                            if "admins" in conf.servers[self.server]
-                            else []
-                        )
-                        self.ignores = (
-                            conf.servers[self.server]["ignores"]
-                            if "ignores" in conf.servers[self.server]
-                            else []
-                        )
-                        self.__version__ = conf.__version__
-                        self.npallowed = conf.npallowed
-                        self.interval = (
-                            conf.servers[self.server]["interval"]
-                            if "interval" in conf.servers[self.server]
-                            else 50
-                        )
-                        conf.prefix = (
-                            conf.servers[self.server]["prefix"]
-                            if "prefix" in conf.servers[self.server]
-                            else "."
-                        )
-                        reload(cmds)
-                        reload(handlers)
-                        self.msg("Reloaded successfully", chan)
-                      except Exception:
-                        Err = format_exc()
-                        for line in Err.split("\n"):
-                            self.log(line, "ERROR")
-                        self.msg("Reload failed, likely partially reloaded. Please check error logs.", chan)
+                        try:
+                            reload(conf)
+                            self.adminnames = (
+                                conf.servers[self.server]["admins"]
+                                if "admins" in conf.servers[self.server]
+                                else []
+                            )
+                            self.ignores = (
+                                conf.servers[self.server]["ignores"]
+                                if "ignores" in conf.servers[self.server]
+                                else []
+                            )
+                            self.__version__ = conf.__version__
+                            self.npallowed = conf.npallowed
+                            self.interval = (
+                                conf.servers[self.server]["interval"]
+                                if "interval" in conf.servers[self.server]
+                                else 50
+                            )
+                            conf.prefix = (
+                                conf.servers[self.server]["prefix"]
+                                if "prefix" in conf.servers[self.server]
+                                else "."
+                            )
+                            reload(cmds)
+                            reload(handlers)
+                            self.msg("Reloaded successfully", chan)
+                        except Exception:
+                            Err = format_exc()
+                            for line in Err.split("\n"):
+                                self.log(line, "ERROR")
+                            self.msg(
+                                "Reload failed, likely partially reloaded. Please check error logs.",
+                                chan,
+                            )
                 else:
                     if ircmsg.startswith("PING "):
                         self.ping(ircmsg)

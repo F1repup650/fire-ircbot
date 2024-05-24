@@ -6,25 +6,27 @@ from typing import Optional, Any, Union
 import bare, pylast
 from pydnsbl import DNSBLIpChecker, DNSBLDomainChecker, providers as BL
 
+
 class droneBL(BL.Provider):
     def process_response(self, response):
         reasons = set()
         for result in response:
             reason = result.host
-            if reason in ['127.0.0.3']:
-                reasons.add('IRC Spambot')
-            elif reason in ['127.0.0.19']:
-                reasons.add('Abused VPN')
-            elif reason in ['127.0.0.9', '127.0.0.8']:
-                reasons.add('Open Proxy')
-            elif reason in ['127.0.0.13']:
-                reasons.add('Automated Attacks')
+            if reason in ["127.0.0.3"]:
+                reasons.add("IRC Spambot")
+            elif reason in ["127.0.0.19"]:
+                reasons.add("Abused VPN")
+            elif reason in ["127.0.0.9", "127.0.0.8"]:
+                reasons.add("Open Proxy")
+            elif reason in ["127.0.0.13"]:
+                reasons.add("Automated Attacks")
             else:
-                print('Unknown dnsbl reason: ' + reason, flush=True)
-                reasons.add('unknown')
+                print("Unknown dnsbl reason: " + reason, flush=True)
+                reasons.add("unknown")
         return reasons
 
-providers = BL.BASE_PROVIDERS + [droneBL('dnsbl.dronebl.org')]
+
+providers = BL.BASE_PROVIDERS + [droneBL("dnsbl.dronebl.org")]
 
 ipbl = DNSBLIpChecker(providers=providers)
 hsbl = DNSBLDomainChecker(providers=providers)
@@ -44,7 +46,7 @@ servers: dict[str, dict[str, Any]] = {
         "channels": {"#random": 0, "#dice": 0, "#offtopic": 0, "#main/replirc": 0},
         "ignores": ["#main/replirc"],
         "hosts": ["9pfs.repl.co"],
-        "dnsblMode": "kickban"
+        "dnsblMode": "kickban",
     },
     "efnet": {
         "address": "irc.underworld.no",
@@ -126,15 +128,15 @@ def decode_escapes(s: str) -> str:
 def cmdFind(message: str, find: list, usePrefix: bool = True) -> bool:
     cmd = None
     try:
-        cmd = message.split(' ', 1)[0]
-    except IndexError: ...
+        cmd = message.split(" ", 1)[0]
+    except IndexError:
+        ...
     if not cmd:
         return False
     if usePrefix:
         return any(cmd == prefix + match for match in find)
     else:
         return any(cmd == match for match in find)
-
 
 
 def mfind(message: str, find: list, usePrefix: bool = True) -> bool:
@@ -172,34 +174,53 @@ def dnsbl(hostname: str) -> tuple[str, dict[str, list[str]]]:
         if hstDT[host] != ["unknown"]:
             hosts.append(host)
     if not hosts:
-            return "", hstDT
+        return "", hstDT
     hostStr = None
     if len(hosts) >= 3:
-            hostStr = ', and '.join((', '.join(hosts)).rsplit(", ", 1))
+        hostStr = ", and ".join((", ".join(hosts)).rsplit(", ", 1))
     else:
-            hostStr = ' and '.join(hosts)
+        hostStr = " and ".join(hosts)
     return hostStr, hstDT
 
-def dnsblHandler(bot: bare.bot, nick: str, hostname: str, chan: str) -> tuple[str, dict[str, list[str]]]:
-    dnsblStatus = 'Not enabled'
+
+def dnsblHandler(
+    bot: bare.bot, nick: str, hostname: str, chan: str
+) -> tuple[str, dict[str, list[str]]]:
+    dnsblStatus = "Not enabled"
     dnsblResps = {}
     if bot.dnsblMode != "none":
         dnsblStatus, dnsblResps = dnsbl(hostname)
         if dnsblStatus:
             match bot.dnsblMode:
                 case "kickban":
-                    bot.sendraw(f"KICK #{chan} {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(
+                        f"KICK #{chan} {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
                     bot.sendraw(f"MODE #{chan} +b *!*@{hostname}")
                 case "akill":
-                    bot.sendraw(f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(
+                        f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
                 case "kline":
-                    bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"KLINE 524160 *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"KLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(
+                        f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
+                    bot.sendraw(
+                        f"KLINE 524160 *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
+                    bot.sendraw(
+                        f"KLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
                 case "gline":
-                    bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"GLINE *@{hostname} 524160 :Sorry, but you're on the {dnsblStatus} blacklist(s).")
-                    bot.sendraw(f"GLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
+                    bot.sendraw(
+                        f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
+                    bot.sendraw(
+                        f"GLINE *@{hostname} 524160 :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
+                    bot.sendraw(
+                        f"GLINE *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s)."
+                    )
                 case _:
                     bot.log(f'Unknown dnsbl Mode "{bot.dnsblMode}"!', "WARN")
     return dnsblStatus, dnsblResps
