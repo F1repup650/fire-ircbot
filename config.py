@@ -191,7 +191,7 @@ def dnsblHandler(bot: bare.bot, nick: str, hostname: str, chan: str) -> tuple[st
                     bot.sendraw(f"KICK #{chan} {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
                     bot.sendraw(f"MODE #{chan} +b *!*@{hostname}")
                 case "akill":
-                    bot.sendraw(f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklists(s).")
+                    bot.sendraw(f"OS AKILL ADD *@{hostname} !P Sorry, but you're on the {dnsblStatus} blacklist(s).")
                 case "kline":
                     bot.sendraw(f"KILL {nick} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
                     bot.sendraw(f"KLINE 524160 *@{hostname} :Sorry, but you're on the {dnsblStatus} blacklist(s).")
