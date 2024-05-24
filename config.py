@@ -6,7 +6,25 @@ from typing import Optional, Any, Union
 import bare, pylast
 from pydnsbl import DNSBLIpChecker, DNSBLDomainChecker, providers as BL
 
-providers = BL.BASE_PROVIDERS + [BL.Provider('dnsbl.dronebl.org.org')]
+class droneBL(BL.Provider):
+    def process_response(self, response):
+        reasons = set()
+        for result in response:
+            reason = result.host
+            if reason in ['127.0.0.3']:
+                reasons.add('IRC Spambot')
+            elif reason in ['127.0.0.19']:
+                reasons.add('Abused VPN')
+            elif reason in ['127.0.0.9', '127.0.0.8']:
+                reasons.add('Open Proxy')
+            elif reason in ['127.0.0.13']:
+                reasons.add('Automated Attacks')
+            else:
+                print('Unknown dnsbl reason: ' + reason, flush=True)
+                reasons.add('unknown')
+        return reasons
+
+providers = BL.BASE_PROVIDERS + [droneBL('dnsbl.dronebl.org')]
 
 ipbl = DNSBLIpChecker(providers=providers)
 hsbl = DNSBLDomainChecker(providers=providers)
