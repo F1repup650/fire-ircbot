@@ -237,7 +237,7 @@ def setStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
     user, stat, reas = ('', 0, '')
     try:
         if message.split(' ')[1] == "help":
-            bot.msg("Assuming you want help with status codes. 1 is Availiable, 2 is Busy, 3 is Unavailable, anything else is Unknown.", chan)
+            bot.msg("Assuming you want help with status codes. 1 is Available, 2 is Busy, 3 is Unavailable, anything else is Unknown.", chan)
             return
         message = message.split(' ', 1)[1]
         user = message.split(' ')[0].lower()
@@ -251,7 +251,7 @@ def setStatus(bot: bare.bot, chan: str, name: str, message: str) -> None:
         return
     match stat:
         case 1:
-            stat = "Availiable"
+            stat = "Available"
         case 2:
             stat = "Busy"
         case 3:
