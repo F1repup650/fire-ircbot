@@ -85,6 +85,7 @@ class bot(bare.bot):
             if "dnsblMode" in conf.servers[server]
             else "none"
         )
+        self.dns = {}
         self.lastfmLink = conf.lastfmLink
         with open("mastermessages.txt") as f:
             TMFeed = []

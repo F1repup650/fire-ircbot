@@ -32,7 +32,7 @@ ipbl = DNSBLIpChecker(providers=providers)
 hsbl = DNSBLDomainChecker(providers=providers)
 
 load_dotenv()
-__version__ = "v3.0.18"
+__version__ = "v3.0.19"
 npbase: str = (
     "\[\x0303last\.fm\x03\] [A-Za-z0-9_[\]{}\\|\-^]{1,$MAX} (is listening|last listened) to: \x02.+ - .*\x02( \([0-9]+ plays\)( \[.*\])?)?"  # pyright: ignore [reportInvalidStringEscapeSequence]
 )
@@ -198,7 +198,8 @@ def dnsblHandler(
     dnsblStatus = "Not enabled"
     dnsblResps = {}
     if bot.dnsblMode != "none":
-        dnsblStatus, dnsblResps = dnsbl(hostname)
+        dnsblStatus, dnsblResps = dnsbl(hostname) if not hostname in bot.dns else (bot.dns[hostname]["status"], bot.dns[hostname]["resps"])
+        bot.dns[hostname] = {"status": dnsblStatus, "resps": dnsblResps}
         if dnsblStatus:
             match bot.dnsblMode:
                 case "kickban":

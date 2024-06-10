@@ -45,6 +45,7 @@ class bot:
     dnsblMode: str
     statuses: dict[str, dict[str, str]]
     ops: dict[str, bool]
+    dns: dict[str, dict[str, Union[str, list[str]]]]
 
     def __init__(self, server: str): ...
 
