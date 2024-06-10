@@ -198,7 +198,11 @@ def dnsblHandler(
     dnsblStatus = "Not enabled"
     dnsblResps = {}
     if bot.dnsblMode != "none":
-        dnsblStatus, dnsblResps = dnsbl(hostname) if not hostname in bot.dns else (bot.dns[hostname]["status"], bot.dns[hostname]["resps"])
+        dnsblStatus, dnsblResps = (
+            dnsbl(hostname)
+            if not hostname in bot.dns
+            else (bot.dns[hostname]["status"], bot.dns[hostname]["resps"])
+        )
         bot.dns[hostname] = {"status": dnsblStatus, "resps": dnsblResps}
         if dnsblStatus:
             match bot.dnsblMode:

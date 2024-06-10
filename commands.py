@@ -292,13 +292,21 @@ def check(bot: bare.bot, chan: str, name: str, message: str) -> None:
         host = msg.split("@", 1)[1]
         cache = host in bot.dns
         dnsbl, raws = conf.dnsblHandler(bot, nick, host, chan)
-        bot.msg(f"Blacklist check: {'(Cached) ' if cache else ''}{dnsbl if dnsbl else 'Safe.'} ({raws})", chan)
+        bot.msg(
+            f"Blacklist check: {'(Cached) ' if cache else ''}{dnsbl if dnsbl else 'Safe.'} ({raws})",
+            chan,
+        )
     except IndexError:
         try:
             host = message.split(" ", 1)[1]
             cache = host in bot.dns
-            dnsbl, raws = conf.dnsblHandler(bot, "thisusernameshouldbetoolongtoeveractuallybeinuse", host, chan)
-            bot.msg(f"Blacklist check: {'(Cached) ' if cache else ''}{dnsbl if dnsbl else 'Safe.'} ({raws})", chan)
+            dnsbl, raws = conf.dnsblHandler(
+                bot, "thisusernameshouldbetoolongtoeveractuallybeinuse", host, chan
+            )
+            bot.msg(
+                f"Blacklist check: {'(Cached) ' if cache else ''}{dnsbl if dnsbl else 'Safe.'} ({raws})",
+                chan,
+            )
         except Exception as E:
             bot.msg("Blacklist Lookup Failed. Error recorded to bot logs.", chan)
             bot.log(str(E), "FATAL")
