@@ -292,6 +292,13 @@ def check(bot: bare.bot, chan: str, name: str, message: str) -> None:
         host = msg.split("@", 1)[1]
         dnsbl, raws = conf.dnsblHandler(bot, nick, host, chan)
         bot.msg(f"Blacklist check: {dnsbl if dnsbl else 'Safe.'} ({raws})", chan)
+    except IndexError:
+        try:
+            dnsbl, raws = conf.dnsblHandler(bot, "thisusernameshouldbetoolongtoeveractuallybeinuse", message.split(" ", 1)[1], chan)
+            bot.msg(f"Blacklist check: {dnsbl if dnsbl else 'Safe.'} ({raws})", chan)
+        except Exception as E:
+            bot.msg("Blacklist Lookup Failed. Error recorded to bot logs.", chan)
+            bot.log(str(E), "FATAL")
     except Exception as E:
         bot.msg("Blacklist lookup failed. Error recorded to bot logs.", chan)
         bot.log(str(E), "FATAL")
