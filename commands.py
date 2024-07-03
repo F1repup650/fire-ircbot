@@ -315,6 +315,17 @@ def check(bot: bare.bot, chan: str, name: str, message: str) -> None:
         bot.log(str(E), "FATAL")
 
 
+def slap(bot: bare.bot, chan: str, name: str, message: str) -> None:
+    msg = message.split(" ")
+    if len(msg) > 1:
+        msg = " ".join(msg[1:]).strip()
+        if msg == bot.nick or not msg:
+            msg = name
+    else:
+        msg = name
+    bot.msg(f"\x01ACTION slaps {msg} around a bit with {r.choice(['a firewall', 'a fireball', 'a large trout', 'a computer', 'an rpi4', 'an rpi5', 'firepi', name])}\x01", chan)
+
+
 data: dict[str, dict[str, Any]] = {
     "!botlist": {"prefix": False, "aliases": []},
     "bugs bugs bugs": {"prefix": False, "aliases": []},
@@ -355,6 +366,7 @@ data: dict[str, dict[str, Any]] = {
     "setStatus": {"prefix": True, "aliases": ["sS"], "check": checks.admin},
     "getStatus": {"prefix": True, "aliases": ["gS"]},
     "check": {"prefix": True, "aliases": [], "check": checks.admin},
+    "slap": {"prefix": True, "aliases": ["s"]}
 }
 regexes: list[str] = [conf.npbase, conf.su]
 call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
@@ -386,4 +398,5 @@ call: dict[str, Callable[[bare.bot, str, str, str], None]] = {
     "setStatus": setStatus,
     "getStatus": getStatus,
     "check": check,
+    "slap": slap,
 }

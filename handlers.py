@@ -213,22 +213,25 @@ def JOIN(bot: bare.bot, msg: str) -> tuple[None, None]:
 
 
 def MODE(bot: bare.bot, msg: str) -> tuple[None, None]:
-    chan = msg.split("#", 1)[1].split(" ", 1)[0]
-    add = True if msg.split("#", 1)[1].split(" ", 2)[1][0] == "+" else False
-    modes = msg.split("#", 1)[1].split(" ", 2)[1][1:]
-    users = ""
     try:
-        users = msg.split("#", 1)[1].split(" ", 2)[2].split()
-    except IndexError:
-        ...
-    if len(modes) != len(users):
-        bot.log("Refusing to handle modes that do not have corresponding users.")
-        return None, None
-    for i in range(len(modes)):
-        if users[i] == bot.nick:
-            if modes[i] == "o":
-                bot.ops[chan] = add
-                bot.log(f"{'Got' if add else 'Lost'} ops in {chan}")
+        chan = msg.split("#", 1)[1].split(" ", 1)[0]
+        add = True if msg.split("#", 1)[1].split(" ", 2)[1][0] == "+" else False
+        modes = msg.split("#", 1)[1].split(" ", 2)[1][1:]
+        users = ""
+        try:
+            users = msg.split("#", 1)[1].split(" ", 2)[2].split()
+        except IndexError:
+            ...
+        if len(modes) != len(users):
+            bot.log("Refusing to handle modes that do not have corresponding users.")
+            return None, None
+        for i in range(len(modes)):
+            if users[i] == bot.nick:
+                if modes[i] == "o":
+                    bot.ops[chan] = add
+                    bot.log(f"{'Got' if add else 'Lost'} ops in {chan}")
+    except IndexError:  # *our* modes are changing, not a channel
+        bot.log("Not handling changing of my modes")
     return None, None
 
 
